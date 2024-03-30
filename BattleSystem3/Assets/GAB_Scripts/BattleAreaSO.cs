@@ -4,8 +4,8 @@ using UnityEngine;
 public class BattleAreaSO : ScriptableObject
 {
     [Header("Monsters")]
-    public EntitySO[] monstersInZoneDay;
-    public EntitySO[] monstersInZoneNight;
+    public ConfigSO[] configsInZoneDay;
+    public ConfigSO[] configsInZoneNight;
     public int[] minMaxMonstersInBattle = new int[2];
     
     [Header("Environment")]

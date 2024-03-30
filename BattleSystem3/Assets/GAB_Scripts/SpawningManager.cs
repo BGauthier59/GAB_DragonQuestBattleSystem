@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -12,7 +13,7 @@ public class SpawningManager : MonoSingleton<SpawningManager>
     
     public int howManyMonster;
     
-    public EntitySO[] monstersInLocation;
+    public ConfigSO[] configsInLocation;
 
     public BattleAreaSO[] allZones;
     public BattleAreaSO selectedZone;
@@ -46,8 +47,8 @@ public class SpawningManager : MonoSingleton<SpawningManager>
 
         InterfaceManager.instance.SetEnvironment(isNight ? selectedZone.fontZoneNight : selectedZone.fontZoneDay);
 
-        monstersInLocation = SelectingArray();
-        DefiningMonster(monstersInLocation);
+        configsInLocation = SelectingArray();
+        DefiningMonster(configsInLocation);
         CreatingMonstersInBattle();
         StartCoroutine(BattleManager.instance.BattleInitialization());
     }
@@ -70,22 +71,20 @@ public class SpawningManager : MonoSingleton<SpawningManager>
         
     } // Crée les héros et associe les statistiques
 
-    EntitySO[] SelectingArray()
+    ConfigSO[] SelectingArray()
     {
-        if(isNight) return selectedZone.monstersInZoneNight;
-        return selectedZone.monstersInZoneDay;
+        if(isNight) return selectedZone.configsInZoneNight;
+        return selectedZone.configsInZoneDay;
     } // Associe la liste d'ennemis à la zone où a lieu le combat
     
-    void DefiningMonster(EntitySO[] monsters)
-    {
-        howManyMonster = Random.Range(selectedZone.minMaxMonstersInBattle[0], selectedZone.minMaxMonstersInBattle[1] + 1);
-        
+    void DefiningMonster(ConfigSO[] configs)
+    {   
         monstersFighting.Clear();
         
-        for (int i = 0; i < howManyMonster; i++)
-        {
-            monstersFighting.Add(monsters[Random.Range(0, monsters.Length)]);
-        }
+        monstersFighting = configs[Random.Range(0, configs.Length)].monsters.ToList();
+
+        howManyMonster = monstersFighting.Count;
+
     } // Defines the amount and type of encountered monsters
 
     void CreatingMonstersInBattle()

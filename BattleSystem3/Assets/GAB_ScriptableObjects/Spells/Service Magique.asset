@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
+  m_Name: Service Magique
+  m_EditorClassIdentifier: 
+  spellName: Service Magique
+  spellDescription: "Soigne tous les alli\xE9s."
+  spellIndex: 1
+  spellType: 0
+  cost: 4
+  hasSpecialEffect: 1
+  doTargetEveryone: 1
+  helpingSpell: 1
+  onlyWorkOnDefeated: 0
+  strenght: 70
+  elementType: 0
+  factor: 0

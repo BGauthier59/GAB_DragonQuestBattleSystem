@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: Royaume d'Iadlajoie nord
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 3651cc2d0fa108949897bec6bdbc11e8, type: 2}
+  - {fileID: 11400000, guid: 7eda20c26de9da74184f4d6c9963784d, type: 2}
+  - {fileID: 11400000, guid: 13945c127ddd0184586306c4d3691fb3, type: 2}
+  - {fileID: 11400000, guid: c243361f85de60c46b79a5f991d5e281, type: 2}
+  - {fileID: 11400000, guid: 3e9064c68d3441544997d7728b4331ca, type: 2}
+  - {fileID: 11400000, guid: 9a9904dca9efdf842b92dea4d6fa4f36, type: 2}
+  - {fileID: 11400000, guid: 861e900e1534c7541910fcaf1b2081c3, type: 2}
+  - {fileID: 11400000, guid: 84965bb9a77c5954da51359f28d48954, type: 2}
+  - {fileID: 11400000, guid: 60fd412c613420440ad677fdca36fd7c, type: 2}
+  - {fileID: 11400000, guid: 764c26de37d873648943ecd103825684, type: 2}
+  - {fileID: 11400000, guid: 8f49380820239e54ca1264b09cd9f627, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 3651cc2d0fa108949897bec6bdbc11e8, type: 2}
+  - {fileID: 11400000, guid: 7eda20c26de9da74184f4d6c9963784d, type: 2}
+  - {fileID: 11400000, guid: 13945c127ddd0184586306c4d3691fb3, type: 2}
+  - {fileID: 11400000, guid: 3e9064c68d3441544997d7728b4331ca, type: 2}
+  - {fileID: 11400000, guid: 9a9904dca9efdf842b92dea4d6fa4f36, type: 2}
+  - {fileID: 11400000, guid: 861e900e1534c7541910fcaf1b2081c3, type: 2}
+  - {fileID: 11400000, guid: 84965bb9a77c5954da51359f28d48954, type: 2}
+  - {fileID: 11400000, guid: c243361f85de60c46b79a5f991d5e281, type: 2}
+  - {fileID: 11400000, guid: 60fd412c613420440ad677fdca36fd7c, type: 2}
+  - {fileID: 11400000, guid: 764c26de37d873648943ecd103825684, type: 2}
+  - {fileID: 11400000, guid: 8f49380820239e54ca1264b09cd9f627, type: 2}
+  minMaxMonstersInBattle: 0300000004000000
+  fontZoneDay: {fileID: 21300000, guid: 47263b2e8ef671048ae5f929d86525c5, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 88bdba381719ad544be4ab5fea84b55a, type: 3}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 2

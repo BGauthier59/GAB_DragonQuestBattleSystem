@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: "R\xE9gion de Bondaibut"
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: a2941b8d5a0a6ed42abfaf14ac6e47e3, type: 2}
+  - {fileID: 11400000, guid: 638d85e5c90854e4e96b8c1561400cce, type: 2}
+  - {fileID: 11400000, guid: 0cbd8885c09461f4f9ab2894aa7dc4e2, type: 2}
+  - {fileID: 11400000, guid: aaf2e3e8bd5a1434cb029c3cdc7de0f9, type: 2}
+  - {fileID: 11400000, guid: 3b8e9df56d9f42341bc28f638fca067e, type: 2}
+  - {fileID: 11400000, guid: 5e00c72808a8628419920846c866c8da, type: 2}
+  - {fileID: 11400000, guid: 0c264503d308f554aaea633c515aa6fe, type: 2}
+  - {fileID: 11400000, guid: d2ee2442a774e5e4fb8badebafaeac56, type: 2}
+  - {fileID: 11400000, guid: b14397c65297460428bd096397d851cb, type: 2}
+  - {fileID: 11400000, guid: 0dd07e672ce151047a1a220fc00c3074, type: 2}
+  - {fileID: 11400000, guid: 7b365f573da56234c9eace0ea2df63fc, type: 2}
+  - {fileID: 11400000, guid: 872138dc641f0884abf195a5de3cac2f, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: a2941b8d5a0a6ed42abfaf14ac6e47e3, type: 2}
+  - {fileID: 11400000, guid: 0dd07e672ce151047a1a220fc00c3074, type: 2}
+  - {fileID: 11400000, guid: 638d85e5c90854e4e96b8c1561400cce, type: 2}
+  - {fileID: 11400000, guid: 0cbd8885c09461f4f9ab2894aa7dc4e2, type: 2}
+  - {fileID: 11400000, guid: aaf2e3e8bd5a1434cb029c3cdc7de0f9, type: 2}
+  - {fileID: 11400000, guid: 3b8e9df56d9f42341bc28f638fca067e, type: 2}
+  - {fileID: 11400000, guid: 5e00c72808a8628419920846c866c8da, type: 2}
+  - {fileID: 11400000, guid: 0c264503d308f554aaea633c515aa6fe, type: 2}
+  - {fileID: 11400000, guid: d2ee2442a774e5e4fb8badebafaeac56, type: 2}
+  - {fileID: 11400000, guid: b14397c65297460428bd096397d851cb, type: 2}
+  - {fileID: 11400000, guid: 7b365f573da56234c9eace0ea2df63fc, type: 2}
+  - {fileID: 11400000, guid: 872138dc641f0884abf195a5de3cac2f, type: 2}
+  minMaxMonstersInBattle: 0300000005000000
+  fontZoneDay: {fileID: 21300000, guid: 6fd00197bc33f2b49b2732d86eb1f925, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 6fd00197bc33f2b49b2732d86eb1f925, type: 3}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 1

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
+  m_Name: 3-Cagoulard
+  m_EditorClassIdentifier: 
+  entityName: Cagoulard
+  sprite: {fileID: 21300000, guid: 1495a29e9ab173f41960116f7a02b4cc, type: 3}
+  type: 1
+  hp: 11
+  mp: 0
+  atk: 15
+  defense: 3
+  agility: 9
+  level: 1
+  mana: 0
+  criticalHit: 0
+  dodge: 0
+  spells: []
+  weapon: {fileID: 0}
+  helmet: {fileID: 0}
+  shield: {fileID: 0}
+  armor: {fileID: 0}
+  hpLevelUp: 
+  mpLevelUp: 
+  atkLevelUp: 
+  defLevelUp: 
+  agiLevelUp: 
+  manaLevelUp: []
+  learnSpells: []
+  strategy: 1
+  elementType: 0
+  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  probability: 0
+  gold: 2
+  xp: 1

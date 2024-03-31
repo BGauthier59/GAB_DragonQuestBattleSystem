@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: 17-Tronc-bine
+  m_Name: 64-Griffon
   m_EditorClassIdentifier: 
-  entityName: Tronc-bine
-  sprite: {fileID: 21300000, guid: 2b6254441d71c6a4bbf17401da5ac0a3, type: 3}
+  entityName: Griffon
+  sprite: {fileID: 21300000, guid: 7ba12720adadbc74e9962d73a41d3fd0, type: 3}
   type: 1
-  hp: 58
+  hp: 106
   mp: 0
-  atk: 50
-  defense: 42
-  agility: 28
+  atk: 82
+  defense: 62
+  agility: 68
   level: 1
   mana: 0
   criticalHit: 0
@@ -40,5 +40,5 @@ MonoBehaviour:
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
-  gold: 14
-  xp: 20
+  gold: 26
+  xp: 36

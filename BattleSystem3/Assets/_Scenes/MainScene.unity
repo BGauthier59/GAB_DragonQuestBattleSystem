@@ -1221,6 +1221,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 775b8d3ee5955f640ba48a6393dbeac0, type: 2}
   - {fileID: 11400000, guid: 9e62cd90153dff44d931b6de514d8236, type: 2}
   - {fileID: 11400000, guid: f438ef7c1b4a02d4c9480720b22c6220, type: 2}
+  - {fileID: 11400000, guid: 57cdf03602b9cc948b1070374da0fc9f, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   selectedZone: {fileID: 0}
   isNight: 0
   centerBattle: {fileID: 156872459}
@@ -4243,11 +4247,31 @@ MonoBehaviour:
     m_Options:
     - m_Text: Choisissez une zone
       m_Image: {fileID: 0}
-    - m_Text: Zone 1
+    - m_Text: "R\xE9gion de Bondaibut"
       m_Image: {fileID: 0}
-    - m_Text: Zone 2
+    - m_Text: Royaume d'Iad'lajoie nord
       m_Image: {fileID: 0}
-    - m_Text: Zone 3
+    - m_Text: Royaume d'Iad'lajoie sud
+      m_Image: {fileID: 0}
+    - m_Text: "R\xE9gion de Delsor"
+      m_Image: {fileID: 0}
+    - m_Text: "Ruines de l'ancienne cit\xE9"
+      m_Image: {fileID: 0}
+    - m_Text: "Alentours du monast\xE8re au sud de Delsor"
+      m_Image: {fileID: 0}
+    - m_Text: "R\xE9gion de Port Lemerche"
+      m_Image: {fileID: 0}
+    - m_Text: "C\xF4tes du rempart de la falaise"
+      m_Image: {fileID: 0}
+    - m_Text: Royaume de Gulrur
+      m_Image: {fileID: 0}
+    - m_Text: "R\xE9gion d'Os\xE9dur"
+      m_Image: {fileID: 0}
+    - m_Text: Caverne du rite
+      m_Image: {fileID: 0}
+    - m_Text: "R\xE9gion de Port Lotecque"
+      m_Image: {fileID: 0}
+    - m_Text: "R\xE9gion d'Ordr\xE9al"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

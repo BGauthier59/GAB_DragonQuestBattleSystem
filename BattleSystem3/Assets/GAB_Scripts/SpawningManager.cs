@@ -109,5 +109,5 @@ public class SpawningManager : MonoSingleton<SpawningManager>
 
 public enum CombatZone
 {
-    NA, Zone1, Zone2, Zone3
+    NA, Région_Bondaibut, Royaume_Iadlajoie_Nord, Royaume_Iadlajoie_Sud, Région_Delsor, Ruines_Ancienne_Cité, Alentours_Monastère, Région_Port_Lemerche
 }

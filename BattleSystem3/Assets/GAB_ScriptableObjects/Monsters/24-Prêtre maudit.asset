@@ -23,7 +23,7 @@ MonoBehaviour:
   level: 1
   mana: 0
   criticalHit: 0
-  dodge: 10
+  dodge: 0
   spells: []
   weapon: {fileID: 0}
   helmet: {fileID: 0}

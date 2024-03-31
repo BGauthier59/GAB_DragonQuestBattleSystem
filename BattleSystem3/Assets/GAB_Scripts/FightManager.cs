@@ -547,7 +547,7 @@ public class FightManager : MonoSingleton<FightManager>
 
     public bool CriticalHit(int criticalValue)
     {
-        int critical = Random.Range(0, 100);
+        int critical = Random.Range(1, 100);
 
         if (critical < criticalValue)
         {

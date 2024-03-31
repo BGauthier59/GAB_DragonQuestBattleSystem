@@ -12,14 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
   m_Name: Royaume d'Iadlajoie sud
   m_EditorClassIdentifier: 
-  monstersInZoneDay:
-  - {fileID: 11400000, guid: a94ea58d85893b54d9fd9c186d757974, type: 2}
-  - {fileID: 11400000, guid: 6ebcd49036a35dd448f2662c2b55741e, type: 2}
-  monstersInZoneNight:
-  - {fileID: 11400000, guid: ff87362b5d53c02469ddf2b18de7a592, type: 2}
-  - {fileID: 11400000, guid: 503bf056e6c13b346b2df39624335f13, type: 2}
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 9657db55fdb163f45953c4fa3531f6bf, type: 2}
+  - {fileID: 11400000, guid: 384acb98cfb30f84a9931050b893c75e, type: 2}
+  - {fileID: 11400000, guid: 74c4b918f39625343b5eb7606c34439f, type: 2}
+  - {fileID: 11400000, guid: 66674bf31d6a41c4cb5657f9b40aab16, type: 2}
+  - {fileID: 11400000, guid: a1eedb36ee5d80b428c9172701a7d8f6, type: 2}
+  - {fileID: 11400000, guid: 69af40f6a65694c4bb77ec6f11f52007, type: 2}
+  - {fileID: 11400000, guid: 6ff3970d348499b43b9baecdcde06e59, type: 2}
+  - {fileID: 11400000, guid: a01d7098bdf3e9342b719edbcd0d2e8c, type: 2}
+  - {fileID: 11400000, guid: 7818d28670fd72849970ee7fbab0ad26, type: 2}
+  - {fileID: 11400000, guid: d79ea27d502b8674fafdd7a18e4f3f4c, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 9657db55fdb163f45953c4fa3531f6bf, type: 2}
+  - {fileID: 11400000, guid: 384acb98cfb30f84a9931050b893c75e, type: 2}
+  - {fileID: 11400000, guid: 74c4b918f39625343b5eb7606c34439f, type: 2}
+  - {fileID: 11400000, guid: 66674bf31d6a41c4cb5657f9b40aab16, type: 2}
+  - {fileID: 11400000, guid: a1eedb36ee5d80b428c9172701a7d8f6, type: 2}
+  - {fileID: 11400000, guid: 69af40f6a65694c4bb77ec6f11f52007, type: 2}
+  - {fileID: 11400000, guid: 6ff3970d348499b43b9baecdcde06e59, type: 2}
+  - {fileID: 11400000, guid: a01d7098bdf3e9342b719edbcd0d2e8c, type: 2}
+  - {fileID: 11400000, guid: 7818d28670fd72849970ee7fbab0ad26, type: 2}
+  - {fileID: 11400000, guid: d79ea27d502b8674fafdd7a18e4f3f4c, type: 2}
   minMaxMonstersInBattle: 0300000005000000
-  fontZoneDay: {fileID: 21300000, guid: d04c90473e5706840898f89b3ad13f4b, type: 3}
-  fontZoneNight: {fileID: 21300000, guid: 9d7897401927ac04f96ce64f46b1916e, type: 3}
+  fontZoneDay: {fileID: 21300000, guid: 0e219d884a18202428609e9685df6668, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: f5932572f5175ac41af7fa74e991f3b3, type: 3}
   musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
   combatZone: 3

@@ -1216,7 +1216,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6cb18384e53f45f47853634a3b63124d, type: 2}
   - {fileID: 11400000, guid: a0e684e184818dc4e92dc49472565782, type: 2}
   howManyMonster: 0
-  monstersInLocation: []
+  configsInLocation: []
   allZones:
   - {fileID: 11400000, guid: 775b8d3ee5955f640ba48a6393dbeac0, type: 2}
   - {fileID: 11400000, guid: 9e62cd90153dff44d931b6de514d8236, type: 2}
@@ -12357,7 +12357,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1125, y: 814}
+  m_SizeDelta: {x: 1700, y: 780}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1919636017
 MonoBehaviour:
@@ -12379,7 +12379,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d654b5713671a414c998ff3add747802, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0e219d884a18202428609e9685df6668, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

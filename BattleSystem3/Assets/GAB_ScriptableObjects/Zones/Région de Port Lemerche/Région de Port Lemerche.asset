@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: "R\xE9gion de Port Lemerche"
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 11a4f4be9356c3647b37ab65c8b784b0, type: 2}
+  - {fileID: 11400000, guid: 4602495731775894888e604704e6aaff, type: 2}
+  - {fileID: 11400000, guid: fd9b99cea68fdad40af6148ad9ea2bc6, type: 2}
+  - {fileID: 11400000, guid: ae8492034646605489f3d517bddee2e2, type: 2}
+  - {fileID: 11400000, guid: 1fd499a8fc92cd7469041ed3b71c671f, type: 2}
+  - {fileID: 11400000, guid: d4971f753251f034f960907f62809ce1, type: 2}
+  - {fileID: 11400000, guid: 8476e3ba7dbaf034b91c22e295ff6af0, type: 2}
+  - {fileID: 11400000, guid: 060d117421531de46bda1708dc48a2b3, type: 2}
+  - {fileID: 11400000, guid: 91f26067a8bfc09499d764dd1198413b, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 11a4f4be9356c3647b37ab65c8b784b0, type: 2}
+  - {fileID: 11400000, guid: 4602495731775894888e604704e6aaff, type: 2}
+  - {fileID: 11400000, guid: fd9b99cea68fdad40af6148ad9ea2bc6, type: 2}
+  - {fileID: 11400000, guid: ae8492034646605489f3d517bddee2e2, type: 2}
+  - {fileID: 11400000, guid: 1fd499a8fc92cd7469041ed3b71c671f, type: 2}
+  - {fileID: 11400000, guid: d4971f753251f034f960907f62809ce1, type: 2}
+  - {fileID: 11400000, guid: 8476e3ba7dbaf034b91c22e295ff6af0, type: 2}
+  - {fileID: 11400000, guid: 060d117421531de46bda1708dc48a2b3, type: 2}
+  - {fileID: 11400000, guid: 91f26067a8bfc09499d764dd1198413b, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 21300000, guid: 47104e38fe4dfb645a59ee6ca910ea7c, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 50f383d4990ceda41a0fd79a7e046dce, type: 3}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 0

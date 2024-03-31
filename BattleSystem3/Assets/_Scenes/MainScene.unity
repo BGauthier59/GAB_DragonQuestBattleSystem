@@ -1225,29 +1225,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1af30e31f391eb74a8bf7bef4e5ba870, type: 2}
   - {fileID: 11400000, guid: 132c36bb733fcd4418ade2b77f7284f3, type: 2}
   - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
-  - {fileID: 11400000, guid: 10a579aa77e05434fb583ccd0f39bb72, type: 2}
+  - {fileID: 11400000, guid: d8fd06b87357523469ab3af69a817750, type: 2}
+  - {fileID: 11400000, guid: d16b74245c0d5d242b6f8441e33e7a94, type: 2}
+  - {fileID: 11400000, guid: b61399a9909d5c54d9ec5057227f41b5, type: 2}
+  - {fileID: 11400000, guid: 8c1aceba9166d934cb0a5790c8effcbd, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   selectedZone: {fileID: 0}
   isNight: 0
   centerBattle: {fileID: 156872459}

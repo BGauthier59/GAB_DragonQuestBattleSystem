@@ -109,5 +109,6 @@ public class SpawningManager : MonoSingleton<SpawningManager>
 
 public enum CombatZone
 {
-    NA, Région_Bondaibut, Royaume_Iadlajoie_Nord, Royaume_Iadlajoie_Sud, Région_Delsor, Ruines_Ancienne_Cité, Alentours_Monastère, Région_Port_Lemerche
+    NA, Région_Bondaibut, Royaume_Iadlajoie_Nord, Royaume_Iadlajoie_Sud, Région_Delsor, Ruines_Ancienne_Cité, Alentours_Monastère, Région_Port_Lemerche, Côtes_Rempart_Falaise, Royaume_Gulrur,
+    Région_Osédur, Caverne_rite, Région_Port_Lotecque
 }

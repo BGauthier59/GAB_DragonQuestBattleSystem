@@ -61,15 +61,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a3762d177ace180488ccfd9a6e4ebeef, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!114 &3528710746046563045
 MonoBehaviour:
@@ -98,7 +98,7 @@ MonoBehaviour:
   entityDef: 0
   isDefending: 0
   entityAgiInit: 0
-  entitytAgi: 0
+  entityAgi: 0
   entitytLv: 0
   entityManaInit: 0
   entityMana: 0
@@ -117,6 +117,7 @@ MonoBehaviour:
   entityShield: {fileID: 0}
   entityArmor: {fileID: 0}
   rectTransform: {fileID: 5978572051527964080}
+  localPos: {x: 0, y: 0, z: 0}
   entityAnim: {fileID: 0}
   entityImage: {fileID: 0}
   entityButton: {fileID: 0}

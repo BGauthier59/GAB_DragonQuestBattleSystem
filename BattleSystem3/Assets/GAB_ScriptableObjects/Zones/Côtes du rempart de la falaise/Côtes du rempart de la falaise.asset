@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: "C\xF4tes du rempart de la falaise"
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 94c9f160c5b944d4ebddba964796c045, type: 2}
+  - {fileID: 11400000, guid: 8804e1d8de66edb4497190df83438738, type: 2}
+  - {fileID: 11400000, guid: a6311ca4ee025f74f8baaef88b309497, type: 2}
+  - {fileID: 11400000, guid: 393fa86ccabcdbf448445ccf59d409e0, type: 2}
+  - {fileID: 11400000, guid: 46d326f7931ddd24cb3c558393082507, type: 2}
+  - {fileID: 11400000, guid: d4c4ac4c42899a8409f63d09a6e14c15, type: 2}
+  - {fileID: 11400000, guid: 6db09faf3ce4a1542934f0c36d8ad56c, type: 2}
+  - {fileID: 11400000, guid: e5d40a761bb06fb478b5babb69959b9f, type: 2}
+  - {fileID: 11400000, guid: 2c2f4906090092446a77e277a6db6c82, type: 2}
+  - {fileID: 11400000, guid: a2002b98b39db8148885d2ac81345f51, type: 2}
+  - {fileID: 11400000, guid: a2002b98b39db8148885d2ac81345f51, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 94c9f160c5b944d4ebddba964796c045, type: 2}
+  - {fileID: 11400000, guid: 8804e1d8de66edb4497190df83438738, type: 2}
+  - {fileID: 11400000, guid: a6311ca4ee025f74f8baaef88b309497, type: 2}
+  - {fileID: 11400000, guid: 393fa86ccabcdbf448445ccf59d409e0, type: 2}
+  - {fileID: 11400000, guid: 46d326f7931ddd24cb3c558393082507, type: 2}
+  - {fileID: 11400000, guid: d4c4ac4c42899a8409f63d09a6e14c15, type: 2}
+  - {fileID: 11400000, guid: 6db09faf3ce4a1542934f0c36d8ad56c, type: 2}
+  - {fileID: 11400000, guid: e5d40a761bb06fb478b5babb69959b9f, type: 2}
+  - {fileID: 11400000, guid: 2c2f4906090092446a77e277a6db6c82, type: 2}
+  - {fileID: 11400000, guid: a2002b98b39db8148885d2ac81345f51, type: 2}
+  - {fileID: 11400000, guid: a2002b98b39db8148885d2ac81345f51, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 21300000, guid: b1ad87215c68fd949aba0bde9c9cce54, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 223478e712c6e844e9d7076129b2c978, type: 3}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 8

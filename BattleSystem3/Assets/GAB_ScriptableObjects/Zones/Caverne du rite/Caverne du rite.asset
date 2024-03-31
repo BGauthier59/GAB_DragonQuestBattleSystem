@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: Caverne du rite
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 0c7688e39a91c174f84dcf42bba46d40, type: 2}
+  - {fileID: 11400000, guid: c5e85d946a6c665498ddcd82a3a70dd7, type: 2}
+  - {fileID: 11400000, guid: 5b2a37897e93d5c46ba4c7719baf84a6, type: 2}
+  - {fileID: 11400000, guid: 161b0b875626487458515f683db0e128, type: 2}
+  - {fileID: 11400000, guid: baa9b5057a76163428ea035df625b669, type: 2}
+  - {fileID: 11400000, guid: 2dceb9fe3307ace45b55fe00d2d7afbf, type: 2}
+  - {fileID: 11400000, guid: 39d3a6a6a5fe1634b81e880fc406218c, type: 2}
+  - {fileID: 11400000, guid: 6c53cbb541e7f1a4b89bd675afde660f, type: 2}
+  - {fileID: 11400000, guid: 7306dd5d92846d348a54e03bc6be1dbe, type: 2}
+  - {fileID: 11400000, guid: 905b1898a0023f941980f4f9aaf9a795, type: 2}
+  - {fileID: 11400000, guid: 5c13780cb5886514dbc5b0f5db703798, type: 2}
+  - {fileID: 11400000, guid: cca79e61f51a7c941bd49918b703a4a4, type: 2}
+  - {fileID: 11400000, guid: c2038bd25322e3e4cb44fc67109ce9ad, type: 2}
+  - {fileID: 11400000, guid: ee6d889de9c28564e84315a25c2e18bf, type: 2}
+  - {fileID: 11400000, guid: ee6d889de9c28564e84315a25c2e18bf, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 0c7688e39a91c174f84dcf42bba46d40, type: 2}
+  - {fileID: 11400000, guid: c5e85d946a6c665498ddcd82a3a70dd7, type: 2}
+  - {fileID: 11400000, guid: 5b2a37897e93d5c46ba4c7719baf84a6, type: 2}
+  - {fileID: 11400000, guid: 161b0b875626487458515f683db0e128, type: 2}
+  - {fileID: 11400000, guid: baa9b5057a76163428ea035df625b669, type: 2}
+  - {fileID: 11400000, guid: 2dceb9fe3307ace45b55fe00d2d7afbf, type: 2}
+  - {fileID: 11400000, guid: 39d3a6a6a5fe1634b81e880fc406218c, type: 2}
+  - {fileID: 11400000, guid: 6c53cbb541e7f1a4b89bd675afde660f, type: 2}
+  - {fileID: 11400000, guid: 7306dd5d92846d348a54e03bc6be1dbe, type: 2}
+  - {fileID: 11400000, guid: 905b1898a0023f941980f4f9aaf9a795, type: 2}
+  - {fileID: 11400000, guid: 5c13780cb5886514dbc5b0f5db703798, type: 2}
+  - {fileID: 11400000, guid: cca79e61f51a7c941bd49918b703a4a4, type: 2}
+  - {fileID: 11400000, guid: c2038bd25322e3e4cb44fc67109ce9ad, type: 2}
+  - {fileID: 11400000, guid: ee6d889de9c28564e84315a25c2e18bf, type: 2}
+  - {fileID: 11400000, guid: ee6d889de9c28564e84315a25c2e18bf, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 0}
+  fontZoneNight: {fileID: 0}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 11

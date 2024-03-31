@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: Royaume de Gulrur
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 355344e1827250e4b952d38cf4556de4, type: 2}
+  - {fileID: 11400000, guid: 355344e1827250e4b952d38cf4556de4, type: 2}
+  - {fileID: 11400000, guid: cb706286a1a7dc24f9a1a3399858eeb1, type: 2}
+  - {fileID: 11400000, guid: 76b6497e51c04974994000aa429c2cb6, type: 2}
+  - {fileID: 11400000, guid: 9859052a3206cef488036981f497f861, type: 2}
+  - {fileID: 11400000, guid: 521856038690736429a39f228c5ee444, type: 2}
+  - {fileID: 11400000, guid: da1b85961bf73774f84d9125329e276e, type: 2}
+  - {fileID: 11400000, guid: 4982181eec234da4498535f1b4c888b3, type: 2}
+  - {fileID: 11400000, guid: e5cad47b45aec9a49afa3ef48f3c80ce, type: 2}
+  - {fileID: 11400000, guid: 227047738a21a2648b91315e1c0bf2af, type: 2}
+  - {fileID: 11400000, guid: 2672a70652cf49d4d97d430341cdfee3, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 355344e1827250e4b952d38cf4556de4, type: 2}
+  - {fileID: 11400000, guid: 355344e1827250e4b952d38cf4556de4, type: 2}
+  - {fileID: 11400000, guid: 9859052a3206cef488036981f497f861, type: 2}
+  - {fileID: 11400000, guid: 521856038690736429a39f228c5ee444, type: 2}
+  - {fileID: 11400000, guid: e5cad47b45aec9a49afa3ef48f3c80ce, type: 2}
+  - {fileID: 11400000, guid: 227047738a21a2648b91315e1c0bf2af, type: 2}
+  - {fileID: 11400000, guid: a53fe9b14d36d75499bfbe3f39bfd0b4, type: 2}
+  - {fileID: 11400000, guid: ad1130dc405b08246bff176e47fbd4dd, type: 2}
+  - {fileID: 11400000, guid: 8ef13b17e33a6b945a0a21896c55cd80, type: 2}
+  - {fileID: 11400000, guid: 46d860ab163607546b2f135cc0c2ccab, type: 2}
+  - {fileID: 11400000, guid: 0a228ebdbe9c3b147949421f2b7ce5bd, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 21300000, guid: b1ad87215c68fd949aba0bde9c9cce54, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 223478e712c6e844e9d7076129b2c978, type: 3}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 9

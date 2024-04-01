@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public class SpawningManager : MonoSingleton<SpawningManager>
@@ -104,6 +105,8 @@ public class SpawningManager : MonoSingleton<SpawningManager>
         }
 
         centerBattle.position -= new Vector3((howManyMonster - 1) * 150 * 0.5f, 0, 0);
+
+
     } // Fait apparaitre les ennemis en combat
 }
 

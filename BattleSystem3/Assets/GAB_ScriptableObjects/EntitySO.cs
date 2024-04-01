@@ -7,6 +7,7 @@ public class EntitySO : ScriptableObject
     [Header("Informations")]
     public string entityName;
     public Sprite sprite;
+    public float spawnPosY;
     public EntityType type;
 
     [Header("Statistics")]

@@ -277,6 +277,7 @@ public class EntityManager : MonoBehaviour
     public void LinkingImage()
     {
         entityImage.sprite = entitySO.sprite;
+        rectTransform.position = rectTransform.position + new Vector3(0, entitySO.spawnPosY, 0);
         entityImage.SetNativeSize();
         entityNameDisplay.text = entityName;
         entityAnim = GetComponent<Animation>();

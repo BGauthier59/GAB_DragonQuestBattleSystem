@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: "P\xE9ninsule polaire"
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: fdd3db866a94ced4d98a6af88b4c64e8, type: 2}
+  - {fileID: 11400000, guid: 592789d210fd41d4ba75a7d2f594a38f, type: 2}
+  - {fileID: 11400000, guid: 1adc1fc67fa898b4fb347848e6dfee8d, type: 2}
+  - {fileID: 11400000, guid: c14ec83599eb3cb4bbe8b8c3d89329cc, type: 2}
+  - {fileID: 11400000, guid: 91021c12b165dde47ac9a4305b33a544, type: 2}
+  - {fileID: 11400000, guid: ef27cf1a8e5fd2041816a0a2ac662719, type: 2}
+  - {fileID: 11400000, guid: a9a32694dd7f46e4385e6b666230bef9, type: 2}
+  - {fileID: 11400000, guid: eab267cd8cf00d74195351188c51a60f, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: fdd3db866a94ced4d98a6af88b4c64e8, type: 2}
+  - {fileID: 11400000, guid: 592789d210fd41d4ba75a7d2f594a38f, type: 2}
+  - {fileID: 11400000, guid: 1adc1fc67fa898b4fb347848e6dfee8d, type: 2}
+  - {fileID: 11400000, guid: c14ec83599eb3cb4bbe8b8c3d89329cc, type: 2}
+  - {fileID: 11400000, guid: 91021c12b165dde47ac9a4305b33a544, type: 2}
+  - {fileID: 11400000, guid: ef27cf1a8e5fd2041816a0a2ac662719, type: 2}
+  - {fileID: 11400000, guid: a9a32694dd7f46e4385e6b666230bef9, type: 2}
+  - {fileID: 11400000, guid: eab267cd8cf00d74195351188c51a60f, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 21300000, guid: 4c6bca9cc93c13340b1fca8bed08ed8c, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: f7633e5573794e2498fe28516625b055, type: 3}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 18

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: Epave
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 9163b48ede0504840b0c7277487df491, type: 2}
+  - {fileID: 11400000, guid: 003bc53300bc6914f9531acab18abf29, type: 2}
+  - {fileID: 11400000, guid: 0d8fd4fcec000cd4ca302e158be9a7d8, type: 2}
+  - {fileID: 11400000, guid: 5e6c44e3e36de984595a23d6b6008321, type: 2}
+  - {fileID: 11400000, guid: 00eb15d389861e34ba3b6dbebfc1c52c, type: 2}
+  - {fileID: 11400000, guid: 30499021e9e0cf44491f23b293888908, type: 2}
+  - {fileID: 11400000, guid: 5307e1e7d1d0a3b43a25cb7cb1be8e4c, type: 2}
+  - {fileID: 11400000, guid: 7517921eb3715b845bfd37fa9e56f74f, type: 2}
+  - {fileID: 11400000, guid: aa09b7d25bf582340893a91883e2a3e8, type: 2}
+  - {fileID: 11400000, guid: 094034e053fb806428b9012b797ce570, type: 2}
+  - {fileID: 11400000, guid: beaf5920b2c29814bbb3d4da15e82949, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 9163b48ede0504840b0c7277487df491, type: 2}
+  - {fileID: 11400000, guid: 003bc53300bc6914f9531acab18abf29, type: 2}
+  - {fileID: 11400000, guid: 0d8fd4fcec000cd4ca302e158be9a7d8, type: 2}
+  - {fileID: 11400000, guid: 5e6c44e3e36de984595a23d6b6008321, type: 2}
+  - {fileID: 11400000, guid: 00eb15d389861e34ba3b6dbebfc1c52c, type: 2}
+  - {fileID: 11400000, guid: 30499021e9e0cf44491f23b293888908, type: 2}
+  - {fileID: 11400000, guid: 5307e1e7d1d0a3b43a25cb7cb1be8e4c, type: 2}
+  - {fileID: 11400000, guid: 7517921eb3715b845bfd37fa9e56f74f, type: 2}
+  - {fileID: 11400000, guid: aa09b7d25bf582340893a91883e2a3e8, type: 2}
+  - {fileID: 11400000, guid: 094034e053fb806428b9012b797ce570, type: 2}
+  - {fileID: 11400000, guid: beaf5920b2c29814bbb3d4da15e82949, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 21300000, guid: 612c0f35ac522084d864be8179c712ec, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 612c0f35ac522084d864be8179c712ec, type: 3}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 14

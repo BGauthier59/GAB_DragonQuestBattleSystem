@@ -15,7 +15,7 @@ MonoBehaviour:
   entityName: Orque rouge
   sprite: {fileID: 21300000, guid: e80631a5aa0bf06478c1023dd462b528, type: 3}
   type: 1
-  hp: 89
+  hp: 98
   mp: 0
   atk: 70
   defense: 52
@@ -41,4 +41,4 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
   gold: 25
-  xp: 28
+  xp: 32

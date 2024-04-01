@@ -1230,6 +1230,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b61399a9909d5c54d9ec5057227f41b5, type: 2}
   - {fileID: 11400000, guid: 8c1aceba9166d934cb0a5790c8effcbd, type: 2}
   - {fileID: 11400000, guid: 843c68859eb39504683fd498ae36a50d, type: 2}
+  - {fileID: 11400000, guid: b64753a54881e5a42b9b58a769d941fb, type: 2}
+  - {fileID: 11400000, guid: 7d81656c6c70ae74ba43edb3dc782a4f, type: 2}
+  - {fileID: 11400000, guid: 261cc83aafa9d184685787f69f9c198c, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 2248a8ad061c3984099c935ba4e1e800, type: 2}
+  - {fileID: 11400000, guid: d9dc11f306d8f2345a2cc61ab2c929dd, type: 2}
+  - {fileID: 11400000, guid: 8455749d61d9c5948871c03e924ee66d, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -4285,6 +4295,28 @@ MonoBehaviour:
     - m_Text: "R\xE9gion de Port Lotecque"
       m_Image: {fileID: 0}
     - m_Text: "R\xE9gion d'Ordr\xE9al"
+      m_Image: {fileID: 0}
+    - m_Text: Epave
+      m_Image: {fileID: 0}
+    - m_Text: "Oc\xE9an nord"
+      m_Image: {fileID: 0}
+    - m_Text: "Oc\xE9an sud"
+      m_Image: {fileID: 0}
+    - m_Text: "\xCEles d\xE9sertes de la mer int\xE9rieure"
+      m_Image: {fileID: 0}
+    - m_Text: "P\xE9ninsule polaire"
+      m_Image: {fileID: 0}
+    - m_Text: "Presqu'\xEEle sacr\xE9e de Dalgor"
+      m_Image: {fileID: 0}
+    - m_Text: "R\xE9gion de Dalgorie"
+      m_Image: {fileID: 0}
+    - m_Text: "R\xE9gion du Sanctum"
+      m_Image: {fileID: 0}
+    - m_Text: "\xCEle des chanceliers"
+      m_Image: {fileID: 0}
+    - m_Text: Domarium d'Alad
+      m_Image: {fileID: 0}
+    - m_Text: "R\xE9gion de Berserkia"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

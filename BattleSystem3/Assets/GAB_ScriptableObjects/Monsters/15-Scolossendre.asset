@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Scolossendre
   sprite: {fileID: 21300000, guid: 35f8ef185f49f3f4da5abbf1f3afc987, type: 3}
+  spawnPosY: 5
   type: 1
   hp: 30
   mp: 0

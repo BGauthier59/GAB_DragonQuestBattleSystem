@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Farfagnome
   sprite: {fileID: 21300000, guid: e94a01fd92caf904795708b03f93bb21, type: 3}
+  spawnPosY: 18
   type: 1
   hp: 43
   mp: 0

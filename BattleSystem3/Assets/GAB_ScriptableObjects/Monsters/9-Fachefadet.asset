@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Fachefadet
   sprite: {fileID: 21300000, guid: 72a0dabe52eddb04397a0953366140dc, type: 3}
+  spawnPosY: 21
   type: 1
   hp: 25
   mp: 0

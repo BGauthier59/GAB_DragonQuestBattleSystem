@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "Mauvaise \xE9toile"
   sprite: {fileID: 21300000, guid: 94ba359fb141c3246b867a567b4bd242, type: 3}
+  spawnPosY: 12
   type: 1
   hp: 57
   mp: 0

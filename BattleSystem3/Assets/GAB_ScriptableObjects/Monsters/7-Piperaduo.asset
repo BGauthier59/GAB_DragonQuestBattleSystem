@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Piperaduo
   sprite: {fileID: 21300000, guid: 5d35ceacf48c0dc4e904e2b96765ed68, type: 3}
+  spawnPosY: 4
   type: 1
   hp: 22
   mp: 0

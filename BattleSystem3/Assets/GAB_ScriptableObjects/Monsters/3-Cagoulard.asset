@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Cagoulard
   sprite: {fileID: 21300000, guid: 1495a29e9ab173f41960116f7a02b4cc, type: 3}
+  spawnPosY: 15
   type: 1
   hp: 11
   mp: 0

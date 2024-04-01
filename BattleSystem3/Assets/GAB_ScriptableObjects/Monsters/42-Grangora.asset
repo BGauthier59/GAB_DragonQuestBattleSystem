@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Grangora
   sprite: {fileID: 21300000, guid: 1b7e51cb066c76f48a92e1a2d6a9e961, type: 3}
+  spawnPosY: 53
   type: 1
   hp: 62
   mp: 0

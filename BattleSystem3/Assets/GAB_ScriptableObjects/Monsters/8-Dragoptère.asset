@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "Dragopt\xE8re"
   sprite: {fileID: 21300000, guid: 7fb696e94e5e4804daca57afe3b57a5c, type: 3}
+  spawnPosY: 40
   type: 1
   hp: 20
   mp: 0

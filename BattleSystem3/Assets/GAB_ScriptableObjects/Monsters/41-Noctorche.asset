@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Noctorche
   sprite: {fileID: 21300000, guid: be1fe98426da4f442adc66fc82116fa4, type: 3}
+  spawnPosY: 14
   type: 1
   hp: 44
   mp: 0

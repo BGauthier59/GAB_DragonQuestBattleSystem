@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Mysticobra
   sprite: {fileID: 21300000, guid: 9a4e37e6cbd73a643a69652ef55c3349, type: 3}
+  spawnPosY: 21
   type: 1
   hp: 48
   mp: 0

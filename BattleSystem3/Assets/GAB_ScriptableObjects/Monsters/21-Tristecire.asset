@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Tristecire
   sprite: {fileID: 21300000, guid: 27c2edfd57cf68c478eb643c1a959b15, type: 3}
+  spawnPosY: 14
   type: 1
   hp: 32
   mp: 0

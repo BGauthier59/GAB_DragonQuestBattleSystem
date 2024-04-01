@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "Ogre du d\xE9sert"
   sprite: {fileID: 21300000, guid: 589bd7e346184574bb0786c7ec67f504, type: 3}
+  spawnPosY: 37
   type: 1
   hp: 124
   mp: 0

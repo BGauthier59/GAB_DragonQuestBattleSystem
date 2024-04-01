@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "Malh\xEAtre"
   sprite: {fileID: 21300000, guid: 1904886a4027e644f806cf3bec31f9e0, type: 3}
+  spawnPosY: 32
   type: 1
   hp: 77
   mp: 0

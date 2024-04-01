@@ -28,6 +28,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c2038bd25322e3e4cb44fc67109ce9ad, type: 2}
   - {fileID: 11400000, guid: ee6d889de9c28564e84315a25c2e18bf, type: 2}
   - {fileID: 11400000, guid: ee6d889de9c28564e84315a25c2e18bf, type: 2}
+  - {fileID: 11400000, guid: ee6d889de9c28564e84315a25c2e18bf, type: 2}
   configsInZoneNight:
   - {fileID: 11400000, guid: 0c7688e39a91c174f84dcf42bba46d40, type: 2}
   - {fileID: 11400000, guid: c5e85d946a6c665498ddcd82a3a70dd7, type: 2}
@@ -42,6 +43,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5c13780cb5886514dbc5b0f5db703798, type: 2}
   - {fileID: 11400000, guid: cca79e61f51a7c941bd49918b703a4a4, type: 2}
   - {fileID: 11400000, guid: c2038bd25322e3e4cb44fc67109ce9ad, type: 2}
+  - {fileID: 11400000, guid: ee6d889de9c28564e84315a25c2e18bf, type: 2}
   - {fileID: 11400000, guid: ee6d889de9c28564e84315a25c2e18bf, type: 2}
   - {fileID: 11400000, guid: ee6d889de9c28564e84315a25c2e18bf, type: 2}
   minMaxMonstersInBattle: 0000000000000000

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Regaliec
   sprite: {fileID: 21300000, guid: f12ca3d625f6f0f4a8c87b4d61daa61e, type: 3}
+  spawnPosY: 13
   type: 1
   hp: 68
   mp: 0

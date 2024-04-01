@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Ratus
   sprite: {fileID: 21300000, guid: a3762d177ace180488ccfd9a6e4ebeef, type: 3}
+  spawnPosY: 1
   type: 1
   hp: 10
   mp: 0

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "Roi p\xEAcheur"
   sprite: {fileID: 21300000, guid: 97dc954e8f23c184aa28efe8c0dbacba, type: 3}
+  spawnPosY: 32
   type: 1
   hp: 96
   mp: 0

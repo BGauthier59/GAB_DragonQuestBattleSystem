@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Bourrold
   sprite: {fileID: 21300000, guid: d2a44d6d43a40d6479750cc44c129d02, type: 3}
+  spawnPosY: 21
   type: 1
   hp: 58
   mp: 0

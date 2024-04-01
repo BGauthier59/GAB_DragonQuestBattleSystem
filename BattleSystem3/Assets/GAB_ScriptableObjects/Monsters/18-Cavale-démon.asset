@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "Cavale-d\xE9mon"
   sprite: {fileID: 21300000, guid: 52b628abb7c039848aa0706a382c6a8f, type: 3}
+  spawnPosY: 30
   type: 1
   hp: 35
   mp: 0

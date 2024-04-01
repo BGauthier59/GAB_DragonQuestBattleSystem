@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Gourou mentor
   sprite: {fileID: 21300000, guid: 0438dc949eda16449b494c20b189490a, type: 3}
+  spawnPosY: 33
   type: 1
   hp: 55
   mp: 0

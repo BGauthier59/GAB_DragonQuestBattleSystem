@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "Pr\xEAtre maudit"
   sprite: {fileID: 21300000, guid: e2d24e42b33a9f44988b0fe0aab61863, type: 3}
+  spawnPosY: 32
   type: 1
   hp: 51
   mp: 0

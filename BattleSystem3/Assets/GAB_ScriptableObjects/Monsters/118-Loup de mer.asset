@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Loup de mer
   sprite: {fileID: 21300000, guid: e1073f2fec1265d4aaf95ddccd9840d7, type: 3}
+  spawnPosY: 20
   type: 1
   hp: 75
   mp: 0

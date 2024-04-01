@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: Cap dalgorique
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 51580c7bd6a3b5e4ca13d9c914f73f63, type: 2}
+  - {fileID: 11400000, guid: f63c4524fbad9a6489bc90da7dea67a7, type: 2}
+  - {fileID: 11400000, guid: d08adfa58742f074c9e046113f693ba9, type: 2}
+  - {fileID: 11400000, guid: 5ad0463fcedef7d48805363e61bb1715, type: 2}
+  - {fileID: 11400000, guid: e84ad71b7e2b5d946b2d39efce3921b9, type: 2}
+  - {fileID: 11400000, guid: da9e70f4fc198ca4abcf43f2959cc722, type: 2}
+  - {fileID: 11400000, guid: 52ad3fdad7041c7429bd55d0d84d124c, type: 2}
+  - {fileID: 11400000, guid: 3b1b2ef997e6eab40b1df8d85b95f6a9, type: 2}
+  - {fileID: 11400000, guid: fb5bf43cccf00a04288403c2696f76d6, type: 2}
+  - {fileID: 11400000, guid: 2de244b79e63970458982010fa448994, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 51580c7bd6a3b5e4ca13d9c914f73f63, type: 2}
+  - {fileID: 11400000, guid: f63c4524fbad9a6489bc90da7dea67a7, type: 2}
+  - {fileID: 11400000, guid: 5ad0463fcedef7d48805363e61bb1715, type: 2}
+  - {fileID: 11400000, guid: 52ad3fdad7041c7429bd55d0d84d124c, type: 2}
+  - {fileID: 11400000, guid: 3b1b2ef997e6eab40b1df8d85b95f6a9, type: 2}
+  - {fileID: 11400000, guid: fb5bf43cccf00a04288403c2696f76d6, type: 2}
+  - {fileID: 11400000, guid: 2de244b79e63970458982010fa448994, type: 2}
+  - {fileID: 11400000, guid: d06517b882066ec4c9c99401a996a30b, type: 2}
+  - {fileID: 11400000, guid: d40a39ecc2967184ea003ecae45c6ee7, type: 2}
+  - {fileID: 11400000, guid: 332cf868024962545a7bbddd459cf963, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 21300000, guid: 701bfe5c03772614c8741fc2b6808e04, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 96a2e304fd4d80b4789e3c6c553bc882, type: 3}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 20

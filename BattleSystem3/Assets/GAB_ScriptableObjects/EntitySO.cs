@@ -9,6 +9,7 @@ public class EntitySO : ScriptableObject
     public Sprite sprite;
     public float spawnPosY;
     public EntityType type;
+    public string pronoun;
 
     [Header("Statistics")]
     public int hp;
@@ -22,6 +23,9 @@ public class EntitySO : ScriptableObject
     public int criticalHit;
     [Range (0, 100)]
     public int dodge;
+
+    [Header("Resistances")]
+    public int entityResilienceToMPTheft;
 
     [Header("Abilities")]
     public List<SpellSO> spells;

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class InterfaceManager : MonoSingleton<InterfaceManager>
 {
     public float time = 1.0f;
+    public float needToReadTime = 2.0f;
 
     public TMP_Dropdown areas;
     public Image environment;

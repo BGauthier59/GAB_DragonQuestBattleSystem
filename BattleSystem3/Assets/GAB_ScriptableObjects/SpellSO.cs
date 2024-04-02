@@ -6,6 +6,7 @@ public class SpellSO : ScriptableObject
     [Header("Information")]
     public string spellName;
     [TextArea(3, 3)] public string spellDescription;
+    [TextArea(3, 3)] public string inBattleDescription;
     public int spellIndex;
     public SpellType spellType;
     public int cost;

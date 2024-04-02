@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Gauthier
   sprite: {fileID: 0}
+  spawnPosY: 0
   type: 0
+  pronoun: 
   hp: 234
   mp: 62
   atk: 200
@@ -24,12 +26,14 @@ MonoBehaviour:
   mana: 1
   criticalHit: 10
   dodge: 10
+  entityResilienceToMPTheft: 0
   spells:
   - {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
   - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
   - {fileID: 11400000, guid: f856d990fb246a24b9f0b7b121f1999e, type: 2}
   - {fileID: 11400000, guid: 776da5e85dfd39d42ba29818aa654bd5, type: 2}
   - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
+  - {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
   weapon: {fileID: 11400000, guid: a19ca8c60de92e54d898a6747ea8b0cd, type: 2}
   helmet: {fileID: 11400000, guid: 6ccf3ef4a648ab84fb7909233c1d62c4, type: 2}
   shield: {fileID: 11400000, guid: 0f9825fd0d3c8c044af134238438311e, type: 2}
@@ -53,6 +57,8 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 776da5e85dfd39d42ba29818aa654bd5, type: 2}
   - learningLevel: 8
     learningSpell: {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
+  - learningLevel: 8
+    learningSpell: {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

@@ -10,18 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Vol de Magie
+  m_Name: Coupe claire
   m_EditorClassIdentifier: 
-  spellName: Vol de Magie
-  spellDescription: Vole les points de magie d'un ennemi.
-  spellIndex: 3
-  spellType: 0
-  cost: 3
+  spellName: Coupe claire
+  spellDescription: Vise les pooints faibles de l'ennemi pour tenter de porter un
+    coup critique.
+  inBattleDescription: " se pr\xE9pare \xE0 porter un coup d\xE9vastateur !"
+  spellIndex: 5
+  spellType: 1
+  cost: 0
   hasSpecialEffect: 1
   doTargetEveryone: 0
   helpingSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 80
+  successRate: 10
   strenght: 0
   elementType: 0
-  factor: 0
+  factor: 100

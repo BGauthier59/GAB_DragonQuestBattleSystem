@@ -14,6 +14,7 @@ public class EntityManager : MonoBehaviour
 
     public int entityIndex;
     public EntityType entityType;
+    public string entityPronoun;
     public EntityStrategy entityStrategy;
     
     public string entityName;
@@ -43,6 +44,7 @@ public class EntityManager : MonoBehaviour
 
     public int entityDodgeInit;
     public int entityDodge;
+    public int entityResilienceToMPTheft;
 
     public List<SpellSO> entitySpells;
 
@@ -80,7 +82,9 @@ public class EntityManager : MonoBehaviour
         name = entityName;
 
         entityType = entitySO.type;
-        
+
+        entityPronoun = entitySO.pronoun;
+
         entityHpMax = entitySO.hp;
         entityHp = entityHpMax;
         
@@ -104,6 +108,8 @@ public class EntityManager : MonoBehaviour
 
         entityDodgeInit = entitySO.dodge;
         entityDodge = entityDodgeInit;
+
+        entityResilienceToMPTheft = entitySO.entityResilienceToMPTheft;
 
         entitytLv = entitySO.level;
         
@@ -385,5 +391,9 @@ public class EntityManager : MonoBehaviour
     }
 
     #endregion
-    
+
+    public void StatutEffect()
+    {
+
+    }
 }

@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3613da6db18ab8d44b981e903bb8a24b, type: 3}
-  m_Name: Sanctum
+  m_Name: Sanctum 1
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: 905fa501bc1129a49abc314d72420c95, type: 2}
+  - {fileID: 11400000, guid: e4ea5851f31259b42a9b0daac12a2dc9, type: 2}
+  - {fileID: 11400000, guid: e4ea5851f31259b42a9b0daac12a2dc9, type: 2}
   - {fileID: 11400000, guid: 905fa501bc1129a49abc314d72420c95, type: 2}

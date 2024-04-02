@@ -17,7 +17,7 @@ public class FightManager : MonoSingleton<FightManager>
     {
         if (attacker.entityType == EntityType.Monster)
         {
-            attacker.entityAnim.Play("MonsterAttacks");
+            //attacker.entityAnim.Play("MonsterAttacks");
         }
         
         AudioManager.instance.Play("Attack");
@@ -595,7 +595,7 @@ public class FightManager : MonoSingleton<FightManager>
 
                 break;
 
-            case 6:
+            case 6: 
 
             break;
 
@@ -609,6 +609,8 @@ public class FightManager : MonoSingleton<FightManager>
         targetEntity.entityImage.color = Color.white;
         BattleManager.instance.hasEntityActed = true;
     }
+
+    
 
     public bool Dodging(int dodgeValue)
     {

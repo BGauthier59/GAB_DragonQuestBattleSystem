@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -13,6 +14,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     public bool hasEntityActed;
     public bool hasSpellBeenChosen;
     public bool hasMonsterBeenTargeted;
+    public bool hasEntityStatutBeenVerified;
     public EntityManager entityActing;
     public EntityManager entityTargeted;
     public SpellSO spellSelected;
@@ -265,8 +267,8 @@ public class BattleManager : MonoSingleton<BattleManager>
                         break;
                         
                     case 6: // Status
-                        entity.entityStatus = Status.None;
-                        statNotif = $"Le status de {entity.entityName} revient à la normale.";
+                        entity.entityStatut = Statut.None;
+                        statNotif = $"Le statut de {entity.entityName} revient à la normale.";
                         break;
                         
                     default:
@@ -286,6 +288,11 @@ public class BattleManager : MonoSingleton<BattleManager>
         entityActing = ally;
         
         AudioManager.instance.Play("PrepareAttack");
+        
+        StartCoroutine(OnStatutEffect(ally, ally.entityStatut));
+
+        hasEntityStatutBeenVerified = false;
+
         InterfaceManager.instance.Message(true, $"C'est au tour de {ally.entityName} ! Que voulez-vous faire ?");
         yield return new WaitForSeconds(InterfaceManager.instance.time);
 
@@ -651,7 +658,43 @@ public class BattleManager : MonoSingleton<BattleManager>
         targets.Clear();
         yield return new WaitForSeconds(InterfaceManager.instance.time);
     }
-    
+
+    public IEnumerator OnStatutEffect(EntityManager entity, Statut statut)
+    {
+        bool isAlly = false;
+
+        if (entity.entityType == EntityType.Ally) isAlly = true;
+
+        switch (statut)
+        {
+            case Statut.None:
+
+                hasEntityStatutBeenVerified = true;
+                Debug.Log("statut vérifié pour " + entity + entity.entityStatut);
+
+                break;
+
+            case Statut.Empoisonné:
+
+                InterfaceManager.instance.Message(true, $"{entity.entityName} souffre du poison !");
+                Debug.Log("statut vérifié pour " + entity + entity.entityStatut);
+
+                break;
+
+            case Statut.Brûlé: 
+                
+                
+                
+                break;
+            case Statut.Endormi: break;
+            case Statut.EmpMagique: break;
+            case Statut.Silence: break;
+        }
+
+        yield return new WaitForSeconds(InterfaceManager.instance.time);
+
+    }
+
     void CheckVictory()
     {
         // Check héros

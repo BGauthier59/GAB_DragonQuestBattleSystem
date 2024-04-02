@@ -27,7 +27,8 @@ MonoBehaviour:
   criticalHit: 0
   dodge: 0
   entityResilienceToMPTheft: 0
-  spells: []
+  spells:
+  - {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}

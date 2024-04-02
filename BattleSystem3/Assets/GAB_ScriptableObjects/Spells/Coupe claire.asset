@@ -15,7 +15,7 @@ MonoBehaviour:
   spellName: Coupe claire
   spellDescription: Vise les pooints faibles de l'ennemi pour tenter de porter un
     coup critique.
-  inBattleDescription: " se pr\xE9pare \xE0 porter un coup d\xE9vastateur !"
+  inBattleDescription: "se pr\xE9pare \xE0 porter un coup d\xE9vastateur !"
   spellIndex: 5
   spellType: 1
   cost: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
   doTargetEveryone: 0
   helpingSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 10
+  successRate: 40
   strenght: 0
   elementType: 0
   factor: 100

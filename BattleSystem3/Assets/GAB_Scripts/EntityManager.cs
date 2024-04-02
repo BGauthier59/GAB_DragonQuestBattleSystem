@@ -48,7 +48,7 @@ public class EntityManager : MonoBehaviour
 
     public List<SpellSO> entitySpells;
 
-    public Status entityStatus;
+    public Statut entityStatut;
 
     public List<bool> hasEffect = new List<bool>();
     public List<int> effectList = new List<int>();
@@ -275,7 +275,7 @@ public class EntityManager : MonoBehaviour
 
         isDefending = false;
 
-        entityStatus = Status.None;
+        entityStatut = Statut.None;
     }
     
     #region Monsters

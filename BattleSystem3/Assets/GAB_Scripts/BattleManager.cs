@@ -290,6 +290,7 @@ public class BattleManager : MonoSingleton<BattleManager>
         AudioManager.instance.Play("PrepareAttack");
         
         StartCoroutine(OnStatutEffect(ally, ally.entityStatut));
+        yield return new WaitForSeconds(InterfaceManager.instance.time);
 
         hasEntityStatutBeenVerified = false;
 
@@ -670,29 +671,81 @@ public class BattleManager : MonoSingleton<BattleManager>
             case Statut.None:
 
                 hasEntityStatutBeenVerified = true;
-                Debug.Log("statut vérifié pour " + entity + entity.entityStatut);
-
                 break;
 
             case Statut.Empoisonné:
 
-                InterfaceManager.instance.Message(true, $"{entity.entityName} souffre du poison !");
-                Debug.Log("statut vérifié pour " + entity + entity.entityStatut);
+                float poisonDamages = entity.entityHpMax / 16;
+                int realPoisonDamages = (int)poisonDamages;
+                if (realPoisonDamages >= 32) realPoisonDamages = 32;
 
+                if (entity.entityHp <= realPoisonDamages)
+                {
+                    InterfaceManager.instance.Message(true, $"{entity.entityName} souffre du poison et perd {math.distance(entity.entityHp, 1)} PVs! Le poison s'est dissipé...");
+                    entity.entityHp = 1;
+                    entity.entityStatut = Statut.None;
+                    StatDisplayManager.instance.DisplayStat(entity);
+                    yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+                }
+                else
+                {
+                    InterfaceManager.instance.Message(true, $"{entity.entityName} souffre du poison et perd {realPoisonDamages} PVs!");
+                    entity.entityHp -= realPoisonDamages;
+                    StatDisplayManager.instance.DisplayStat(entity);
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                }
                 break;
 
-            case Statut.Brûlé: 
-                
-                
-                
+            case Statut.Brûlé:
+
+                float burnDamages = entity.entityHpMax / 12;
+                int realBurnDamages = (int)burnDamages;
+                if (realBurnDamages >= 32) realBurnDamages = 32;
+
+                if (entity.entityHp <= realBurnDamages) 
+                {
+                    InterfaceManager.instance.Message(true, $"{entity.entityName} souffre de la brûlure et perd {math.distance(entity.entityHp, 1)} PVs! La brûlure s'est dissipée...");
+                    entity.entityHp = 1;
+                    entity.entityStatut = Statut.None;
+                    StatDisplayManager.instance.DisplayStat(entity);
+                    yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+                }
+                else
+                {
+                    InterfaceManager.instance.Message(true, $"{entity.entityName} souffre du poison et perd {realBurnDamages} PVs!");
+                    entity.entityHp -= realBurnDamages;
+                    StatDisplayManager.instance.DisplayStat(entity);
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                }
                 break;
-            case Statut.Endormi: break;
-            case Statut.EmpMagique: break;
+
+            case Statut.EmpMagique:
+
+                float magDamages = entity.entityMpMax / 16;
+                int realMagDamages = (int)magDamages;
+                if (realMagDamages >= 16) realMagDamages = 16;
+
+                if (entity.entityMp <= realMagDamages)
+                {
+                    InterfaceManager.instance.Message(true, $"{entity.entityName} souffre du poison magique et perd {math.distance(entity.entityMp, 1)} PMs! Le poison magique s'est dissipé...");
+                    entity.entityMp = 1;
+                    entity.entityStatut = Statut.None;
+                    StatDisplayManager.instance.DisplayStat(entity);
+                    yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+                }
+                else
+                {
+                    InterfaceManager.instance.Message(true, $"{entity.entityName} souffre du poison magique et perd {realMagDamages} PMs!");
+                    entity.entityMp -= realMagDamages;
+                    StatDisplayManager.instance.DisplayStat(entity);
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                }
+                break;
+
             case Statut.Silence: break;
+            case Statut.Endormi: break;
         }
-
         yield return new WaitForSeconds(InterfaceManager.instance.time);
-
     }
 
     void CheckVictory()

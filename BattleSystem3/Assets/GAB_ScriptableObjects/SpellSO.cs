@@ -39,8 +39,8 @@ public enum ElementType
 public enum Statut
 {
     None, // Aucun effet
-    Brûlé, // Subit 1/16 des dégâts max par tour : maximum = 32
-    Empoisonné, // Subit 1/16 des dégâts max par tour : maximum 32. Attaque réduite de 1/8
+    Brûlé, // Subit 1/12 des dégâts max par tour
+    Empoisonné, // Subit 1/16 des dégâts max par tour
     EmpMagique, // Comme poison mais pour MP
     Endormi, // Ne peut pas agir. 1/3 de se réveiller pendant un tour
     Silence, // Ne peut pas lancer de sort.

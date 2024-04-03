@@ -577,25 +577,15 @@ public class FightManager : MonoSingleton<FightManager>
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages} points de dégâts !");
                     targetEntity.entityHp -= realDamages;
 
-                    if (targetEntity.entityHp <= 0)
-                    {
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
-                        targetEntity.entityHp = 0;
-                        TargetIsDefeated(targetEntity);
-                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
-                    }
-                    else
-                    {
-                        StatDisplayManager.instance.DisplayStat(targetEntity);
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
-                        targetEntity.entityImage.color = Color.white;
-                    }
+                    StartCoroutine(CheckDefeat(targetEntity));
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
                 }
 
                 break;
 
-            case 6: 
+            case 6: // Multicoups
+
+
 
             break;
 
@@ -610,7 +600,23 @@ public class FightManager : MonoSingleton<FightManager>
         BattleManager.instance.hasEntityActed = true;
     }
 
-    
+    public IEnumerator CheckDefeat(EntityManager targetEntity)
+    {
+        if (targetEntity.entityHp <= 0)
+        {
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
+            targetEntity.entityHp = 0;
+            TargetIsDefeated(targetEntity);
+            InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
+        }
+        else
+        {
+            StatDisplayManager.instance.DisplayStat(targetEntity);
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
+            targetEntity.entityImage.color = Color.white;
+        }
+    }
 
     public bool Dodging(int dodgeValue)
     {

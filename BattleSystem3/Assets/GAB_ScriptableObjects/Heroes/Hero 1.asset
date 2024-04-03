@@ -19,14 +19,18 @@ MonoBehaviour:
   pronoun: 
   hp: 234
   mp: 62
-  atk: 200
-  defense: 25
+  atk: 30
+  defense: 10
   agility: 10
   level: 20
   mana: 1
   criticalHit: 10
   dodge: 10
   entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 0
+  entityResilienceToSilence: 0
+  entityResilienceToSleep: 0
   spells:
   - {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
   - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
@@ -34,10 +38,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 776da5e85dfd39d42ba29818aa654bd5, type: 2}
   - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
   - {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
-  weapon: {fileID: 11400000, guid: a19ca8c60de92e54d898a6747ea8b0cd, type: 2}
-  helmet: {fileID: 11400000, guid: 6ccf3ef4a648ab84fb7909233c1d62c4, type: 2}
-  shield: {fileID: 11400000, guid: 0f9825fd0d3c8c044af134238438311e, type: 2}
-  armor: {fileID: 11400000, guid: 06f058434d5d48749a8674b8b2c9e6b1, type: 2}
+  - {fileID: 11400000, guid: b0998091b84311948bff433ee090ca4f, type: 2}
+  weapon: {fileID: 0}
+  helmet: {fileID: 0}
+  shield: {fileID: 0}
+  armor: {fileID: 0}
   hpLevelUp: 0a0000000d000000
   mpLevelUp: 0500000008000000
   atkLevelUp: 0500000007000000
@@ -59,6 +64,8 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
   - learningLevel: 8
     learningSpell: {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
+  - learningLevel: 8
+    learningSpell: {fileID: 11400000, guid: b0998091b84311948bff433ee090ca4f, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

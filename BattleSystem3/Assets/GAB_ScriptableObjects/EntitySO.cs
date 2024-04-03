@@ -26,6 +26,11 @@ public class EntitySO : ScriptableObject
 
     [Header("Resistances")]
     public int entityResilienceToMPTheft;
+    public int entityResilienceToPoison;
+    public int entityResilienceToBurn;
+    public int entityResilienceToSilence;
+    public int entityResilienceToSleep;
+
 
     [Header("Abilities")]
     public List<SpellSO> spells;

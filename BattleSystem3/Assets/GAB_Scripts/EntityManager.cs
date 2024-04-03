@@ -45,6 +45,10 @@ public class EntityManager : MonoBehaviour
     public int entityDodgeInit;
     public int entityDodge;
     public int entityResilienceToMPTheft;
+    public int entityResilienceToPoison;
+    public int entityResilienceToBurn;
+    public int entityResilienceToSilence;
+    public int entityResilienceToSleep;
 
     public List<SpellSO> entitySpells;
 
@@ -110,6 +114,10 @@ public class EntityManager : MonoBehaviour
         entityDodge = entityDodgeInit;
 
         entityResilienceToMPTheft = entitySO.entityResilienceToMPTheft;
+        entityResilienceToPoison = entitySO.entityResilienceToPoison;
+        entityResilienceToBurn = entitySO.entityResilienceToBurn;
+        entityResilienceToSilence = entitySO.entityResilienceToSilence;
+        entityResilienceToSleep = entitySO.entityResilienceToSleep;
 
         entitytLv = entitySO.level;
         

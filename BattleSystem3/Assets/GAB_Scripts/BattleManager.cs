@@ -184,7 +184,7 @@ public class BattleManager : MonoSingleton<BattleManager>
             if (!entityManager.isDefeated)
             {
                 entityManager.isDefending = false;
-                
+
                 yield return new WaitUntil(() => isVictoryChecked);
                 isVictoryChecked = false;
 
@@ -346,6 +346,14 @@ public class BattleManager : MonoSingleton<BattleManager>
     
     public void MagicButtonSelected()
     {
+        if (entityActing.entityStatut == Statut.Silence)
+        {
+            InterfaceManager.instance.Message(true, $"{entityActing.entityName} est dans l'incapacité de lancer des sorts !");
+            StartCoroutine(AllyIsActing(entityActing));
+            return;
+        }
+
+
         InterfaceManager.instance.ActionButtonsState(false); // Les boutons d'actions disparaissent
         InterfaceManager.instance.CancelButtonState(true);
 
@@ -712,7 +720,7 @@ public class BattleManager : MonoSingleton<BattleManager>
                 }
                 else
                 {
-                    InterfaceManager.instance.Message(true, $"{entity.entityName} souffre du poison et perd {realBurnDamages} PVs!");
+                    InterfaceManager.instance.Message(true, $"{entity.entityName} souffre de la brûlure et perd {realBurnDamages} PVs!");
                     entity.entityHp -= realBurnDamages;
                     StatDisplayManager.instance.DisplayStat(entity);
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
@@ -742,7 +750,8 @@ public class BattleManager : MonoSingleton<BattleManager>
                 }
                 break;
 
-            case Statut.Silence: break;
+            case Statut.Silence:break;
+
             case Statut.Endormi: break;
         }
         yield return new WaitForSeconds(InterfaceManager.instance.time);

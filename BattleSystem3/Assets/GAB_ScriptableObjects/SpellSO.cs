@@ -13,6 +13,7 @@ public class SpellSO : ScriptableObject
 
     [Header("Effect")]
     public bool hasSpecialEffect;
+    public bool hasEffectAndDamages;
     public bool doTargetEveryone;
     public bool helpingSpell;
     public bool onlyWorkOnDefeated;
@@ -44,5 +45,4 @@ public enum Statut
     EmpMagique, // Comme poison mais pour MP
     Endormi, // Ne peut pas agir. 1/3 de se réveiller pendant un tour
     Silence, // Ne peut pas lancer de sort.
-
 }

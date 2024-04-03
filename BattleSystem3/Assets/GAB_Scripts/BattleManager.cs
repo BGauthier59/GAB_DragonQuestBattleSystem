@@ -287,13 +287,15 @@ public class BattleManager : MonoSingleton<BattleManager>
     {
         entityActing = ally;
         
-        AudioManager.instance.Play("PrepareAttack");
-        
         StartCoroutine(OnStatutEffect(ally, ally.entityStatut));
-        yield return new WaitForSeconds(InterfaceManager.instance.time);
 
-        hasEntityStatutBeenVerified = false;
+        if (ally.entityStatut != Statut.None && ally.entityStatut != Statut.Silence)
+        {
+            Debug.Log("vérification statut de " + ally);
+            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+        }
 
+        AudioManager.instance.Play("PrepareAttack");
         InterfaceManager.instance.Message(true, $"C'est au tour de {ally.entityName} ! Que voulez-vous faire ?");
         yield return new WaitForSeconds(InterfaceManager.instance.time);
 
@@ -343,17 +345,22 @@ public class BattleManager : MonoSingleton<BattleManager>
         hasEntityActed = true;
 
     }
-    
+    IEnumerator MagicButtonFailed()
+    {
+        InterfaceManager.instance.Message(true, $"{entityActing.entityName} est dans l'incapacité de lancer des sorts !");
+        yield return new WaitForSeconds(InterfaceManager.instance.time);
+        StartCoroutine(AllyIsActing(entityActing));
+    }
+
     public void MagicButtonSelected()
     {
         if (entityActing.entityStatut == Statut.Silence)
         {
-            InterfaceManager.instance.Message(true, $"{entityActing.entityName} est dans l'incapacité de lancer des sorts !");
-            StartCoroutine(AllyIsActing(entityActing));
+            StartCoroutine(MagicButtonFailed());
             return;
+
         }
-
-
+         
         InterfaceManager.instance.ActionButtonsState(false); // Les boutons d'actions disparaissent
         InterfaceManager.instance.CancelButtonState(true);
 
@@ -499,7 +506,15 @@ public class BattleManager : MonoSingleton<BattleManager>
         EntityManager target;
 
         List<SpellSO> spells = new List<SpellSO>();
-        
+
+        StartCoroutine(OnStatutEffect(monster, monster.entityStatut));
+
+        if (monster.entityStatut != Statut.None && monster.entityStatut != Statut.Silence)
+        {
+            Debug.Log("vérification statut de " + monster);
+            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+        }
+
         switch (entityActing.entityStrategy)
         {
             // Attaque ou lance une aptitude
@@ -678,14 +693,17 @@ public class BattleManager : MonoSingleton<BattleManager>
         {
             case Statut.None:
 
-                hasEntityStatutBeenVerified = true;
                 break;
 
             case Statut.Empoisonné:
 
-                float poisonDamages = entity.entityHpMax / 16;
+                float poisonDamages;
+                    
+                if (entity.entityType == EntityType.Monster) poisonDamages = entity.entityAtk / 4;
+                else poisonDamages = entity.entityHpMax / 16;
+
                 int realPoisonDamages = (int)poisonDamages;
-                if (realPoisonDamages >= 32) realPoisonDamages = 32;
+                if (realPoisonDamages >= 48) realPoisonDamages = 48;
 
                 if (entity.entityHp <= realPoisonDamages)
                 {
@@ -706,9 +724,13 @@ public class BattleManager : MonoSingleton<BattleManager>
 
             case Statut.Brûlé:
 
-                float burnDamages = entity.entityHpMax / 12;
+                float burnDamages;
+
+                if (entity.entityType == EntityType.Monster) burnDamages = entity.entityAtk / 3;
+                else burnDamages = entity.entityHpMax / 12;
+
                 int realBurnDamages = (int)burnDamages;
-                if (realBurnDamages >= 32) realBurnDamages = 32;
+                if (realBurnDamages >= 48) realBurnDamages = 48;
 
                 if (entity.entityHp <= realBurnDamages) 
                 {

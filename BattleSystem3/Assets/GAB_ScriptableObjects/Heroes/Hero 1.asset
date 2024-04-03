@@ -32,8 +32,8 @@ MonoBehaviour:
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   spells:
-  - {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
-  - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
+  - {fileID: 11400000, guid: 6830c2fc9e666004db0495c04462fca3, type: 2}
+  - {fileID: 11400000, guid: 19a7061b453a5494db4226b7a19ef906, type: 2}
   - {fileID: 11400000, guid: f856d990fb246a24b9f0b7b121f1999e, type: 2}
   - {fileID: 11400000, guid: 776da5e85dfd39d42ba29818aa654bd5, type: 2}
   - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
@@ -53,9 +53,9 @@ MonoBehaviour:
   - 0.15
   learnSpells:
   - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
+    learningSpell: {fileID: 11400000, guid: 6830c2fc9e666004db0495c04462fca3, type: 2}
   - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
+    learningSpell: {fileID: 11400000, guid: 19a7061b453a5494db4226b7a19ef906, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: f856d990fb246a24b9f0b7b121f1999e, type: 2}
   - learningLevel: 0

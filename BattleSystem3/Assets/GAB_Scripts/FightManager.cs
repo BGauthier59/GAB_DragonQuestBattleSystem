@@ -18,9 +18,8 @@ public class FightManager : MonoSingleton<FightManager>
         if (attacker.entityType == EntityType.Monster)
         {
             //attacker.entityAnim.Play("MonsterAttacks");
+            AudioManager.instance.Play("Attack");
         }
-        
-        AudioManager.instance.Play("Attack");
         
         InterfaceManager.instance.Message(true, $"{attacker.entityName} attaque {target.entityName} !");
         yield return new WaitForSeconds(InterfaceManager.instance.time);
@@ -575,6 +574,7 @@ public class FightManager : MonoSingleton<FightManager>
                     AudioManager.instance.Play("CriticalHit");
                     InterfaceManager.instance.Message(true, "L'attaque frappe de plein fouet !");
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    targetEntity.entityImage.color = hitColor;
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages} points de dégâts !");
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
                     targetEntity.entityHp -= realDamages;
@@ -585,6 +585,7 @@ public class FightManager : MonoSingleton<FightManager>
                         yield return new WaitForSeconds(InterfaceManager.instance.time);
                     }
                 }
+                targetEntity.entityImage.color = Color.white;
                 StatDisplayManager.instance.DisplayStat(targetEntity);
                 break;
 
@@ -650,7 +651,8 @@ public class FightManager : MonoSingleton<FightManager>
                         {
                             break;
                         }
-                        target = multiHitsTargets[Random.Range(0, multiHitsTargets.Count)];
+                        if (i == 0) target = targetEntity;
+                        else target = multiHitsTargets[Random.Range(0, multiHitsTargets.Count)];
 
                         float multiHitsDamages = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (target.entityDef / 4) * spell.factor * 0.01f;
                         if (target.isDefending) multiHitsDamages /= 2;
@@ -663,8 +665,10 @@ public class FightManager : MonoSingleton<FightManager>
 
                         InterfaceManager.instance.Message(true, $"{target.entityName} subit {realDamages} points de dégâts !");
                         Debug.Log(target);
+                        target.entityImage.color = hitColor;
                         yield return new WaitForSeconds(InterfaceManager.instance.time);
                         StatDisplayManager.instance.DisplayStat(target);
+                        target.entityImage.color = Color.white;
 
                         if (CheckDefeat(target))
                         {
@@ -684,16 +688,29 @@ public class FightManager : MonoSingleton<FightManager>
                     int realDamages = (int)damages;
                     if (realDamages <= 0) realDamages = 0;
 
+                    if (realDamages == 0) AudioManager.instance.Play("Miss");
+                    else AudioManager.instance.Play("Hit");
+
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages} points de dégâts !");
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
                     targetEntity.entityHp -= realDamages;
+
+                    if (CheckDefeat(targetEntity))
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
+
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                 }
 
                 if(targetEntity.entityStatut != Statut.None)
                 {
-                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    if (!spell.hasEffectAndDamages)
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
                     break;
                 }
 
@@ -702,14 +719,20 @@ public class FightManager : MonoSingleton<FightManager>
 
                 if (trueChanceToPoison <= 0)
                 {
-                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    if (!spell.hasEffectAndDamages)
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
                     break;
                 }
                 if (trueChanceToPoison >= spell.successRate)
                 {
-                    InterfaceManager.instance.Message(true, "Le sort a échoué...");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    if (!spell.hasEffectAndDamages)
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
                     break;
                 }
                 else
@@ -724,10 +747,38 @@ public class FightManager : MonoSingleton<FightManager>
 
             case 8: //Brûlure
 
+                if (spell.hasEffectAndDamages)
+                {
+                    float damages = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4) * spell.factor * 0.01f;
+                    if (targetEntity.isDefending) damages /= 2;
+                    int realDamages = (int)damages;
+                    if (realDamages <= 0) realDamages = 0;
+
+                    if (realDamages == 0) AudioManager.instance.Play("Miss");
+                    else AudioManager.instance.Play("Hit");
+
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages} points de dégâts !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    targetEntity.entityHp -= realDamages;
+
+                    if (CheckDefeat(targetEntity))
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
+
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                }
+
+                StatDisplayManager.instance.DisplayStat(targetEntity);
+
                 if (targetEntity.entityStatut != Statut.None)
                 {
-                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    if (!spell.hasEffectAndDamages)
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
                     break;
                 }
 
@@ -736,14 +787,20 @@ public class FightManager : MonoSingleton<FightManager>
 
                 if (trueChanceToBurn <= 0)
                 {
-                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    if (!spell.hasEffectAndDamages)
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
                     break;
                 }
                 if (trueChanceToBurn >= spell.successRate)
                 {
-                    InterfaceManager.instance.Message(true, "Le sort a échoué...");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    if (!spell.hasEffectAndDamages)
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
                     break;
                 }
                 else

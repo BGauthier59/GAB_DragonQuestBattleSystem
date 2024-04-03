@@ -20,7 +20,7 @@ MonoBehaviour:
   hp: 192
   mp: 113
   atk: 5
-  defense: 10
+  defense: 100
   agility: 7
   level: 20
   mana: 1

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: "R\xE9gion de Berserkia"
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 8018a16a5a42ec54ea5e831e8a3289a8, type: 2}
+  - {fileID: 11400000, guid: 84e5571444d48a242bf3a5f43e6ae9f4, type: 2}
+  - {fileID: 11400000, guid: 6a11bbfac22c01f4786e056229741ba0, type: 2}
+  - {fileID: 11400000, guid: 05b338e9a959fe845bf9c45de576f8a2, type: 2}
+  - {fileID: 11400000, guid: 83f1212bc11eb314d8f743ddb0739ea5, type: 2}
+  - {fileID: 11400000, guid: e04f48a06ae8fed489097b25a21f8486, type: 2}
+  - {fileID: 11400000, guid: 789c96595383cc043a6fb9371292e1bc, type: 2}
+  - {fileID: 11400000, guid: 6b9326848f70a484490bbe343fd749c1, type: 2}
+  - {fileID: 11400000, guid: 9189df0a159a2ab4abc6d5260a680a83, type: 2}
+  - {fileID: 11400000, guid: 690272b95763c334a9154f9ab2854944, type: 2}
+  - {fileID: 11400000, guid: 4fe87fad40237ec468c2a98b6fdf8824, type: 2}
+  - {fileID: 11400000, guid: bab908d0730b1504a86ac90eb5b0ce9c, type: 2}
+  - {fileID: 11400000, guid: e1f14f78479e8544bb885d866a842f28, type: 2}
+  - {fileID: 11400000, guid: 95cdfbd0b176fd94fb235dbfd5afbdfd, type: 2}
+  - {fileID: 11400000, guid: 31f5917b5d8999d4a9042d02c6714ed1, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 6a11bbfac22c01f4786e056229741ba0, type: 2}
+  - {fileID: 11400000, guid: 05b338e9a959fe845bf9c45de576f8a2, type: 2}
+  - {fileID: 11400000, guid: 83f1212bc11eb314d8f743ddb0739ea5, type: 2}
+  - {fileID: 11400000, guid: e04f48a06ae8fed489097b25a21f8486, type: 2}
+  - {fileID: 11400000, guid: 6b9326848f70a484490bbe343fd749c1, type: 2}
+  - {fileID: 11400000, guid: 9189df0a159a2ab4abc6d5260a680a83, type: 2}
+  - {fileID: 11400000, guid: 690272b95763c334a9154f9ab2854944, type: 2}
+  - {fileID: 11400000, guid: 4fe87fad40237ec468c2a98b6fdf8824, type: 2}
+  - {fileID: 11400000, guid: bab908d0730b1504a86ac90eb5b0ce9c, type: 2}
+  - {fileID: 11400000, guid: 31f5917b5d8999d4a9042d02c6714ed1, type: 2}
+  - {fileID: 11400000, guid: dce7e83a02b678a4283afb0ec829a86f, type: 2}
+  - {fileID: 11400000, guid: d456c37b025574848903eaec5ecc5a9a, type: 2}
+  - {fileID: 11400000, guid: 33e08874dce9325468b95c646ca8c678, type: 2}
+  - {fileID: 11400000, guid: 96668a5fafd66b2428e52d1383b6facc, type: 2}
+  - {fileID: 11400000, guid: ee709b14aa3291641bf280c4ebd180d7, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 21300000, guid: c8846e36d36405d46ab514f0102dff1d, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 3d048e115c5e1e1478c9cf5cb772ac43, type: 3}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 24

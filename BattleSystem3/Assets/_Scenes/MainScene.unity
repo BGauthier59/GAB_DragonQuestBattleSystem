@@ -1240,11 +1240,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8455749d61d9c5948871c03e924ee66d, type: 2}
   - {fileID: 11400000, guid: be408d03bde93db4b9865d969c1a79ee, type: 2}
   - {fileID: 11400000, guid: a40c605e790ed4b488cfddd83b5d403c, type: 2}
-  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
-  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
-  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
-  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
-  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
+  - {fileID: 11400000, guid: 85c32438dc8dc8749a553f39ef0bfe6a, type: 2}
+  - {fileID: 11400000, guid: 98b4b2a2a5b8a1648ad15299658a912c, type: 2}
+  - {fileID: 11400000, guid: e756fabd59b94934d95cfa816c832236, type: 2}
+  - {fileID: 11400000, guid: 3c9aaca56726da748bd905b7de1dfdbc, type: 2}
+  - {fileID: 11400000, guid: 25e2d9fd15e45334187baef5a7f8c7ec, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
@@ -4324,6 +4324,12 @@ MonoBehaviour:
     - m_Text: "\xCEle des chanceliers"
       m_Image: {fileID: 0}
     - m_Text: Domarium d'Alad
+      m_Image: {fileID: 0}
+    - m_Text: "R\xE9gion de Berserkia"
+      m_Image: {fileID: 0}
+    - m_Text: Souterrains sous Berserkia
+      m_Image: {fileID: 0}
+    - m_Text: "R\xE9gion de Delphoe"
       m_Image: {fileID: 0}
     - m_Text: "R\xE9gion de Berserkia"
       m_Image: {fileID: 0}

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: "\xCEle des chanceliers"
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 3bb37400fff95dd46809e049b325a746, type: 2}
+  - {fileID: 11400000, guid: 09bd4b459974ab14b8670cd1c7cba913, type: 2}
+  - {fileID: 11400000, guid: e82efba8929a4c441987c1d5624e68f9, type: 2}
+  - {fileID: 11400000, guid: 2ecf361b072073847a6647ca37673b7a, type: 2}
+  - {fileID: 11400000, guid: 9483109014440de48a807bb6faa1e928, type: 2}
+  - {fileID: 11400000, guid: 7261955ad4e33bd41818ffc49dec0e74, type: 2}
+  - {fileID: 11400000, guid: 7107644da5768c041886485263b4bab7, type: 2}
+  - {fileID: 11400000, guid: 883e85f1c30a4b44a8eb8c398e1d3ff3, type: 2}
+  - {fileID: 11400000, guid: bbf9abd9bfe4ff841925d82b1f10f6f9, type: 2}
+  - {fileID: 11400000, guid: 0067ea77a70baaf419c73633a8144dc9, type: 2}
+  - {fileID: 11400000, guid: e40ecbcf531631545b7fcd4dc2bae15b, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 3bb37400fff95dd46809e049b325a746, type: 2}
+  - {fileID: 11400000, guid: 09bd4b459974ab14b8670cd1c7cba913, type: 2}
+  - {fileID: 11400000, guid: e82efba8929a4c441987c1d5624e68f9, type: 2}
+  - {fileID: 11400000, guid: 2ecf361b072073847a6647ca37673b7a, type: 2}
+  - {fileID: 11400000, guid: 9483109014440de48a807bb6faa1e928, type: 2}
+  - {fileID: 11400000, guid: 7261955ad4e33bd41818ffc49dec0e74, type: 2}
+  - {fileID: 11400000, guid: 7107644da5768c041886485263b4bab7, type: 2}
+  - {fileID: 11400000, guid: 883e85f1c30a4b44a8eb8c398e1d3ff3, type: 2}
+  - {fileID: 11400000, guid: bbf9abd9bfe4ff841925d82b1f10f6f9, type: 2}
+  - {fileID: 11400000, guid: 0067ea77a70baaf419c73633a8144dc9, type: 2}
+  - {fileID: 11400000, guid: e40ecbcf531631545b7fcd4dc2bae15b, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 21300000, guid: d0ca7615a41abb4408096c30f7608441, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 74625eb6d65a7c54396765b30fe1118a, type: 3}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 22

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Caporal mandragore
   sprite: {fileID: 21300000, guid: 225d2b61032d67145831ddcfff474c44, type: 3}
-  spawnPosY: 42
+  spawnPosY: 32
   type: 1
+  pronoun: 
   hp: 118
   mp: 0
   atk: 93
@@ -25,6 +26,11 @@ MonoBehaviour:
   mana: 0
   criticalHit: 0
   dodge: 0
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 0
+  entityResilienceToSilence: 0
+  entityResilienceToSleep: 0
   spells: []
   weapon: {fileID: 0}
   helmet: {fileID: 0}

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: Souterrains sous Berserkia
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 14efefc195425a1459d620ef7981ef88, type: 2}
+  - {fileID: 11400000, guid: 80e13259702417946a7bcf7b9d1b9943, type: 2}
+  - {fileID: 11400000, guid: 22695b614af38774abb887173dcce1b8, type: 2}
+  - {fileID: 11400000, guid: e21b715e2fe118040819f2e0f0584f7a, type: 2}
+  - {fileID: 11400000, guid: a3fa652e07b66e7459fd9fd824fe73ff, type: 2}
+  - {fileID: 11400000, guid: 2da09a7fd4496b446a9b0ec6e8adc5b9, type: 2}
+  - {fileID: 11400000, guid: cb4ee5839eae8ac41a0394408c24e2bb, type: 2}
+  - {fileID: 11400000, guid: 28c2015fa65595c48920d02f3113d3aa, type: 2}
+  - {fileID: 11400000, guid: 2d63e587707adde49a381bcfc479f3b1, type: 2}
+  - {fileID: 11400000, guid: 9cae41e3bbb04a5459d241c7f002d98b, type: 2}
+  - {fileID: 11400000, guid: dd08ca8ff9620bf46a9be0e5e9f3f336, type: 2}
+  - {fileID: 11400000, guid: 654d54f4c5c2394408b1838c463eb085, type: 2}
+  - {fileID: 11400000, guid: 963cd125026e6de4d8350c1b289ea82f, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 14efefc195425a1459d620ef7981ef88, type: 2}
+  - {fileID: 11400000, guid: 80e13259702417946a7bcf7b9d1b9943, type: 2}
+  - {fileID: 11400000, guid: 22695b614af38774abb887173dcce1b8, type: 2}
+  - {fileID: 11400000, guid: e21b715e2fe118040819f2e0f0584f7a, type: 2}
+  - {fileID: 11400000, guid: a3fa652e07b66e7459fd9fd824fe73ff, type: 2}
+  - {fileID: 11400000, guid: 2da09a7fd4496b446a9b0ec6e8adc5b9, type: 2}
+  - {fileID: 11400000, guid: cb4ee5839eae8ac41a0394408c24e2bb, type: 2}
+  - {fileID: 11400000, guid: 28c2015fa65595c48920d02f3113d3aa, type: 2}
+  - {fileID: 11400000, guid: 2d63e587707adde49a381bcfc479f3b1, type: 2}
+  - {fileID: 11400000, guid: 9cae41e3bbb04a5459d241c7f002d98b, type: 2}
+  - {fileID: 11400000, guid: dd08ca8ff9620bf46a9be0e5e9f3f336, type: 2}
+  - {fileID: 11400000, guid: 654d54f4c5c2394408b1838c463eb085, type: 2}
+  - {fileID: 11400000, guid: 963cd125026e6de4d8350c1b289ea82f, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 0}
+  fontZoneNight: {fileID: 0}
+  musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
+  combatZone: 25

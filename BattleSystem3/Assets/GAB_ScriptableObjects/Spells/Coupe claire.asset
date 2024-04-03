@@ -16,14 +16,16 @@ MonoBehaviour:
   spellDescription: Vise les pooints faibles de l'ennemi pour tenter de porter un
     coup critique.
   inBattleDescription: "se pr\xE9pare \xE0 porter un coup d\xE9vastateur !"
+  excuseForInaction: 
   spellIndex: 5
   spellType: 1
   cost: 0
   hasSpecialEffect: 1
+  hasEffectAndDamages: 0
   doTargetEveryone: 0
   helpingSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 100
+  successRate: 20
   strenght: 0
   elementType: 0
   factor: 0

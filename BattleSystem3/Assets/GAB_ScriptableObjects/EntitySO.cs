@@ -31,7 +31,6 @@ public class EntitySO : ScriptableObject
     public int entityResilienceToSilence;
     public int entityResilienceToSleep;
 
-
     [Header("Abilities")]
     public List<SpellSO> spells;
     

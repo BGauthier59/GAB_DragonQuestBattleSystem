@@ -15,6 +15,7 @@ MonoBehaviour:
   spellName: Multigriffe
   spellDescription: "Distribue plusieurs coups r\xE9partis al\xE9atoirement"
   inBattleDescription: "d\xE9verse une pluie de coups de griffes !"
+  excuseForInaction: 
   spellIndex: 6
   spellType: 1
   cost: 0
@@ -23,7 +24,7 @@ MonoBehaviour:
   doTargetEveryone: 0
   helpingSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 100
+  successRate: 1
   strenght: 0
   elementType: 0
   factor: 100

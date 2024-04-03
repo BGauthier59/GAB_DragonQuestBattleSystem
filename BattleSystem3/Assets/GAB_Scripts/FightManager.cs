@@ -715,9 +715,9 @@ public class FightManager : MonoSingleton<FightManager>
                 }
 
                 int aleaPoison = Random.Range(0, 100);
-                int trueChanceToPoison = aleaPoison - targetEntity.entityResilienceToPoison;
+                int truePoisonSpellSuccessRate = spell.successRate - targetEntity.entityResilienceToPoison;
 
-                if (trueChanceToPoison <= 0)
+                if (truePoisonSpellSuccessRate <= 0)
                 {
                     if (!spell.hasEffectAndDamages)
                     {
@@ -726,7 +726,7 @@ public class FightManager : MonoSingleton<FightManager>
                     }
                     break;
                 }
-                if (trueChanceToPoison >= spell.successRate)
+                if (aleaPoison >= truePoisonSpellSuccessRate)
                 {
                     if (!spell.hasEffectAndDamages)
                     {
@@ -783,9 +783,9 @@ public class FightManager : MonoSingleton<FightManager>
                 }
 
                 int aleaBurn = Random.Range(0, 100);
-                int trueChanceToBurn = aleaBurn - targetEntity.entityResilienceToBurn;
+                int trueBurnSpellSuccessRate = spell.successRate - targetEntity.entityResilienceToBurn;
 
-                if (trueChanceToBurn <= 0)
+                if (trueBurnSpellSuccessRate <= 0)
                 {
                     if (!spell.hasEffectAndDamages)
                     {
@@ -794,7 +794,7 @@ public class FightManager : MonoSingleton<FightManager>
                     }
                     break;
                 }
-                if (trueChanceToBurn >= spell.successRate)
+                if (aleaBurn >= trueBurnSpellSuccessRate)
                 {
                     if (!spell.hasEffectAndDamages)
                     {
@@ -813,9 +813,99 @@ public class FightManager : MonoSingleton<FightManager>
                     break;
                 }
 
-            case 9:
+            case 9: //Poison magique
 
+                if (targetEntity.entityStatut != Statut.None)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
 
+                int aleaMagPoison = Random.Range(0, 100);
+                int trueMagPoisonSpellSuccessRate = spell.successRate - targetEntity.entityResilienceToPoison;
+
+                if (trueMagPoisonSpellSuccessRate <= 0)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+                if (aleaMagPoison >= trueMagPoisonSpellSuccessRate)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+                else
+                {
+                    targetEntity.entityStatut = Statut.EmpMagique;
+
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} voit sa magie empoisonnée !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                    break;
+                }
+
+            case 10: //Silence
+
+                if (targetEntity.entityStatut != Statut.None)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+
+                int aleaSilence = Random.Range(0, 100);
+                int trueSilenceSpellSuccessRate = aleaSilence - targetEntity.entityResilienceToSilence;
+
+                if (trueSilenceSpellSuccessRate <= 0)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+                if (aleaSilence >= trueSilenceSpellSuccessRate)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+                else
+                {
+                    targetEntity.entityStatut = Statut.Silence;
+
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est réduit(e) au silence !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                    break;
+                }
+
+            case 11: //Inaction
+
+                int aleaInaction = Random.Range(0, 100);
+
+                if (targetEntity.isBlocked == true)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas en mesure d'y prêter attention !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+                else if (aleaInaction >= spell.successRate)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} reste de marbre.");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+                else
+                {
+                    targetEntity.isBlocked = true;
+
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} {spell.excuseForInaction}");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                    break;
+                }
 
 
             default:
@@ -858,10 +948,11 @@ public class FightManager : MonoSingleton<FightManager>
 
     public bool CriticalHit(int criticalValue)
     {
-        int critical = Random.Range(1, 100);
+        int critical = Random.Range(10, 100);
 
         if (critical < criticalValue)
         {
+            Debug.Log("critical : + " + critical + " / criticalValue : " + criticalValue);
             AudioManager.instance.Play("CriticalHit");
             return true;
         }

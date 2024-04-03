@@ -295,6 +295,14 @@ public class BattleManager : MonoSingleton<BattleManager>
             yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
         }
 
+        if (ally.isBlocked == true)
+        {
+            InterfaceManager.instance.Message(true, $"{ally.entityName} ne peut pas bouger !");
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
+            ally.isBlocked = false;
+            hasEntityActed = true;
+        }
+
         AudioManager.instance.Play("PrepareAttack");
         InterfaceManager.instance.Message(true, $"C'est au tour de {ally.entityName} ! Que voulez-vous faire ?");
         yield return new WaitForSeconds(InterfaceManager.instance.time);
@@ -685,10 +693,6 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     public IEnumerator OnStatutEffect(EntityManager entity, Statut statut)
     {
-        bool isAlly = false;
-
-        if (entity.entityType == EntityType.Ally) isAlly = true;
-
         switch (statut)
         {
             case Statut.None:

@@ -7,6 +7,7 @@ public class SpellSO : ScriptableObject
     public string spellName;
     [TextArea(3, 3)] public string spellDescription;
     [TextArea(3, 3)] public string inBattleDescription;
+    [TextArea(3, 3)] public string excuseForInaction;
     public int spellIndex;
     public SpellType spellType;
     public int cost;

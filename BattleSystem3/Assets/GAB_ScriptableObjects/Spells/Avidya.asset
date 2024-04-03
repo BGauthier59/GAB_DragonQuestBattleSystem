@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: "Supercigu\xEB"
+  m_Name: Avidya
   m_EditorClassIdentifier: 
-  spellName: "Supercigu\xEB"
-  spellDescription: "Tente d'empoisonner tous les adversaires par la force de la
-    pens\xE9e."
-  inBattleDescription: "lance la Cigu\xEB !"
+  spellName: Avidya
+  spellDescription: Tente d'empoisonner la magie de la cible.
+  inBattleDescription: lance l'Avidya !
   excuseForInaction: 
-  spellIndex: 7
+  spellIndex: 9
   spellType: 0
   cost: 0
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
-  doTargetEveryone: 1
+  doTargetEveryone: 0
   helpingSpell: 0
   onlyWorkOnDefeated: 0
   successRate: 20

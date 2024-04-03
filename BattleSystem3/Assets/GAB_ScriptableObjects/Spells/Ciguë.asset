@@ -15,6 +15,7 @@ MonoBehaviour:
   spellName: "Cigu\xEB"
   spellDescription: "Tente d'empoisonner un adversaire par la force de la pens\xE9e."
   inBattleDescription: "lance la Cigu\xEB !"
+  excuseForInaction: 
   spellIndex: 7
   spellType: 0
   cost: 0
@@ -23,7 +24,7 @@ MonoBehaviour:
   doTargetEveryone: 0
   helpingSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 100
+  successRate: 20
   strenght: 0
   elementType: 0
   factor: 0

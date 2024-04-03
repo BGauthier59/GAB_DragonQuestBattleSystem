@@ -53,6 +53,7 @@ public class EntityManager : MonoBehaviour
     public List<SpellSO> entitySpells;
 
     public Statut entityStatut;
+    public bool isBlocked;
 
     public List<bool> hasEffect = new List<bool>();
     public List<int> effectList = new List<int>();

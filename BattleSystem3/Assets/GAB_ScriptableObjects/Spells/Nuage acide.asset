@@ -23,7 +23,7 @@ MonoBehaviour:
   doTargetEveryone: 1
   helpingSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 100
+  successRate: 50
   strenght: 0
   elementType: 0
   factor: 100

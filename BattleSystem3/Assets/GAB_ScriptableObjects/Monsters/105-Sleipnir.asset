@@ -16,6 +16,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 983d55cdd24e146488bae923640da361, type: 3}
   spawnPosY: 19
   type: 1
+  pronoun: 
   hp: 226
   mp: 0
   atk: 148
@@ -25,6 +26,11 @@ MonoBehaviour:
   mana: 0
   criticalHit: 0
   dodge: 0
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 0
+  entityResilienceToSilence: 0
+  entityResilienceToSleep: 0
   spells: []
   weapon: {fileID: 0}
   helmet: {fileID: 0}

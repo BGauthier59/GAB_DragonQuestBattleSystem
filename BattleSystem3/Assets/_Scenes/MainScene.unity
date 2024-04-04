@@ -1245,7 +1245,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e756fabd59b94934d95cfa816c832236, type: 2}
   - {fileID: 11400000, guid: 3c9aaca56726da748bd905b7de1dfdbc, type: 2}
   - {fileID: 11400000, guid: 25e2d9fd15e45334187baef5a7f8c7ec, type: 2}
-  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
+  - {fileID: 11400000, guid: 57c6226b4bee89042bba8053db659930, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
@@ -4331,7 +4331,11 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: "R\xE9gion de Delphoe"
       m_Image: {fileID: 0}
-    - m_Text: "R\xE9gion de Berserkia"
+    - m_Text: Tour des Delphois
+      m_Image: {fileID: 0}
+    - m_Text: None
+      m_Image: {fileID: 0}
+    - m_Text: None
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

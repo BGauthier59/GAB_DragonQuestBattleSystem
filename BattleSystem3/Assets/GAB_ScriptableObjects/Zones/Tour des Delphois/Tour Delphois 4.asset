@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3613da6db18ab8d44b981e903bb8a24b, type: 3}
+  m_Name: Tour Delphois 4
+  m_EditorClassIdentifier: 
+  monsters:
+  - {fileID: 11400000, guid: 0576fbc88a28f3d47a01f383a3ffd421, type: 2}
+  - {fileID: 11400000, guid: 0576fbc88a28f3d47a01f383a3ffd421, type: 2}
+  - {fileID: 11400000, guid: 31d297f0eded33241850cdde1d8c0b4b, type: 2}
+  - {fileID: 11400000, guid: 31d297f0eded33241850cdde1d8c0b4b, type: 2}

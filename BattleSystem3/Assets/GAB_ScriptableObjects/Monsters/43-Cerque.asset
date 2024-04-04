@@ -10,21 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: 15-Scolossendre
+  m_Name: 43-Cerque
   m_EditorClassIdentifier: 
-  entityName: Scolossendre
-  sprite: {fileID: 21300000, guid: 35f8ef185f49f3f4da5abbf1f3afc987, type: 3}
+  entityName: Cerque
+  sprite: {fileID: 21300000, guid: 9259d0a3c6d18a74f8eb5ba120946ff0, type: 3}
   spawnPosY: 5
   type: 1
-  hp: 30
+  pronoun: 
+  hp: 33
   mp: 0
-  atk: 30
-  defense: 32
-  agility: 38
+  atk: 46
+  defense: 82
+  agility: 49
   level: 1
   mana: 0
   criticalHit: 0
   dodge: 0
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 0
+  entityResilienceToSilence: 0
+  entityResilienceToSleep: 0
   spells: []
   weapon: {fileID: 0}
   helmet: {fileID: 0}
@@ -41,5 +47,5 @@ MonoBehaviour:
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
-  gold: 10
-  xp: 10
+  gold: 18
+  xp: 17

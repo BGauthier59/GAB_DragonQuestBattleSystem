@@ -19,8 +19,8 @@ MonoBehaviour:
   pronoun: 
   hp: 234
   mp: 62
-  atk: 30
-  defense: 100
+  atk: 150
+  defense: 80
   agility: 10
   level: 20
   mana: 1

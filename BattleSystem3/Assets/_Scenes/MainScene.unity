@@ -6121,7 +6121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de241da9487c88b42841443f5f301706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptySprite: {fileID: 21300000, guid: 39ba8c1cb728c3841bc59375ce146f5a, type: 3}
+  emptySprite: {fileID: 21300000, guid: 224a2c9e1b524c14bbd79685e0614369, type: 3}
   hitColor: {r: 1, g: 0.5019608, b: 0.5019608, a: 0.78431374}
 --- !u!4 &759816008
 Transform:

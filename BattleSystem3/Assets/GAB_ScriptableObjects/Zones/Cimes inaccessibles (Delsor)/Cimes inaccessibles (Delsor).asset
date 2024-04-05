@@ -13,11 +13,23 @@ MonoBehaviour:
   m_Name: Cimes inaccessibles (Delsor)
   m_EditorClassIdentifier: 
   configsInZoneDay:
-  - {fileID: 11400000, guid: d0933f85ed6056a46a4276b9d8fc74e8, type: 2}
+  - {fileID: 11400000, guid: 50b22dcde38fcc24b8a5132543f79713, type: 2}
+  - {fileID: 11400000, guid: 33fdd886539ac8c4d924746cb0990065, type: 2}
+  - {fileID: 11400000, guid: 59d858a23a4557b458bc752edd719e97, type: 2}
+  - {fileID: 11400000, guid: 7f2f529f5e86e94458d23c39833f7787, type: 2}
+  - {fileID: 11400000, guid: 4d603f7c6f39cb24ca9bf92f39a45319, type: 2}
+  - {fileID: 11400000, guid: 90300bf631c7c47458a067b2ca0cac6b, type: 2}
+  - {fileID: 11400000, guid: 3148a2db2640eb44d8d243d04dadbd67, type: 2}
   configsInZoneNight:
-  - {fileID: 11400000, guid: d0933f85ed6056a46a4276b9d8fc74e8, type: 2}
+  - {fileID: 11400000, guid: 50b22dcde38fcc24b8a5132543f79713, type: 2}
+  - {fileID: 11400000, guid: 33fdd886539ac8c4d924746cb0990065, type: 2}
+  - {fileID: 11400000, guid: 59d858a23a4557b458bc752edd719e97, type: 2}
+  - {fileID: 11400000, guid: 7f2f529f5e86e94458d23c39833f7787, type: 2}
+  - {fileID: 11400000, guid: 4d603f7c6f39cb24ca9bf92f39a45319, type: 2}
+  - {fileID: 11400000, guid: 90300bf631c7c47458a067b2ca0cac6b, type: 2}
+  - {fileID: 11400000, guid: 3148a2db2640eb44d8d243d04dadbd67, type: 2}
   minMaxMonstersInBattle: 0000000000000000
-  fontZoneDay: {fileID: 21300000, guid: 999447840eb9d5448a2147482e3402e5, type: 3}
-  fontZoneNight: {fileID: 21300000, guid: ea85fd37a8d816442943ecb82044971b, type: 3}
+  fontZoneDay: {fileID: 21300000, guid: 5d2116c71f354d5458263fe4141bdb27, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 3666d6385d7e07142b3562790e15a693, type: 3}
   musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
   combatZone: 31

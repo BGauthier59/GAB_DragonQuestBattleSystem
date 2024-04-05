@@ -289,25 +289,32 @@ public class BattleManager : MonoSingleton<BattleManager>
         
         StartCoroutine(OnStatutEffect(ally, ally.entityStatut));
 
-        if (ally.entityStatut != Statut.None && ally.entityStatut != Statut.Silence)
+        if (ally.entityStatut != Statut.None)
         {
             Debug.Log("vérification statut de " + ally);
             yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
         }
-
-        if (ally.isBlocked == true)
+        else if (ally.isBlocked == true)
         {
             InterfaceManager.instance.Message(true, $"{ally.entityName} ne peut pas bouger !");
             yield return new WaitForSeconds(InterfaceManager.instance.time);
             ally.isBlocked = false;
             hasEntityActed = true;
         }
+        else if (ally.entityStatut == Statut.Endormi)
+        {
+            InterfaceManager.instance.Message(true, $"{ally.entityName} dort à poings fermés !");
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
+            hasEntityActed = true;
+        }
+        else
+        {
+            AudioManager.instance.Play("PrepareAttack");
+            InterfaceManager.instance.Message(true, $"C'est au tour de {ally.entityName} ! Que voulez-vous faire ?");
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
 
-        AudioManager.instance.Play("PrepareAttack");
-        InterfaceManager.instance.Message(true, $"C'est au tour de {ally.entityName} ! Que voulez-vous faire ?");
-        yield return new WaitForSeconds(InterfaceManager.instance.time);
-
-        InterfaceManager.instance.ActionButtonsState(true); // Les boutons d'actions apparaissent
+            InterfaceManager.instance.ActionButtonsState(true); // Les boutons d'actions apparaissent
+        }
     }
 
     public void AttackButtonSelected()
@@ -517,68 +524,91 @@ public class BattleManager : MonoSingleton<BattleManager>
 
         StartCoroutine(OnStatutEffect(monster, monster.entityStatut));
 
-        if (monster.entityStatut != Statut.None && monster.entityStatut != Statut.Silence)
+        if (monster.entityStatut != Statut.None)
         {
             Debug.Log("vérification statut de " + monster);
             yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
         }
 
-        switch (entityActing.entityStrategy)
+        if (monster.entityStatut == Statut.Endormi)
         {
-            // Attaque ou lance une aptitude
-            case EntityStrategy.Attaquant:
-                foreach (SpellSO spell in entityActing.entitySpells)
-                {
-                    if (entityActing.entityMp >= spell.cost)
+            InterfaceManager.instance.Message(true, $"{monster.entityPronoun} {monster.entityName} dort à poings fermés !");
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
+            BattleManager.instance.hasEntityActed = true;
+        }
+        else
+        {
+            switch (entityActing.entityStrategy)
+            {
+                // Attaque ou lance une aptitude
+                case EntityStrategy.Attaquant:
+                    foreach (SpellSO spell in entityActing.entitySpells)
                     {
-                        spells.Add(spell);
-                    }
-                }
-                
-                foreach (GameObject hero in SpawningManager.instance.heroesInBattle)
-                {
-                    EntityManager entityManager = hero.GetComponent<EntityManager>();
-                    if (!entityManager.isDefeated)
-                    {
-                        targets.Add(hero.GetComponent<EntityManager>());
-                    }
-                }
-
-                int aleaAction = Random.Range(1, 3);
-                if (spells.Count == 0 || aleaAction == 1) // Attaque normale
-                {
-                    target = targets[Random.Range(0, targets.Count)];
-                    StartCoroutine(FightManager.instance.Attacking(entityActing, target));
-                }
-                else // Lance une aptitude
-                {
-                    SpellSO chosenSpell = spells[Random.Range(0, spells.Count)];
-                    target = targets[Random.Range(0, targets.Count)];
-                    StartCoroutine(FightManager.instance.CastingSpell(entityActing, target, chosenSpell));
-                }
-                break;
-            
-            // Ne lance que des sorts si possible
-            case EntityStrategy.Mage:
-                foreach (SpellSO spell in entityActing.entitySpells)
-                {
-                    if (entityActing.entityMp >= spell.cost) spells.Add(spell);
-                }
-
-                if (spells.Count != 0)
-                {
-                    SpellSO selectedSpell = spells[Random.Range(0, spells.Count)];
-
-                    if (selectedSpell.helpingSpell)
-                    {
-                        foreach (GameObject ally in SpawningManager.instance.monstersInBattle)
+                        if (entityActing.entityMp >= spell.cost)
                         {
-                            EntityManager entityManager = ally.GetComponent<EntityManager>();
-                            if (!entityManager.isDefeated)
+                            spells.Add(spell);
+                        }
+                    }
+
+                    foreach (GameObject hero in SpawningManager.instance.heroesInBattle)
+                    {
+                        EntityManager entityManager = hero.GetComponent<EntityManager>();
+                        if (!entityManager.isDefeated)
+                        {
+                            targets.Add(hero.GetComponent<EntityManager>());
+                        }
+                    }
+
+                    int aleaAction = Random.Range(1, 3);
+                    if (spells.Count == 0 || aleaAction == 1) // Attaque normale
+                    {
+                        target = targets[Random.Range(0, targets.Count)];
+                        StartCoroutine(FightManager.instance.Attacking(entityActing, target));
+                    }
+                    else // Lance une aptitude
+                    {
+                        SpellSO chosenSpell = spells[Random.Range(0, spells.Count)];
+                        target = targets[Random.Range(0, targets.Count)];
+                        StartCoroutine(FightManager.instance.CastingSpell(entityActing, target, chosenSpell));
+                    }
+                    break;
+
+                // Ne lance que des sorts si possible
+                case EntityStrategy.Mage:
+                    foreach (SpellSO spell in entityActing.entitySpells)
+                    {
+                        if (entityActing.entityMp >= spell.cost) spells.Add(spell);
+                    }
+
+                    if (spells.Count != 0)
+                    {
+                        SpellSO selectedSpell = spells[Random.Range(0, spells.Count)];
+
+                        if (selectedSpell.helpingSpell)
+                        {
+                            foreach (GameObject ally in SpawningManager.instance.monstersInBattle)
                             {
-                                targets.Add(ally.GetComponent<EntityManager>());
+                                EntityManager entityManager = ally.GetComponent<EntityManager>();
+                                if (!entityManager.isDefeated)
+                                {
+                                    targets.Add(ally.GetComponent<EntityManager>());
+                                }
                             }
                         }
+                        else
+                        {
+                            foreach (GameObject hero in SpawningManager.instance.heroesInBattle)
+                            {
+                                EntityManager entityManager = hero.GetComponent<EntityManager>();
+                                if (!entityManager.isDefeated)
+                                {
+                                    targets.Add(hero.GetComponent<EntityManager>());
+                                }
+                            }
+                        }
+                        target = targets[Random.Range(0, targets.Count)];
+                        StartCoroutine(FightManager.instance.CastingSpell(entityActing, target, selectedSpell));
+
                     }
                     else
                     {
@@ -590,76 +620,76 @@ public class BattleManager : MonoSingleton<BattleManager>
                                 targets.Add(hero.GetComponent<EntityManager>());
                             }
                         }
+                        target = targets[Random.Range(0, targets.Count)];
+                        StartCoroutine(FightManager.instance.Attacking(entityActing, target));
                     }
-                    target = targets[Random.Range(0, targets.Count)];
-                    StartCoroutine(FightManager.instance.CastingSpell(entityActing, target, selectedSpell));
+                    break;
 
-                }
-                else
-                {
-                    foreach (GameObject hero in SpawningManager.instance.heroesInBattle)
+                // Soigne un allié si nécessaire
+                case EntityStrategy.Soigneur:
+
+                    var cantHeal = false;
+
+                    // Check les pv des aliés monstres
+
+                    List<EntityManager> alliesToHeal = new List<EntityManager>();
+                    for (int i = 0; i < SpawningManager.instance.monstersInBattle.Count; i++)
                     {
-                        EntityManager entityManager = hero.GetComponent<EntityManager>();
-                        if (!entityManager.isDefeated)
+                        EntityManager ally = SpawningManager.instance.monstersInBattle[i].GetComponent<EntityManager>();
+
+                        if (!ally.isDefeated && (float)ally.entityHp / ally.entityHpMax < .5f) // Allié à potentiellement soigner
                         {
-                            targets.Add(hero.GetComponent<EntityManager>());
-                        }
-                    }
-                    target = targets[Random.Range(0, targets.Count)];
-                    StartCoroutine(FightManager.instance.Attacking(entityActing, target));
-                }
-                break; 
-            
-            // Soigne un allié si nécessaire
-            case EntityStrategy.Soigneur:
-
-                var cantHeal = false;
-                
-                // Check les pv des aliés monstres
-                
-                List<EntityManager> alliesToHeal = new List<EntityManager>();
-                for (int i = 0; i < SpawningManager.instance.monstersInBattle.Count; i++)
-                {
-                    EntityManager ally = SpawningManager.instance.monstersInBattle[i].GetComponent<EntityManager>();
-                    
-                    if (!ally.isDefeated && (float) ally.entityHp / ally.entityHpMax < .5f) // Allié à potentiellement soigner
-                    {
-                        alliesToHeal.Add(ally);
-                    }
-                }
-                
-                int aleaHeal = Random.Range(0, 5);
-
-                if (alliesToHeal.Count != 0 && aleaHeal != 0) // On soigne un ennemi dans la liste
-                {
-                    foreach (SpellSO spell in entityActing.entitySpells)
-                    {
-                        if (entityActing.entityMp >= spell.cost)
-                        {
-                            spells.Add(spell);
+                            alliesToHeal.Add(ally);
                         }
                     }
 
-                    if (spells.Count != 0) // On applique le sort de soin s'il y en a un de disponible
+                    int aleaHeal = Random.Range(0, 5);
+
+                    if (alliesToHeal.Count != 0 && aleaHeal != 0) // On soigne un ennemi dans la liste
                     {
-                        SpellSO selectedSpell = spells[Random.Range(0, spells.Count)];
-                        target = alliesToHeal[Random.Range(0, alliesToHeal.Count)];
-                        StartCoroutine(FightManager.instance.CastingSpell(entityActing, target, selectedSpell));
+                        foreach (SpellSO spell in entityActing.entitySpells)
+                        {
+                            if (entityActing.entityMp >= spell.cost)
+                            {
+                                spells.Add(spell);
+                            }
+                        }
+
+                        if (spells.Count != 0) // On applique le sort de soin s'il y en a un de disponible
+                        {
+                            SpellSO selectedSpell = spells[Random.Range(0, spells.Count)];
+                            target = alliesToHeal[Random.Range(0, alliesToHeal.Count)];
+                            StartCoroutine(FightManager.instance.CastingSpell(entityActing, target, selectedSpell));
+                        }
+                        else
+                        {
+                            cantHeal = true;
+                        }
+
                     }
-                    else
+                    else // On ne soigne personne
                     {
                         cantHeal = true;
                     }
-                    
-                }
-                else // On ne soigne personne
-                {
-                    cantHeal = true;
-                }
-                
-                // Sinon, attaque
-                if (cantHeal)
-                {
+
+                    // Sinon, attaque
+                    if (cantHeal)
+                    {
+                        foreach (GameObject hero in SpawningManager.instance.heroesInBattle)
+                        {
+                            EntityManager entityManager = hero.GetComponent<EntityManager>();
+                            if (!entityManager.isDefeated)
+                            {
+                                targets.Add(hero.GetComponent<EntityManager>());
+                            }
+                        }
+                        target = targets[Random.Range(0, targets.Count)];
+                        StartCoroutine(FightManager.instance.Attacking(entityActing, target));
+                    }
+                    break;
+
+                // Ne fait que attaquer
+                default:
                     foreach (GameObject hero in SpawningManager.instance.heroesInBattle)
                     {
                         EntityManager entityManager = hero.GetComponent<EntityManager>();
@@ -670,22 +700,8 @@ public class BattleManager : MonoSingleton<BattleManager>
                     }
                     target = targets[Random.Range(0, targets.Count)];
                     StartCoroutine(FightManager.instance.Attacking(entityActing, target));
-                }
-                break;
-            
-            // Ne fait que attaquer
-            default:
-                foreach (GameObject hero in SpawningManager.instance.heroesInBattle)
-                {
-                    EntityManager entityManager = hero.GetComponent<EntityManager>();
-                    if (!entityManager.isDefeated)
-                    {
-                        targets.Add(hero.GetComponent<EntityManager>());
-                    }
-                }
-                target = targets[Random.Range(0, targets.Count)];
-                StartCoroutine(FightManager.instance.Attacking(entityActing, target));
-                break;
+                    break;
+            }
         }
         targets.Clear();
         yield return new WaitForSeconds(InterfaceManager.instance.time);
@@ -776,9 +792,32 @@ public class BattleManager : MonoSingleton<BattleManager>
                 }
                 break;
 
-            case Statut.Silence:break;
+            case Statut.Silence:
 
-            case Statut.Endormi: break;
+                entity.turnsBeforeRecovering -= 1;
+                if (entity.turnsBeforeRecovering <= 0)
+                {
+                    InterfaceManager.instance.Message(true, $"{entity.entityName} peut à nouveau lancer des sorts !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    entity.entityStatut = Statut.None;
+                    StatDisplayManager.instance.DisplayStat(entity);
+                }
+
+                break;
+
+            case Statut.Endormi:
+
+                entity.turnsBeforeRecovering -= 1;
+                if (entity.turnsBeforeRecovering <= 0)
+                {
+                    Debug.Log("Réveil !");
+                    InterfaceManager.instance.Message(true, $"{entity.entityName} se réveille !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    entity.entityStatut = Statut.None;
+                    StatDisplayManager.instance.DisplayStat(entity);
+                }
+
+                break;
         }
         yield return new WaitForSeconds(InterfaceManager.instance.time);
     }

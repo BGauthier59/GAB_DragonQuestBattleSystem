@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3613da6db18ab8d44b981e903bb8a24b, type: 3}
-  m_Name: "CI Ordr\xE9al"
+  m_Name: CI Gulrur 4
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: 2645a2dca2aef0341befb21510eae71e, type: 2}
+  - {fileID: 11400000, guid: 3960ce3a30604e642b26190c32e79c1d, type: 2}
+  - {fileID: 11400000, guid: fb4adb16f6f745746924d33416739e2d, type: 2}
+  - {fileID: 11400000, guid: 0fd45e6b61ca1dc4e9ae3932dc39372b, type: 2}
+  - {fileID: 11400000, guid: 0fd45e6b61ca1dc4e9ae3932dc39372b, type: 2}

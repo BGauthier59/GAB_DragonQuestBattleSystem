@@ -1251,7 +1251,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ecd4419d291d09044994395d3e60748d, type: 2}
   - {fileID: 11400000, guid: 8ca102c5e0138194dbea99c251f83c63, type: 2}
   - {fileID: 11400000, guid: 7b93d2719081fcc46965fc49f0ed986f, type: 2}
-  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
+  - {fileID: 11400000, guid: 65eb7f3baba04214f927a7066f89d547, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
@@ -4343,15 +4343,17 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Cimes inaccesibles Delphoe
       m_Image: {fileID: 0}
-    - m_Text: Cimes inacessibles Delsor
+    - m_Text: "Cimes inacessibles Ordr\xE9al"
       m_Image: {fileID: 0}
     - m_Text: Cimes inacessibles Gulrur et Dalgorie
       m_Image: {fileID: 0}
-    - m_Text: "Cimes inacessibles Ordr\xE9al"
+    - m_Text: Cimes inacessibles Delsor
       m_Image: {fileID: 0}
     - m_Text: Retraite de Gulrur
       m_Image: {fileID: 0}
-    - m_Text: None
+    - m_Text: Source divine
+      m_Image: {fileID: 0}
+    - m_Text: Source divine
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

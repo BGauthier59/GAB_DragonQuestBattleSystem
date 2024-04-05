@@ -138,6 +138,12 @@ public class FightManager : MonoSingleton<FightManager>
 
         if (spell.hasSpecialEffect)
         {
+            if (target.isReflected == true)
+            {
+                target = caster;
+                InterfaceManager.instance.Message(true, $"Mais le miroir magique renvoie le sort !");
+                yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+            }
             StartCoroutine(SpellSpecialEffect(spell, caster, target));
         }
         else
@@ -225,6 +231,7 @@ public class FightManager : MonoSingleton<FightManager>
                                     
                                     AudioManager.instance.Play("Hit");
                                     target.entityImage.color = hitColor;
+                                    Debug.Log(target);
                                     InterfaceManager.instance.Message(true, $"{target.entityName} subit {realDamages} points de dégâts !");
                                     target.entityHp -= realDamages;
                                     
@@ -258,6 +265,13 @@ public class FightManager : MonoSingleton<FightManager>
                         int realDamages = (int) damages;
                         if (realDamages < 0) realDamages = Random.Range(0,2);
 
+                        if (target.isReflected == true)
+                        {
+                            target = caster;
+                            InterfaceManager.instance.Message(true, $"Mais le miroir magique renvoie le sort !");
+                            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+                        }
+
                         AudioManager.instance.Play("Hit");
                         target.entityImage.color = hitColor;
                         InterfaceManager.instance.Message(true, $"{target.entityName} subit {realDamages} points de dégâts !");
@@ -287,6 +301,13 @@ public class FightManager : MonoSingleton<FightManager>
                                 float damages = (caster.entityMana * spell.strenght) * Random.Range(0.9f, 1.1f);
                                 damages *= SpellElementFactor(spell, target);
                                 int realDamages = (int) damages;
+
+                                if (target.isReflected == true || spell.spellType == SpellType.Spell)
+                                {
+                                    target = caster;
+                                    InterfaceManager.instance.Message(true, $"Mais le miroir magique renvoie le sort !");
+                                    yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+                                }
 
                                 if (realDamages < 0) realDamages = Random.Range(0,2);
 
@@ -874,7 +895,8 @@ public class FightManager : MonoSingleton<FightManager>
                 else
                 {
                     targetEntity.entityStatut = Statut.Silence;
-
+                    targetEntity.turnsBeforeRecovering = Random.Range(3, 7);
+                    Debug.Log(targetEntity.turnsBeforeRecovering);
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est réduit(e) au silence !");
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
@@ -906,6 +928,50 @@ public class FightManager : MonoSingleton<FightManager>
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
                 }
+
+            case 12: //reflexion
+
+                targetEntity = caster;
+                caster.isReflected = true;
+                InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est protégé par un voile de lumière !");
+                yield return new WaitForSeconds(InterfaceManager.instance.time);
+                break;
+
+            case 13: //torpeur
+
+                if (targetEntity.entityStatut != Statut.None)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+
+                int aleaSleep = Random.Range(0, 100);
+                int trueSleepSpellSuccessRate = spell.successRate - targetEntity.entityResilienceToSleep;
+
+                if (trueSleepSpellSuccessRate <= 0 || targetEntity.isBlocked)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+                if (aleaSleep >= trueSleepSpellSuccessRate)
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+                else
+                {
+                    targetEntity.entityStatut = Statut.Endormi;
+                    targetEntity.turnsBeforeRecovering = Random.Range(1, 4);
+                    Debug.Log(targetEntity.turnsBeforeRecovering);
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} tombe dans un profond sommeil !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                    break;
+                }
+
 
 
             default:

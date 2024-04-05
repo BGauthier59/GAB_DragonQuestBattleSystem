@@ -13,11 +13,23 @@ MonoBehaviour:
   m_Name: "Cimes inaccessibles (Ordr\xE9al)"
   m_EditorClassIdentifier: 
   configsInZoneDay:
-  - {fileID: 11400000, guid: 50b22dcde38fcc24b8a5132543f79713, type: 2}
+  - {fileID: 11400000, guid: d0933f85ed6056a46a4276b9d8fc74e8, type: 2}
+  - {fileID: 11400000, guid: a164783c4c4124b479489177afaab5f6, type: 2}
+  - {fileID: 11400000, guid: 0b4b6f0c095218044b56a2deefbda0df, type: 2}
+  - {fileID: 11400000, guid: 787b8733109a02a408efb74773941bbe, type: 2}
+  - {fileID: 11400000, guid: 8b705ff8982c8244c940afd7bb3050f8, type: 2}
+  - {fileID: 11400000, guid: b61f237afa9da2f4196e2b3e2d972dc4, type: 2}
+  - {fileID: 11400000, guid: 2306b1354bf2d594984afcc3bb323fff, type: 2}
   configsInZoneNight:
-  - {fileID: 11400000, guid: 50b22dcde38fcc24b8a5132543f79713, type: 2}
+  - {fileID: 11400000, guid: d0933f85ed6056a46a4276b9d8fc74e8, type: 2}
+  - {fileID: 11400000, guid: a164783c4c4124b479489177afaab5f6, type: 2}
+  - {fileID: 11400000, guid: 0b4b6f0c095218044b56a2deefbda0df, type: 2}
+  - {fileID: 11400000, guid: 787b8733109a02a408efb74773941bbe, type: 2}
+  - {fileID: 11400000, guid: 8b705ff8982c8244c940afd7bb3050f8, type: 2}
+  - {fileID: 11400000, guid: b61f237afa9da2f4196e2b3e2d972dc4, type: 2}
+  - {fileID: 11400000, guid: 2306b1354bf2d594984afcc3bb323fff, type: 2}
   minMaxMonstersInBattle: 0000000000000000
-  fontZoneDay: {fileID: 21300000, guid: 5d2116c71f354d5458263fe4141bdb27, type: 3}
-  fontZoneNight: {fileID: 21300000, guid: 3666d6385d7e07142b3562790e15a693, type: 3}
+  fontZoneDay: {fileID: 21300000, guid: 999447840eb9d5448a2147482e3402e5, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: ea85fd37a8d816442943ecb82044971b, type: 3}
   musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
   combatZone: 30

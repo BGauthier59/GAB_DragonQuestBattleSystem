@@ -14,8 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   configsInZoneDay:
   - {fileID: 11400000, guid: ad4db6a0fbd915145a668c613fbe151b, type: 2}
+  - {fileID: 11400000, guid: 7089d7823e94e364e9a1c3be6b1ebb6b, type: 2}
+  - {fileID: 11400000, guid: a4e96bf93a7fd5549a6f73fb6162a7e1, type: 2}
+  - {fileID: 11400000, guid: f91e324612bcfc14d82df5066db2d4ea, type: 2}
+  - {fileID: 11400000, guid: 21b86811e54662c4ebc01b21dd7dd31c, type: 2}
+  - {fileID: 11400000, guid: e750133bb632fba4a89899cdd5973e20, type: 2}
+  - {fileID: 11400000, guid: 959e360cc29325d46b6716d3060440a6, type: 2}
   configsInZoneNight:
   - {fileID: 11400000, guid: ad4db6a0fbd915145a668c613fbe151b, type: 2}
+  - {fileID: 11400000, guid: 7089d7823e94e364e9a1c3be6b1ebb6b, type: 2}
+  - {fileID: 11400000, guid: a4e96bf93a7fd5549a6f73fb6162a7e1, type: 2}
+  - {fileID: 11400000, guid: f91e324612bcfc14d82df5066db2d4ea, type: 2}
+  - {fileID: 11400000, guid: 21b86811e54662c4ebc01b21dd7dd31c, type: 2}
+  - {fileID: 11400000, guid: e750133bb632fba4a89899cdd5973e20, type: 2}
+  - {fileID: 11400000, guid: 959e360cc29325d46b6716d3060440a6, type: 2}
   minMaxMonstersInBattle: 0000000000000000
   fontZoneDay: {fileID: 21300000, guid: 45b43df5c4462e043bdcf8d53333e229, type: 3}
   fontZoneNight: {fileID: 21300000, guid: ed936af423e71eb4b8d03b3c97b01831, type: 3}

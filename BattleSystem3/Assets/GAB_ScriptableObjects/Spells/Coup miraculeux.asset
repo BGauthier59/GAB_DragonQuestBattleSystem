@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Multigriffes
+  m_Name: Coup miraculeux
   m_EditorClassIdentifier: 
-  spellName: Multigriffe
-  spellDescription: "Distribue plusieurs coups r\xE9partis al\xE9atoirement"
-  inBattleDescription: "d\xE9verse une pluie de coups de griffes !"
+  spellName: Coup miraculeux
+  spellDescription: "R\xE9investit une partie des d\xE9g\xE2ts caus\xE9s en PVs."
+  inBattleDescription: porte un coup miraculeux !
   excuseForInaction: 
-  spellIndex: 6
+  spellIndex: 20
   spellType: 1
-  cost: 0
+  cost: 4
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
@@ -28,4 +28,4 @@ MonoBehaviour:
   successRate: 100
   strenght: 0
   elementType: 0
-  factor: 60
+  factor: 100

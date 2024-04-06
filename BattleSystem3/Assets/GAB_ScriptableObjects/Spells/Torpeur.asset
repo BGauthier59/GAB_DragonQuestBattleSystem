@@ -23,8 +23,9 @@ MonoBehaviour:
   hasEffectAndDamages: 0
   doTargetEveryone: 0
   helpingSpell: 0
+  selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 100
+  successRate: 30
   strenght: 0
   elementType: 0
   factor: 0

@@ -19,11 +19,12 @@ MonoBehaviour:
   excuseForInaction: 
   spellIndex: 5
   spellType: 1
-  cost: 0
+  cost: 8
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
   helpingSpell: 0
+  selfSpell: 0
   onlyWorkOnDefeated: 0
   successRate: 20
   strenght: 0

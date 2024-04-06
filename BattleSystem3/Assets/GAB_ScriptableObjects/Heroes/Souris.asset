@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: Hero 3
+  m_Name: Souris
   m_EditorClassIdentifier: 
-  entityName: Greg
+  entityName: Souris
   sprite: {fileID: 0}
   spawnPosY: 0
   type: 0
   pronoun: 
-  hp: 264
-  mp: 20
-  atk: 150
-  defense: 80
-  agility: 100
-  level: 20
-  mana: 5
+  hp: 31
+  mp: 26
+  atk: 12
+  defense: 7
+  agility: 12
+  level: 1
+  mana: 0.7
   criticalHit: 10
   dodge: 10
   entityResilienceToMPTheft: 0
@@ -40,14 +40,14 @@ MonoBehaviour:
   helmet: {fileID: 0}
   shield: {fileID: 0}
   armor: {fileID: 0}
-  hpLevelUp: 0a0000000d000000
-  mpLevelUp: 0500000008000000
-  atkLevelUp: 0500000007000000
-  defLevelUp: 0400000007000000
-  agiLevelUp: 0700000009000000
+  hpLevelUp: 080000000c000000
+  mpLevelUp: 0600000009000000
+  atkLevelUp: 0500000008000000
+  defLevelUp: 0300000005000000
+  agiLevelUp: 0500000008000000
   manaLevelUp:
   - 0.1
-  - 0.15
+  - 0.2
   learnSpells:
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
@@ -57,6 +57,8 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: f856d990fb246a24b9f0b7b121f1999e, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 776da5e85dfd39d42ba29818aa654bd5, type: 2}
+  - learningLevel: 4
+    learningSpell: {fileID: 11400000, guid: 885f9ab5789e58647ae1b959acecf35c, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

@@ -45,6 +45,7 @@ public enum Statut
     Brûlé, // Subit 1/12 des dégâts max par tour
     Empoisonné, // Subit 1/16 des dégâts max par tour
     EmpMagique, // Comme poison mais pour MP
-    Endormi, // Ne peut pas agir. 1/3 de se réveiller pendant un tour
+    Endormi, // Ne peut pas agir. Se réveille à chaque coup physique reçu ou au bout d'un certain nbr de tours
     Silence, // Ne peut pas lancer de sort.
+    Paralysé, //Ne peut pas agir pendant un certain nbr de tours
 }

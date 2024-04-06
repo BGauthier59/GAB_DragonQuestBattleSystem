@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Unity.Mathematics;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -309,6 +310,12 @@ public class BattleManager : MonoSingleton<BattleManager>
             yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
             hasEntityActed = true;
         }
+        else if (ally.entityStatut == Statut.Paralysé)
+        {
+            InterfaceManager.instance.Message(true, $"{ally.entityName} est incapable de bouger !");
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
+            hasEntityActed = true;
+        }
         else
         {
             AudioManager.instance.Play("PrepareAttack");
@@ -520,14 +527,13 @@ public class BattleManager : MonoSingleton<BattleManager>
     IEnumerator MonsterIsActing(EntityManager monster)
     {
         entityActing = monster;
+        hasEntityStatutBeenVerified = false;
 
         EntityManager target;
 
         List<SpellSO> spells = new List<SpellSO>();
 
         StartCoroutine(OnStatutEffect(monster, monster.entityStatut));
-
-        hasEntityStatutBeenVerified = false;
 
         if (monster.entityStatut != Statut.None)
         {
@@ -545,6 +551,12 @@ public class BattleManager : MonoSingleton<BattleManager>
         else if (monster.entityStatut == Statut.Endormi)
         {
             InterfaceManager.instance.Message(true, $"{monster.entityPronoun} {monster.entityName} dort à poings fermés !");
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
+            hasEntityActed = true;
+        }
+        else if (monster.entityStatut == Statut.Paralysé)
+        {
+            InterfaceManager.instance.Message(true, $"{monster.entityPronoun} {monster.entityName} est incapable de bouger !");
             yield return new WaitForSeconds(InterfaceManager.instance.time);
             hasEntityActed = true;
         }
@@ -829,6 +841,20 @@ public class BattleManager : MonoSingleton<BattleManager>
                 {
                     Debug.Log("Réveil !");
                     InterfaceManager.instance.Message(true, $"{entity.entityName} se réveille !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    entity.entityStatut = Statut.None;
+                    StatDisplayManager.instance.DisplayStat(entity);
+                }
+                hasEntityStatutBeenVerified = true;
+                break;
+
+            case Statut.Paralysé:
+
+                entity.turnsBeforeRecovering -= 1;
+                if (entity.turnsBeforeRecovering <= 0)
+                {
+                    Debug.Log("Déparalysie !");
+                    InterfaceManager.instance.Message(true, $"{entity.entityName} n'est plus paralysé(e) !");
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
                     entity.entityStatut = Statut.None;
                     StatDisplayManager.instance.DisplayStat(entity);

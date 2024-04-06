@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Multigriffes
+  m_Name: Stimulation
   m_EditorClassIdentifier: 
-  spellName: Multigriffe
-  spellDescription: "Distribue plusieurs coups r\xE9partis al\xE9atoirement"
-  inBattleDescription: "d\xE9verse une pluie de coups de griffes !"
+  spellName: Stimulation
+  spellDescription: "Gu\xE9rie un alli\xE9 de la paralysie."
+  inBattleDescription: lance le Tohu-Bohu !
   excuseForInaction: 
-  spellIndex: 6
-  spellType: 1
+  spellIndex: 18
+  spellType: 0
   cost: 0
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
-  helpingSpell: 0
+  helpingSpell: 1
   selfSpell: 0
   onlyWorkOnDefeated: 0
   successRate: 100
   strenght: 0
   elementType: 0
-  factor: 60
+  factor: 0

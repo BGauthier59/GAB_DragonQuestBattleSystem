@@ -49,11 +49,19 @@ public class EntityManager : MonoBehaviour
     public int entityResilienceToBurn;
     public int entityResilienceToSilence;
     public int entityResilienceToSleep;
+    public int entityResilienceToStatDecrease;
+
+    [Range(-2, 2)] public int atkStatIndex = 0;
+    [Range(-2, 2)] public int defStatIndex = 0;
+    [Range(-2, 2)] public int manaStatIndex = 0;
 
     public List<SpellSO> entitySpells;
 
     public Statut entityStatut;
     public int turnsBeforeRecovering;
+    public int turnsBeforeResetDef;
+    public int turnsBeforeResetAtk;
+    public int turnsBeforeRestMana;
     public bool isBlocked;
     public bool isReflected;
 
@@ -121,8 +129,9 @@ public class EntityManager : MonoBehaviour
         entityResilienceToBurn = entitySO.entityResilienceToBurn;
         entityResilienceToSilence = entitySO.entityResilienceToSilence;
         entityResilienceToSleep = entitySO.entityResilienceToSleep;
+        entityResilienceToStatDecrease = entitySO.entityResilienceToStatDecrease;
 
-        entitytLv = entitySO.level;
+    entitytLv = entitySO.level;
         
         entitySpells = entitySO.spells;
         
@@ -403,8 +412,83 @@ public class EntityManager : MonoBehaviour
 
     #endregion
 
-    public void StatutEffect()
+    public void SetNewDef(int defStatIndex)
     {
+        switch(defStatIndex)
+        {
+            case (-2):
 
+                float entityDefMin = entityDefInit * 0.5f;
+                int realEntityDefMin = (int)entityDefMin;
+                entityDef = realEntityDefMin;
+
+                break;
+
+            case (-1):
+
+                float entityDefLower = entityDefInit * 0.75f;
+                int realEntityDefLower = (int)entityDefLower;
+                entityDef = realEntityDefLower;
+                break;
+
+            case (0):
+
+                entityDef = entityDefInit;
+
+                break;
+
+            case (1):
+
+                float entityDefUpper = entityDefInit * 1.5f;
+                int realEntityDefUpper = (int)entityDefUpper;
+                entityDef = realEntityDefUpper;
+                break;
+
+            case (2):
+
+                float entityDefMax = entityDefInit * 2;
+                entityDef = (int)entityDefMax;
+                break;
+        }
+    }
+
+    public void SetNewAtk(int atkStatIndex)
+    {
+        switch (atkStatIndex)
+        {
+            case (-2):
+
+                float entityAtkMin = entityAtkInit * 0.5f;
+                int realEntityAtkMin = (int)entityAtkMin;
+                entityAtk = realEntityAtkMin;
+
+                break;
+
+            case (-1):
+
+                float entityAtkLower = entityAtkInit * 0.75f;
+                int realEntityAtkLower = (int)entityAtkLower;
+                entityAtk = realEntityAtkLower;
+                break;
+
+            case (0):
+
+                entityAtk = entityAtkInit;
+
+                break;
+
+            case (1):
+
+                float entityAtkUpper = entityAtkInit * 1.5f;
+                int realEntityAtkUpper = (int)entityAtkUpper;
+                entityAtk = realEntityAtkUpper;
+                break;
+
+            case (2):
+
+                float entityAtkMax = entityAtkInit * 2;
+                entityAtk = (int)entityAtkMax;
+                break;
+        }
     }
 }

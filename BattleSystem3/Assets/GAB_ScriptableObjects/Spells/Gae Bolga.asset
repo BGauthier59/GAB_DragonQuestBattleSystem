@@ -10,22 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Multigriffes
+  m_Name: Gae Bolga
   m_EditorClassIdentifier: 
-  spellName: Multigriffe
-  spellDescription: "Distribue plusieurs coups r\xE9partis al\xE9atoirement"
-  inBattleDescription: "d\xE9verse une pluie de coups de griffes !"
+  spellName: Gae Bolga
+  spellDescription: "Porte un coup charg\xE9 par la foudre, qui peut paralyser la
+    cible."
+  inBattleDescription: canalise la foudre dans son arme et frappe !
   excuseForInaction: 
-  spellIndex: 6
+  spellIndex: 14
   spellType: 1
-  cost: 0
+  cost: 5
   hasSpecialEffect: 1
-  hasEffectAndDamages: 0
+  hasEffectAndDamages: 1
   doTargetEveryone: 0
   helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 100
+  successRate: 20
   strenght: 0
   elementType: 0
-  factor: 60
+  factor: 100

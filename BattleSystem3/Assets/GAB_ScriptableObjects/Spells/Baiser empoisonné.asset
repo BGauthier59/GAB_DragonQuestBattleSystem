@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Multigriffes
+  m_Name: "Baiser empoisonn\xE9"
   m_EditorClassIdentifier: 
-  spellName: Multigriffe
-  spellDescription: "Distribue plusieurs coups r\xE9partis al\xE9atoirement"
-  inBattleDescription: "d\xE9verse une pluie de coups de griffes !"
+  spellName: "Baiser empoisonn\xE9"
+  spellDescription: ATTAQUE MONSTRE
+  inBattleDescription: "donne un baiser empoisonn\xE9 !"
   excuseForInaction: 
-  spellIndex: 6
+  spellIndex: 7
   spellType: 1
   cost: 0
   hasSpecialEffect: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
   helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 100
+  successRate: 50
   strenght: 0
   elementType: 0
-  factor: 60
+  factor: 0

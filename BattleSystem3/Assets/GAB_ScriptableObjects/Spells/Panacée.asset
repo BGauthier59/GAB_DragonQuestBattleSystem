@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Multigriffes
+  m_Name: "Panac\xE9e"
   m_EditorClassIdentifier: 
-  spellName: Multigriffe
-  spellDescription: "Distribue plusieurs coups r\xE9partis al\xE9atoirement"
-  inBattleDescription: "d\xE9verse une pluie de coups de griffes !"
+  spellName: "Panac\xE9e"
+  spellDescription: "Gu\xE9rie un alli\xE9 du poison, physique ou magique."
+  inBattleDescription: "lance la Panac\xE9e !"
   excuseForInaction: 
-  spellIndex: 6
-  spellType: 1
-  cost: 0
+  spellIndex: 15
+  spellType: 0
+  cost: 2
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
-  helpingSpell: 0
+  helpingSpell: 1
   selfSpell: 0
   onlyWorkOnDefeated: 0
   successRate: 100
   strenght: 0
   elementType: 0
-  factor: 60
+  factor: 0

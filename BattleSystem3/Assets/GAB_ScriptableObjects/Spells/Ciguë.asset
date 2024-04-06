@@ -18,13 +18,14 @@ MonoBehaviour:
   excuseForInaction: 
   spellIndex: 7
   spellType: 0
-  cost: 0
+  cost: 3
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
   helpingSpell: 0
+  selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 20
+  successRate: 50
   strenght: 0
   elementType: 0
   factor: 0

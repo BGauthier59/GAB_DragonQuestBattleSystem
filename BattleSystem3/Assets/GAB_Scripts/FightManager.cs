@@ -1376,6 +1376,10 @@ public class FightManager : MonoSingleton<FightManager>
 
                 break;
 
+            case 25: //Ne fait rien
+
+                break;
+
 
             default:
                 Debug.LogError("Index du sort invalide");

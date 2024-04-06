@@ -23,6 +23,7 @@ MonoBehaviour:
   hasEffectAndDamages: 0
   doTargetEveryone: 0
   helpingSpell: 0
+  selfSpell: 1
   onlyWorkOnDefeated: 0
   successRate: 0
   strenght: 0

@@ -16,7 +16,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 1e420c5c13be9a8408ef015badefe64f, type: 3}
   spawnPosY: 51
   type: 1
-  pronoun: 
+  pronoun: La
   hp: 103
   mp: 0
   atk: 98

@@ -17,6 +17,7 @@ public class SpellSO : ScriptableObject
     public bool hasEffectAndDamages;
     public bool doTargetEveryone;
     public bool helpingSpell;
+    public bool selfSpell;
     public bool onlyWorkOnDefeated;
     [Range(1, 100)] public int successRate;
 

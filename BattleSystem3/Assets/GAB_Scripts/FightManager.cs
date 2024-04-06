@@ -20,7 +20,7 @@ public class FightManager : MonoSingleton<FightManager>
             //attacker.entityAnim.Play("MonsterAttacks");
             AudioManager.instance.Play("Attack");
         }
-        
+
         InterfaceManager.instance.Message(true, $"{attacker.entityName} attaque {target.entityName} !");
         yield return new WaitForSeconds(InterfaceManager.instance.time);
         
@@ -55,14 +55,17 @@ public class FightManager : MonoSingleton<FightManager>
             
             AudioManager.instance.Play("Hit");
             target.entityImage.color = hitColor;
+
             InterfaceManager.instance.Message(true, $"{target.entityName} subit {realDamages} points de dégâts !");
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
+
             target.entityHp -= realDamages;
             
             if (target.entityHp <= 0)
             {
-                yield return new WaitForSeconds(InterfaceManager.instance.time);
                 target.entityHp = 0;
                 TargetIsDefeated(target);
+
                 InterfaceManager.instance.Message(true, $"{target.entityName} est vaincu(e) !");
                 yield return new WaitForSeconds(InterfaceManager.instance.time);
             }
@@ -121,17 +124,9 @@ public class FightManager : MonoSingleton<FightManager>
             targets = SpawningManager.instance.monstersInBattle;
         }
         
-        if (caster.entityType == EntityType.Ally)
-        {
-            InterfaceManager.instance.Message(true, $"{caster.entityName} utilise {spell.spellName} !");
-            yield return new WaitForSeconds(InterfaceManager.instance.time);
-        }
-        else
-        {
-            InterfaceManager.instance.Message(true, $"{caster.entityPronoun} {caster.entityName} {spell.inBattleDescription}");
-            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
-        }
-
+        InterfaceManager.instance.Message(true, $"{caster.entityName} utilise {spell.spellName} !");
+        yield return new WaitForSeconds(InterfaceManager.instance.time);
+        
         caster.entityMp -= spell.cost;
         
         StatDisplayManager.instance.DisplayStat(caster);
@@ -265,7 +260,7 @@ public class FightManager : MonoSingleton<FightManager>
                         int realDamages = (int) damages;
                         if (realDamages < 0) realDamages = Random.Range(0,2);
 
-                        if (target.isReflected == true)
+                        if (target.isReflected == true && spell.spellType == SpellType.Spell)
                         {
                             target = caster;
                             InterfaceManager.instance.Message(true, $"Mais le miroir magique renvoie le sort !");
@@ -302,7 +297,7 @@ public class FightManager : MonoSingleton<FightManager>
                                 damages *= SpellElementFactor(spell, target);
                                 int realDamages = (int) damages;
 
-                                if (target.isReflected == true || spell.spellType == SpellType.Spell)
+                                if (target.isReflected == true && spell.spellType == SpellType.Spell)
                                 {
                                     target = caster;
                                     InterfaceManager.instance.Message(true, $"Mais le miroir magique renvoie le sort !");
@@ -314,13 +309,11 @@ public class FightManager : MonoSingleton<FightManager>
                                 AudioManager.instance.Play("Hit");
                                 target.entityImage.color = hitColor;
                                 InterfaceManager.instance.Message(true, $"{target.entityName} subit {realDamages} points de dégâts !");
+                                yield return new WaitForSeconds(InterfaceManager.instance.time);
                                 target.entityHp -= realDamages;
-                                
-                                if (target.entityHp <= 0)
+
+                                if (CheckDefeat(target))
                                 {
-                                    yield return new WaitForSeconds(InterfaceManager.instance.time);
-                                    target.entityHp = 0;
-                                    TargetIsDefeated(target);
                                     InterfaceManager.instance.Message(true, $"{target.entityName} est vaincu(e) !");
                                     yield return new WaitForSeconds(InterfaceManager.instance.time);
                                 }
@@ -878,7 +871,8 @@ public class FightManager : MonoSingleton<FightManager>
                 }
 
                 int aleaSilence = Random.Range(0, 100);
-                int trueSilenceSpellSuccessRate = aleaSilence - targetEntity.entityResilienceToSilence;
+                int trueSilenceSpellSuccessRate = spell.successRate - targetEntity.entityResilienceToSilence;
+                Debug.Log(trueSilenceSpellSuccessRate);
 
                 if (trueSilenceSpellSuccessRate <= 0)
                 {
@@ -971,6 +965,30 @@ public class FightManager : MonoSingleton<FightManager>
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
                 }
+
+            case 14: //paralysie
+
+                break;
+
+            case 15: //soigne du poison
+
+                break;
+
+            case 16: //soigne de la brûlure
+
+                break;
+
+            case 17: //soigne du sommeil
+
+                break;
+
+            case 18: //soigne de la paralysie
+
+                break;
+
+            case 19: //soigne de tout
+
+                break;
 
 
 

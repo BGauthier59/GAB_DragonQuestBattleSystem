@@ -286,25 +286,27 @@ public class BattleManager : MonoSingleton<BattleManager>
     IEnumerator AllyIsActing(EntityManager ally)
     {
         entityActing = ally;
-        
+        hasEntityStatutBeenVerified = false;
+
         StartCoroutine(OnStatutEffect(ally, ally.entityStatut));
 
         if (ally.entityStatut != Statut.None)
         {
             Debug.Log("vérification statut de " + ally);
-            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+            yield return new WaitUntil(() => hasEntityStatutBeenVerified);
         }
-        else if (ally.isBlocked == true)
+
+        if (ally.isBlocked == true)
         {
             InterfaceManager.instance.Message(true, $"{ally.entityName} ne peut pas bouger !");
-            yield return new WaitForSeconds(InterfaceManager.instance.time);
+            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
             ally.isBlocked = false;
             hasEntityActed = true;
         }
         else if (ally.entityStatut == Statut.Endormi)
         {
             InterfaceManager.instance.Message(true, $"{ally.entityName} dort à poings fermés !");
-            yield return new WaitForSeconds(InterfaceManager.instance.time);
+            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
             hasEntityActed = true;
         }
         else
@@ -429,6 +431,7 @@ public class BattleManager : MonoSingleton<BattleManager>
             }
             hasMonsterBeenTargeted = true;
         }
+
         else
         {
             if (spellSelected.helpingSpell) // Sort de soutien allié
@@ -524,17 +527,26 @@ public class BattleManager : MonoSingleton<BattleManager>
 
         StartCoroutine(OnStatutEffect(monster, monster.entityStatut));
 
+        hasEntityStatutBeenVerified = false;
+
         if (monster.entityStatut != Statut.None)
         {
             Debug.Log("vérification statut de " + monster);
-            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+            yield return new WaitUntil(() => hasEntityStatutBeenVerified);
         }
 
-        if (monster.entityStatut == Statut.Endormi)
+        if (monster.isBlocked == true)
+        {
+            InterfaceManager.instance.Message(true, $"{monster.entityPronoun} {monster.entityName} ne peut pas bouger !");
+            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+            monster.isBlocked = false;
+            hasEntityActed = true;
+        }
+        else if (monster.entityStatut == Statut.Endormi)
         {
             InterfaceManager.instance.Message(true, $"{monster.entityPronoun} {monster.entityName} dort à poings fermés !");
             yield return new WaitForSeconds(InterfaceManager.instance.time);
-            BattleManager.instance.hasEntityActed = true;
+            hasEntityActed = true;
         }
         else
         {
@@ -544,7 +556,7 @@ public class BattleManager : MonoSingleton<BattleManager>
                 case EntityStrategy.Attaquant:
                     foreach (SpellSO spell in entityActing.entitySpells)
                     {
-                        if (entityActing.entityMp >= spell.cost)
+                        if (entityActing.entityMp >= spell.cost && entityActing.entityStatut != Statut.Silence)
                         {
                             spells.Add(spell);
                         }
@@ -713,6 +725,8 @@ public class BattleManager : MonoSingleton<BattleManager>
         {
             case Statut.None:
 
+                hasEntityStatutBeenVerified = true;
+
                 break;
 
             case Statut.Empoisonné:
@@ -740,6 +754,7 @@ public class BattleManager : MonoSingleton<BattleManager>
                     StatDisplayManager.instance.DisplayStat(entity);
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
                 }
+                hasEntityStatutBeenVerified = true;
                 break;
 
             case Statut.Brûlé:
@@ -767,6 +782,7 @@ public class BattleManager : MonoSingleton<BattleManager>
                     StatDisplayManager.instance.DisplayStat(entity);
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
                 }
+                hasEntityStatutBeenVerified = true;
                 break;
 
             case Statut.EmpMagique:
@@ -790,6 +806,7 @@ public class BattleManager : MonoSingleton<BattleManager>
                     StatDisplayManager.instance.DisplayStat(entity);
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
                 }
+                hasEntityStatutBeenVerified = true;
                 break;
 
             case Statut.Silence:
@@ -802,7 +819,7 @@ public class BattleManager : MonoSingleton<BattleManager>
                     entity.entityStatut = Statut.None;
                     StatDisplayManager.instance.DisplayStat(entity);
                 }
-
+                hasEntityStatutBeenVerified = true;
                 break;
 
             case Statut.Endormi:
@@ -816,7 +833,7 @@ public class BattleManager : MonoSingleton<BattleManager>
                     entity.entityStatut = Statut.None;
                     StatDisplayManager.instance.DisplayStat(entity);
                 }
-
+                hasEntityStatutBeenVerified = true;
                 break;
         }
         yield return new WaitForSeconds(InterfaceManager.instance.time);

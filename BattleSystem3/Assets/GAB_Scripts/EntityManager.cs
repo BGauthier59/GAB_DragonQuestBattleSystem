@@ -9,14 +9,14 @@ using UnityEngine.UI;
 public class EntityManager : MonoBehaviour
 {
     #region Variables
-    
+
     public EntitySO entitySO;
 
     public int entityIndex;
     public EntityType entityType;
     public string entityPronoun;
     public EntityStrategy entityStrategy;
-    
+
     public string entityName;
     public int entityHpMax;
     public int entityHp;
@@ -90,7 +90,7 @@ public class EntityManager : MonoBehaviour
     public bool isDefeated;
 
     #endregion
-    
+
     public void LinkingStat()
     {
         entityName = entitySO.entityName;
@@ -102,19 +102,19 @@ public class EntityManager : MonoBehaviour
 
         entityHpMax = entitySO.hp;
         entityHp = entityHpMax;
-        
+
         entityMpMax = entitySO.mp;
         entityMp = entityMpMax;
-        
+
         entityAtkInit = entitySO.atk;
         entityAtk = entityAtkInit;
-        
+
         entityDefInit = entitySO.defense;
         entityDef = entityDefInit;
-        
+
         entityAgiInit = entitySO.agility;
         entityAgi = entityAgiInit;
-        
+
         entityManaInit = entitySO.mana;
         entityMana = entityManaInit;
 
@@ -131,10 +131,10 @@ public class EntityManager : MonoBehaviour
         entityResilienceToSleep = entitySO.entityResilienceToSleep;
         entityResilienceToStatDecrease = entitySO.entityResilienceToStatDecrease;
 
-    entitytLv = entitySO.level;
-        
+        entitytLv = entitySO.level;
+
         entitySpells = entitySO.spells;
-        
+
         entityImage = GetComponent<Image>();
         entityImage.sprite = FightManager.instance.emptySprite;
         entityButton = GetComponent<Button>();
@@ -153,28 +153,28 @@ public class EntityManager : MonoBehaviour
         entityCritical = entityCriticalInit;
         entityDodge = entityDodgeInit;
     }
-    
+
     public void LinkingEquipments()
     {
         if (entitySO.weapon != null)
         {
             entityWeapon = entitySO.weapon;
-            
+
             entityHpMax += entitySO.weapon.hp;
             entityHp = entityHpMax;
-        
+
             entityMpMax += entitySO.weapon.mp;
             entityMp = entityMpMax;
-        
+
             entityAtkInit += entitySO.weapon.atk;
             entityAtk = entityAtkInit;
-        
+
             entityDefInit += entitySO.weapon.def;
             entityDef = entityDefInit;
-        
+
             entityAgiInit += entitySO.weapon.agi;
             entityAgi = entityAgiInit;
-        
+
             entityManaInit += entitySO.weapon.mana;
             entityMana = entityManaInit;
 
@@ -188,22 +188,22 @@ public class EntityManager : MonoBehaviour
         if (entitySO.armor != null)
         {
             entityArmor = entitySO.armor;
-            
+
             entityHpMax += entitySO.armor.hp;
             entityHp = entityHpMax;
-        
+
             entityMpMax += entitySO.armor.mp;
             entityMp = entityMpMax;
-        
+
             entityAtkInit += entitySO.armor.atk;
             entityAtk = entityAtkInit;
-        
+
             entityDefInit += entitySO.armor.def;
             entityDef = entityDefInit;
-        
+
             entityAgiInit += entitySO.armor.agi;
             entityAgi = entityAgiInit;
-        
+
             entityManaInit += entitySO.armor.mana;
             entityMana = entityManaInit;
 
@@ -217,22 +217,22 @@ public class EntityManager : MonoBehaviour
         if (entitySO.shield != null)
         {
             entityShield = entitySO.shield;
-            
+
             entityHpMax += entitySO.shield.hp;
             entityHp = entityHpMax;
-        
+
             entityMpMax += entitySO.shield.mp;
             entityMp = entityMpMax;
-        
+
             entityAtkInit += entitySO.shield.atk;
             entityAtk = entityAtkInit;
-        
+
             entityDefInit += entitySO.shield.def;
             entityDef = entityDefInit;
-        
+
             entityAgiInit += entitySO.shield.agi;
             entityAgi = entityAgiInit;
-        
+
             entityManaInit += entitySO.shield.mana;
             entityMana = entityManaInit;
 
@@ -246,22 +246,22 @@ public class EntityManager : MonoBehaviour
         if (entitySO.helmet != null)
         {
             entityHelmet = entitySO.helmet;
-            
+
             entityHpMax += entitySO.helmet.hp;
             entityHp = entityHpMax;
-        
+
             entityMpMax += entitySO.helmet.mp;
             entityMp = entityMpMax;
-        
+
             entityAtkInit += entitySO.helmet.atk;
             entityAtk = entityAtkInit;
-        
+
             entityDefInit += entitySO.helmet.def;
             entityDef = entityDefInit;
-        
+
             entityAgiInit += entitySO.helmet.agi;
             entityAgi = entityAgiInit;
-        
+
             entityManaInit += entitySO.helmet.mana;
             entityMana = entityManaInit;
 
@@ -282,11 +282,11 @@ public class EntityManager : MonoBehaviour
     public void StatAfterBattle()
     {
         entityAtk = entityAtkInit;
-        
+
         entityDef = entityDefInit;
-        
+
         entityAgi = entityAgiInit;
-        
+
         entityMana = entityManaInit;
 
         entityCritical = entityCriticalInit;
@@ -297,7 +297,7 @@ public class EntityManager : MonoBehaviour
 
         entityStatut = Statut.None;
     }
-    
+
     #region Monsters
 
     public void LinkingImage()
@@ -368,23 +368,23 @@ public class EntityManager : MonoBehaviour
     {
         StatDisplayManager.instance.DisplayStat(this);
     }
-    
+
     public void OnNewLevel(int hp, int mp, int atk, int def, int agi, float mana)
     {
         entitytLv++;
-        
+
         entityHpMax += hp;
         entityHp = entityHpMax;
 
         entityMpMax += mp;
         entityMp = entityMpMax;
-        
+
         entityAtkInit += atk;
         entityAtk = entityAtkInit;
-        
+
         entityDefInit += def;
         entityDef = entityDefInit;
-        
+
         entityAgiInit += agi;
         entityAgi = entityAgiInit;
 
@@ -406,15 +406,15 @@ public class EntityManager : MonoBehaviour
                 }
             }
         }
-        
-        Debug.Log("Set spells for "+ entityName);
+
+        Debug.Log("Set spells for " + entityName);
     }
 
     #endregion
 
     public void SetNewDef(int defStatIndex)
     {
-        switch(defStatIndex)
+        switch (defStatIndex)
         {
             case (-2):
 
@@ -488,6 +488,45 @@ public class EntityManager : MonoBehaviour
 
                 float entityAtkMax = entityAtkInit * 2;
                 entityAtk = (int)entityAtkMax;
+                break;
+        }
+
+
+    }
+
+    public void SetNewMana(int manaStatIndex)
+    {
+        switch (manaStatIndex)
+        {
+            case (-2):
+
+                float entityManaMin = entityManaInit * 0.75f;
+                entityMana = entityManaMin;
+
+                break;
+
+            case (-1):
+
+                float entityManaLower = entityManaInit * 0.9f;
+                entityMana = entityManaLower;
+                break;
+
+            case (0):
+
+                entityMana = entityManaInit;
+
+                break;
+
+            case (1):
+
+                float entityManaUpper = entityManaInit * 1.25f;
+                entityMana = entityManaUpper;
+                break;
+
+            case (2):
+
+                float entityManaMax = entityManaInit * 1.5f;
+                entityMana = entityManaMax;
                 break;
         }
     }

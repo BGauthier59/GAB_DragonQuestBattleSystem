@@ -33,7 +33,7 @@ MonoBehaviour:
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
   spells:
-  - {fileID: 11400000, guid: a4f27f9407542c94992841e320990b79, type: 2}
+  - {fileID: 11400000, guid: 79118bed7858f0e4c9a445191c58e8e4, type: 2}
   - {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
   - {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
   - {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
@@ -54,7 +54,7 @@ MonoBehaviour:
   - 0.15
   learnSpells:
   - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: a4f27f9407542c94992841e320990b79, type: 2}
+    learningSpell: {fileID: 11400000, guid: 79118bed7858f0e4c9a445191c58e8e4, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
   - learningLevel: 0

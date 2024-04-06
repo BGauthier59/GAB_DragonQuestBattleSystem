@@ -17,7 +17,7 @@ MonoBehaviour:
   inBattleDescription: "effectue une piq\xFBre paralysante !"
   excuseForInaction: 
   spellIndex: 14
-  spellType: 0
+  spellType: 1
   cost: 5
   hasSpecialEffect: 1
   hasEffectAndDamages: 1

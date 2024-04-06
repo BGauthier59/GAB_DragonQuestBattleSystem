@@ -10,8 +10,11 @@ using Random = UnityEngine.Random;
 public class FightManager : MonoSingleton<FightManager>
 {
     public Sprite emptySprite;
-
     public Color hitColor;
+    public Color healColor;
+    public Color defBonusColor;
+    public Color atkBonusColor;
+    bool isCheckingSpecialAtk;
 
     public IEnumerator Attacking(EntityManager attacker, EntityManager target)
     {
@@ -123,13 +126,13 @@ public class FightManager : MonoSingleton<FightManager>
         List<GameObject> targets = new List<GameObject>();
         targets.Clear();
 
-        if (target.entityType == EntityType.Ally)
+        if (target.entityType == EntityType.Monster)
         {
-            targets = SpawningManager.instance.heroesInBattle;
+            targets = SpawningManager.instance.monstersInBattle;
         }
         else
         {
-            targets = SpawningManager.instance.monstersInBattle;
+            targets = SpawningManager.instance.heroesInBattle;
         }
 
         if (caster.entityType == EntityType.Monster) InterfaceManager.instance.Message(true, $"{caster.entityPronoun} {caster.entityName} {spell.inBattleDescription}");
@@ -142,13 +145,39 @@ public class FightManager : MonoSingleton<FightManager>
 
         if (spell.hasSpecialEffect)
         {
-            if (target.isReflected == true)
+            if (!spell.doTargetEveryone)
             {
-                target = caster;
-                InterfaceManager.instance.Message(true, $"Mais le miroir magique renvoie le sort !");
-                yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+                if (target.isReflected == true)
+                {
+                    target = caster;
+                    InterfaceManager.instance.Message(true, $"Mais le miroir magique renvoie le sort !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+                }
+                StartCoroutine(SpellSpecialEffect(spell, caster, target, true));
             }
-            StartCoroutine(SpellSpecialEffect(spell, caster, target));
+            else
+            {
+                foreach(GameObject t in targets)
+                {
+                    EntityManager currentTarget = t.GetComponent<EntityManager>();
+                    if (!currentTarget.isDefeated)
+                    {
+                        isCheckingSpecialAtk = true;
+
+                        if (target.isReflected == true)
+                        {
+                            target = caster;
+                            InterfaceManager.instance.Message(true, $"Mais le miroir magique renvoie le sort !");
+                            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
+                        }
+
+                        StartCoroutine(SpellSpecialEffect(spell, caster, currentTarget, false));
+                        yield return new WaitWhile(() => isCheckingSpecialAtk);
+                    }
+                }
+                BattleManager.instance.hasEntityActed = true;
+
+            }
         }
         else
         {
@@ -433,8 +462,9 @@ public class FightManager : MonoSingleton<FightManager>
         return 1;
     }
 
-    private IEnumerator SpellSpecialEffect(SpellSO spell, EntityManager caster, EntityManager targetEntity)
+    private IEnumerator SpellSpecialEffect(SpellSO spell, EntityManager caster, EntityManager targetEntity, bool checkOnce)
     {
+        targetEntity.entityImage.color = hitColor;
         switch (spell.spellIndex)
         {
             case 1: // Heal
@@ -1380,15 +1410,100 @@ public class FightManager : MonoSingleton<FightManager>
 
                 break;
 
+            case 26: //augmente le mana
+
+                if (targetEntity.manaStatIndex == 2)
+                {
+                    InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} ne peut plus monter !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                }
+                else
+                {
+                    targetEntity.manaStatIndex += 1;
+
+                    if (targetEntity.manaStatIndex == 0) InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} revient à la normale !");
+                    else if (targetEntity.manaStatIndex == 1 || targetEntity.manaStatIndex == -1) InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} augmente légèrement !");
+                    else if (targetEntity.manaStatIndex == 2) InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} augmente nettement !");
+
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    targetEntity.SetNewMana(targetEntity.manaStatIndex);
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                    Debug.Log(targetEntity.manaStatIndex + " + " + targetEntity.entityMana);
+                }
+
+                break;
+
+            case 27:
+
+                if (spell.hasEffectAndDamages)
+                {
+                    float damages27 = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4) * spell.factor * 0.01f;
+                    if (targetEntity.isDefending) damages27 /= 2;
+                    int realDamages27 = (int)damages27;
+                    if (realDamages27 <= 0) realDamages27 = 0;
+
+                    if (realDamages27 == 0) AudioManager.instance.Play("Miss");
+                    else AudioManager.instance.Play("Hit");
+
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages27} points de dégâts !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    targetEntity.entityHp -= realDamages27;
+
+                    if (CheckDefeat(targetEntity))
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
+                    }
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                }
+
+                if (targetEntity.manaStatIndex == -2)
+                {
+                    InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} ne peut plus baisser !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                }
+                else
+                {
+                    int aleaMana = Random.Range(0, 100);
+                    int trueManaSpellSuccessRate = spell.successRate - targetEntity.entityResilienceToStatDecrease;
+
+                    if (aleaMana >= trueManaSpellSuccessRate)
+                    {
+                        if (!spell.hasEffectAndDamages)
+                        {
+                            InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
+                            yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        }
+                    }
+                    else
+                    {
+                        targetEntity.manaStatIndex -= 1;
+
+                        if (targetEntity.manaStatIndex == 0) InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} revient à la normale !");
+                        else if (targetEntity.manaStatIndex == 1 || targetEntity.manaStatIndex == -1) InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} diminue légèrement !");
+                        else if (targetEntity.manaStatIndex == -2) InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} diminue nettement !");
+
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        targetEntity.SetNewMana(targetEntity.manaStatIndex);
+                        StatDisplayManager.instance.DisplayStat(targetEntity);
+                        Debug.Log(targetEntity.manaStatIndex + " + " + targetEntity.entityMana);
+                    }
+                }
+
+                break;
 
             default:
                 Debug.LogError("Index du sort invalide");
                 break;
+
         }
-        
+
+        targetEntity.entityImage.color = Color.white;
         yield return new WaitForSeconds(InterfaceManager.instance.time);
         targetEntity.entityImage.color = Color.white;
-        BattleManager.instance.hasEntityActed = true;
+        if (checkOnce) BattleManager.instance.hasEntityActed = true;
+        isCheckingSpecialAtk = false;
     }
 
     public bool CheckDefeat(EntityManager targetEntity)

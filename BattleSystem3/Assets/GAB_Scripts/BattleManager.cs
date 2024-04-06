@@ -592,6 +592,16 @@ public class BattleManager : MonoSingleton<BattleManager>
                     else // Lance une aptitude
                     {
                         SpellSO chosenSpell = spells[Random.Range(0, spells.Count)];
+                        if (chosenSpell.helpingSpell)
+                        {
+                            targets.Clear();
+                            foreach(GameObject m in SpawningManager.instance.monstersInBattle)
+                            {
+                                var e = m.GetComponent<EntityManager>();
+                                if (e.isDefeated) continue;
+                                targets.Add(e);
+                            }
+                        }
                         target = targets[Random.Range(0, targets.Count)];
                         StartCoroutine(FightManager.instance.CastingSpell(entityActing, target, chosenSpell));
                     }

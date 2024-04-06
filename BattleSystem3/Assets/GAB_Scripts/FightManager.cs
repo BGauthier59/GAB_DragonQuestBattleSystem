@@ -126,13 +126,15 @@ public class FightManager : MonoSingleton<FightManager>
         List<GameObject> targets = new List<GameObject>();
         targets.Clear();
 
-        if (target.entityType == EntityType.Monster)
+        if (target.entityType == EntityType.Ally)
         {
-            targets = SpawningManager.instance.monstersInBattle;
+            if (spell.helpingSpell) targets = SpawningManager.instance.heroesInBattle;
+            else targets = SpawningManager.instance.monstersInBattle;
         }
         else
         {
-            targets = SpawningManager.instance.heroesInBattle;
+            if (spell.helpingSpell) targets = SpawningManager.instance.monstersInBattle;
+            else targets = SpawningManager.instance.heroesInBattle;
         }
 
         if (caster.entityType == EntityType.Monster) InterfaceManager.instance.Message(true, $"{caster.entityPronoun} {caster.entityName} {spell.inBattleDescription}");
@@ -464,7 +466,12 @@ public class FightManager : MonoSingleton<FightManager>
 
     private IEnumerator SpellSpecialEffect(SpellSO spell, EntityManager caster, EntityManager targetEntity, bool checkOnce)
     {
-        targetEntity.entityImage.color = hitColor;
+        if (!spell.helpingSpell) targetEntity.entityImage.color = hitColor;
+        else if (spell.spellIndex == 1) targetEntity.entityImage.color = healColor;
+        else if (spell.spellIndex == 21) targetEntity.entityImage.color = defBonusColor;
+        else if (spell.spellIndex == 23) targetEntity.entityImage.color = atkBonusColor;
+
+
         switch (spell.spellIndex)
         {
             case 1: // Heal

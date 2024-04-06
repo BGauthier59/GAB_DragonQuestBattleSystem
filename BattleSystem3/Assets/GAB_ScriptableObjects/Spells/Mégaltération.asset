@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Magnumana
+  m_Name: "M\xE9galt\xE9ration"
   m_EditorClassIdentifier: 
-  spellName: Magnumana
-  spellDescription: "Augmente fortement le mana d'un alli\xE9."
-  inBattleDescription: lance le Magnumana !
+  spellName: "M\xE9galt\xE9ration"
+  spellDescription: "Diminue la d\xE9fense de toutes les cibles."
+  inBattleDescription: "lance la M\xE9galt\xE9ration !"
   excuseForInaction: 
-  spellIndex: 26
+  spellIndex: 22
   spellType: 0
-  cost: 10
+  cost: 0
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
-  doTargetEveryone: 0
-  helpingSpell: 1
+  doTargetEveryone: 1
+  helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 100
+  successRate: 30
   strenght: 0
   elementType: 0
   factor: 0

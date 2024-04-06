@@ -23,7 +23,7 @@ MonoBehaviour:
   defense: 7
   agility: 12
   level: 1
-  mana: 0.7
+  mana: 2.4
   criticalHit: 10
   dodge: 10
   entityResilienceToMPTheft: 0
@@ -31,6 +31,7 @@ MonoBehaviour:
   entityResilienceToBurn: 0
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
+  entityResilienceToStatDecrease: 0
   spells:
   - {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
   - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}

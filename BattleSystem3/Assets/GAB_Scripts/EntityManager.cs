@@ -490,8 +490,6 @@ public class EntityManager : MonoBehaviour
                 entityAtk = (int)entityAtkMax;
                 break;
         }
-
-
     }
 
     public void SetNewMana(int manaStatIndex)

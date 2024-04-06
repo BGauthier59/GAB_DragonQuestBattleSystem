@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
   m_Name: "M\xE9gatorpeur"
   m_EditorClassIdentifier: 
-  spellName: Torpeur
+  spellName: "M\xE9gatorpeur"
   spellDescription: Plonge tous les ennemis dans un profond sommeil.
   inBattleDescription: "lance la M\xE9gaorpeur !"
   excuseForInaction: 

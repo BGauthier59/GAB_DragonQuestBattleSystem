@@ -17,8 +17,9 @@ MonoBehaviour:
   inBattleDescription: "lance la R\xE9flexion !"
   excuseForInaction: 
   spellIndex: 12
-  spellType: 1
+  spellType: 0
   cost: 0
+  SFXname: "R\xE9flexion"
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
@@ -29,3 +30,4 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 0
+  staticDamages: 0

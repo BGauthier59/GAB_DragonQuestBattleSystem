@@ -20,6 +20,7 @@ MonoBehaviour:
   spellIndex: 0
   spellType: 0
   cost: 20
+  SFXname: Plante
   hasSpecialEffect: 0
   hasEffectAndDamages: 0
   doTargetEveryone: 1
@@ -30,3 +31,4 @@ MonoBehaviour:
   strenght: 80
   elementType: 4
   factor: 0
+  staticDamages: 0

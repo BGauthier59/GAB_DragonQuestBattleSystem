@@ -19,6 +19,7 @@ MonoBehaviour:
   spellIndex: 0
   spellType: 0
   cost: 5
+  SFXname: Vent
   hasSpecialEffect: 0
   hasEffectAndDamages: 0
   doTargetEveryone: 1
@@ -29,3 +30,4 @@ MonoBehaviour:
   strenght: 20
   elementType: 3
   factor: 0
+  staticDamages: 0

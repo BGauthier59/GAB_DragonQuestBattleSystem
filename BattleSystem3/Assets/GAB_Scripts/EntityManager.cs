@@ -86,6 +86,8 @@ public class EntityManager : MonoBehaviour
     public Button entityButton;
     public TextMeshProUGUI entityNameDisplay;
     public bool isDodgingAnim;
+    public int gold;
+    public int xp;
 
     public bool isDefeated;
 
@@ -140,6 +142,10 @@ public class EntityManager : MonoBehaviour
         entityButton = GetComponent<Button>();
 
         entityStrategy = entitySO.strategy;
+
+        xp = entitySO.xp;
+        gold = entitySO.gold;
+
     }
 
     public void Heal()

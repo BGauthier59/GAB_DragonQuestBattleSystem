@@ -19,6 +19,7 @@ MonoBehaviour:
   spellIndex: 22
   spellType: 0
   cost: 2
+  SFXname: StatDecrease
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
@@ -29,3 +30,4 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 0
+  staticDamages: 0

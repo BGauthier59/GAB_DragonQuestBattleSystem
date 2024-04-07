@@ -11,6 +11,7 @@ public class SpellSO : ScriptableObject
     public int spellIndex;
     public SpellType spellType;
     public int cost;
+    public string SFXname;
 
     [Header("Effect")]
     public bool hasSpecialEffect;

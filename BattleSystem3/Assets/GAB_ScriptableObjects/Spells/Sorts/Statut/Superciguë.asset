@@ -20,6 +20,7 @@ MonoBehaviour:
   spellIndex: 7
   spellType: 0
   cost: 0
+  SFXname: Poison
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 1
@@ -30,3 +31,4 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 0
+  staticDamages: 0

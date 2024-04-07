@@ -18,8 +18,9 @@ MonoBehaviour:
   inBattleDescription: "ass\xE8ne une rafale de coups sur l'\xE9quipe !"
   excuseForInaction: 
   spellIndex: 6
-  spellType: 0
+  spellType: 1
   cost: 6
+  SFXname: Sword
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
@@ -30,3 +31,4 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 70
+  staticDamages: 0

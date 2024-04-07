@@ -30,3 +30,4 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 0
+  staticDamages: 0

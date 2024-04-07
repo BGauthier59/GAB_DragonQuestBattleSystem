@@ -20,6 +20,7 @@ MonoBehaviour:
   spellIndex: 5
   spellType: 1
   cost: 8
+  SFXname: Sword
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
@@ -30,3 +31,4 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 0
+  staticDamages: 0

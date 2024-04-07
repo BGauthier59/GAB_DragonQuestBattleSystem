@@ -19,6 +19,7 @@ MonoBehaviour:
   spellIndex: 0
   spellType: 0
   cost: 7
+  SFXname: Divin
   hasSpecialEffect: 0
   hasEffectAndDamages: 0
   doTargetEveryone: 1
@@ -29,3 +30,4 @@ MonoBehaviour:
   strenght: 40
   elementType: 6
   factor: 0
+  staticDamages: 0

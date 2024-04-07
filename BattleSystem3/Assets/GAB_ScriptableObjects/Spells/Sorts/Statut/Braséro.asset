@@ -19,6 +19,7 @@ MonoBehaviour:
   spellIndex: 8
   spellType: 0
   cost: 5
+  SFXname: "Br\xFBlure"
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
@@ -29,3 +30,4 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 0
+  staticDamages: 0

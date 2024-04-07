@@ -32,7 +32,8 @@ MonoBehaviour:
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells: []
+  spells:
+  - {fileID: 11400000, guid: f74b107c9c8a53a4aac2ef2e47f82d34, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}

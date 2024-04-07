@@ -18,7 +18,7 @@ MonoBehaviour:
   inBattleDescription: "ass\xE8ne une s\xE9rie de coups de hache !"
   excuseForInaction: 
   spellIndex: 6
-  spellType: 0
+  spellType: 1
   cost: 10
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
@@ -30,3 +30,4 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 90
+  staticDamages: 0

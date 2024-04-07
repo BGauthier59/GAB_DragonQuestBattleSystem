@@ -19,6 +19,7 @@ MonoBehaviour:
   spellIndex: 0
   spellType: 0
   cost: 14
+  SFXname: "T\xE9n\xE8bres"
   hasSpecialEffect: 0
   hasEffectAndDamages: 0
   doTargetEveryone: 0
@@ -29,3 +30,4 @@ MonoBehaviour:
   strenght: 90
   elementType: 7
   factor: 0
+  staticDamages: 0

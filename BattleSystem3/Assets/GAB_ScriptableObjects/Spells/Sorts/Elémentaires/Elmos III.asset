@@ -19,6 +19,7 @@ MonoBehaviour:
   spellIndex: 0
   spellType: 0
   cost: 12
+  SFXname: Feu
   hasSpecialEffect: 0
   hasEffectAndDamages: 0
   doTargetEveryone: 0
@@ -29,3 +30,4 @@ MonoBehaviour:
   strenght: 70
   elementType: 1
   factor: 0
+  staticDamages: 0

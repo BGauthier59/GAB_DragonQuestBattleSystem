@@ -18,7 +18,7 @@ MonoBehaviour:
   type: 1
   pronoun: La
   hp: 121
-  mp: 0
+  mp: 42
   atk: 127
   defense: 66
   agility: 85
@@ -32,7 +32,10 @@ MonoBehaviour:
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells: []
+  spells:
+  - {fileID: 11400000, guid: 70d02411ea2cf3246b27a60b421f251c, type: 2}
+  - {fileID: 11400000, guid: 76abd92ebdb02184286edee36a22fd2c, type: 2}
+  - {fileID: 11400000, guid: 25ff15e0bdbb02d4f8aa4a3286148f67, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}

@@ -788,6 +788,7 @@ public class FightManager : MonoSingleton<FightManager>
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
                         yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
                     }
 
                     StatDisplayManager.instance.DisplayStat(targetEntity);
@@ -854,6 +855,7 @@ public class FightManager : MonoSingleton<FightManager>
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
                         yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
                     }
 
                     StatDisplayManager.instance.DisplayStat(targetEntity);
@@ -922,6 +924,7 @@ public class FightManager : MonoSingleton<FightManager>
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
                         yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
                     }
 
                     StatDisplayManager.instance.DisplayStat(targetEntity);
@@ -979,6 +982,7 @@ public class FightManager : MonoSingleton<FightManager>
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
                         yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
                     }
 
                     StatDisplayManager.instance.DisplayStat(targetEntity);
@@ -1038,6 +1042,7 @@ public class FightManager : MonoSingleton<FightManager>
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
                         yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
                     }
 
                     StatDisplayManager.instance.DisplayStat(targetEntity);
@@ -1135,6 +1140,7 @@ public class FightManager : MonoSingleton<FightManager>
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
                         yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
                     }
 
                     StatDisplayManager.instance.DisplayStat(targetEntity);

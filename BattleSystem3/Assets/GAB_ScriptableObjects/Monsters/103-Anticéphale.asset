@@ -18,7 +18,7 @@ MonoBehaviour:
   type: 1
   pronoun: L'
   hp: 120
-  mp: 0
+  mp: 27
   atk: 145
   defense: 255
   agility: 103
@@ -32,7 +32,9 @@ MonoBehaviour:
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells: []
+  spells:
+  - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
+  - {fileID: 11400000, guid: 8ae93ae615124e244920d721fb0aea0e, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -45,7 +47,7 @@ MonoBehaviour:
   manaLevelUp: []
   learnSpells: []
   strategy: 1
-  elementType: 0
+  elementType: 6
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
   gold: 39

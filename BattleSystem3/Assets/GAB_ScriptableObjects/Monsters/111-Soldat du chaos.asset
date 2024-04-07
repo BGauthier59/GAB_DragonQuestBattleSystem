@@ -17,8 +17,8 @@ MonoBehaviour:
   spawnPosY: 48
   type: 1
   pronoun: Le
-  hp: 558
-  mp: 0
+  hp: 252
+  mp: 77
   atk: 198
   defense: 138
   agility: 112
@@ -32,7 +32,11 @@ MonoBehaviour:
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells: []
+  spells:
+  - {fileID: 11400000, guid: 777cb550d9c342f4ba826fc2a7190a09, type: 2}
+  - {fileID: 11400000, guid: bdb3562b194a2ce4dab8e4aa6e10119e, type: 2}
+  - {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
+  - {fileID: 11400000, guid: 83ad7b5ee12db7f44a91ba00b9e73ea4, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}

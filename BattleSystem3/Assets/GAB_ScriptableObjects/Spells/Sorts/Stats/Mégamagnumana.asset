@@ -18,7 +18,7 @@ MonoBehaviour:
   excuseForInaction: 
   spellIndex: 26
   spellType: 0
-  cost: 10
+  cost: 20
   SFXname: StatIncrease
   hasSpecialEffect: 1
   hasEffectAndDamages: 0

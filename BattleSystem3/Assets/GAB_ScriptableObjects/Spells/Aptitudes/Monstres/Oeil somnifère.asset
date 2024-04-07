@@ -16,9 +16,10 @@ MonoBehaviour:
   spellDescription: ATTAQUE MONSTRE
   inBattleDescription: fait les gros yeux !
   excuseForInaction: 
-  spellIndex: 9
+  spellIndex: 13
   spellType: 1
   cost: 0
+  SFXname: 
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0

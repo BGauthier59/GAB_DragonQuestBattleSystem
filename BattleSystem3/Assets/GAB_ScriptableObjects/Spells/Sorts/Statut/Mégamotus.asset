@@ -22,7 +22,7 @@ MonoBehaviour:
   SFXname: Silence
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
-  doTargetEveryone: 0
+  doTargetEveryone: 1
   helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0

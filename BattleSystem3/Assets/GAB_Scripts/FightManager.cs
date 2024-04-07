@@ -150,7 +150,7 @@ public class FightManager : MonoSingleton<FightManager>
         {
             if (!spell.doTargetEveryone)
             {
-                if (target.isReflected == true)
+                if (target.isReflected == true && spell.spellType == SpellType.Spell)
                 {
                     target = caster;
                     AudioManager.instance.Play("Réflexion");
@@ -170,7 +170,7 @@ public class FightManager : MonoSingleton<FightManager>
                     {
                         isCheckingSpecialAtk = true;
 
-                        if (target.isReflected == true)
+                        if (target.isReflected == true && spell.spellType == SpellType.Spell)
                         {
                             target = caster;
                             AudioManager.instance.Play("Réflexion");

@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
   m_Name: Morsure venimeuse
   m_EditorClassIdentifier: 
-  spellName: 
-  spellDescription: 
-  inBattleDescription: 
+  spellName: Morsure venimeuse
+  spellDescription: ATTAQUE MONSTRE
+  inBattleDescription: attaque avec ses crocs venimeux !
   excuseForInaction: 
-  spellIndex: 0
-  spellType: 0
+  spellIndex: 7
+  spellType: 1
   cost: 0
   SFXname: 
-  hasSpecialEffect: 0
-  hasEffectAndDamages: 0
+  hasSpecialEffect: 1
+  hasEffectAndDamages: 1
   doTargetEveryone: 0
   helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 0
+  successRate: 30
   strenght: 0
   elementType: 0
   factor: 0
-  staticDamages: 0
+  staticDamages: 90

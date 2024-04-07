@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "R\xE9gion Os\xE9dur 12"
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: 52a0054c508327e45a220c1330082b40, type: 2}
+  - {fileID: 11400000, guid: a614fbf91564b914ea21c4a8ba17c6a7, type: 2}
   - {fileID: 11400000, guid: 50e533ed6020e0a41854d65fdb16c5a4, type: 2}
   - {fileID: 11400000, guid: f9ffee58e5ce44d4b81b332fb8fb155d, type: 2}
   - {fileID: 11400000, guid: f9ffee58e5ce44d4b81b332fb8fb155d, type: 2}

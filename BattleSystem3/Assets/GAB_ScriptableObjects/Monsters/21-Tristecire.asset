@@ -18,8 +18,8 @@ MonoBehaviour:
   type: 1
   pronoun: Le
   hp: 32
-  mp: 0
-  atk: 31
+  mp: 9
+  atk: 36
   defense: 32
   agility: 35
   level: 1

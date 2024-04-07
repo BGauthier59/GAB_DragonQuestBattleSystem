@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
+  m_Name: 71-Microterreur
+  m_EditorClassIdentifier: 
+  entityName: Microterreur
+  sprite: {fileID: 21300000, guid: 6b85612bc5b4dfd4cacf415c1fc0f0fc, type: 3}
+  spawnPosY: 4
+  type: 1
+  pronoun: Le
+  hp: 57
+  mp: 8
+  atk: 81
+  defense: 55
+  agility: 71
+  level: 1
+  mana: 1
+  criticalHit: 0
+  dodge: 30
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 0
+  entityResilienceToSilence: 0
+  entityResilienceToSleep: 0
+  entityResilienceToStatDecrease: 0
+  spells:
+  - {fileID: 11400000, guid: c33ae85594d6a134da8ac8e4df44e1a7, type: 2}
+  - {fileID: 11400000, guid: 3a6a6f81556e1194ba4878846124fa6e, type: 2}
+  - {fileID: 11400000, guid: 79118bed7858f0e4c9a445191c58e8e4, type: 2}
+  weapon: {fileID: 0}
+  helmet: {fileID: 0}
+  shield: {fileID: 0}
+  armor: {fileID: 0}
+  hpLevelUp: 
+  mpLevelUp: 
+  atkLevelUp: 
+  defLevelUp: 
+  agiLevelUp: 
+  manaLevelUp: []
+  learnSpells: []
+  strategy: 1
+  elementType: 0
+  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  probability: 0
+  gold: 25
+  xp: 27

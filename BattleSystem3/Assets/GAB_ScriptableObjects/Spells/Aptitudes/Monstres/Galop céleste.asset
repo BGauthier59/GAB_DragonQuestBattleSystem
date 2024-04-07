@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
+  m_Name: "Galop c\xE9leste"
+  m_EditorClassIdentifier: 
+  spellName: "Galop c\xE9leste"
+  spellDescription: ATTAQUE MONSTRE
+  inBattleDescription: "galope jusqu'aux cieux et lib\xE8re une pluie d'\xE9toiles
+    filantes !"
+  excuseForInaction: "est projet\xE9(e) au sol !"
+  spellIndex: 11
+  spellType: 1
+  cost: 0
+  hasSpecialEffect: 1
+  hasEffectAndDamages: 1
+  doTargetEveryone: 1
+  helpingSpell: 0
+  selfSpell: 0
+  onlyWorkOnDefeated: 0
+  successRate: 30
+  strenght: 0
+  elementType: 0
+  factor: 80

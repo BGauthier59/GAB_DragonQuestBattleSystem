@@ -27,6 +27,7 @@ public class SpellSO : ScriptableObject
     
     [Header("Aptitude")]
     public int factor;
+    public int staticDamages;
 }
 
 public enum SpellType

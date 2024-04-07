@@ -18,12 +18,12 @@ MonoBehaviour:
   type: 1
   pronoun: Le
   hp: 48
-  mp: 0
-  atk: 44
+  mp: 8
+  atk: 49
   defense: 45
   agility: 48
   level: 1
-  mana: 0
+  mana: 1
   criticalHit: 0
   dodge: 10
   entityResilienceToMPTheft: 0
@@ -31,7 +31,9 @@ MonoBehaviour:
   entityResilienceToBurn: 0
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
-  spells: []
+  entityResilienceToStatDecrease: 0
+  spells:
+  - {fileID: 11400000, guid: 7762f3e276536c745b0cc5b7828d0a46, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}

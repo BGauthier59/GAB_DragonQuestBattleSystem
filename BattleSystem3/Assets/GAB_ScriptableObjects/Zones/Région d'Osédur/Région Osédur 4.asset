@@ -15,4 +15,4 @@ MonoBehaviour:
   monsters:
   - {fileID: 11400000, guid: f9ffee58e5ce44d4b81b332fb8fb155d, type: 2}
   - {fileID: 11400000, guid: f9ffee58e5ce44d4b81b332fb8fb155d, type: 2}
-  - {fileID: 11400000, guid: b8358a0f124e479469cdc98bbf422755, type: 2}
+  - {fileID: 11400000, guid: a614fbf91564b914ea21c4a8ba17c6a7, type: 2}

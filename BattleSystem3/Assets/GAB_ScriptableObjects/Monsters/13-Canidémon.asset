@@ -23,7 +23,7 @@ MonoBehaviour:
   defense: 22
   agility: 17
   level: 1
-  mana: 0
+  mana: 1
   criticalHit: 0
   dodge: 0
   entityResilienceToMPTheft: 0

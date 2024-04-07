@@ -17,13 +17,13 @@ MonoBehaviour:
   spawnPosY: 0
   type: 0
   pronoun: 
-  hp: 31
-  mp: 26
-  atk: 12
-  defense: 7
-  agility: 12
-  level: 1
-  mana: 2.4
+  hp: 160
+  mp: 65
+  atk: 70
+  defense: 70
+  agility: 90
+  level: 10
+  mana: 1.5
   criticalHit: 10
   dodge: 10
   entityResilienceToMPTheft: 0
@@ -37,6 +37,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
   - {fileID: 11400000, guid: f856d990fb246a24b9f0b7b121f1999e, type: 2}
   - {fileID: 11400000, guid: 776da5e85dfd39d42ba29818aa654bd5, type: 2}
+  - {fileID: 11400000, guid: 885f9ab5789e58647ae1b959acecf35c, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}

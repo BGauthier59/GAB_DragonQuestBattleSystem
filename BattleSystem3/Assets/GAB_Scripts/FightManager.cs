@@ -126,12 +126,12 @@ public class FightManager : MonoSingleton<FightManager>
         List<GameObject> targets = new List<GameObject>();
         targets.Clear();
 
-        if (target.entityType == EntityType.Ally)
+        if (target.entityType == EntityType.Monster)
         {
-            if (spell.helpingSpell) targets = SpawningManager.instance.heroesInBattle;
+            if (spell.helpingSpell && caster.entityType == EntityType.Ally) targets = SpawningManager.instance.heroesInBattle;
             else targets = SpawningManager.instance.monstersInBattle;
         }
-        else
+        else if (target.entityType == EntityType.Ally)
         {
             if (spell.helpingSpell) targets = SpawningManager.instance.monstersInBattle;
             else targets = SpawningManager.instance.heroesInBattle;
@@ -161,6 +161,8 @@ public class FightManager : MonoSingleton<FightManager>
             {
                 foreach(GameObject t in targets)
                 {
+                    Debug.Log(t);
+
                     EntityManager currentTarget = t.GetComponent<EntityManager>();
                     if (!currentTarget.isDefeated)
                     {
@@ -192,8 +194,7 @@ public class FightManager : MonoSingleton<FightManager>
                         int defense = target.entityDef;
                         if (target.isDefending) defense *= 2;
 
-                        float damages = (caster.entityAtk * Random.Range(0.9f, 1.1f) - (defense * 2)) *
-                                        (spell.factor * 0.01f);
+                        float damages = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (defense / 4)) * spell.factor * 0.01f;
                         int realDamages = (int) damages;
                         if (realDamages < 0) realDamages = Random.Range(0,2);
 
@@ -254,8 +255,7 @@ public class FightManager : MonoSingleton<FightManager>
                                 int defense = target.entityDef;
                                 if (target.isDefending) defense *= 2;
                             
-                                float damages = (caster.entityAtk * Random.Range(0.9f, 1.1f) - defense * 2) *
-                                                (spell.factor * 0.01f);
+                                float damages = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (defense / 4)) * spell.factor * 0.01f;
                                 int realDamages = (int) damages;
                                 if (realDamages < 0) realDamages = Random.Range(0,2);
 
@@ -467,7 +467,6 @@ public class FightManager : MonoSingleton<FightManager>
     private IEnumerator SpellSpecialEffect(SpellSO spell, EntityManager caster, EntityManager targetEntity, bool checkOnce)
     {
         if (!spell.helpingSpell) targetEntity.entityImage.color = hitColor;
-        else if (spell.spellIndex == 1) targetEntity.entityImage.color = healColor;
         else if (spell.spellIndex == 21) targetEntity.entityImage.color = defBonusColor;
         else if (spell.spellIndex == 23) targetEntity.entityImage.color = atkBonusColor;
 
@@ -480,6 +479,8 @@ public class FightManager : MonoSingleton<FightManager>
                 {
                     float heal = (spell.strenght * caster.entityMana) * Random.Range(.9f, 1.1f);
                     int realHeal = (int)heal;
+
+                    Debug.Log(targetEntity);
 
                     targetEntity.entityHp += realHeal;
                     if (targetEntity.entityHp > targetEntity.entityHpMax) targetEntity.entityHp = targetEntity.entityHpMax;
@@ -732,7 +733,8 @@ public class FightManager : MonoSingleton<FightManager>
                         if (i == 0) target = targetEntity;
                         else target = multiHitsTargets[Random.Range(0, multiHitsTargets.Count)];
 
-                        float multiHitsDamages = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (target.entityDef / 4) * spell.factor * 0.01f;
+                        float multiHitsDamages = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (target.entityDef / 4)) * spell.factor * 0.01f;
+
                         if (target.isDefending) multiHitsDamages /= 2;
                         int realMultiHitsDamages = (int)multiHitsDamages;
                         if (realMultiHitsDamages <= 0) realMultiHitsDamages = 0;
@@ -761,7 +763,7 @@ public class FightManager : MonoSingleton<FightManager>
 
                 if (spell.hasEffectAndDamages)
                 {
-                    float damages7 = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4) * spell.factor * 0.01f;
+                    float damages7 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
                     if (targetEntity.isDefending) damages7 /= 2;
                     int realDamages7 = (int)damages7;
                     if (realDamages7 <= 0) realDamages7 = 0;
@@ -827,7 +829,7 @@ public class FightManager : MonoSingleton<FightManager>
 
                 if (spell.hasEffectAndDamages)
                 {
-                    float damages8 = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4) * spell.factor * 0.01f;
+                    float damages8 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
                     if (targetEntity.isDefending) damages8 /= 2;
                     int realDamages8 = (int)damages8;
                     if (realDamages8 <= 0) realDamages8 = 0;
@@ -893,6 +895,29 @@ public class FightManager : MonoSingleton<FightManager>
 
             case 9: //Poison magique
 
+                if (spell.hasEffectAndDamages)
+                {
+                    float damages11 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
+                    if (targetEntity.isDefending) damages11 /= 2;
+                    int realDamages11 = (int)damages11;
+                    if (realDamages11 <= 0) realDamages11 = 0;
+
+                    if (realDamages11 == 0) AudioManager.instance.Play("Miss");
+                    else AudioManager.instance.Play("Hit");
+
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages11} points de dégâts !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    targetEntity.entityHp -= realDamages11;
+
+                    if (CheckDefeat(targetEntity))
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
+
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                }
+
                 if (targetEntity.entityStatut != Statut.None)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
@@ -926,6 +951,29 @@ public class FightManager : MonoSingleton<FightManager>
                 }
 
             case 10: //Silence
+
+                if (spell.hasEffectAndDamages)
+                {
+                    float damages11 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
+                    if (targetEntity.isDefending) damages11 /= 2;
+                    int realDamages11 = (int)damages11;
+                    if (realDamages11 <= 0) realDamages11 = 0;
+
+                    if (realDamages11 == 0) AudioManager.instance.Play("Miss");
+                    else AudioManager.instance.Play("Hit");
+
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages11} points de dégâts !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    targetEntity.entityHp -= realDamages11;
+
+                    if (CheckDefeat(targetEntity))
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
+
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                }
 
                 if (targetEntity.entityStatut != Statut.None)
                 {
@@ -965,7 +1013,7 @@ public class FightManager : MonoSingleton<FightManager>
 
                 if (spell.hasEffectAndDamages)
                 {
-                    float damages11 = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4) * spell.factor * 0.01f;
+                    float damages11 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
                     if (targetEntity.isDefending) damages11 /= 2;
                     int realDamages11 = (int)damages11;
                     if (realDamages11 <= 0) realDamages11 = 0;
@@ -1062,7 +1110,7 @@ public class FightManager : MonoSingleton<FightManager>
 
                 if (spell.hasEffectAndDamages)
                 {
-                    float damages14 = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4) * spell.factor * 0.01f;
+                    float damages14 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
                     if (targetEntity.isDefending) damages14 /= 2;
                     int realDamages14 = (int)damages14;
                     if (realDamages14 <= 0) realDamages14 = 0;
@@ -1208,7 +1256,7 @@ public class FightManager : MonoSingleton<FightManager>
 
             case 20: //Coup miraculeux
 
-                float damages20 = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4) * spell.factor * 0.01f;
+                float damages20 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
                 if (targetEntity.isDefending) damages20 /= 2;
                 int realDamages20 = (int)damages20;
                 if (realDamages20 <= 0) realDamages20 = 0;
@@ -1269,7 +1317,7 @@ public class FightManager : MonoSingleton<FightManager>
 
                 if (spell.hasEffectAndDamages)
                 {
-                    float damages22 = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4) * spell.factor * 0.01f;
+                    float damages22 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
                     if (targetEntity.isDefending) damages22 /= 2;
                     int realDamages22 = (int)damages22;
                     if (realDamages22 <= 0) realDamages22 = 0;
@@ -1357,7 +1405,7 @@ public class FightManager : MonoSingleton<FightManager>
 
                 if (spell.hasEffectAndDamages)
                 {
-                    float damages24 = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4) * spell.factor * 0.01f;
+                    float damages24 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
                     if (targetEntity.isDefending) damages24 /= 2;
                     int realDamages24 = (int)damages24;
                     if (realDamages24 <= 0) realDamages24 = 0;
@@ -1440,11 +1488,11 @@ public class FightManager : MonoSingleton<FightManager>
 
                 break;
 
-            case 27:
+            case 27://diminue le mana
 
                 if (spell.hasEffectAndDamages)
                 {
-                    float damages27 = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4) * spell.factor * 0.01f;
+                    float damages27 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
                     if (targetEntity.isDefending) damages27 /= 2;
                     int realDamages27 = (int)damages27;
                     if (realDamages27 <= 0) realDamages27 = 0;
@@ -1498,6 +1546,28 @@ public class FightManager : MonoSingleton<FightManager>
                     }
                 }
 
+                break;
+
+            case 28: //Dégâts fixes
+
+                float damages28 = Random.Range(spell.staticDamages * 0.9f, spell.staticDamages * 1.1f);
+                if (targetEntity.isDefending) damages28 /= 2;
+                int realDamages28 = (int)(damages28);
+
+                if (realDamages28 == 0) AudioManager.instance.Play("Miss");
+                else AudioManager.instance.Play("Hit");
+
+                InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages28} points de dégâts !");
+                yield return new WaitForSeconds(InterfaceManager.instance.time);
+                targetEntity.entityHp -= realDamages28;
+
+                if (CheckDefeat(targetEntity))
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+                StatDisplayManager.instance.DisplayStat(targetEntity);
                 break;
 
             default:

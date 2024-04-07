@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Caverne rite
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: 52a0054c508327e45a220c1330082b40, type: 2}
-  - {fileID: 11400000, guid: 52a0054c508327e45a220c1330082b40, type: 2}
-  - {fileID: 11400000, guid: 52a0054c508327e45a220c1330082b40, type: 2}
+  - {fileID: 11400000, guid: 7134dbdeec40fdb4ea18dc8c74796f65, type: 2}
+  - {fileID: 11400000, guid: 7134dbdeec40fdb4ea18dc8c74796f65, type: 2}
+  - {fileID: 11400000, guid: 7134dbdeec40fdb4ea18dc8c74796f65, type: 2}

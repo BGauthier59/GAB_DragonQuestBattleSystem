@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4155071a886cad34e893654b8020b502, type: 3}
+  m_Name: "Oc\xE9an sud"
+  m_EditorClassIdentifier: 
+  configsInZoneDay:
+  - {fileID: 11400000, guid: 898b275e9d71b014594c561255c3223b, type: 2}
+  - {fileID: 11400000, guid: ded8060d58d4d03409ca8fec5021c0be, type: 2}
+  - {fileID: 11400000, guid: 3c2efd70b2b93a84a9ce39aa3986c9b7, type: 2}
+  - {fileID: 11400000, guid: 52521727ef32bb54594380f0533410e6, type: 2}
+  - {fileID: 11400000, guid: 22eb82a50faff39489951430a83256cf, type: 2}
+  - {fileID: 11400000, guid: 5142ff21f92a3734da63fbd636eb0ae2, type: 2}
+  - {fileID: 11400000, guid: ba9d1e175133f3b42b190acdf2df39a9, type: 2}
+  - {fileID: 11400000, guid: 9a68e27516bb9a94fbbedc272f57a9a1, type: 2}
+  - {fileID: 11400000, guid: 6a13c93b912596949949b83ebf9d6f03, type: 2}
+  - {fileID: 11400000, guid: 0d1b89166b362524d9a50379ac940765, type: 2}
+  - {fileID: 11400000, guid: 93a72ea18cebb634c816651a6f2e2854, type: 2}
+  - {fileID: 11400000, guid: 7983decf538b71f49b1398a26b937faa, type: 2}
+  - {fileID: 11400000, guid: 114d65f3bc0f848478aa616227a1b9ad, type: 2}
+  - {fileID: 11400000, guid: 912bb45773d1fcb4bbd1df605b83a8e9, type: 2}
+  - {fileID: 11400000, guid: 3d4f0224794884d4fb6fd6c0c60271ab, type: 2}
+  - {fileID: 11400000, guid: a3a047525be9db74983f58535d7ef9f9, type: 2}
+  - {fileID: 11400000, guid: 9540ac55a9b33eb42b23220705a78651, type: 2}
+  - {fileID: 11400000, guid: 844b5744577535044bd1f8d4b607106b, type: 2}
+  configsInZoneNight:
+  - {fileID: 11400000, guid: 898b275e9d71b014594c561255c3223b, type: 2}
+  - {fileID: 11400000, guid: ded8060d58d4d03409ca8fec5021c0be, type: 2}
+  - {fileID: 11400000, guid: 3c2efd70b2b93a84a9ce39aa3986c9b7, type: 2}
+  - {fileID: 11400000, guid: 52521727ef32bb54594380f0533410e6, type: 2}
+  - {fileID: 11400000, guid: 22eb82a50faff39489951430a83256cf, type: 2}
+  - {fileID: 11400000, guid: 5142ff21f92a3734da63fbd636eb0ae2, type: 2}
+  - {fileID: 11400000, guid: ba9d1e175133f3b42b190acdf2df39a9, type: 2}
+  - {fileID: 11400000, guid: 9a68e27516bb9a94fbbedc272f57a9a1, type: 2}
+  - {fileID: 11400000, guid: 6a13c93b912596949949b83ebf9d6f03, type: 2}
+  - {fileID: 11400000, guid: 0d1b89166b362524d9a50379ac940765, type: 2}
+  - {fileID: 11400000, guid: 93a72ea18cebb634c816651a6f2e2854, type: 2}
+  - {fileID: 11400000, guid: 7983decf538b71f49b1398a26b937faa, type: 2}
+  - {fileID: 11400000, guid: 114d65f3bc0f848478aa616227a1b9ad, type: 2}
+  - {fileID: 11400000, guid: 912bb45773d1fcb4bbd1df605b83a8e9, type: 2}
+  - {fileID: 11400000, guid: 3d4f0224794884d4fb6fd6c0c60271ab, type: 2}
+  - {fileID: 11400000, guid: a3a047525be9db74983f58535d7ef9f9, type: 2}
+  - {fileID: 11400000, guid: 9540ac55a9b33eb42b23220705a78651, type: 2}
+  - {fileID: 11400000, guid: 844b5744577535044bd1f8d4b607106b, type: 2}
+  minMaxMonstersInBattle: 0000000000000000
+  fontZoneDay: {fileID: 21300000, guid: 8f4a6b3aa61c12c4484ac0ccdaa87561, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 56cdfabdfb9c99e4f912e2efaca5586c, type: 3}
+  musicInZone: {fileID: 8300000, guid: e7a74493c6b058a4e8aa9139302632e6, type: 3}
+  combatZone: 16

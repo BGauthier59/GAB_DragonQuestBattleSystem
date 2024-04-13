@@ -23,6 +23,7 @@ public class EntitySO : ScriptableObject
     public int criticalHit;
     [Range (0, 100)]
     public int dodge;
+    [Range(1, 3)] public int actionPerTurn;
 
     [Header("Resistances")]
     public int entityResilienceToMPTheft;

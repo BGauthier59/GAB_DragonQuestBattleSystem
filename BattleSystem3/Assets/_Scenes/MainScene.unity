@@ -1215,6 +1215,8 @@ MonoBehaviour:
   heroes:
   - {fileID: 11400000, guid: 928e003365f724947a30d3d5d69a7f75, type: 2}
   - {fileID: 11400000, guid: 973a2bcee7854ba4cb80754e6ab194e8, type: 2}
+  - {fileID: 11400000, guid: 6cb18384e53f45f47853634a3b63124d, type: 2}
+  - {fileID: 11400000, guid: a0e684e184818dc4e92dc49472565782, type: 2}
   howManyMonster: 0
   configsInLocation: []
   allZones:
@@ -7352,6 +7354,7 @@ MonoBehaviour:
   hasSpellBeenChosen: 0
   hasMonsterBeenTargeted: 0
   hasEntityStatutBeenVerified: 0
+  waitingEntityHasActed: 0
   entityActing: {fileID: 0}
   entityTargeted: {fileID: 0}
   spellSelected: {fileID: 0}

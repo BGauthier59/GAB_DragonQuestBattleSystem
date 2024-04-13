@@ -484,60 +484,19 @@ public class FightManager : MonoSingleton<FightManager>
         {
             case 1: // Heal
 
-                if (!spell.doTargetEveryone)
-                {
-                    float heal = (spell.strenght * caster.entityMana) * Random.Range(.9f, 1.1f);
-                    int realHeal = (int)heal;
+                float heal = (spell.strenght * caster.entityMana) * Random.Range(.9f, 1.1f);
+                int realHeal = (int)heal;
 
-                    Debug.Log(targetEntity);
+                Debug.Log(targetEntity);
 
-                    targetEntity.entityHp += realHeal;
-                    if (targetEntity.entityHp > targetEntity.entityHpMax) targetEntity.entityHp = targetEntity.entityHpMax;
+                targetEntity.entityHp += realHeal;
+                if (targetEntity.entityHp > targetEntity.entityHpMax) targetEntity.entityHp = targetEntity.entityHpMax;
 
-                    targetEntity.entityImage.color = Color.green;
-                    AudioManager.instance.Play("Heal");
-                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} a récupéré {realHeal} points de vie !");
-                    StatDisplayManager.instance.DisplayStat(targetEntity);
-                }
-                else
-                {
-                    List<GameObject> targets = new List<GameObject>();
-                    targets.Clear();
-
-                    if (targetEntity.entityType == EntityType.Ally)
-                    {
-                        targets = SpawningManager.instance.heroesInBattle;
-                    }
-                    else
-                    {
-                        targets = SpawningManager.instance.monstersInBattle;
-                    }
-
-                    for (int i = 0; i < targets.Count; i++)
-                    {
-                        EntityManager healTarget = targets[i].GetComponent<EntityManager>();
-
-                        if (!healTarget.isDefeated)
-                        {
-                            float heal = (spell.strenght * caster.entityMana) * Random.Range(.9f, 1.1f);
-                            int realHeal = (int)heal;
-
-                            healTarget.entityHp += realHeal;
-                            if (healTarget.entityHp > healTarget.entityHpMax) healTarget.entityHp = healTarget.entityHpMax;
-
-
-                            healTarget.entityImage.color = Color.green;
-
-                            AudioManager.instance.Play("Heal");
-                            InterfaceManager.instance.Message(true, $"{healTarget.entityName} a récupéré {realHeal} points de vie !");
-                            StatDisplayManager.instance.DisplayStat(healTarget);
-
-                            yield return new WaitForSeconds(InterfaceManager.instance.time);
-
-                            healTarget.entityImage.color = Color.white;
-                        }
-                    }
-                }
+                targetEntity.entityImage.color = Color.green;
+                AudioManager.instance.Play("Heal");
+                InterfaceManager.instance.Message(true, $"{targetEntity.entityName} a récupéré {realHeal} points de vie !");
+                yield return new WaitForSeconds(InterfaceManager.instance.time);
+                StatDisplayManager.instance.DisplayStat(targetEntity);
 
                 break;
 
@@ -554,6 +513,7 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.entityHp = (int)(targetEntity.entityHpMax * .5f);
                     targetEntity.isDefeated = false;
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est ressuscité(e) !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                 }
                 else // Echec

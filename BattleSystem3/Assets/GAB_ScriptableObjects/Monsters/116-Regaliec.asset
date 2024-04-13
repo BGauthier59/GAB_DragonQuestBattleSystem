@@ -20,12 +20,13 @@ MonoBehaviour:
   hp: 68
   mp: 0
   atk: 84
-  defense: 54
-  agility: 62
+  defense: 67
+  agility: 70
   level: 1
   mana: 1
   criticalHit: 0
   dodge: 10
+  actionPerTurn: 1
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0

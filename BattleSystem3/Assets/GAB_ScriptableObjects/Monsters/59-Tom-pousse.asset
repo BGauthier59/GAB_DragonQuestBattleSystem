@@ -19,13 +19,14 @@ MonoBehaviour:
   pronoun: Le
   hp: 56
   mp: 20
-  atk: 70
-  defense: 65
-  agility: 72
+  atk: 80
+  defense: 75
+  agility: 102
   level: 1
   mana: 1
   criticalHit: 0
   dodge: 0
+  actionPerTurn: 1
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0

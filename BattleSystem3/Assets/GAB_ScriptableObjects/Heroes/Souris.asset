@@ -26,6 +26,7 @@ MonoBehaviour:
   mana: 0.6
   criticalHit: 10
   dodge: 10
+  actionPerTurn: 0
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -37,13 +38,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 776da5e85dfd39d42ba29818aa654bd5, type: 2}
   - {fileID: 11400000, guid: 6830c2fc9e666004db0495c04462fca3, type: 2}
   - {fileID: 11400000, guid: a5268f334d12a584eb9f30701b42e9d3, type: 2}
-  weapon: {fileID: 11400000, guid: ff82ea6f9decb094fb90599639297b9c, type: 2}
-  helmet: {fileID: 11400000, guid: c7e18ad440cddb94abe9678748ccc7ad, type: 2}
-  shield: {fileID: 11400000, guid: 56ec2370bfdbf26448f1d4419e13b757, type: 2}
-  armor: {fileID: 11400000, guid: 63a789993e358be4a85ce4853e0a5c80, type: 2}
+  - {fileID: 11400000, guid: 6fd4baafc5257e34c8277e168f5b8a95, type: 2}
+  - {fileID: 11400000, guid: 4f54229ba58584c4b8c39efb201b8b8f, type: 2}
+  - {fileID: 11400000, guid: 5089c0dd326eb8e4faa2b663df231e6f, type: 2}
+  - {fileID: 11400000, guid: dcc98863970e2e44ebf3ce0cbc90f624, type: 2}
+  weapon: {fileID: 11400000, guid: 7abe7f3666c211e40831388f04219e5a, type: 2}
+  helmet: {fileID: 11400000, guid: 84a404fd232c92e40b33ecb0679ca4f3, type: 2}
+  shield: {fileID: 11400000, guid: 009a2de45e17a134e80791e2122e3589, type: 2}
+  armor: {fileID: 11400000, guid: 5a7e2ae5aa52ac94199b4cf2e3bb939f, type: 2}
   hpLevelUp: 080000000c000000
   mpLevelUp: 0600000009000000
-  atkLevelUp: 0500000008000000
+  atkLevelUp: 0300000006000000
   defLevelUp: 0300000005000000
   agiLevelUp: 0500000008000000
   manaLevelUp:

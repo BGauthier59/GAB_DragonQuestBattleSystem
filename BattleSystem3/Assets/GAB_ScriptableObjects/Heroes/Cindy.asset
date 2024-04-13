@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
   m_Name: Cindy
   m_EditorClassIdentifier: 
-  entityName: Greg
+  entityName: Cindy
   sprite: {fileID: 0}
   spawnPosY: 0
   type: 0
   pronoun: 
-  hp: 264
-  mp: 20
-  atk: 150
-  defense: 80
-  agility: 100
-  level: 20
-  mana: 0.7
+  hp: 92
+  mp: 68
+  atk: 42
+  defense: 30
+  agility: 45
+  level: 5
+  mana: 1
   criticalHit: 10
   dodge: 10
   entityResilienceToMPTheft: 0
@@ -31,32 +31,57 @@ MonoBehaviour:
   entityResilienceToBurn: 0
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
-  spells:
-  - {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
-  - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
-  - {fileID: 11400000, guid: f856d990fb246a24b9f0b7b121f1999e, type: 2}
-  - {fileID: 11400000, guid: 776da5e85dfd39d42ba29818aa654bd5, type: 2}
-  weapon: {fileID: 0}
-  helmet: {fileID: 0}
-  shield: {fileID: 0}
-  armor: {fileID: 0}
-  hpLevelUp: 0a0000000d000000
-  mpLevelUp: 0500000008000000
-  atkLevelUp: 0500000007000000
-  defLevelUp: 0400000007000000
-  agiLevelUp: 0700000009000000
+  entityResilienceToStatDecrease: 0
+  spells: []
+  weapon: {fileID: 11400000, guid: 4a69440664898504b9f37cb58345b73f, type: 2}
+  helmet: {fileID: 11400000, guid: 87e9abd056bb71b48b3d7a7f0dafa7f0, type: 2}
+  shield: {fileID: 11400000, guid: 56ec2370bfdbf26448f1d4419e13b757, type: 2}
+  armor: {fileID: 11400000, guid: 8db379a422dd780499376213d83667d8, type: 2}
+  hpLevelUp: 090000000d000000
+  mpLevelUp: 070000000a000000
+  atkLevelUp: 0500000008000000
+  defLevelUp: 0400000006000000
+  agiLevelUp: 0600000009000000
   manaLevelUp:
   - 0.1
-  - 0.15
+  - 2
   learnSpells:
   - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: bdc4f6fc8b70a0142bb060d5d95e8d18, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: cc229a28c865aac44a7659b6eaccb00d, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: db51f43c70849da46aa7ee239e43f427, type: 2}
+  - learningLevel: 5
     learningSpell: {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
-  - learningLevel: 0
+  - learningLevel: 6
+    learningSpell: {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
+  - learningLevel: 7
     learningSpell: {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: f856d990fb246a24b9f0b7b121f1999e, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 776da5e85dfd39d42ba29818aa654bd5, type: 2}
+  - learningLevel: 8
+    learningSpell: {fileID: 11400000, guid: e0bdc00bcb4d8814595b418e46ed80c9, type: 2}
+  - learningLevel: 9
+    learningSpell: {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
+  - learningLevel: 10
+    learningSpell: {fileID: 11400000, guid: ddb31d0bea0887344ab27c960c5f84e4, type: 2}
+  - learningLevel: 11
+    learningSpell: {fileID: 11400000, guid: 76abd92ebdb02184286edee36a22fd2c, type: 2}
+  - learningLevel: 12
+    learningSpell: {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
+  - learningLevel: 13
+    learningSpell: {fileID: 11400000, guid: ad7ee25a2f883dc469f1fe251255b48d, type: 2}
+  - learningLevel: 14
+    learningSpell: {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
+  - learningLevel: 15
+    learningSpell: {fileID: 11400000, guid: bdb570d8985c3434981f49a81683b63a, type: 2}
+  - learningLevel: 16
+    learningSpell: {fileID: 11400000, guid: 5678a91f97613cb4c962e518d0e1b498, type: 2}
+  - learningLevel: 17
+    learningSpell: {fileID: 11400000, guid: 2a97068c2e16e404dac24cde891cba80, type: 2}
+  - learningLevel: 18
+    learningSpell: {fileID: 11400000, guid: 03e8d9a0dafc498408295d8bf1ecf809, type: 2}
+  - learningLevel: 19
+    learningSpell: {fileID: 11400000, guid: 8f9e804a992cb2d4abc914ef6b38059e, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

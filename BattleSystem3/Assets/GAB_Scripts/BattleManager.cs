@@ -81,7 +81,8 @@ public class BattleManager : MonoSingleton<BattleManager>
             StatDisplayManager.instance.DisplayStat(entityManager);
         }
         
-        AudioManager.instance.Play("BattleTheme");
+        if (SpawningManager.instance.selectedZone.combatZone == CombatZone.Boss) AudioManager.instance.Play("BossBattleTheme");
+        else AudioManager.instance.Play("BattleTheme");
     }
 
     public void AllyButtonsCreation()
@@ -920,6 +921,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     {
         StopAllCoroutines();
         AudioManager.instance.Stop("BattleTheme");
+        AudioManager.instance.Stop("BossBattleTheme");
 
         if (hasTeamWon)
         {

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 18-Egide
   m_EditorClassIdentifier: 
   itemName: 
-  equipmentName: Bouclier d'orichalque
-  equipmentSprite: {fileID: 21300000, guid: d230dc1ede85a664881bef4df245d1d3, type: 3}
+  equipmentName: Egide
+  equipmentSprite: {fileID: 21300000, guid: 79679932a9cc895438c573647d92b377, type: 3}
   equipmentType: 1
-  hp: 0
+  hp: 30
   mp: 0
   atk: 0
-  def: 32
+  def: 35
   agi: 0
   mana: 0
   dodge: 0

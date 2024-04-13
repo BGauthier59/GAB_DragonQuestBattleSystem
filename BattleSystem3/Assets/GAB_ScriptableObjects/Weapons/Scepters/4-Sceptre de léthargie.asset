@@ -20,6 +20,6 @@ MonoBehaviour:
   atk: 12
   def: 0
   agi: 0
-  mana: 0.45
+  mana: 0.4
   dodge: 0
   critical: 0

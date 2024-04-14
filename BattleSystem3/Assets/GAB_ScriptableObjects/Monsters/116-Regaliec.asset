@@ -21,7 +21,7 @@ MonoBehaviour:
   mp: 0
   atk: 84
   defense: 67
-  agility: 70
+  agility: 60
   level: 1
   mana: 1
   criticalHit: 0

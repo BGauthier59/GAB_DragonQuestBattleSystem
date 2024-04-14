@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Domarium d'Alad 18
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: c679f060a352c504bb6aa228e2fdc412, type: 2}
+  - {fileID: 11400000, guid: 64051e1841c4af44c9cdf2c5f4ce552d, type: 2}
   - {fileID: 11400000, guid: ba67a5d686f80304f9c49bbd953f7745, type: 2}
   - {fileID: 11400000, guid: a4a0bdda19300ab4aaf8f8c3d8d1c5bb, type: 2}
   - {fileID: 11400000, guid: a4a0bdda19300ab4aaf8f8c3d8d1c5bb, type: 2}

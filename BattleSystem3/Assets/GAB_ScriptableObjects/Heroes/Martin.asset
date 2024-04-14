@@ -17,13 +17,13 @@ MonoBehaviour:
   spawnPosY: 0
   type: 0
   pronoun: 
-  hp: 108
-  mp: 45
-  atk: 68
-  defense: 43
-  agility: 48
-  level: 7
-  mana: 0.7
+  hp: 173
+  mp: 82
+  atk: 99
+  defense: 64
+  agility: 68
+  level: 12
+  mana: 1
   criticalHit: 10
   dodge: 10
   actionPerTurn: 0
@@ -34,18 +34,18 @@ MonoBehaviour:
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
   spells: []
-  weapon: {fileID: 11400000, guid: 4e070563b0810b44db4c1e406e71fb90, type: 2}
-  helmet: {fileID: 11400000, guid: 3b4a0c68a38fef2459e3230d20fcf5c1, type: 2}
-  shield: {fileID: 11400000, guid: 56ec2370bfdbf26448f1d4419e13b757, type: 2}
-  armor: {fileID: 11400000, guid: f84cc3117f0862f4a9020867ce9bd03b, type: 2}
+  weapon: {fileID: 11400000, guid: 6d18265c0b2603d48a77f5739c321490, type: 2}
+  helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
+  shield: {fileID: 11400000, guid: fbc6ccd4e6b699a419cdebdd678dcec3, type: 2}
+  armor: {fileID: 11400000, guid: e4fb3cd3c54a915418d9e15989a1b875, type: 2}
   hpLevelUp: 0b0000000f000000
   mpLevelUp: 0500000008000000
   atkLevelUp: 0500000008000000
   defLevelUp: 0300000005000000
-  agiLevelUp: 0400000006000000
+  agiLevelUp: 0300000005000000
   manaLevelUp:
-  - 0.1
-  - 0.15
+  - 0
+  - 0.05
   learnSpells: []
   strategy: 0
   elementType: 0

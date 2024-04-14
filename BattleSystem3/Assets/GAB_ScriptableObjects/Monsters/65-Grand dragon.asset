@@ -19,9 +19,9 @@ MonoBehaviour:
   pronoun: Le
   hp: 155
   mp: 0
-  atk: 138
-  defense: 71
-  agility: 56
+  atk: 148
+  defense: 81
+  agility: 64
   level: 1
   mana: 1
   criticalHit: 5

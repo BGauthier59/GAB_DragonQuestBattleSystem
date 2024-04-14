@@ -17,11 +17,11 @@ MonoBehaviour:
   spawnPosY: 32
   type: 1
   pronoun: Le
-  hp: 96
+  hp: 102
   mp: 48
-  atk: 84
-  defense: 67
-  agility: 63
+  atk: 85
+  defense: 74
+  agility: 73
   level: 1
   mana: 0.8
   criticalHit: 0

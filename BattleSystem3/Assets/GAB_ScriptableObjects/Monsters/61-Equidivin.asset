@@ -17,11 +17,11 @@ MonoBehaviour:
   spawnPosY: 19
   type: 1
   pronoun: L'
-  hp: 76
+  hp: 86
   mp: 4
-  atk: 88
-  defense: 63
-  agility: 63
+  atk: 93
+  defense: 77
+  agility: 80
   level: 1
   mana: 1
   criticalHit: 0

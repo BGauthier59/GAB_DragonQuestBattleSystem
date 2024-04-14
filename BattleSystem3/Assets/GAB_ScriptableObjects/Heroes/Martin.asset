@@ -33,7 +33,8 @@ MonoBehaviour:
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells: []
+  spells:
+  - {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
   weapon: {fileID: 11400000, guid: 6d18265c0b2603d48a77f5739c321490, type: 2}
   helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
   shield: {fileID: 11400000, guid: fbc6ccd4e6b699a419cdebdd678dcec3, type: 2}
@@ -46,7 +47,9 @@ MonoBehaviour:
   manaLevelUp:
   - 0
   - 0.05
-  learnSpells: []
+  learnSpells:
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

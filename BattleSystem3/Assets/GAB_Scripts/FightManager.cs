@@ -495,7 +495,7 @@ public class FightManager : MonoSingleton<FightManager>
                 targetEntity.entityImage.color = Color.green;
                 AudioManager.instance.Play("Heal");
                 InterfaceManager.instance.Message(true, $"{targetEntity.entityName} a récupéré {realHeal} points de vie !");
-                yield return new WaitForSeconds(InterfaceManager.instance.time);
+                yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                 StatDisplayManager.instance.DisplayStat(targetEntity);
 
                 break;
@@ -519,6 +519,7 @@ public class FightManager : MonoSingleton<FightManager>
                 else // Echec
                 {
                     InterfaceManager.instance.Message(true, "Le sort a échoué...");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                 }
 
@@ -532,13 +533,13 @@ public class FightManager : MonoSingleton<FightManager>
                 if (trueChanceToMPTheft <= 0)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affecté(e) !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 else if (trueChanceToMPTheft >= spell.successRate)
                 {
                     InterfaceManager.instance.Message(true, "Le sort a échoué...");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 else
@@ -557,50 +558,9 @@ public class FightManager : MonoSingleton<FightManager>
                     break;
                 }
 
-            case 4: // Protection
+            case 4: // Vide
 
-                if (!spell.doTargetEveryone)
-                {
-                    float boost = Random.Range(targetEntity.entityDefInit * 0.2f, targetEntity.entityDefInit * 0.25f);
-                    int realBoost = (int)boost;
-
-                    targetEntity.entityDef += realBoost;
-
-                    NewEffect(targetEntity, 3, 1, realBoost);
-                    InterfaceManager.instance.Message(true, $"La défense de {targetEntity.entityName} augmente de {realBoost} !");
-                }
-                else
-                {
-                    List<GameObject> targets = new List<GameObject>();
-                    targets.Clear();
-
-                    if (targetEntity.entityType == EntityType.Ally)
-                    {
-                        targets = SpawningManager.instance.heroesInBattle;
-                    }
-                    else
-                    {
-                        targets = SpawningManager.instance.monstersInBattle;
-                    }
-
-                    for (int i = 0; i < targets.Count; i++)
-                    {
-                        EntityManager spellTarget = targets[i].GetComponent<EntityManager>();
-
-                        if (!spellTarget.isDefeated)
-                        {
-                            float boost = Random.Range(spellTarget.entityDefInit * 0.2f, spellTarget.entityDefInit * 0.25f);
-                            int realBoost = (int)boost;
-
-                            spellTarget.entityDef += realBoost;
-
-                            NewEffect(spellTarget, 3, 1, realBoost);
-
-                            if (i != 0) yield return new WaitForSeconds(InterfaceManager.instance.time);
-                            InterfaceManager.instance.Message(true, $"La défense de {spellTarget.entityName} augmente de {realBoost} !");
-                        }
-                    }
-                }
+               
                 break;
 
             case 5: // Coupe claire
@@ -672,7 +632,7 @@ public class FightManager : MonoSingleton<FightManager>
 
                         InterfaceManager.instance.Message(true, $"{target.entityName} subit {realMultiHitsDamages} points de dégâts !");
                         Debug.Log(target);
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                         StatDisplayManager.instance.DisplayStat(target);
 
                         if (CheckDefeat(target))
@@ -703,7 +663,6 @@ public class FightManager : MonoSingleton<FightManager>
                         else target = multiHitsTargets[Random.Range(0, multiHitsTargets.Count)];
 
                         float multiHitsDamages = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (target.entityDef / 4)) * spell.factor * 0.01f;
-
                         if (target.isDefending) multiHitsDamages /= 2;
                         int realMultiHitsDamages = (int)multiHitsDamages;
                         if (realMultiHitsDamages <= 0) realMultiHitsDamages = 0;
@@ -741,7 +700,7 @@ public class FightManager : MonoSingleton<FightManager>
                     else AudioManager.instance.Play("Hit");
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages7} points de dégâts !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.entityHp -= realDamages7;
 
                     if (CheckDefeat(targetEntity))
@@ -759,7 +718,7 @@ public class FightManager : MonoSingleton<FightManager>
                     if (!spell.hasEffectAndDamages)
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     }
                     break;
                 }
@@ -772,7 +731,7 @@ public class FightManager : MonoSingleton<FightManager>
                     if (!spell.hasEffectAndDamages)
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     }
                     break;
                 }
@@ -781,7 +740,7 @@ public class FightManager : MonoSingleton<FightManager>
                     if (!spell.hasEffectAndDamages)
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     }
                     break;
                 }
@@ -790,7 +749,7 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.entityStatut = Statut.Empoisonné;
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est empoisonné !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
                 }
@@ -808,7 +767,7 @@ public class FightManager : MonoSingleton<FightManager>
                     else AudioManager.instance.Play("Hit");
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages8} points de dégâts !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.entityHp -= realDamages8;
 
                     if (CheckDefeat(targetEntity))
@@ -828,7 +787,7 @@ public class FightManager : MonoSingleton<FightManager>
                     if (!spell.hasEffectAndDamages)
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     }
                     break;
                 }
@@ -841,7 +800,7 @@ public class FightManager : MonoSingleton<FightManager>
                     if (!spell.hasEffectAndDamages)
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     }
                     break;
                 }
@@ -850,7 +809,7 @@ public class FightManager : MonoSingleton<FightManager>
                     if (!spell.hasEffectAndDamages)
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     }
                     break;
                 }
@@ -859,7 +818,7 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.entityStatut = Statut.Brûlé;
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est brûlé !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
                 }
@@ -877,7 +836,7 @@ public class FightManager : MonoSingleton<FightManager>
                     else AudioManager.instance.Play("Hit");
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages11} points de dégâts !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.entityHp -= realDamages11;
 
                     if (CheckDefeat(targetEntity))
@@ -893,7 +852,7 @@ public class FightManager : MonoSingleton<FightManager>
                 if (targetEntity.entityStatut != Statut.None)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
 
@@ -903,13 +862,13 @@ public class FightManager : MonoSingleton<FightManager>
                 if (trueMagPoisonSpellSuccessRate <= 0)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 if (aleaMagPoison >= trueMagPoisonSpellSuccessRate)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 else
@@ -917,7 +876,7 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.entityStatut = Statut.EmpMagique;
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} voit sa magie empoisonnée !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
                 }
@@ -935,7 +894,7 @@ public class FightManager : MonoSingleton<FightManager>
                     else AudioManager.instance.Play("Hit");
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages11} points de dégâts !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.entityHp -= realDamages11;
 
                     if (CheckDefeat(targetEntity))
@@ -951,7 +910,7 @@ public class FightManager : MonoSingleton<FightManager>
                 if (targetEntity.entityStatut != Statut.None)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
 
@@ -962,13 +921,13 @@ public class FightManager : MonoSingleton<FightManager>
                 if (trueSilenceSpellSuccessRate <= 0)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 if (aleaSilence >= trueSilenceSpellSuccessRate)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 else
@@ -977,7 +936,7 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.turnsBeforeRecovering = Random.Range(3, 7);
                     Debug.Log(targetEntity.turnsBeforeRecovering);
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est réduit(e) au silence !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
                 }
@@ -995,7 +954,7 @@ public class FightManager : MonoSingleton<FightManager>
                     else AudioManager.instance.Play("Hit");
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages11} points de dégâts !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.entityHp -= realDamages11;
 
                     if (CheckDefeat(targetEntity))
@@ -1023,7 +982,7 @@ public class FightManager : MonoSingleton<FightManager>
                     if (!spell.hasEffectAndDamages)
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} reste de marbre.");
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     }
                     break;
                 }
@@ -1032,7 +991,7 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.isBlocked = true;
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} {spell.excuseForInaction}");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
                 }
@@ -1050,7 +1009,7 @@ public class FightManager : MonoSingleton<FightManager>
                 if (targetEntity.entityStatut != Statut.None)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
 
@@ -1060,13 +1019,13 @@ public class FightManager : MonoSingleton<FightManager>
                 if (trueSleepSpellSuccessRate <= 0 || targetEntity.isBlocked)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 if (aleaSleep >= trueSleepSpellSuccessRate)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 else
@@ -1075,7 +1034,7 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.turnsBeforeRecovering = Random.Range(1, 4);
                     Debug.Log(targetEntity.turnsBeforeRecovering);
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} tombe dans un profond sommeil !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
                 }
@@ -1093,7 +1052,7 @@ public class FightManager : MonoSingleton<FightManager>
                     else AudioManager.instance.Play("Hit");
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages14} points de dégâts !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.entityHp -= realDamages14;
 
                     if (CheckDefeat(targetEntity))
@@ -1109,7 +1068,7 @@ public class FightManager : MonoSingleton<FightManager>
                 if (targetEntity.entityStatut != Statut.None && !spell.hasEffectAndDamages)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
 
@@ -1119,7 +1078,7 @@ public class FightManager : MonoSingleton<FightManager>
                 if ((trueParaSpellSuccessRate <= 0 || targetEntity.isBlocked) && !spell.hasEffectAndDamages)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 if (aleaPara >= trueParaSpellSuccessRate)
@@ -1127,7 +1086,7 @@ public class FightManager : MonoSingleton<FightManager>
                     if (!spell.hasEffectAndDamages)
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                         break;
                     }
                 }
@@ -1137,7 +1096,7 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.turnsBeforeRecovering = Random.Range(1, 4);
                     Debug.Log(targetEntity.turnsBeforeRecovering);
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est paralysé(e) !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
                 }
@@ -1150,13 +1109,13 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.entityStatut = Statut.None;
                     targetEntity.turnsBeforeRecovering = 0;
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est guéri(e) du poison !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 else
                 {
                     InterfaceManager.instance.Message(true, $"Mais cela n'a aucun effet sur {targetEntity.entityName} !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
 
@@ -1167,13 +1126,13 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.entityStatut = Statut.None;
                     targetEntity.turnsBeforeRecovering = 0;
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est guéri(e) de la brûlure !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 else
                 {
                     InterfaceManager.instance.Message(true, $"Mais cela n'a aucun effet sur {targetEntity.entityName} !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
 
@@ -1184,13 +1143,13 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.entityStatut = Statut.None;
                     targetEntity.turnsBeforeRecovering = 0;
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est réveillé(e) par le sort !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 else
                 {
                     InterfaceManager.instance.Message(true, $"Mais cela n'a aucun effet sur {targetEntity.entityName} !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
 
@@ -1201,13 +1160,13 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.entityStatut = Statut.None;
                     targetEntity.turnsBeforeRecovering = 0;
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est guéri(e) de la paralysie !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 else
                 {
                     InterfaceManager.instance.Message(true, $"Mais cela n'a aucun effet sur {targetEntity.entityName} !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
 
@@ -1219,13 +1178,13 @@ public class FightManager : MonoSingleton<FightManager>
                     targetEntity.entityStatut = Statut.None;
                     targetEntity.turnsBeforeRecovering = 0;
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est guéri(e) !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
                 else
                 {
                     InterfaceManager.instance.Message(true, $"Mais cela n'a aucun effet sur {targetEntity.entityName} !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
 
@@ -1240,7 +1199,7 @@ public class FightManager : MonoSingleton<FightManager>
                 else AudioManager.instance.Play("Hit");
 
                 InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages20} points de dégâts !");
-                yield return new WaitForSeconds(InterfaceManager.instance.time);
+                yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                 targetEntity.entityHp -= realDamages20;
 
                 if (CheckDefeat(targetEntity))
@@ -1259,7 +1218,7 @@ public class FightManager : MonoSingleton<FightManager>
                     if (caster.entityHp >= caster.entityHpMax) caster.entityHp = caster.entityHpMax;
                     AudioManager.instance.Play("Heal");
                     InterfaceManager.instance.Message(true, $"{caster.entityName} récupère {realHealDamages} PVs !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(caster);
                 }
 
@@ -1280,7 +1239,7 @@ public class FightManager : MonoSingleton<FightManager>
                     else if (targetEntity.defStatIndex == 1 || targetEntity.defStatIndex == -1) InterfaceManager.instance.Message(true, $"La défense de {targetEntity.entityName} augmente légèrement !");
                     else if (targetEntity.defStatIndex == 2) InterfaceManager.instance.Message(true, $"La défense de {targetEntity.entityName} augmente nettement !");
 
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.SetNewDef(targetEntity.defStatIndex);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     Debug.Log(targetEntity.defStatIndex + " + " + targetEntity.entityDef);
@@ -1301,13 +1260,13 @@ public class FightManager : MonoSingleton<FightManager>
                     else AudioManager.instance.Play("Hit");
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages22} points de dégâts !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.entityHp -= realDamages22;
 
                     if (CheckDefeat(targetEntity))
                     {
                         InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                         break;
                     }
                     StatDisplayManager.instance.DisplayStat(targetEntity);
@@ -1316,7 +1275,7 @@ public class FightManager : MonoSingleton<FightManager>
                 if (targetEntity.defStatIndex == -2 && !spell.hasEffectAndDamages)
                 {
                     InterfaceManager.instance.Message(true, $"La défense de {targetEntity.entityName} ne peut plus baisser !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                 }
                 else
                 {
@@ -1328,7 +1287,7 @@ public class FightManager : MonoSingleton<FightManager>
                         if (!spell.hasEffectAndDamages)
                         {
                             InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
-                            yield return new WaitForSeconds(InterfaceManager.instance.time);
+                            yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                         }
                     }
                     else
@@ -1339,7 +1298,7 @@ public class FightManager : MonoSingleton<FightManager>
                         else if (targetEntity.defStatIndex == 1 || targetEntity.defStatIndex == -1) InterfaceManager.instance.Message(true, $"La défense de {targetEntity.entityName} diminue légèrement !");
                         else if (targetEntity.defStatIndex == -2) InterfaceManager.instance.Message(true, $"La défense de {targetEntity.entityName} diminue nettement !");
 
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                         targetEntity.SetNewDef(targetEntity.defStatIndex);
                         StatDisplayManager.instance.DisplayStat(targetEntity);
                         Debug.Log(targetEntity.defStatIndex + " + " + targetEntity.entityDef);
@@ -1368,7 +1327,7 @@ public class FightManager : MonoSingleton<FightManager>
                         InterfaceManager.instance.Message(true, $"L'attaque de {targetEntity.entityName} augmente nettement !");
                     }
 
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.SetNewAtk(targetEntity.atkStatIndex);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     Debug.Log(targetEntity.atkStatIndex + " + " + targetEntity.entityAtk);
@@ -1389,7 +1348,7 @@ public class FightManager : MonoSingleton<FightManager>
                     else AudioManager.instance.Play("Hit");
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages24} points de dégâts !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.entityHp -= realDamages24;
 
                     if (CheckDefeat(targetEntity))
@@ -1404,7 +1363,7 @@ public class FightManager : MonoSingleton<FightManager>
                 if (targetEntity.atkStatIndex == -2)
                 {
                     InterfaceManager.instance.Message(true, $"L'attaque de {targetEntity.entityName} ne peut plus baisser !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                 }
                 else
                 {
@@ -1416,7 +1375,7 @@ public class FightManager : MonoSingleton<FightManager>
                         if (!spell.hasEffectAndDamages)
                         {
                             InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
-                            yield return new WaitForSeconds(InterfaceManager.instance.time);
+                            yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                         }
                     }
                     else
@@ -1427,7 +1386,7 @@ public class FightManager : MonoSingleton<FightManager>
                         else if (targetEntity.atkStatIndex == 1 || targetEntity.atkStatIndex == -1) InterfaceManager.instance.Message(true, $"L'attaque de {targetEntity.entityName} diminue légèrement !");
                         else if (targetEntity.atkStatIndex == -2) InterfaceManager.instance.Message(true, $"L'attaque de {targetEntity.entityName} diminue nettement !");
 
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                         targetEntity.SetNewAtk(targetEntity.atkStatIndex);
                         StatDisplayManager.instance.DisplayStat(targetEntity);
                         Debug.Log(targetEntity.atkStatIndex + " + " + targetEntity.entityAtk);
@@ -1455,7 +1414,7 @@ public class FightManager : MonoSingleton<FightManager>
                     else if (targetEntity.manaStatIndex == 1 || targetEntity.manaStatIndex == -1) InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} augmente légèrement !");
                     else if (targetEntity.manaStatIndex == 2) InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} augmente nettement !");
 
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.SetNewMana(targetEntity.manaStatIndex);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     Debug.Log(targetEntity.manaStatIndex + " + " + targetEntity.entityMana);
@@ -1476,7 +1435,7 @@ public class FightManager : MonoSingleton<FightManager>
                     else AudioManager.instance.Play("Hit");
 
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages27} points de dégâts !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     targetEntity.entityHp -= realDamages27;
 
                     if (CheckDefeat(targetEntity))
@@ -1491,7 +1450,7 @@ public class FightManager : MonoSingleton<FightManager>
                 if (targetEntity.manaStatIndex == -2)
                 {
                     InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} ne peut plus baisser !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                 }
                 else
                 {
@@ -1503,7 +1462,7 @@ public class FightManager : MonoSingleton<FightManager>
                         if (!spell.hasEffectAndDamages)
                         {
                             InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
-                            yield return new WaitForSeconds(InterfaceManager.instance.time);
+                            yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                         }
                     }
                     else
@@ -1514,7 +1473,7 @@ public class FightManager : MonoSingleton<FightManager>
                         else if (targetEntity.manaStatIndex == 1 || targetEntity.manaStatIndex == -1) InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} diminue légèrement !");
                         else if (targetEntity.manaStatIndex == -2) InterfaceManager.instance.Message(true, $"Le mana de {targetEntity.entityName} diminue nettement !");
 
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                         targetEntity.SetNewMana(targetEntity.manaStatIndex);
                         StatDisplayManager.instance.DisplayStat(targetEntity);
                         Debug.Log(targetEntity.manaStatIndex + " + " + targetEntity.entityMana);

@@ -1258,6 +1258,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 476dd892b31a3284392597b83f3c4764, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
+  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
+  - {fileID: 11400000, guid: 91a038728d6f3f246bd7738b44ebe071, type: 2}
+  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   selectedZone: {fileID: 0}
   isNight: 0
   centerBattle: {fileID: 156872459}
@@ -4677,6 +4680,8 @@ MonoBehaviour:
     - m_Text: Boss4
       m_Image: {fileID: 0}
     - m_Text: Boss5
+      m_Image: {fileID: 0}
+    - m_Text: Boss6
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

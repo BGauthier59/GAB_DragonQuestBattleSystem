@@ -10,31 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: 76-Roco-roco
+  m_Name: 131-Chancelier
   m_EditorClassIdentifier: 
-  entityName: Roco-roco
-  sprite: {fileID: 21300000, guid: 511defe5d18b16942864c8cc457dde74, type: 3}
-  spawnPosY: 11
+  entityName: Chancelier
+  sprite: {fileID: 21300000, guid: 29094562e1fe776439b6f13826d8a4aa, type: 3}
+  spawnPosY: 51
   type: 1
   pronoun: Le
-  hp: 75
-  mp: 0
-  atk: 108
-  defense: 62
-  agility: 85
+  hp: 815
+  mp: 9999
+  atk: 138
+  defense: 95
+  agility: 80
   level: 1
-  mana: 1
+  mana: 0.8
   criticalHit: 0
-  dodge: 5
+  dodge: 0
   actionPerTurn: 1
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
-  entityResilienceToSilence: 0
-  entityResilienceToSleep: 0
-  entityResilienceToStatDecrease: 0
+  entityResilienceToSilence: 10
+  entityResilienceToSleep: 10
+  entityResilienceToStatDecrease: 10
   spells:
-  - {fileID: 11400000, guid: f74b107c9c8a53a4aac2ef2e47f82d34, type: 2}
+  - {fileID: 11400000, guid: 3219ff11a90df904182a256afbc711c5, type: 2}
+  - {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
+  - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
+  - {fileID: 11400000, guid: de9ea8df1c5eb6d4cbc9991fbc884c2f, type: 2}
+  - {fileID: 11400000, guid: 1f4b5d4126c158744baadc0d435463fc, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -50,5 +54,5 @@ MonoBehaviour:
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
-  gold: 27
-  xp: 35
+  gold: 80
+  xp: 120

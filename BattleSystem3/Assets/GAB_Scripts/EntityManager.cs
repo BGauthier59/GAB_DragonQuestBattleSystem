@@ -63,7 +63,8 @@ public class EntityManager : MonoBehaviour
     public int turnsBeforeRecovering;
     public int turnsBeforeResetDef;
     public int turnsBeforeResetAtk;
-    public int turnsBeforeRestMana;
+    public int turnsBeforeResetMana;
+    public int turnsBeforeResetReflexion;
     public bool isBlocked;
     public bool isReflected;
 

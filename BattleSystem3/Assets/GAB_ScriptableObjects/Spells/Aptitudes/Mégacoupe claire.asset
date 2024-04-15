@@ -10,23 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: "R\xE9flexion"
+  m_Name: "M\xE9gacoupe claire"
   m_EditorClassIdentifier: 
-  spellName: "R\xE9flexion"
-  spellDescription: "Invoque un miroir de lumi\xE8re qui renvoie les sorts."
-  inBattleDescription: "lance la R\xE9flexion !"
+  spellName: "M\xE9gacoupe claire"
+  spellDescription: Vise les pooints faibles de l'ennemi pour tenter de porter un
+    coup critique.
+  inBattleDescription: "taillade toute l'\xE9quipe \xE0 la vitesse de la lumi\xE8re
+    !"
   excuseForInaction: 
-  spellIndex: 12
-  spellType: 0
-  cost: 0
-  SFXname: "R\xE9flexion"
+  spellIndex: 5
+  spellType: 1
+  cost: 20
+  SFXname: Sword
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
-  doTargetEveryone: 0
-  helpingSpell: 1
-  selfSpell: 1
+  doTargetEveryone: 1
+  helpingSpell: 0
+  selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 100
+  successRate: 20
   strenght: 0
   elementType: 0
   factor: 0

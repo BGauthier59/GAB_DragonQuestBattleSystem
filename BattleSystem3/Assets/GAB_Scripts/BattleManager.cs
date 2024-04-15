@@ -747,6 +747,14 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     public IEnumerator OnStatutEffect(EntityManager entity, Statut statut)
     {
+        if (entity.isReflected) entity.turnsBeforeResetReflexion--;
+        if (entity.isReflected && entity.turnsBeforeResetReflexion <= 0)
+        {
+            entity.isReflected = false;
+            InterfaceManager.instance.Message(true, $"Le voile de lumière qui protège {entity.entityName} disparaît...");
+            yield return new WaitForSeconds(InterfaceManager.instance.time);
+        }
+
         switch (statut)
         {
             case Statut.None:

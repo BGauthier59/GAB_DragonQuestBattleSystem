@@ -10,32 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: "73-Pr\xE9torien octavien"
+  m_Name: "137-Ma\xEEtre Armand"
   m_EditorClassIdentifier: 
-  entityName: "Pr\xE9torien octavien"
-  sprite: {fileID: 21300000, guid: 15bab5db728508c42906d37a739bd64b, type: 3}
-  spawnPosY: 43
+  entityName: "Ma\xEEtre Armand"
+  sprite: {fileID: 21300000, guid: 7bc56361e8e510f4eaacc735895afa49, type: 3}
+  spawnPosY: 41
   type: 1
   pronoun: Le
-  hp: 110
-  mp: 23
-  atk: 114
-  defense: 83
-  agility: 69
+  hp: 1040
+  mp: 9999
+  atk: 152
+  defense: 102
+  agility: 84
   level: 1
-  mana: 1
+  mana: 0.8
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
   entityResilienceToMPTheft: 0
-  entityResilienceToPoison: 0
-  entityResilienceToBurn: 0
-  entityResilienceToSilence: 0
-  entityResilienceToSleep: 0
-  entityResilienceToStatDecrease: 0
+  entityResilienceToPoison: 20
+  entityResilienceToBurn: 20
+  entityResilienceToSilence: 100
+  entityResilienceToSleep: 100
+  entityResilienceToStatDecrease: 20
   spells:
-  - {fileID: 11400000, guid: dcc98863970e2e44ebf3ce0cbc90f624, type: 2}
+  - {fileID: 11400000, guid: cab4ffda81820274d83ed95408190823, type: 2}
   - {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
+  - {fileID: 11400000, guid: e8c33c364950fca488bb429c08dd10da, type: 2}
+  - {fileID: 11400000, guid: 777cb550d9c342f4ba826fc2a7190a09, type: 2}
+  - {fileID: 11400000, guid: 650eb64a1b1dc5a41907803d7d9108f0, type: 2}
+  - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
+  - {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -51,5 +56,5 @@ MonoBehaviour:
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
-  gold: 25
-  xp: 39
+  gold: 80
+  xp: 120

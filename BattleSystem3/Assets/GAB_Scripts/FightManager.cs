@@ -95,6 +95,15 @@ public class FightManager : MonoSingleton<FightManager>
         defeated.isDefeated = true;
         defeated.entityImage.sprite = emptySprite; // Image vide associée
         defeated.entityImage.color = Color.white;
+        defeated.entityStatut = Statut.None;
+        defeated.turnsBeforeRecovering = 0;
+        defeated.turnsBeforeResetDef = 0;
+        defeated.turnsBeforeResetAtk = 0;
+        defeated.turnsBeforeResetMana = 0;
+        defeated.isDefending = false;
+        defeated.isBlocked = false;
+        defeated.isReflected = false;
+
         if (defeated.entityType == EntityType.Monster)
         {
             BattleManager.instance.goldEarned += defeated.gold;
@@ -128,12 +137,12 @@ public class FightManager : MonoSingleton<FightManager>
 
         if (target.entityType == EntityType.Monster)
         {
-            if (spell.helpingSpell && caster.entityType == EntityType.Ally) targets = SpawningManager.instance.heroesInBattle;
+            if (spell.helpingSpell && caster.entityType == EntityType.Ally) targets = SpawningManager.instance.monstersInBattle;
             else targets = SpawningManager.instance.monstersInBattle;
         }
         else if (target.entityType == EntityType.Ally)
         {
-            if (spell.helpingSpell) targets = SpawningManager.instance.monstersInBattle;
+            if (spell.helpingSpell) targets = SpawningManager.instance.heroesInBattle;
             else targets = SpawningManager.instance.heroesInBattle;
         }
 
@@ -1000,6 +1009,7 @@ public class FightManager : MonoSingleton<FightManager>
 
                 targetEntity = caster;
                 caster.isReflected = true;
+                caster.turnsBeforeResetReflexion = 3;
                 InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est protégé par un voile de lumière !");
                 yield return new WaitForSeconds(InterfaceManager.instance.time);
                 break;

@@ -42,6 +42,8 @@ public class EntityManager : MonoBehaviour
     public int entityCriticalInit;
     public int entityCritical;
 
+    public int entityActionPerTurn;
+
     public int entityDodgeInit;
     public int entityDodge;
     public int entityResilienceToMPTheft;
@@ -125,6 +127,8 @@ public class EntityManager : MonoBehaviour
 
         entityDodgeInit = entitySO.dodge;
         entityDodge = entityDodgeInit;
+
+        entityActionPerTurn = entitySO.actionPerTurn;
 
         entityResilienceToMPTheft = entitySO.entityResilienceToMPTheft;
         entityResilienceToPoison = entitySO.entityResilienceToPoison;

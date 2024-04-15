@@ -17,15 +17,16 @@ MonoBehaviour:
   spawnPosY: 0
   type: 0
   pronoun: 
-  hp: 180
-  mp: 60
-  atk: 80
-  defense: 80
-  agility: 80
-  level: 10
-  mana: 1.5
+  hp: 170
+  mp: 100
+  atk: 83
+  defense: 69
+  agility: 69
+  level: 12
+  mana: 1
   criticalHit: 10
   dodge: 10
+  actionPerTurn: 0
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -33,40 +34,45 @@ MonoBehaviour:
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
   spells:
-  - {fileID: 11400000, guid: eefb1a0c883773645b0612bcedbfb6e9, type: 2}
-  - {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
+  - {fileID: 11400000, guid: a4f27f9407542c94992841e320990b79, type: 2}
+  - {fileID: 11400000, guid: bdc4f6fc8b70a0142bb060d5d95e8d18, type: 2}
+  - {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
+  - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
-  - {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
-  - {fileID: 11400000, guid: 1f4b5d4126c158744baadc0d435463fc, type: 2}
-  - {fileID: 11400000, guid: 83ad7b5ee12db7f44a91ba00b9e73ea4, type: 2}
-  - {fileID: 11400000, guid: b0998091b84311948bff433ee090ca4f, type: 2}
-  weapon: {fileID: 0}
-  helmet: {fileID: 0}
-  shield: {fileID: 0}
-  armor: {fileID: 0}
-  hpLevelUp: 0a0000000d000000
+  - {fileID: 11400000, guid: 9a348bfe61ad8984ea29076e62b0d0b3, type: 2}
+  weapon: {fileID: 11400000, guid: a9fe020fda791fe4dbaa40ae1c2d2b30, type: 2}
+  helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
+  shield: {fileID: 11400000, guid: 8d1f77f2821664848b5615fef674ba8d, type: 2}
+  armor: {fileID: 11400000, guid: e4fb3cd3c54a915418d9e15989a1b875, type: 2}
+  hpLevelUp: 0a0000000e000000
   mpLevelUp: 0500000008000000
   atkLevelUp: 0500000008000000
-  defLevelUp: 0300000006000000
-  agiLevelUp: 0400000007000000
+  defLevelUp: 0300000005000000
+  agiLevelUp: 0300000006000000
   manaLevelUp:
-  - 0.1
-  - 0.15
+  - 0
+  - 0.05
   learnSpells:
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: eefb1a0c883773645b0612bcedbfb6e9, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
-  - learningLevel: 0
+  - learningLevel: 1
+    learningSpell: {fileID: 11400000, guid: a4f27f9407542c94992841e320990b79, type: 2}
+  - learningLevel: 2
+    learningSpell: {fileID: 11400000, guid: bdc4f6fc8b70a0142bb060d5d95e8d18, type: 2}
+  - learningLevel: 4
+    learningSpell: {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
+  - learningLevel: 6
+    learningSpell: {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
+  - learningLevel: 7
     learningSpell: {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 1f4b5d4126c158744baadc0d435463fc, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 83ad7b5ee12db7f44a91ba00b9e73ea4, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: b0998091b84311948bff433ee090ca4f, type: 2}
+  - learningLevel: 9
+    learningSpell: {fileID: 11400000, guid: 9a348bfe61ad8984ea29076e62b0d0b3, type: 2}
+  - learningLevel: 13
+    learningSpell: {fileID: 11400000, guid: 5abb6247cff777f4fbfd90db5f288afc, type: 2}
+  - learningLevel: 14
+    learningSpell: {fileID: 11400000, guid: e8c33c364950fca488bb429c08dd10da, type: 2}
+  - learningLevel: 15
+    learningSpell: {fileID: 11400000, guid: 7762f3e276536c745b0cc5b7828d0a46, type: 2}
+  - learningLevel: 18
+    learningSpell: {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

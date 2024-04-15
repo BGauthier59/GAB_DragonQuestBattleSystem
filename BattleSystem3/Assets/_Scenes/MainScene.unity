@@ -1215,6 +1215,8 @@ MonoBehaviour:
   heroes:
   - {fileID: 11400000, guid: 928e003365f724947a30d3d5d69a7f75, type: 2}
   - {fileID: 11400000, guid: 973a2bcee7854ba4cb80754e6ab194e8, type: 2}
+  - {fileID: 11400000, guid: 6cb18384e53f45f47853634a3b63124d, type: 2}
+  - {fileID: 11400000, guid: a0e684e184818dc4e92dc49472565782, type: 2}
   howManyMonster: 0
   configsInLocation: []
   allZones:
@@ -1251,9 +1253,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8ca102c5e0138194dbea99c251f83c63, type: 2}
   - {fileID: 11400000, guid: 7b93d2719081fcc46965fc49f0ed986f, type: 2}
   - {fileID: 11400000, guid: 65eb7f3baba04214f927a7066f89d547, type: 2}
-  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
-  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
-  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 476dd892b31a3284392597b83f3c4764, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   selectedZone: {fileID: 0}
@@ -4664,7 +4666,17 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Source divine
       m_Image: {fileID: 0}
-    - m_Text: Source divine
+    - m_Text: Domarium d'Imper
+      m_Image: {fileID: 0}
+    - m_Text: Boss1
+      m_Image: {fileID: 0}
+    - m_Text: Boss2
+      m_Image: {fileID: 0}
+    - m_Text: Boss3
+      m_Image: {fileID: 0}
+    - m_Text: Boss4
+      m_Image: {fileID: 0}
+    - m_Text: Boss5
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7342,6 +7354,7 @@ MonoBehaviour:
   hasSpellBeenChosen: 0
   hasMonsterBeenTargeted: 0
   hasEntityStatutBeenVerified: 0
+  waitingEntityHasActed: 0
   entityActing: {fileID: 0}
   entityTargeted: {fileID: 0}
   spellSelected: {fileID: 0}

@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class InterfaceManager : MonoSingleton<InterfaceManager>
 {
-    public float shortTime = 0.5f;
+    public float shortTime = 0.8f;
     public float time = 1.0f;
     public float needToReadTime = 1.5f;
 

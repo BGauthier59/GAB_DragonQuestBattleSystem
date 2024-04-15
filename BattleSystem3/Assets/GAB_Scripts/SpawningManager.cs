@@ -115,5 +115,5 @@ public enum CombatZone
     NA, Région_Bondaibut, Royaume_Iadlajoie_Nord, Royaume_Iadlajoie_Sud, Région_Delsor, Ruines_Ancienne_Cité, Alentours_Monastère, Région_Port_Lemerche, Côtes_Rempart_Falaise, Royaume_Gulrur,
     Région_Osédur, Caverne_rite, Région_Port_Lotecque, Région_Ordréal, Epave, Océan_nord, Océan_sud, Îles_mer_intérieure, Péninsule_polaire, Presqu_île_Dalgor, Cap_Dalgorique, Région_Sanctum, 
     Île_chanceliers, Domarium_Alad, Région_Berserkia, Souterrains_Berserkia, Région_Delphoe, Tour_Delphois, Cimes_Inaccessibles_Delphoe, Cimes_Inaccessibles_Gulrur, Cimes_Inaccessibles_Ordréal,
-    Cimes_Inaccessibles_Delsor, Retraite_Gulrur, Source_Divine, Domarium_Imper,
+    Cimes_Inaccessibles_Delsor, Retraite_Gulrur, Source_Divine, Domarium_Imper, Boss,
 }

@@ -27,6 +27,7 @@ MonoBehaviour:
   criticalHit: 10
   dodge: 10
   actionPerTurn: 0
+  entityChanceToUseSpell: 0
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -35,10 +36,10 @@ MonoBehaviour:
   entityResilienceToStatDecrease: 0
   spells:
   - {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
-  weapon: {fileID: 11400000, guid: 6d18265c0b2603d48a77f5739c321490, type: 2}
-  helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
-  shield: {fileID: 11400000, guid: fbc6ccd4e6b699a419cdebdd678dcec3, type: 2}
-  armor: {fileID: 11400000, guid: e4fb3cd3c54a915418d9e15989a1b875, type: 2}
+  weapon: {fileID: 11400000, guid: 4612487c84dff1c42b9fd813011b4520, type: 2}
+  helmet: {fileID: 11400000, guid: 20f49ad1e9f18b24f9b80471a28cab6f, type: 2}
+  shield: {fileID: 11400000, guid: 4d2404364d53398499dab926d7084953, type: 2}
+  armor: {fileID: 11400000, guid: af22d0bb46c1ab944b126a737d1f8187, type: 2}
   hpLevelUp: 0b0000000f000000
   mpLevelUp: 0500000008000000
   atkLevelUp: 0500000008000000

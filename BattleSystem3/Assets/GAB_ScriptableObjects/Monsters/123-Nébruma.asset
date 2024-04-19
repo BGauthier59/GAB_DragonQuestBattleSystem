@@ -21,7 +21,7 @@ MonoBehaviour:
   mp: 20
   atk: 101
   defense: 89
-  agility: 106
+  agility: 70
   level: 1
   mana: 0.7
   criticalHit: 0
@@ -53,4 +53,4 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
   gold: 22
-  xp: 31
+  xp: 39

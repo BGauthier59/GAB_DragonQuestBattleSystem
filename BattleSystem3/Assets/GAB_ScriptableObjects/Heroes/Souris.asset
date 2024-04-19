@@ -27,6 +27,7 @@ MonoBehaviour:
   criticalHit: 10
   dodge: 10
   actionPerTurn: 0
+  entityChanceToUseSpell: 0
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -45,10 +46,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0ccf524335bd04d4eb9b7753d3391d54, type: 2}
   - {fileID: 11400000, guid: 19a7061b453a5494db4226b7a19ef906, type: 2}
   - {fileID: 11400000, guid: eefb1a0c883773645b0612bcedbfb6e9, type: 2}
-  weapon: {fileID: 11400000, guid: 7abe7f3666c211e40831388f04219e5a, type: 2}
-  helmet: {fileID: 11400000, guid: 84a404fd232c92e40b33ecb0679ca4f3, type: 2}
-  shield: {fileID: 11400000, guid: 009a2de45e17a134e80791e2122e3589, type: 2}
-  armor: {fileID: 11400000, guid: 5a7e2ae5aa52ac94199b4cf2e3bb939f, type: 2}
+  weapon: {fileID: 11400000, guid: 5419a3b641277f64fabd07a90444cf09, type: 2}
+  helmet: {fileID: 11400000, guid: 44bd9191357fe49478c445886dc4eabe, type: 2}
+  shield: {fileID: 11400000, guid: 9bca4bd453970514ea65e83b335e8ec1, type: 2}
+  armor: {fileID: 11400000, guid: 5eab7e7d66f6b634980d1a8cf4fd415d, type: 2}
   hpLevelUp: 080000000c000000
   mpLevelUp: 0600000009000000
   atkLevelUp: 0300000006000000

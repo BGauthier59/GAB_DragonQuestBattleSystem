@@ -17,9 +17,9 @@ MonoBehaviour:
   spawnPosY: 21
   type: 1
   pronoun: Le
-  hp: 116
+  hp: 139
   mp: 44
-  atk: 142
+  atk: 158
   defense: 124
   agility: 88
   level: 1
@@ -54,4 +54,4 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
   gold: 31
-  xp: 53
+  xp: 79

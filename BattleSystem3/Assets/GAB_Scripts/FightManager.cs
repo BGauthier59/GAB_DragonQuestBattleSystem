@@ -157,6 +157,8 @@ public class FightManager : MonoSingleton<FightManager>
 
         if (spell.hasSpecialEffect)
         {
+            if (spell.spellIndex == 28) AudioManager.instance.Play(spell.SFXname);
+
             if (!spell.doTargetEveryone)
             {
                 if (target.isReflected == true && spell.spellType == SpellType.Spell)
@@ -213,14 +215,14 @@ public class FightManager : MonoSingleton<FightManager>
                         if (Dodging(target.entityDodge))
                         {
                             InterfaceManager.instance.Message(true, $"{target.entityName} a évité l'attaque !");
-                            yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                            yield return new WaitForSeconds(InterfaceManager.instance.time);
                         }
                         else
                         {
                             if (CriticalHit(target.entityCritical))
                             {
                                 InterfaceManager.instance.Message(true, "Coup critique !");
-                                yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                                yield return new WaitForSeconds(InterfaceManager.instance.time);
                                 realDamages *= 2;
                             }
                             
@@ -242,7 +244,7 @@ public class FightManager : MonoSingleton<FightManager>
                             else
                             {
                                 StatDisplayManager.instance.DisplayStat(target);
-                                yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                                yield return new WaitForSeconds(InterfaceManager.instance.time);
                                 target.entityImage.color = Color.white;
 
                                 if (target.entityStatut == Statut.Endormi)
@@ -250,7 +252,7 @@ public class FightManager : MonoSingleton<FightManager>
                                     target.entityStatut = Statut.None;
                                     target.turnsBeforeRecovering = 0;
                                     InterfaceManager.instance.Message(true, $"{target.entityName} se réveille !");
-                                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                                    yield return new WaitForSeconds(InterfaceManager.instance.time);
                                 }
 
                             }
@@ -313,7 +315,7 @@ public class FightManager : MonoSingleton<FightManager>
                                             target.entityStatut = Statut.None;
                                             target.turnsBeforeRecovering = 0;
                                             InterfaceManager.instance.Message(true, $"{target.entityName} se réveille !");
-                                            yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                                            yield return new WaitForSeconds(InterfaceManager.instance.time);
                                         }
                                     }
                                     StatDisplayManager.instance.DisplayStat(target);
@@ -328,7 +330,10 @@ public class FightManager : MonoSingleton<FightManager>
                     if (!spell.doTargetEveryone) // Une seule cible
                     {
                         float damages = (caster.entityMana * spell.strenght) * Random.Range(0.9f, 1.1f);
+
+                        Debug.Log(damages);
                         damages *= SpellElementFactor(spell, target);
+                        Debug.Log(damages);
                         int realDamages = (int) damages;
                         if (realDamages < 0) realDamages = Random.Range(0,2);
 
@@ -340,12 +345,13 @@ public class FightManager : MonoSingleton<FightManager>
                             yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
                         }
 
-                        AudioManager.instance.Play("Hit");
+                        if (realDamages <= 0) AudioManager.instance.Play("Miss");
+                        else AudioManager.instance.Play("Hit");
                         target.entityImage.color = hitColor;
                         InterfaceManager.instance.Message(true, $"{target.entityName} subit {realDamages} points de dégâts !");
                         target.entityHp -= realDamages;
                         StatDisplayManager.instance.DisplayStat(target);
-                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
                         target.entityImage.color = Color.white;
 
                         if (target.entityHp <= 0)
@@ -354,7 +360,7 @@ public class FightManager : MonoSingleton<FightManager>
                             target.entityHp = 0;
                             TargetIsDefeated(target);
                             InterfaceManager.instance.Message(true, $"{target.entityName} est vaincu(e) !");
-                            yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                            yield return new WaitForSeconds(InterfaceManager.instance.time);
                         }
                         StatDisplayManager.instance.DisplayStat(target);
                     }
@@ -380,7 +386,8 @@ public class FightManager : MonoSingleton<FightManager>
 
                                 if (realDamages < 0) realDamages = Random.Range(0,2);
 
-                                AudioManager.instance.Play("Hit");
+                                if (realDamages <= 0) AudioManager.instance.Play("Miss");
+                                else AudioManager.instance.Play("Hit");
                                 target.entityImage.color = hitColor;
                                 InterfaceManager.instance.Message(true, $"{target.entityName} subit {realDamages} points de dégâts !");
                                 yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
@@ -389,12 +396,11 @@ public class FightManager : MonoSingleton<FightManager>
                                 if (CheckDefeat(target))
                                 {
                                     InterfaceManager.instance.Message(true, $"{target.entityName} est vaincu(e) !");
-                                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                                    yield return new WaitForSeconds(InterfaceManager.instance.time);
                                 }
                                 else
                                 {
                                     StatDisplayManager.instance.DisplayStat(target);
-                                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                                     target.entityImage.color = Color.white;
                                 }
                                 StatDisplayManager.instance.DisplayStat(target);
@@ -424,39 +430,39 @@ public class FightManager : MonoSingleton<FightManager>
                 return 1;
             
             case ElementType.Vent:
+                noEffects.Add(ElementType.Vent);
                 weaknesses.Add(ElementType.Terre);
-                resistances.Add(ElementType.Vent);
+                resistances.Add(ElementType.Eau); resistances.Add(ElementType.Obscur);
                 break;
             
             case ElementType.Terre:
-                noEffects.Add(ElementType.Vent);
+                weaknesses.Add(ElementType.Feu);
+                resistances.Add(ElementType.Vent); resistances.Add(ElementType.Plante); resistances.Add(ElementType.Obscur);
                 break;
             
             case ElementType.Plante:
-                weaknesses.Add(ElementType.Eau);
-                resistances.Add(ElementType.Feu);
+                //pas de sort de Plante
                 break;
             
             case ElementType.Feu:
+                noEffects.Add(ElementType.Feu);
                 weaknesses.Add(ElementType.Plante);
-                resistances.Add(ElementType.Eau);
+                resistances.Add(ElementType.Eau); resistances.Add(ElementType.Divin);
                 break;
             
             case ElementType.Eau:
                 weaknesses.Add(ElementType.Feu);
-                resistances.Add(ElementType.Plante);
+                resistances.Add(ElementType.Plante); resistances.Add(ElementType.Eau); resistances.Add(ElementType.Divin);
                 break;
             
             case ElementType.Obscur:
-                weaknesses.Add(ElementType.Divin);
-                resistances.Add(ElementType.Feu); resistances.Add(ElementType.Eau); resistances.Add(ElementType.Plante);
                 noEffects.Add(ElementType.Obscur);
+                weaknesses.Add(ElementType.Divin);
                 break;
             
             case ElementType.Divin:
-                weaknesses.Add(ElementType.Obscur);
-                resistances.Add(ElementType.Feu); resistances.Add(ElementType.Eau); resistances.Add(ElementType.Plante);
                 noEffects.Add(ElementType.Divin);
+                weaknesses.Add(ElementType.Obscur);
                 break;
             
             default:
@@ -474,8 +480,7 @@ public class FightManager : MonoSingleton<FightManager>
         }
         foreach (var weaknessType in weaknesses)
         {
-            if (target.entitySO.elementType == weaknessType) return 2f;
-            
+            if (target.entitySO.elementType == weaknessType) return 1.5f;
         }
         return 1;
     }
@@ -487,7 +492,7 @@ public class FightManager : MonoSingleton<FightManager>
         else if (spell.spellIndex == 23) targetEntity.entityImage.color = Color.yellow;
         else if (spell.spellIndex == 26) targetEntity.entityImage.color = Color.magenta;
 
-        if (spell.SFXname != null) AudioManager.instance.Play(spell.SFXname);
+        if (spell.SFXname != null && spell.spellIndex != 28) AudioManager.instance.Play(spell.SFXname);
 
         switch (spell.spellIndex)
         {
@@ -1551,8 +1556,7 @@ public class FightManager : MonoSingleton<FightManager>
         }
 
         targetEntity.entityImage.color = Color.white;
-        yield return new WaitForSeconds(InterfaceManager.instance.time);
-        targetEntity.entityImage.color = Color.white;
+        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
         if (checkOnce) BattleManager.instance.hasEntityActed = true;
         isCheckingSpecialAtk = false;
     }

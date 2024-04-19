@@ -17,16 +17,17 @@ MonoBehaviour:
   spawnPosY: 32
   type: 1
   pronoun: L'
-  hp: 132
+  hp: 138
   mp: 20
   atk: 128
-  defense: 80
-  agility: 64
+  defense: 113
+  agility: 79
   level: 1
   mana: 1
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
+  entityChanceToUseSpell: 6
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -49,7 +50,7 @@ MonoBehaviour:
   manaLevelUp: []
   learnSpells: []
   strategy: 1
-  elementType: 0
+  elementType: 4
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
   gold: 28

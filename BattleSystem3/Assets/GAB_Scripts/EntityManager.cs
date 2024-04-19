@@ -43,6 +43,7 @@ public class EntityManager : MonoBehaviour
     public int entityCritical;
 
     public int entityActionPerTurn;
+    public int entityChanceToUseSpell;
 
     public int entityDodgeInit;
     public int entityDodge;
@@ -130,6 +131,7 @@ public class EntityManager : MonoBehaviour
         entityDodge = entityDodgeInit;
 
         entityActionPerTurn = entitySO.actionPerTurn;
+        entityChanceToUseSpell = entitySO.entityChanceToUseSpell;
 
         entityResilienceToMPTheft = entitySO.entityResilienceToMPTheft;
         entityResilienceToPoison = entitySO.entityResilienceToPoison;
@@ -163,6 +165,7 @@ public class EntityManager : MonoBehaviour
         entityMana = entityManaInit;
         entityCritical = entityCriticalInit;
         entityDodge = entityDodgeInit;
+        isDefeated = false;
     }
 
     public void LinkingEquipments()
@@ -303,6 +306,18 @@ public class EntityManager : MonoBehaviour
         entityCritical = entityCriticalInit;
 
         entityDodge = entityDodgeInit;
+
+        atkStatIndex = 0;
+
+        defStatIndex = 0;
+
+        manaStatIndex = 0;
+
+        turnsBeforeRecovering = 0;
+
+        isBlocked = false;
+
+        isReflected = false;
 
         isDefending = false;
 

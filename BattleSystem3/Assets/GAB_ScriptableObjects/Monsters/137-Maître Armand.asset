@@ -27,6 +27,7 @@ MonoBehaviour:
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
+  entityChanceToUseSpell: 10
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 20
   entityResilienceToBurn: 20

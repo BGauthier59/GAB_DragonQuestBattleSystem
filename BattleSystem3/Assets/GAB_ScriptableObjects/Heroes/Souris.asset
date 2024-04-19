@@ -21,7 +21,7 @@ MonoBehaviour:
   mp: 152
   atk: 75
   defense: 57
-  agility: 72
+  agility: 62
   level: 12
   mana: 0.9
   criticalHit: 10
@@ -53,7 +53,7 @@ MonoBehaviour:
   mpLevelUp: 0600000009000000
   atkLevelUp: 0300000006000000
   defLevelUp: 0300000005000000
-  agiLevelUp: 0300000006000000
+  agiLevelUp: 0300000005000000
   manaLevelUp:
   - 0
   - 0.05

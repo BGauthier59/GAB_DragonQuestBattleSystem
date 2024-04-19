@@ -28,6 +28,6 @@ MonoBehaviour:
   onlyWorkOnDefeated: 0
   successRate: 1
   strenght: 30
-  elementType: 4
+  elementType: 5
   factor: 0
   staticDamages: 0

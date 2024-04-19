@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellName: "M\xE9gatorpeur"
   spellDescription: Plonge tous les ennemis dans un profond sommeil.
-  inBattleDescription: "lance la M\xE9gaorpeur !"
+  inBattleDescription: "lance la M\xE9gatorpeur !"
   excuseForInaction: 
   spellIndex: 13
   spellType: 0

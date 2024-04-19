@@ -27,6 +27,7 @@ MonoBehaviour:
   criticalHit: 10
   dodge: 10
   actionPerTurn: 0
+  entityChanceToUseSpell: 0
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -34,6 +35,7 @@ MonoBehaviour:
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
   spells:
+  - {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
   - {fileID: 11400000, guid: a4f27f9407542c94992841e320990b79, type: 2}
   - {fileID: 11400000, guid: bdc4f6fc8b70a0142bb060d5d95e8d18, type: 2}
   - {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
@@ -75,6 +77,8 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
   - learningLevel: 12
     learningSpell: {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

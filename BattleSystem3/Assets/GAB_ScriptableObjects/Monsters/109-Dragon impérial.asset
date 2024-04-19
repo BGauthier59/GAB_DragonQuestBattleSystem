@@ -27,6 +27,7 @@ MonoBehaviour:
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
+  entityChanceToUseSpell: 7
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -37,7 +38,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8783029f92f651a40838e1947d90b3ed, type: 2}
   - {fileID: 11400000, guid: 848321aaefffffc4b9c44b3531b4a742, type: 2}
   - {fileID: 11400000, guid: b4f574918374a0a4fb70de4f7a1724ad, type: 2}
-  - {fileID: 11400000, guid: 859c97369521d1b4aa5bc148b2fe3849, type: 2}
+  - {fileID: 11400000, guid: 47b34d54554974e4e99a51044e12b80f, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -50,7 +51,7 @@ MonoBehaviour:
   manaLevelUp: []
   learnSpells: []
   strategy: 1
-  elementType: 0
+  elementType: 6
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
   gold: 58

@@ -19,6 +19,7 @@ MonoBehaviour:
   spellIndex: 28
   spellType: 1
   cost: 0
+  SFXname: SouffleGlace
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 1

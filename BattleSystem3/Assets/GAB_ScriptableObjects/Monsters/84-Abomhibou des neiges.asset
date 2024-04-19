@@ -17,16 +17,17 @@ MonoBehaviour:
   spawnPosY: 13
   type: 1
   pronoun: L'
-  hp: 127
+  hp: 140
   mp: 16
   atk: 139
-  defense: 79
-  agility: 70
+  defense: 104
+  agility: 83
   level: 1
   mana: 1
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
+  entityChanceToUseSpell: 5
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0

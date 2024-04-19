@@ -17,7 +17,7 @@ MonoBehaviour:
   spawnPosY: 11
   type: 1
   pronoun: Le
-  hp: 75
+  hp: 80
   mp: 0
   atk: 108
   defense: 62
@@ -27,6 +27,7 @@ MonoBehaviour:
   criticalHit: 0
   dodge: 5
   actionPerTurn: 1
+  entityChanceToUseSpell: 7
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -47,7 +48,7 @@ MonoBehaviour:
   manaLevelUp: []
   learnSpells: []
   strategy: 1
-  elementType: 0
+  elementType: 6
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
   gold: 27

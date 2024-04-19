@@ -19,6 +19,7 @@ MonoBehaviour:
   spellIndex: 13
   spellType: 1
   cost: 0
+  SFXname: SouffleStatut
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 1

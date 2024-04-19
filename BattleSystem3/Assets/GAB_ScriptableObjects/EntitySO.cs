@@ -24,6 +24,7 @@ public class EntitySO : ScriptableObject
     [Range (0, 100)]
     public int dodge;
     [Range(1, 3)] public int actionPerTurn;
+    public int entityChanceToUseSpell;
 
     [Header("Resistances")]
     public int entityResilienceToMPTheft;

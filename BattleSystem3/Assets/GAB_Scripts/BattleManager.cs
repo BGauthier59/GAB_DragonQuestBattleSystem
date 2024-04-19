@@ -587,8 +587,8 @@ public class BattleManager : MonoSingleton<BattleManager>
                             }
                         }
 
-                        int aleaAction = Random.Range(1, 3);
-                        if (spells.Count == 0 || aleaAction == 1) // Attaque normale
+                        int aleaAction = Random.Range(1, monster.entityChanceToUseSpell);
+                        if (spells.Count == 0 || aleaAction == 1 || aleaAction == 2 || aleaAction == 3) // Attaque normale
                         {
                             target = targets[Random.Range(0, targets.Count)];
                             StartCoroutine(FightManager.instance.Attacking(entityActing, target));

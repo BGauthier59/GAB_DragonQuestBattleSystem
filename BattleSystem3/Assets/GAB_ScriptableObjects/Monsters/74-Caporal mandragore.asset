@@ -27,6 +27,7 @@ MonoBehaviour:
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
+  entityChanceToUseSpell: 6
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -35,7 +36,6 @@ MonoBehaviour:
   entityResilienceToStatDecrease: 0
   spells:
   - {fileID: 11400000, guid: 1f4b5d4126c158744baadc0d435463fc, type: 2}
-  - {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
   - {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}

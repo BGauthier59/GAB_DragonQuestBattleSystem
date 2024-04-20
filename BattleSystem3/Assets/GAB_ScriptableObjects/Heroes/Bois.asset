@@ -26,7 +26,7 @@ MonoBehaviour:
   mana: 1
   criticalHit: 10
   dodge: 10
-  actionPerTurn: 0
+  actionPerTurn: 1
   entityChanceToUseSpell: 0
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
@@ -42,11 +42,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
   - {fileID: 11400000, guid: 9a348bfe61ad8984ea29076e62b0d0b3, type: 2}
-  - {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
-  - {fileID: 11400000, guid: 5abb6247cff777f4fbfd90db5f288afc, type: 2}
-  - {fileID: 11400000, guid: e8c33c364950fca488bb429c08dd10da, type: 2}
-  - {fileID: 11400000, guid: 7762f3e276536c745b0cc5b7828d0a46, type: 2}
-  - {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
   weapon: {fileID: 11400000, guid: 336d8c2b5da7ab146bed20c9e49a76e2, type: 2}
   helmet: {fileID: 11400000, guid: 20f49ad1e9f18b24f9b80471a28cab6f, type: 2}
   shield: {fileID: 11400000, guid: a9904f0b601ad2f478c2ca3c4b2d48be, type: 2}

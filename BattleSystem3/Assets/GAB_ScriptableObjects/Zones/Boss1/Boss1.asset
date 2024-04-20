@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Boss1
   m_EditorClassIdentifier: 
   configsInZoneDay:
-  - {fileID: 11400000, guid: dfaa2ccea559edc469cca1cf34245cbe, type: 2}
+  - {fileID: 11400000, guid: 75c62b5edd3ce7549a51ef6aaf708373, type: 2}
   configsInZoneNight:
-  - {fileID: 11400000, guid: dfaa2ccea559edc469cca1cf34245cbe, type: 2}
+  - {fileID: 11400000, guid: 75c62b5edd3ce7549a51ef6aaf708373, type: 2}
   minMaxMonstersInBattle: 0000000000000000
-  fontZoneDay: {fileID: 21300000, guid: b27efb0f90480b8449fbd619fe325a67, type: 3}
-  fontZoneNight: {fileID: 21300000, guid: b27efb0f90480b8449fbd619fe325a67, type: 3}
+  fontZoneDay: {fileID: 21300000, guid: fde88e5b48fa95f43830e4c68f65116f, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: fde88e5b48fa95f43830e4c68f65116f, type: 3}
   musicInZone: {fileID: 8300000, guid: b4055e5c886b7bf45824a5c48d59466c, type: 3}
   combatZone: 35

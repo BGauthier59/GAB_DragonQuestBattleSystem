@@ -26,7 +26,7 @@ MonoBehaviour:
   mana: 0.9
   criticalHit: 10
   dodge: 10
-  actionPerTurn: 0
+  actionPerTurn: 1
   entityChanceToUseSpell: 0
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0

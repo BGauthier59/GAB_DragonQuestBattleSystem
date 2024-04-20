@@ -182,51 +182,50 @@ public class BattleManager : MonoSingleton<BattleManager>
         
         for (int i = 0; i < gameOrder.Count; i++)
         {
-            hasEntityActed = false;
-
             EntityManager entityManager = gameOrder[i].GetComponent<EntityManager>();
-            if (!entityManager.isDefeated)
+
+            entityManager.isDefending = false;
+
+            for (int j = 0; j < entityManager.entityActionPerTurn; j++)
             {
-                entityManager.isDefending = false;
-
-                yield return new WaitUntil(() => isVictoryChecked);
-                isVictoryChecked = false;
-
-                for (int j = 0; j < entityManager.hasEffect.Count; j++)
+                hasEntityActed = false;
+                if (!entityManager.isDefeated)
                 {
-                    if (CheckingEffect(entityManager, j))
+                    yield return new WaitUntil(() => isVictoryChecked);
+                    isVictoryChecked = false;
+
+                    switch (entityManager.entityType)
                     {
-                        InterfaceManager.instance.Message(true, statNotif);
-                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        case (EntityType.Ally):
+                            if (!escapeFail) StartCoroutine(AllyIsActing(entityManager));
+                            else hasEntityActed = true; // Fuite ratée : on passe directement à la suite pour les héros
+                            break;
+
+                        case (EntityType.Monster):
+
+                            StartCoroutine(MonsterIsActing(entityManager));
+                            break;
+
+                        default:
+                            Debug.LogError("Type invalide");
+                            break;
                     }
                 }
-                
-                switch (entityManager.entityType)
+                else
                 {
-                    case(EntityType.Ally):
-                        if (!escapeFail) StartCoroutine(AllyIsActing(entityManager));
-                        else hasEntityActed = true; // Fuite ratée : on passe directement à la suite pour les héros
-                        break;
-
-                    case (EntityType.Monster):
-
-                        StartCoroutine(MonsterIsActing(entityManager));
-                        break;
-                    
-                    default:
-                        Debug.LogError("Type invalide");
-                        break;
+                    hasEntityActed = true; // Entité vaincue : on passe directement à la suite
                 }
-            }
-            else
-            {
-                hasEntityActed = true; // Entité vaincue : on passe directement à la suite
+
+                yield return new WaitUntil(() => hasEntityActed);
+                CheckVictory();
+
+
             }
 
-            yield return new WaitUntil(() => hasEntityActed);
-            
-            CheckVictory();
+            //yield return new WaitUntil(() => hasEntityActed);
         }
+
+        Debug.Log('0');
         isNextTurn = true;
     }
 
@@ -373,22 +372,9 @@ public class BattleManager : MonoSingleton<BattleManager>
         hasEntityActed = true;
 
     }
-    IEnumerator MagicButtonFailed()
-    {
-        InterfaceManager.instance.Message(true, $"{entityActing.entityName} est dans l'incapacité de lancer des sorts !");
-        yield return new WaitForSeconds(InterfaceManager.instance.time);
-        StartCoroutine(AllyIsActing(entityActing));
-    }
 
     public void MagicButtonSelected()
-    {
-        if (entityActing.entityStatut == Statut.Silence)
-        {
-            StartCoroutine(MagicButtonFailed());
-            return;
-
-        }
-         
+    {   
         InterfaceManager.instance.ActionButtonsState(false); // Les boutons d'actions disparaissent
         InterfaceManager.instance.CancelButtonState(true);
 
@@ -412,6 +398,11 @@ public class BattleManager : MonoSingleton<BattleManager>
             spellButtonManager.SetNameOnDisplay();
 
             if (entityActing.entitySpells[i].cost > entityActing.entityMp)
+            {
+                spellButtonManager.GetComponent<Button>().interactable = false;
+            }
+
+            if (entityActing.entityStatut == Statut.Silence && spellButtonManager.associatedSpell.spellType == SpellType.Spell)
             {
                 spellButtonManager.GetComponent<Button>().interactable = false;
             }

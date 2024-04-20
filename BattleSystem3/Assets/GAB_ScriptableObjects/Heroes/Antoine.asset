@@ -26,11 +26,14 @@ MonoBehaviour:
   mana: 0.7
   criticalHit: 10
   dodge: 10
+  actionPerTurn: 1
+  entityChanceToUseSpell: 0
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
+  entityResilienceToStatDecrease: 0
   spells:
   - {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
   - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}

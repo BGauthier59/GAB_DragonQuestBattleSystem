@@ -23,7 +23,7 @@ public class EntitySO : ScriptableObject
     public int criticalHit;
     [Range (0, 100)]
     public int dodge;
-    [Range(1, 3)] public int actionPerTurn;
+    [Range(1, 10)] public int actionPerTurn;
     public int entityChanceToUseSpell;
 
     [Header("Resistances")]

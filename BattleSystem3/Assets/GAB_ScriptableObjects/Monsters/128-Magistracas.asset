@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
+  m_Name: 128-Magistracas
+  m_EditorClassIdentifier: 
+  entityName: Magistracas
+  sprite: {fileID: 21300000, guid: e34dd13fb9fbf6e43a8de64238919a5d, type: 3}
+  spawnPosY: 45
+  type: 1
+  pronoun: Le
+  hp: 825
+  mp: 9999
+  atk: 81
+  defense: 67
+  agility: 52
+  level: 1
+  mana: 0.7
+  criticalHit: 0
+  dodge: 0
+  actionPerTurn: 2
+  entityChanceToUseSpell: 7
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 100
+  entityResilienceToSilence: 100
+  entityResilienceToSleep: 100
+  entityResilienceToStatDecrease: 0
+  spells:
+  - {fileID: 11400000, guid: 4f54229ba58584c4b8c39efb201b8b8f, type: 2}
+  - {fileID: 11400000, guid: bdb3562b194a2ce4dab8e4aa6e10119e, type: 2}
+  - {fileID: 11400000, guid: 5fc9270c2fe6fa949bfa8316178a942c, type: 2}
+  - {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
+  - {fileID: 11400000, guid: 40fd42d17c3319442a1e722e5f92af7f, type: 2}
+  weapon: {fileID: 0}
+  helmet: {fileID: 0}
+  shield: {fileID: 0}
+  armor: {fileID: 0}
+  hpLevelUp: 
+  mpLevelUp: 
+  atkLevelUp: 
+  defLevelUp: 
+  agiLevelUp: 
+  manaLevelUp: []
+  learnSpells: []
+  strategy: 1
+  elementType: 0
+  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  probability: 0
+  gold: 350
+  xp: 510

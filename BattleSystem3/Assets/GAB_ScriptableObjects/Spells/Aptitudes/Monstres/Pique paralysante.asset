@@ -19,6 +19,7 @@ MonoBehaviour:
   spellIndex: 14
   spellType: 1
   cost: 5
+  SFXname: None
   hasSpecialEffect: 1
   hasEffectAndDamages: 1
   doTargetEveryone: 0

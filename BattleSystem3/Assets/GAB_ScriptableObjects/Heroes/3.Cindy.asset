@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: Cindy
+  m_Name: 3.Cindy
   m_EditorClassIdentifier: 
   entityName: Cindy
   sprite: {fileID: 0}
   spawnPosY: 0
   type: 0
   pronoun: 
-  hp: 156
-  mp: 122
-  atk: 90
-  defense: 57
-  agility: 80
-  level: 12
-  mana: 0.9
+  hp: 92
+  mp: 68
+  atk: 42
+  defense: 30
+  agility: 45
+  level: 5
+  mana: 0.6
   criticalHit: 10
   dodge: 10
   actionPerTurn: 1
@@ -38,19 +38,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bdc4f6fc8b70a0142bb060d5d95e8d18, type: 2}
   - {fileID: 11400000, guid: cc229a28c865aac44a7659b6eaccb00d, type: 2}
   - {fileID: 11400000, guid: db51f43c70849da46aa7ee239e43f427, type: 2}
+  - {fileID: 11400000, guid: c5886072998571b4ab2f3a71b6511ac0, type: 2}
+  - {fileID: 11400000, guid: bd7281e306c3aaa40a93a6e867cb54e0, type: 2}
+  - {fileID: 11400000, guid: b8d6e381e8fd0a14fba0d760de9e5b26, type: 2}
+  - {fileID: 11400000, guid: 786427b99a944984481c5bbe8749b6d8, type: 2}
+  - {fileID: 11400000, guid: 636bab58834a32d4ba27a8002f979793, type: 2}
+  - {fileID: 11400000, guid: 9f07ce02acbfea44a8434593d7d01df1, type: 2}
   - {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
   - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
-  - {fileID: 11400000, guid: e0bdc00bcb4d8814595b418e46ed80c9, type: 2}
-  - {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
-  - {fileID: 11400000, guid: ddb31d0bea0887344ab27c960c5f84e4, type: 2}
-  - {fileID: 11400000, guid: 76abd92ebdb02184286edee36a22fd2c, type: 2}
-  - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
-  - {fileID: 11400000, guid: ad7ee25a2f883dc469f1fe251255b48d, type: 2}
-  weapon: {fileID: 11400000, guid: 3a0693f5e3f191546919d6349ab1d2bf, type: 2}
-  helmet: {fileID: 11400000, guid: f881842bc1b68d94dae8f6e4e70a963d, type: 2}
-  shield: {fileID: 11400000, guid: 9bca4bd453970514ea65e83b335e8ec1, type: 2}
-  armor: {fileID: 11400000, guid: 5eab7e7d66f6b634980d1a8cf4fd415d, type: 2}
+  weapon: {fileID: 11400000, guid: 4a69440664898504b9f37cb58345b73f, type: 2}
+  helmet: {fileID: 11400000, guid: 87e9abd056bb71b48b3d7a7f0dafa7f0, type: 2}
+  shield: {fileID: 11400000, guid: 56ec2370bfdbf26448f1d4419e13b757, type: 2}
+  armor: {fileID: 11400000, guid: 8db379a422dd780499376213d83667d8, type: 2}
   hpLevelUp: 070000000b000000
   mpLevelUp: 0600000009000000
   atkLevelUp: 0300000006000000
@@ -96,6 +96,18 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 03e8d9a0dafc498408295d8bf1ecf809, type: 2}
   - learningLevel: 19
     learningSpell: {fileID: 11400000, guid: 8f9e804a992cb2d4abc914ef6b38059e, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: c5886072998571b4ab2f3a71b6511ac0, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: bd7281e306c3aaa40a93a6e867cb54e0, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: b8d6e381e8fd0a14fba0d760de9e5b26, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 786427b99a944984481c5bbe8749b6d8, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 636bab58834a32d4ba27a8002f979793, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 9f07ce02acbfea44a8434593d7d01df1, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

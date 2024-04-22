@@ -20,7 +20,7 @@ MonoBehaviour:
   spellIndex: 5
   spellType: 1
   cost: 8
-  SFXname: Sword
+  SFXname: Axe
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0

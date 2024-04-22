@@ -19,7 +19,7 @@ MonoBehaviour:
   spellIndex: 7
   spellType: 1
   cost: 0
-  SFXname: 
+  SFXname: None
   hasSpecialEffect: 1
   hasEffectAndDamages: 1
   doTargetEveryone: 0
@@ -29,5 +29,5 @@ MonoBehaviour:
   successRate: 30
   strenght: 0
   elementType: 0
-  factor: 0
-  staticDamages: 90
+  factor: 90
+  staticDamages: 0

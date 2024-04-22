@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: Martin
+  m_Name: 4.Martin
   m_EditorClassIdentifier: 
   entityName: Martin
   sprite: {fileID: 0}
@@ -35,7 +35,12 @@ MonoBehaviour:
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
   spells:
-  - {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
+  - {fileID: 11400000, guid: ea3d33a15325ed848b539116bb77914d, type: 2}
+  - {fileID: 11400000, guid: 7d73ba6257ae4b64f95f84457044976c, type: 2}
+  - {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
+  - {fileID: 11400000, guid: 46549ed84e1276b4f9d8e34187a0e3e0, type: 2}
+  - {fileID: 11400000, guid: e2ac99364f2de2040ac639218f416614, type: 2}
+  - {fileID: 11400000, guid: cab4ffda81820274d83ed95408190823, type: 2}
   weapon: {fileID: 11400000, guid: 4612487c84dff1c42b9fd813011b4520, type: 2}
   helmet: {fileID: 11400000, guid: 20f49ad1e9f18b24f9b80471a28cab6f, type: 2}
   shield: {fileID: 11400000, guid: 4d2404364d53398499dab926d7084953, type: 2}
@@ -50,7 +55,17 @@ MonoBehaviour:
   - 0.05
   learnSpells:
   - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
+    learningSpell: {fileID: 11400000, guid: ea3d33a15325ed848b539116bb77914d, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 7d73ba6257ae4b64f95f84457044976c, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 46549ed84e1276b4f9d8e34187a0e3e0, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: e2ac99364f2de2040ac639218f416614, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: cab4ffda81820274d83ed95408190823, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

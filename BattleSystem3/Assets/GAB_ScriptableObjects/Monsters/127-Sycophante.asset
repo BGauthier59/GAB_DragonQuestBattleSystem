@@ -29,7 +29,7 @@ MonoBehaviour:
   actionPerTurn: 1
   entityChanceToUseSpell: 7
   entityResilienceToMPTheft: 100
-  entityResilienceToPoison: 20
+  entityResilienceToPoison: 0
   entityResilienceToBurn: 0
   entityResilienceToSilence: 100
   entityResilienceToSleep: 10

@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: Bois
+  m_Name: 1.Bois
   m_EditorClassIdentifier: 
   entityName: Bois
   sprite: {fileID: 0}
   spawnPosY: 0
   type: 0
   pronoun: 
-  hp: 170
-  mp: 100
-  atk: 83
-  defense: 69
-  agility: 69
-  level: 12
-  mana: 1
+  hp: 36
+  mp: 18
+  atk: 14
+  defense: 8
+  agility: 9
+  level: 1
+  mana: 0.7
   criticalHit: 10
   dodge: 10
   actionPerTurn: 1
@@ -35,22 +35,23 @@ MonoBehaviour:
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
   spells:
-  - {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
+  - {fileID: 11400000, guid: 28ecd91b2a01f1f48ade6ef33a7bd029, type: 2}
+  - {fileID: 11400000, guid: bdb3562b194a2ce4dab8e4aa6e10119e, type: 2}
   - {fileID: 11400000, guid: a4f27f9407542c94992841e320990b79, type: 2}
   - {fileID: 11400000, guid: bdc4f6fc8b70a0142bb060d5d95e8d18, type: 2}
   - {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
-  - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
-  - {fileID: 11400000, guid: 9a348bfe61ad8984ea29076e62b0d0b3, type: 2}
-  weapon: {fileID: 11400000, guid: 336d8c2b5da7ab146bed20c9e49a76e2, type: 2}
-  helmet: {fileID: 11400000, guid: 20f49ad1e9f18b24f9b80471a28cab6f, type: 2}
-  shield: {fileID: 11400000, guid: a9904f0b601ad2f478c2ca3c4b2d48be, type: 2}
-  armor: {fileID: 11400000, guid: 19f2f787d0f4e1a448f34223c76fb6b3, type: 2}
+  - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
+  - {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
+  weapon: {fileID: 11400000, guid: 96821775e82c6824fb2ebc22f09af1e2, type: 2}
+  helmet: {fileID: 11400000, guid: 3b4a0c68a38fef2459e3230d20fcf5c1, type: 2}
+  shield: {fileID: 11400000, guid: fbc6ccd4e6b699a419cdebdd678dcec3, type: 2}
+  armor: {fileID: 11400000, guid: 63a789993e358be4a85ce4853e0a5c80, type: 2}
   hpLevelUp: 0a0000000e000000
   mpLevelUp: 0500000008000000
   atkLevelUp: 0500000008000000
   defLevelUp: 0300000005000000
-  agiLevelUp: 0300000006000000
+  agiLevelUp: 0400000006000000
   manaLevelUp:
   - 0
   - 0.05
@@ -63,7 +64,7 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
   - learningLevel: 6
     learningSpell: {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
-  - learningLevel: 7
+  - learningLevel: 5
     learningSpell: {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
   - learningLevel: 9
     learningSpell: {fileID: 11400000, guid: 9a348bfe61ad8984ea29076e62b0d0b3, type: 2}
@@ -77,8 +78,28 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
   - learningLevel: 12
     learningSpell: {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
-  - learningLevel: 0
+  - learningLevel: 7
     learningSpell: {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 28ecd91b2a01f1f48ade6ef33a7bd029, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: bdb3562b194a2ce4dab8e4aa6e10119e, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 1f4b5d4126c158744baadc0d435463fc, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 0bcf2b37184b66545ab85fd960d1ae40, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 83ad7b5ee12db7f44a91ba00b9e73ea4, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 650eb64a1b1dc5a41907803d7d9108f0, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 55de6908804603e4aabd726b2651b78b, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 5fc9270c2fe6fa949bfa8316178a942c, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 08253c2b9d012d445981611d9ea9f6d9, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

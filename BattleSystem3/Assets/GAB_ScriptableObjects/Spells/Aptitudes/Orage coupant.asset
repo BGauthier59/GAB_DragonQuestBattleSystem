@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
+  m_Name: Orage coupant
+  m_EditorClassIdentifier: 
+  spellName: Orage coupant
+  spellDescription: "Transforme l'air en une lame puissante dirig\xE9e contre tous
+    les ennemis."
+  inBattleDescription: change l'air en lame et attaque !
+  excuseForInaction: 
+  spellIndex: 28
+  spellType: 1
+  cost: 12
+  SFXname: VentCoupant
+  hasSpecialEffect: 1
+  hasEffectAndDamages: 0
+  doTargetEveryone: 1
+  helpingSpell: 0
+  selfSpell: 0
+  onlyWorkOnDefeated: 0
+  successRate: 0
+  strenght: 0
+  elementType: 0
+  factor: 0
+  staticDamages: 100

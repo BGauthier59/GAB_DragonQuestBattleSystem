@@ -524,6 +524,7 @@ public class FightManager : MonoSingleton<FightManager>
                     {
                         targetEntity.entityImage.sprite = targetEntity.entitySO.sprite;
                     }
+                    AudioManager.instance.Play("RedemptionYes");
                     targetEntity.entityHp = (int)(targetEntity.entityHpMax * .5f);
                     targetEntity.isDefeated = false;
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est ressuscité(e) !");
@@ -532,6 +533,7 @@ public class FightManager : MonoSingleton<FightManager>
                 }
                 else // Echec
                 {
+                    AudioManager.instance.Play("RedemptionNo");
                     InterfaceManager.instance.Message(true, "Le sort a échoué...");
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
@@ -921,7 +923,7 @@ public class FightManager : MonoSingleton<FightManager>
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                 }
 
-                if (targetEntity.entityStatut != Statut.None)
+                if (targetEntity.entityStatut != Statut.None && !spell.hasEffectAndDamages)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
                     yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
@@ -932,13 +934,13 @@ public class FightManager : MonoSingleton<FightManager>
                 int trueSilenceSpellSuccessRate = spell.successRate - targetEntity.entityResilienceToSilence;
                 Debug.Log(trueSilenceSpellSuccessRate);
 
-                if (trueSilenceSpellSuccessRate <= 0)
+                if (trueSilenceSpellSuccessRate <= 0 && !spell.hasEffectAndDamages)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas affect(é) !");
                     yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
-                if (aleaSilence >= trueSilenceSpellSuccessRate)
+                if (aleaSilence >= trueSilenceSpellSuccessRate && !spell.hasEffectAndDamages)
                 {
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
                     yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
@@ -1096,14 +1098,11 @@ public class FightManager : MonoSingleton<FightManager>
                     yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     break;
                 }
-                if (aleaPara >= trueParaSpellSuccessRate)
+                if (aleaPara >= trueParaSpellSuccessRate && !spell.hasEffectAndDamages)
                 {
-                    if (!spell.hasEffectAndDamages)
-                    {
-                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
-                        yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
-                        break;
-                    }
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} s'en sort indemne !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                    break;
                 }
                 else
                 {
@@ -1115,7 +1114,6 @@ public class FightManager : MonoSingleton<FightManager>
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
                 }
-                break;
 
             case 15: //soigne du poison
 
@@ -1542,9 +1540,78 @@ public class FightManager : MonoSingleton<FightManager>
 
                 InterfaceManager.instance.Message(true, $"{caster.entityName} accumule de l'or et de l'expérience !");
                 yield return new WaitForSeconds(InterfaceManager.instance.time);
-                caster.xp += 10;
-                caster.gold += 10;
+                caster.xp += 30;
+                caster.gold += 30;
                 StatDisplayManager.instance.DisplayStat(caster);
+
+                break;
+
+            case 30: //Soin de mana
+
+                float damages30 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
+                if (targetEntity.isDefending) damages30 /= 2;
+                int realDamages30 = (int)damages30;
+                if (realDamages30 <= 0) realDamages30 = 0;
+
+                if (realDamages30 == 0) AudioManager.instance.Play("Miss");
+                else AudioManager.instance.Play("Hit");
+
+                InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages30} points de dégâts !");
+                yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                targetEntity.entityHp -= realDamages30;
+
+                if (CheckDefeat(targetEntity))
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                }
+
+                StatDisplayManager.instance.DisplayStat(targetEntity);
+
+                if (realDamages30 >= 3)
+                {
+                    float healDamages = realDamages30 * 0.5f;
+                    int realHealDamages = (int)healDamages;
+                    caster.entityMp += (int)realHealDamages;
+                    if (caster.entityMp >= caster.entityHpMax) caster.entityMp = caster.entityHpMax;
+                    AudioManager.instance.Play("ManaHeal");
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} récupère {realHealDamages} PMs !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                    StatDisplayManager.instance.DisplayStat(caster);
+                }
+
+                break;
+
+            case 31: //Casse-miroir
+
+                float damages31 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
+                if (targetEntity.isDefending) damages31 /= 2;
+                int realDamages31 = (int)damages31;
+                if (realDamages31 <= 0) realDamages31 = 0;
+
+                if (realDamages31 == 0) AudioManager.instance.Play("Miss");
+                else AudioManager.instance.Play("Hit");
+
+                InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages31} points de dégâts !");
+                yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                targetEntity.entityHp -= realDamages31;
+
+                if (CheckDefeat(targetEntity))
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                }
+
+                StatDisplayManager.instance.DisplayStat(targetEntity);
+
+                if (targetEntity.isReflected == true)
+                {
+                    targetEntity.isReflected = false;
+                    AudioManager.instance.Play("WallBreak");
+                    InterfaceManager.instance.Message(true, $"La protection qui entourait {targetEntity.entityName} se brise !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                    StatDisplayManager.instance.DisplayStat(caster);
+                }
 
                 break;
 

@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: Souris
+  m_Name: 2.Souris
   m_EditorClassIdentifier: 
   entityName: Souris
   sprite: {fileID: 0}
   spawnPosY: 0
   type: 0
   pronoun: 
-  hp: 140
-  mp: 152
-  atk: 75
-  defense: 57
-  agility: 62
-  level: 12
-  mana: 0.9
+  hp: 31
+  mp: 26
+  atk: 12
+  defense: 7
+  agility: 7
+  level: 1
+  mana: 0.6
   criticalHit: 10
   dodge: 10
   actionPerTurn: 1
@@ -36,25 +36,21 @@ MonoBehaviour:
   entityResilienceToStatDecrease: 0
   spells:
   - {fileID: 11400000, guid: f856d990fb246a24b9f0b7b121f1999e, type: 2}
+  - {fileID: 11400000, guid: 13ba876fc40be1349be927c65664eac1, type: 2}
+  - {fileID: 11400000, guid: a4b55afcbeb314840ae765bce5d0f38f, type: 2}
+  - {fileID: 11400000, guid: df8c83ffcbe33314b94c14539807055c, type: 2}
+  - {fileID: 11400000, guid: 67142e8eedb53f34f8ae3aa5d5949b6b, type: 2}
+  - {fileID: 11400000, guid: 8e37959bd7d3c0445baa5a90a563e959, type: 2}
   - {fileID: 11400000, guid: 776da5e85dfd39d42ba29818aa654bd5, type: 2}
-  - {fileID: 11400000, guid: 6830c2fc9e666004db0495c04462fca3, type: 2}
-  - {fileID: 11400000, guid: a5268f334d12a584eb9f30701b42e9d3, type: 2}
-  - {fileID: 11400000, guid: 6fd4baafc5257e34c8277e168f5b8a95, type: 2}
-  - {fileID: 11400000, guid: 4f54229ba58584c4b8c39efb201b8b8f, type: 2}
-  - {fileID: 11400000, guid: 5089c0dd326eb8e4faa2b663df231e6f, type: 2}
-  - {fileID: 11400000, guid: dcc98863970e2e44ebf3ce0cbc90f624, type: 2}
-  - {fileID: 11400000, guid: 0ccf524335bd04d4eb9b7753d3391d54, type: 2}
-  - {fileID: 11400000, guid: 19a7061b453a5494db4226b7a19ef906, type: 2}
-  - {fileID: 11400000, guid: eefb1a0c883773645b0612bcedbfb6e9, type: 2}
-  weapon: {fileID: 11400000, guid: 5419a3b641277f64fabd07a90444cf09, type: 2}
-  helmet: {fileID: 11400000, guid: 44bd9191357fe49478c445886dc4eabe, type: 2}
-  shield: {fileID: 11400000, guid: 9bca4bd453970514ea65e83b335e8ec1, type: 2}
-  armor: {fileID: 11400000, guid: 5eab7e7d66f6b634980d1a8cf4fd415d, type: 2}
+  weapon: {fileID: 11400000, guid: ff82ea6f9decb094fb90599639297b9c, type: 2}
+  helmet: {fileID: 11400000, guid: 3b4a0c68a38fef2459e3230d20fcf5c1, type: 2}
+  shield: {fileID: 11400000, guid: 56ec2370bfdbf26448f1d4419e13b757, type: 2}
+  armor: {fileID: 11400000, guid: f84cc3117f0862f4a9020867ce9bd03b, type: 2}
   hpLevelUp: 080000000c000000
   mpLevelUp: 0600000009000000
   atkLevelUp: 0300000006000000
   defLevelUp: 0300000005000000
-  agiLevelUp: 0300000005000000
+  agiLevelUp: 0400000005000000
   manaLevelUp:
   - 0
   - 0.05
@@ -89,6 +85,16 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 7ea0b1b4207a45f4f859255ee512f91d, type: 2}
   - learningLevel: 17
     learningSpell: {fileID: 11400000, guid: f4b70b5dd11682c47b50b721039a1677, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 13ba876fc40be1349be927c65664eac1, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: a4b55afcbeb314840ae765bce5d0f38f, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: df8c83ffcbe33314b94c14539807055c, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 67142e8eedb53f34f8ae3aa5d5949b6b, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 8e37959bd7d3c0445baa5a90a563e959, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

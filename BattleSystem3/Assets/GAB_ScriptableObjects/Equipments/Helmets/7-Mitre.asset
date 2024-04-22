@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 7-Mitre
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Mitre
   equipmentName: Mitre
   equipmentSprite: {fileID: 21300000, guid: b6acf6ccb1c1b624585123fb846fab10, type: 3}
   equipmentType: 2

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 21-Heaume de l'invincible
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Heaume de l'invincible
   equipmentName: Heaume de l'invincible
   equipmentSprite: {fileID: 21300000, guid: bb02f0f3082fdf84e80822279dbecd62, type: 3}
   equipmentType: 2

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
+  m_Name: "133-Boit\xE9nique (invincible)"
+  m_EditorClassIdentifier: 
+  entityName: "Boit\xE9nique"
+  sprite: {fileID: 21300000, guid: 5419d2425354f8a4ab6e49ef96ad78a2, type: 3}
+  spawnPosY: 58
+  type: 1
+  pronoun: 
+  hp: 9999
+  mp: 9999
+  atk: 250
+  defense: 150
+  agility: 40
+  level: 1
+  mana: 1.2
+  criticalHit: 0
+  dodge: 0
+  actionPerTurn: 3
+  entityChanceToUseSpell: 10
+  entityResilienceToMPTheft: 100
+  entityResilienceToPoison: 100
+  entityResilienceToBurn: 100
+  entityResilienceToSilence: 100
+  entityResilienceToSleep: 100
+  entityResilienceToStatDecrease: 100
+  spells:
+  - {fileID: 11400000, guid: 8ad2d2e45d037024e8f59f797fbd1715, type: 2}
+  - {fileID: 11400000, guid: facbac75ad8a7a1409514b639d4b93b0, type: 2}
+  weapon: {fileID: 0}
+  helmet: {fileID: 0}
+  shield: {fileID: 0}
+  armor: {fileID: 0}
+  hpLevelUp: 
+  mpLevelUp: 
+  atkLevelUp: 
+  defLevelUp: 
+  agiLevelUp: 
+  manaLevelUp: []
+  learnSpells: []
+  strategy: 1
+  elementType: 7
+  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  probability: 0
+  gold: 0
+  xp: 0

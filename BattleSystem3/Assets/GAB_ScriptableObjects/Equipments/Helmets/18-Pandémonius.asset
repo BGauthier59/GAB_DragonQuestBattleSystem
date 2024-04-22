@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: "18-Pand\xE9monius"
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: "Pand\xE9monius"
   equipmentName: "Pand\xE9monius"
   equipmentSprite: {fileID: 21300000, guid: bc6208818487ef2459929ee69eaf4cb3, type: 3}
   equipmentType: 2

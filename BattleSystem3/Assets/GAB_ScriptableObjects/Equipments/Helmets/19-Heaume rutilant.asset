@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 19-Heaume rutilant
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Heaume rutilant
   equipmentName: Heaume rutilant
   equipmentSprite: {fileID: 21300000, guid: 78e4f254a07c54045ae0244acbbf12e2, type: 3}
   equipmentType: 2

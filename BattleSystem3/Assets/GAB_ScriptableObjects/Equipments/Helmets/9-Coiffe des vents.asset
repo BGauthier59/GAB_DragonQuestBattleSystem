@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 9-Coiffe des vents
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Coiffe des vents
   equipmentName: Coiffe des vents
   equipmentSprite: {fileID: 21300000, guid: f87753436df5c0f4bbc05238bb058704, type: 3}
   equipmentType: 2

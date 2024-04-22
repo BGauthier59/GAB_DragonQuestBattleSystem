@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 11-Heaume noir
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Heaume noir
   equipmentName: Heaume noir
   equipmentSprite: {fileID: 21300000, guid: 4008a2d19b6eeb248bd5e329f5ac8242, type: 3}
   equipmentType: 2

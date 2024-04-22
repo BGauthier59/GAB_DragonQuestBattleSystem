@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 4-Tiare ancienne
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Tiare ancienne
   equipmentName: Tiare ancienne
   equipmentSprite: {fileID: 21300000, guid: a0817753e2761e140b4938a6e0729aef, type: 3}
   equipmentType: 2

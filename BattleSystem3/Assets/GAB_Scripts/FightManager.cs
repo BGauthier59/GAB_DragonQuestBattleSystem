@@ -766,7 +766,7 @@ public class FightManager : MonoSingleton<FightManager>
                 {
                     targetEntity.entityStatut = Statut.Empoisonné;
 
-                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est empoisonné !");
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est empoisonné(e) !");
                     yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
@@ -835,7 +835,7 @@ public class FightManager : MonoSingleton<FightManager>
                 {
                     targetEntity.entityStatut = Statut.Brûlé;
 
-                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est brûlé !");
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est brûlé(e) !");
                     yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;
@@ -1019,7 +1019,7 @@ public class FightManager : MonoSingleton<FightManager>
                 targetEntity = caster;
                 caster.isReflected = true;
                 caster.turnsBeforeResetReflexion = 3;
-                InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est protégé par un voile de lumière !");
+                InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est protégé(e) par un voile de lumière !");
                 yield return new WaitForSeconds(InterfaceManager.instance.time);
                 break;
 
@@ -1614,6 +1614,61 @@ public class FightManager : MonoSingleton<FightManager>
                     yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
                     StatDisplayManager.instance.DisplayStat(caster);
                 }
+
+                break;
+
+            case 32: //Reset Stat
+
+                if (spell.hasEffectAndDamages)
+                {
+                    float damages32 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
+                    if (targetEntity.isDefending) damages32 /= 2;
+                    int realDamages32 = (int)damages32;
+                    if (realDamages32 <= 0) realDamages32 = 0;
+
+                    if (realDamages32 == 0) AudioManager.instance.Play("Miss");
+                    else AudioManager.instance.Play("Hit");
+
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages32} points de dégâts !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                    targetEntity.entityHp -= realDamages32;
+
+                    if (CheckDefeat(targetEntity))
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
+
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                }
+
+                bool statResetIsTrue = false;
+
+                if (targetEntity.atkStatIndex > 0)
+                {
+                    targetEntity.atkStatIndex = 0;
+                    targetEntity.SetNewAtk(targetEntity.atkStatIndex);
+                    statResetIsTrue = true;
+                }
+                if (targetEntity.defStatIndex > 0)
+                {
+                    targetEntity.defStatIndex = 0;
+                    targetEntity.SetNewDef(targetEntity.defStatIndex);
+                    statResetIsTrue = true;
+                }
+                if (targetEntity.manaStatIndex > 0)
+                {
+                    targetEntity.manaStatIndex = 0;
+                    targetEntity.SetNewMana(targetEntity.manaStatIndex);
+                    statResetIsTrue = true;
+                }
+
+                if (statResetIsTrue)
+                {
+                    InterfaceManager.instance.Message(true, $"Les stats de {targetEntity.entityName} reviennent à la normale !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                }
+                StatDisplayManager.instance.DisplayStat(caster);
 
                 break;
 

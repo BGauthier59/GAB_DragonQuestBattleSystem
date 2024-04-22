@@ -30,5 +30,5 @@ MonoBehaviour:
   successRate: 100
   strenght: 0
   elementType: 0
-  factor: 90
+  factor: 120
   staticDamages: 0

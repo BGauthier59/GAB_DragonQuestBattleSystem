@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: "20-Coiffe chim\xE9rique"
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: "Coiffe chim\xE9rique"
   equipmentName: "Coiffe chim\xE9rique"
   equipmentSprite: {fileID: 21300000, guid: 7f29647264910934c9f6839dfe94d8cf, type: 3}
   equipmentType: 2

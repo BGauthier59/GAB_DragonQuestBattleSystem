@@ -84,6 +84,9 @@ public class BattleManager : MonoSingleton<BattleManager>
         }
         
         if (SpawningManager.instance.selectedZone.combatZone == CombatZone.Boss) AudioManager.instance.Play("BossBattleTheme");
+        else if (SpawningManager.instance.selectedZone.combatZone == CombatZone.BossChancelor) AudioManager.instance.Play("ChancelorBattleTheme");
+        else if (SpawningManager.instance.selectedZone.combatZone == CombatZone.MajorBoss) AudioManager.instance.Play("MajorBossBattleTheme");
+        else if (SpawningManager.instance.selectedZone.combatZone == CombatZone.FinalBoss) AudioManager.instance.Play("FinalBossBattleTheme");
         else AudioManager.instance.Play("BattleTheme");
     }
 
@@ -924,6 +927,9 @@ public class BattleManager : MonoSingleton<BattleManager>
         StopAllCoroutines();
         AudioManager.instance.Stop("BattleTheme");
         AudioManager.instance.Stop("BossBattleTheme");
+        AudioManager.instance.Stop("ChancelorBattleTheme");
+        AudioManager.instance.Stop("MajorBossBattleTheme");
+        AudioManager.instance.Stop("FinalBossBattleTheme");
 
         if (hasTeamWon)
         {

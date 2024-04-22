@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 2-Casque de fer
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Casque de fer
   equipmentName: Casque de fer
   equipmentSprite: {fileID: 21300000, guid: 81a22cac7d5963b48828f76d59bb5394, type: 3}
   equipmentType: 2

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 6-Chapeau du printemps
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Chapeau du printemps
   equipmentName: Chapeau du printemps
   equipmentSprite: {fileID: 21300000, guid: 34a4b25ca97ac184f85f798f6c2533b9, type: 3}
   equipmentType: 2

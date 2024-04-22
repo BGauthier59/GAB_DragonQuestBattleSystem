@@ -27,7 +27,7 @@ MonoBehaviour:
   selfSpell: 0
   onlyWorkOnDefeated: 0
   successRate: 0
-  strenght: 50
+  strenght: 40
   elementType: 2
   factor: 0
   staticDamages: 0

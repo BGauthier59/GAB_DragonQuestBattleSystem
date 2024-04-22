@@ -23,12 +23,12 @@ MonoBehaviour:
   SFXname: Divin
   hasSpecialEffect: 0
   hasEffectAndDamages: 0
-  doTargetEveryone: 1
+  doTargetEveryone: 0
   helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0
   successRate: 0
-  strenght: 150
+  strenght: 80
   elementType: 6
   factor: 0
   staticDamages: 0

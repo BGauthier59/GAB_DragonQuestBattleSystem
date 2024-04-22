@@ -17,7 +17,7 @@ MonoBehaviour:
   spawnPosY: 51
   type: 1
   pronoun: Le
-  hp: 815
+  hp: 575
   mp: 9999
   atk: 138
   defense: 95
@@ -33,7 +33,7 @@ MonoBehaviour:
   entityResilienceToBurn: 0
   entityResilienceToSilence: 10
   entityResilienceToSleep: 10
-  entityResilienceToStatDecrease: 10
+  entityResilienceToStatDecrease: 0
   spells:
   - {fileID: 11400000, guid: 3219ff11a90df904182a256afbc711c5, type: 2}
   - {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
@@ -55,5 +55,5 @@ MonoBehaviour:
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
-  gold: 80
-  xp: 120
+  gold: 150
+  xp: 300

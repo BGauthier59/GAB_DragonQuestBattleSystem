@@ -50,7 +50,7 @@ MonoBehaviour:
   mpLevelUp: 0600000009000000
   atkLevelUp: 0300000006000000
   defLevelUp: 0300000005000000
-  agiLevelUp: 0300000006000000
+  agiLevelUp: 0400000006000000
   manaLevelUp:
   - 0
   - 0.05

@@ -19,7 +19,7 @@ MonoBehaviour:
   spellIndex: 0
   spellType: 1
   cost: 0
-  SFXname: None
+  SFXname: Axe
   hasSpecialEffect: 0
   hasEffectAndDamages: 0
   doTargetEveryone: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 17-Coiffe illusoire
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Coiffe illusoire
   equipmentName: Coiffe illusoire
   equipmentSprite: {fileID: 21300000, guid: d026af76de46b0a41adc83385fbd63e9, type: 3}
   equipmentType: 2

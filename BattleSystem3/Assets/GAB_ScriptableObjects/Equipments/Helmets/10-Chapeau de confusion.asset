@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 10-Chapeau de confusion
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Chapeau de confusion
   equipmentName: Chapeau de confusion
   equipmentSprite: {fileID: 21300000, guid: ec7e1b6cde0cf42459354cfd0141ec49, type: 3}
   equipmentType: 2

@@ -17,13 +17,13 @@ MonoBehaviour:
   spawnPosY: 0
   type: 0
   pronoun: 
-  hp: 92
-  mp: 68
-  atk: 42
-  defense: 30
-  agility: 45
-  level: 5
-  mana: 0.6
+  hp: 156
+  mp: 122
+  atk: 67
+  defense: 57
+  agility: 80
+  level: 12
+  mana: 0.9
   criticalHit: 10
   dodge: 10
   actionPerTurn: 1
@@ -44,18 +44,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 786427b99a944984481c5bbe8749b6d8, type: 2}
   - {fileID: 11400000, guid: 636bab58834a32d4ba27a8002f979793, type: 2}
   - {fileID: 11400000, guid: 9f07ce02acbfea44a8434593d7d01df1, type: 2}
+  - {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
   - {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
   - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - {fileID: 11400000, guid: 635010b322596494992889056efeaa6f, type: 2}
-  weapon: {fileID: 11400000, guid: 4a69440664898504b9f37cb58345b73f, type: 2}
-  helmet: {fileID: 11400000, guid: 87e9abd056bb71b48b3d7a7f0dafa7f0, type: 2}
-  shield: {fileID: 11400000, guid: 56ec2370bfdbf26448f1d4419e13b757, type: 2}
-  armor: {fileID: 11400000, guid: 8db379a422dd780499376213d83667d8, type: 2}
+  - {fileID: 11400000, guid: e0bdc00bcb4d8814595b418e46ed80c9, type: 2}
+  - {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
+  - {fileID: 11400000, guid: ddb31d0bea0887344ab27c960c5f84e4, type: 2}
+  - {fileID: 11400000, guid: 76abd92ebdb02184286edee36a22fd2c, type: 2}
+  weapon: {fileID: 11400000, guid: b1d01498109b32549b0cd240ace61a72, type: 2}
+  helmet: {fileID: 11400000, guid: f881842bc1b68d94dae8f6e4e70a963d, type: 2}
+  shield: {fileID: 11400000, guid: 009a2de45e17a134e80791e2122e3589, type: 2}
+  armor: {fileID: 11400000, guid: 83b79a58890f0fe49afd396beda7842e, type: 2}
   hpLevelUp: 070000000b000000
   mpLevelUp: 0600000009000000
   atkLevelUp: 0300000006000000
   defLevelUp: 0300000005000000
-  agiLevelUp: 0400000006000000
+  agiLevelUp: 0500000006000000
   manaLevelUp:
   - 0
   - 0.05
@@ -108,6 +113,8 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 636bab58834a32d4ba27a8002f979793, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 9f07ce02acbfea44a8434593d7d01df1, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

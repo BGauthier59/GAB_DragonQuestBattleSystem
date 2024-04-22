@@ -23,7 +23,7 @@ MonoBehaviour:
   defense: 74
   agility: 77
   level: 1
-  mana: 0.8
+  mana: 1
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Boss
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: f9ffee58e5ce44d4b81b332fb8fb155d, type: 2}
+  - {fileID: 11400000, guid: 52a0054c508327e45a220c1330082b40, type: 2}
   - {fileID: 11400000, guid: 74bc8ee811d177c48aff4cbae611dbde, type: 2}
-  - {fileID: 11400000, guid: f9ffee58e5ce44d4b81b332fb8fb155d, type: 2}
+  - {fileID: 11400000, guid: 52a0054c508327e45a220c1330082b40, type: 2}

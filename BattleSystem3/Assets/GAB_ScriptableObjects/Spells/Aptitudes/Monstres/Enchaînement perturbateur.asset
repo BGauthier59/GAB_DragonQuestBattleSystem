@@ -12,21 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
   m_Name: "Encha\xEEnement perturbateur"
   m_EditorClassIdentifier: 
-  spellName: "Coup de th\xE9\xE2tre"
-  spellDescription: Porte une attaque surprise qui peut rendre la cible inactive.
-  inBattleDescription: porte une attaque surprise !
+  spellName: "Encha\xEEnement perturbateur"
+  spellDescription: ATTAQUE MONSTRE
+  inBattleDescription: "tranche dans tous les sens avec une rapidit\xE9 d\xE9concertante
+    !"
   excuseForInaction: "en reste bouche b\xE9e !"
   spellIndex: 11
   spellType: 1
-  cost: 3
+  cost: 0
   SFXname: Sword
   hasSpecialEffect: 1
   hasEffectAndDamages: 1
-  doTargetEveryone: 0
+  doTargetEveryone: 1
   helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 20
+  successRate: 30
   strenght: 0
   elementType: 0
   factor: 100

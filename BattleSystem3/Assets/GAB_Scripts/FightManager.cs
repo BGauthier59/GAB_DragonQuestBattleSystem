@@ -590,7 +590,7 @@ public class FightManager : MonoSingleton<FightManager>
                 }
                 else
                 {
-                    float damages5 = ((Random.Range(caster.entityAtk * 1.9f, caster.entityAtk * 2.1f)) / 2) - (targetEntity.entityDef / 4);
+                    float damages5 = ((Random.Range(caster.entityAtk * 1.6f, caster.entityAtk * 1.8f)) / 2) - (targetEntity.entityDef / 4);
                     if (targetEntity.isDefending) damages5 /= 2;
                     int realDamages5 = (int)damages5;
                     if (realDamages5 <= caster.entityAtk) realDamages5 = caster.entityAtk;
@@ -637,7 +637,9 @@ public class FightManager : MonoSingleton<FightManager>
                         }
                         target = multiHitsTargets[Random.Range(0, multiHitsTargets.Count)];
 
-                        float multiHitsDamages = ((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (target.entityDef / 4) * spell.factor * 0.01f;
+                        Debug.Log(caster + " + " + caster.entityAtk + " + " + target);
+
+                        float multiHitsDamages = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (target.entityDef / 4)) * spell.factor * 0.01f;
                         if (target.isDefending) multiHitsDamages /= 2;
                         int realMultiHitsDamages = (int)multiHitsDamages;
                         if (realMultiHitsDamages <= 0) realMultiHitsDamages = 0;
@@ -658,7 +660,7 @@ public class FightManager : MonoSingleton<FightManager>
                         }
                     }
                 }
-                if (caster.entityType == EntityType.Ally)
+                else
                 {
                     int hits = 2;
 

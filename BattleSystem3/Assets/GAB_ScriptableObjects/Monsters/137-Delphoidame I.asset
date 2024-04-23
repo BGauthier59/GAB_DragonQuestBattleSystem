@@ -10,34 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: 134-Trompy
+  m_Name: 137-Delphoidame I
   m_EditorClassIdentifier: 
-  entityName: Trompy
-  sprite: {fileID: 21300000, guid: 45687a496677d054f84425d27b6b79f3, type: 3}
-  spawnPosY: 45
+  entityName: Delphoidame
+  sprite: {fileID: 21300000, guid: c8cb8543cdf09e9489cc2d62c04c1cbc, type: 3}
+  spawnPosY: 31
   type: 1
-  pronoun: 
-  hp: 520
+  pronoun: La
+  hp: 400
   mp: 9999
-  atk: 182
-  defense: 165
-  agility: 75
+  atk: 185
+  defense: 112
+  agility: 106
   level: 1
   mana: 1
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
   entityChanceToUseSpell: 10
-  entityResilienceToMPTheft: 0
+  entityResilienceToMPTheft: 100
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
-  entityResilienceToSilence: 0
-  entityResilienceToSleep: 0
+  entityResilienceToSilence: 100
+  entityResilienceToSleep: 100
   entityResilienceToStatDecrease: 0
   spells:
-  - {fileID: 11400000, guid: 9f07ce02acbfea44a8434593d7d01df1, type: 2}
-  - {fileID: 11400000, guid: ea3d33a15325ed848b539116bb77914d, type: 2}
-  - {fileID: 11400000, guid: 8ae93ae615124e244920d721fb0aea0e, type: 2}
+  - {fileID: 11400000, guid: 66b7a961d58ccb8449946d9b55e6079e, type: 2}
+  - {fileID: 11400000, guid: 7ea0b1b4207a45f4f859255ee512f91d, type: 2}
+  - {fileID: 11400000, guid: 8f9e804a992cb2d4abc914ef6b38059e, type: 2}
+  - {fileID: 11400000, guid: b0998091b84311948bff433ee090ca4f, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -50,8 +51,8 @@ MonoBehaviour:
   manaLevelUp: []
   learnSpells: []
   strategy: 1
-  elementType: 5
+  elementType: 3
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
-  gold: 450
-  xp: 530
+  gold: 180
+  xp: 300

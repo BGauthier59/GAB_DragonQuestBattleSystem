@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: 134-Trompy
+  m_Name: 136-Fetidrag
   m_EditorClassIdentifier: 
-  entityName: Trompy
-  sprite: {fileID: 21300000, guid: 45687a496677d054f84425d27b6b79f3, type: 3}
-  spawnPosY: 45
+  entityName: Fetidrag
+  sprite: {fileID: 21300000, guid: bba366730da3ba9489ff752a0cbfef59, type: 3}
+  spawnPosY: 60
   type: 1
-  pronoun: 
-  hp: 520
+  pronoun: Le
+  hp: 3010
   mp: 9999
-  atk: 182
-  defense: 165
-  agility: 75
+  atk: 212
+  defense: 107
+  agility: 83
   level: 1
   mana: 1
   criticalHit: 0
@@ -29,15 +29,17 @@ MonoBehaviour:
   actionPerTurn: 1
   entityChanceToUseSpell: 10
   entityResilienceToMPTheft: 0
-  entityResilienceToPoison: 0
+  entityResilienceToPoison: 100
   entityResilienceToBurn: 0
-  entityResilienceToSilence: 0
+  entityResilienceToSilence: 100
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
   spells:
-  - {fileID: 11400000, guid: 9f07ce02acbfea44a8434593d7d01df1, type: 2}
-  - {fileID: 11400000, guid: ea3d33a15325ed848b539116bb77914d, type: 2}
-  - {fileID: 11400000, guid: 8ae93ae615124e244920d721fb0aea0e, type: 2}
+  - {fileID: 11400000, guid: ca146e0fe5fca7140ae781e4006c38f3, type: 2}
+  - {fileID: 11400000, guid: fea30239232249f4aa3c914224f1b24c, type: 2}
+  - {fileID: 11400000, guid: 0a7c4422c26221344a2f5e87430a8116, type: 2}
+  - {fileID: 11400000, guid: b0998091b84311948bff433ee090ca4f, type: 2}
+  - {fileID: 11400000, guid: f8ac9cf0ac7f49f41b929d940f6ee4e2, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -53,5 +55,5 @@ MonoBehaviour:
   elementType: 5
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
-  gold: 450
-  xp: 530
+  gold: 1230
+  xp: 2870

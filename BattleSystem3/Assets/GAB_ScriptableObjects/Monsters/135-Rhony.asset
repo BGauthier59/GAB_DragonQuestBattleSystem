@@ -28,12 +28,12 @@ MonoBehaviour:
   dodge: 0
   actionPerTurn: 1
   entityChanceToUseSpell: 10
-  entityResilienceToMPTheft: 100
-  entityResilienceToPoison: 100
-  entityResilienceToBurn: 100
-  entityResilienceToSilence: 100
-  entityResilienceToSleep: 100
-  entityResilienceToStatDecrease: 100
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 0
+  entityResilienceToSilence: 0
+  entityResilienceToSleep: 0
+  entityResilienceToStatDecrease: 0
   spells:
   - {fileID: 11400000, guid: e2ac99364f2de2040ac639218f416614, type: 2}
   - {fileID: 11400000, guid: 40f0a316ce283504ab5699a92107cc33, type: 2}
@@ -49,7 +49,7 @@ MonoBehaviour:
   manaLevelUp: []
   learnSpells: []
   strategy: 1
-  elementType: 7
+  elementType: 5
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
   gold: 350

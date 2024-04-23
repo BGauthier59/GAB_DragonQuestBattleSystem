@@ -568,7 +568,7 @@ public class FightManager : MonoSingleton<FightManager>
 
                     if (caster.entityMp > caster.entityMpMax) caster.entityMp = caster.entityMpMax;
 
-                    InterfaceManager.instance.Message(true, $"{caster.entityName} a récupéré {aleaMP} points de magie !");
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} a volé {aleaMP} points de magie à {targetEntity} !");
                     yield return new WaitForSeconds(InterfaceManager.instance.time);
                     StatDisplayManager.instance.DisplayStat(targetEntity);
                     break;

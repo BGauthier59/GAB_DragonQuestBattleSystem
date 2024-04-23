@@ -1216,6 +1216,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 928e003365f724947a30d3d5d69a7f75, type: 2}
   - {fileID: 11400000, guid: 973a2bcee7854ba4cb80754e6ab194e8, type: 2}
   - {fileID: 11400000, guid: a0e684e184818dc4e92dc49472565782, type: 2}
+  - {fileID: 11400000, guid: bb6856df1e8e69c439a55a2dc92b65cb, type: 2}
   howManyMonster: 0
   configsInLocation: []
   allZones:
@@ -1261,6 +1262,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 91a038728d6f3f246bd7738b44ebe071, type: 2}
   - {fileID: 11400000, guid: 0b3875249a67f494d9ea217639b56901, type: 2}
   - {fileID: 11400000, guid: bb7d7d25c15fef844ad6a6b342b98c06, type: 2}
+  - {fileID: 11400000, guid: 1cad301f590b0c44ea75cf908aa9b4f1, type: 2}
+  - {fileID: 11400000, guid: a49eae7c801382c4b8a335f2a12ec8de, type: 2}
+  - {fileID: 11400000, guid: 40a64fd4ced44b244b22365ca276dcd0, type: 2}
+  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
+  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
+  - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   - {fileID: 11400000, guid: 2a2c4b0310b87bd40bd3b59bfd417f73, type: 2}
   selectedZone: {fileID: 0}
@@ -4964,6 +4971,18 @@ MonoBehaviour:
     - m_Text: Boss9
       m_Image: {fileID: 0}
     - m_Text: Boss10
+      m_Image: {fileID: 0}
+    - m_Text: Boss11
+      m_Image: {fileID: 0}
+    - m_Text: Boss12
+      m_Image: {fileID: 0}
+    - m_Text: Boss13
+      m_Image: {fileID: 0}
+    - m_Text: Boss14
+      m_Image: {fileID: 0}
+    - m_Text: Boss15
+      m_Image: {fileID: 0}
+    - m_Text: Boss16
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

@@ -31,8 +31,8 @@ MonoBehaviour:
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
-  entityResilienceToSilence: 100
-  entityResilienceToSleep: 100
+  entityResilienceToSilence: 999
+  entityResilienceToSleep: 999
   entityResilienceToStatDecrease: 0
   spells:
   - {fileID: 11400000, guid: 394426c3032d1b140a110dc143974604, type: 2}

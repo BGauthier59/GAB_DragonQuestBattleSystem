@@ -29,9 +29,9 @@ MonoBehaviour:
   actionPerTurn: 2
   entityChanceToUseSpell: 5
   entityResilienceToMPTheft: 0
-  entityResilienceToPoison: 100
-  entityResilienceToBurn: 100
-  entityResilienceToSilence: 100
+  entityResilienceToPoison: 999
+  entityResilienceToBurn: 999
+  entityResilienceToSilence: 999
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
   spells:

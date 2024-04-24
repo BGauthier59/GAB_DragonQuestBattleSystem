@@ -10,41 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: "140-Ma\xEEtre Armand II"
+  m_Name: 141-Cindy
   m_EditorClassIdentifier: 
-  entityName: "Ma\xEEtre Armand"
-  sprite: {fileID: 21300000, guid: 7bc56361e8e510f4eaacc735895afa49, type: 3}
-  spawnPosY: 41
+  entityName: Cindy
+  sprite: {fileID: 21300000, guid: 0ae6c45445f8dec4da000ac5172f706d, type: 3}
+  spawnPosY: 51
   type: 1
   pronoun: 
-  hp: 3600
+  hp: 3230
   mp: 9999
-  atk: 232
+  atk: 248
   defense: 118
   agility: 103
   level: 1
   mana: 1.2
-  criticalHit: 0
+  criticalHit: 100
   dodge: 0
   actionPerTurn: 2
-  entityChanceToUseSpell: 15
+  entityChanceToUseSpell: 40
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
-  entityResilienceToSilence: 999
-  entityResilienceToSleep: 999
+  entityResilienceToSilence: 100
+  entityResilienceToSleep: 100
   entityResilienceToStatDecrease: 0
   spells:
-  - {fileID: 11400000, guid: 394426c3032d1b140a110dc143974604, type: 2}
-  - {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
-  - {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
-  - {fileID: 11400000, guid: 777cb550d9c342f4ba826fc2a7190a09, type: 2}
-  - {fileID: 11400000, guid: 650eb64a1b1dc5a41907803d7d9108f0, type: 2}
-  - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
-  - {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
+  - {fileID: 11400000, guid: f86fafba53e2d2144b8c04dda32427f8, type: 2}
+  - {fileID: 11400000, guid: c1d00c4bc9fddf94abe8c8ac2d70ad44, type: 2}
+  - {fileID: 11400000, guid: 2a97068c2e16e404dac24cde891cba80, type: 2}
+  - {fileID: 11400000, guid: 8f9e804a992cb2d4abc914ef6b38059e, type: 2}
+  - {fileID: 11400000, guid: 3219ff11a90df904182a256afbc711c5, type: 2}
+  - {fileID: 11400000, guid: eefb1a0c883773645b0612bcedbfb6e9, type: 2}
+  - {fileID: 11400000, guid: 1e96378f377433349b3ec7c53c89a117, type: 2}
   - {fileID: 11400000, guid: c2c9f45c701916347b3feea7012b41d0, type: 2}
-  - {fileID: 11400000, guid: 55de6908804603e4aabd726b2651b78b, type: 2}
-  - {fileID: 11400000, guid: 08253c2b9d012d445981611d9ea9f6d9, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -57,8 +55,8 @@ MonoBehaviour:
   manaLevelUp: []
   learnSpells: []
   strategy: 1
-  elementType: 0
+  elementType: 1
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
-  gold: 2000
-  xp: 3600
+  gold: 2200
+  xp: 3750

@@ -16,6 +16,7 @@ public class EntityManager : MonoBehaviour
     public EntityType entityType;
     public string entityPronoun;
     public EntityStrategy entityStrategy;
+    public ElementType elementType;
 
     public string entityName;
     public int entityHpMax;
@@ -149,6 +150,8 @@ public class EntityManager : MonoBehaviour
         entityButton = GetComponent<Button>();
 
         entityStrategy = entitySO.strategy;
+
+        elementType = entitySO.elementType;
 
         xp = entitySO.xp;
         gold = entitySO.gold;

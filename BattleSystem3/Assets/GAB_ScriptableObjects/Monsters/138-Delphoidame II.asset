@@ -28,11 +28,11 @@ MonoBehaviour:
   dodge: 0
   actionPerTurn: 2
   entityChanceToUseSpell: 100
-  entityResilienceToMPTheft: 100
+  entityResilienceToMPTheft: 999
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
-  entityResilienceToSilence: 100
-  entityResilienceToSleep: 100
+  entityResilienceToSilence: 999
+  entityResilienceToSleep: 999
   entityResilienceToStatDecrease: 0
   spells:
   - {fileID: 11400000, guid: eefb1a0c883773645b0612bcedbfb6e9, type: 2}

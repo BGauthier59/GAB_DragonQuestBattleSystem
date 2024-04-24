@@ -465,15 +465,15 @@ public class FightManager : MonoSingleton<FightManager>
 
         foreach (var noEffectType in noEffects)
         {
-            if (target.entitySO.elementType == noEffectType) return 0;
+            if (target.elementType == noEffectType) return 0;
         }
         foreach (var resistanceType in resistances)
         {
-            if (target.entitySO.elementType == resistanceType) return .5f;
+            if (target.elementType == resistanceType) return .5f;
         }
         foreach (var weaknessType in weaknesses)
         {
-            if (target.entitySO.elementType == weaknessType) return 1.5f;
+            if (target.elementType == weaknessType) return 1.5f;
         }
         return 1;
     }
@@ -575,9 +575,56 @@ public class FightManager : MonoSingleton<FightManager>
                     break;
                 }
 
-            case 4: // Vide
+            case 4: // Réducto
 
-               
+                if (spell.hasEffectAndDamages)
+                {
+                    float damages32 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
+                    if (targetEntity.isDefending) damages32 /= 2;
+                    int realDamages32 = (int)damages32;
+                    if (realDamages32 <= 0) realDamages32 = 0;
+
+                    if (realDamages32 == 0) AudioManager.instance.Play("Miss");
+                    else AudioManager.instance.Play("Hit");
+
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages32} points de dégâts !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                    targetEntity.entityHp -= realDamages32;
+
+                    if (CheckDefeat(targetEntity))
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                        StatDisplayManager.instance.DisplayStat(targetEntity);
+                    }
+                }
+
+                bool statResetIsTrue = false;
+
+                if (targetEntity.atkStatIndex > 0)
+                {
+                    targetEntity.atkStatIndex = 0;
+                    targetEntity.SetNewAtk(targetEntity.atkStatIndex);
+                    statResetIsTrue = true;
+
+                }
+                if (targetEntity.defStatIndex > 0)
+                {
+                    targetEntity.defStatIndex = 0;
+                    targetEntity.SetNewDef(targetEntity.defStatIndex);
+                    statResetIsTrue = true;
+                }
+                if (targetEntity.manaStatIndex > 0)
+                {
+                    targetEntity.manaStatIndex = 0;
+                    targetEntity.SetNewMana(targetEntity.manaStatIndex);
+                    statResetIsTrue = true;
+                }
+                if (statResetIsTrue)
+                {
+                    InterfaceManager.instance.Message(true, $"Les stats de {targetEntity.entityName} reviennent à la normale !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                    StatDisplayManager.instance.DisplayStat(caster);
+                }
                 break;
 
             case 5: // Coupe claire
@@ -1064,7 +1111,7 @@ public class FightManager : MonoSingleton<FightManager>
                 else
                 {
                     targetEntity.entityStatut = Statut.Endormi;
-                    targetEntity.turnsBeforeRecovering = Random.Range(1, 4);
+                    targetEntity.turnsBeforeRecovering = Random.Range(2, 4);
                     Debug.Log(targetEntity.turnsBeforeRecovering);
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} tombe dans un profond sommeil !");
                     yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
@@ -1133,7 +1180,7 @@ public class FightManager : MonoSingleton<FightManager>
                 else
                 {
                     targetEntity.entityStatut = Statut.Paralysé;
-                    targetEntity.turnsBeforeRecovering = Random.Range(1, 4);
+                    targetEntity.turnsBeforeRecovering = Random.Range(2, 4);
                     Debug.Log(targetEntity.turnsBeforeRecovering);
                     InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est paralysé(e) !");
                     yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
@@ -1641,58 +1688,233 @@ public class FightManager : MonoSingleton<FightManager>
 
                 break;
 
-            case 32: //Reset Stat
+            case 32: //Attaque élémentaire
 
-                if (spell.hasEffectAndDamages)
+                if (caster.elementType == ElementType.Feu)
                 {
-                    float damages32 = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (targetEntity.entityDef / 4)) * spell.factor * 0.01f;
-                    if (targetEntity.isDefending) damages32 /= 2;
-                    int realDamages32 = (int)damages32;
-                    if (realDamages32 <= 0) realDamages32 = 0;
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} provoque un déluge de flammes !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
 
-                    if (realDamages32 == 0) AudioManager.instance.Play("Miss");
-                    else AudioManager.instance.Play("Hit");
-
-                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages32} points de dégâts !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
-                    targetEntity.entityHp -= realDamages32;
-
-                    if (CheckDefeat(targetEntity))
+                    if (targetEntity.entityStatut != Statut.None)
                     {
-                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
+                    }
+                    else
+                    {
+                        targetEntity.entityStatut = Statut.Brûlé;
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est brûlé(e) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
+                    }
+                }
+                else if (caster.elementType == ElementType.Eau)
+                {
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} libère des eaux soporifiques !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+
+                    if (targetEntity.entityStatut != Statut.None)
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
+                    }
+                    else
+                    {
+                        targetEntity.entityStatut = Statut.Endormi;
+                        targetEntity.turnsBeforeRecovering = Random.Range(2, 4);
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est endormi(e) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
+                    }
+                }
+                else if (caster.elementType == ElementType.Plante)
+                {
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} commande aux forces de la nature !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+
+                    if (targetEntity.entityStatut != Statut.None)
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} souffre déjà d'un état de statut !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
+                    }
+                    else
+                    {
+                        targetEntity.entityStatut = Statut.Empoisonné;
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est empoisonné(e) !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
+                    }
+                }
+                else if (caster.elementType == ElementType.Vent)
+                {
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} provoque un terrible cyclone !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+
+                    if (targetEntity.isBlocked)
+                    {
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} n'est pas en mesure d'y prêter attention !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
+                    }
+                    else
+                    {
+                        targetEntity.isBlocked = true;
+                        InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est mis(e) au tapis !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        break;
+                    }
+                }
+                else if (caster.elementType == ElementType.Terre)
+                {
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} érige une armure de terre !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+
+                    if (caster.defStatIndex == 2)
+                    {
+                        InterfaceManager.instance.Message(true, $"La défense de {caster.entityName} ne peut plus monter !");
                         yield return new WaitForSeconds(InterfaceManager.instance.time);
                     }
+                    else
+                    {
+                        caster.defStatIndex += 1;
 
-                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                        if (caster.defStatIndex == 0) InterfaceManager.instance.Message(true, $"La défense de {caster.entityName} revient à la normale !");
+                        else if (caster.defStatIndex == 1 || caster.defStatIndex == -1) InterfaceManager.instance.Message(true, $"La défense de {caster.entityName} augmente légèrement !");
+                        else if (caster.defStatIndex == 2) InterfaceManager.instance.Message(true, $"La défense de {caster.entityName} augmente nettement !");
+
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        caster.SetNewDef(caster.defStatIndex);
+                        StatDisplayManager.instance.DisplayStat(caster);
+                        Debug.Log(caster.defStatIndex + " + " + caster.entityDef);
+                    }
+                    if (caster.atkStatIndex == 2)
+                    {
+                        InterfaceManager.instance.Message(true, $"L'attaque de {caster.entityName} ne peut plus monter !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
+                    else
+                    {
+                        caster.atkStatIndex += 1;
+
+                        if (caster.atkStatIndex == 0) InterfaceManager.instance.Message(true, $"L'attaque de {caster.entityName} revient à la normale !");
+                        else if (caster.atkStatIndex == 1 || caster.atkStatIndex == -1) InterfaceManager.instance.Message(true, $"L'attaque de {caster.entityName} augmente légèrement !");
+                        else if (caster.atkStatIndex == 2) InterfaceManager.instance.Message(true, $"L'attaque de {caster.entityName} augmente nettement !");
+
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        caster.SetNewAtk(caster.atkStatIndex);
+                        StatDisplayManager.instance.DisplayStat(caster);
+                        Debug.Log(caster.atkStatIndex + " + " + caster.entityAtk);
+                    }
+                }
+                else if (caster.elementType == ElementType.Divin)
+                {
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} rayonne d'une lumière divine !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+
+                    if (caster.atkStatIndex == 2)
+                    {
+                        InterfaceManager.instance.Message(true, $"L'attaque de {caster.entityName} ne peut plus monter !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
+                    else
+                    {
+
+                        if (caster.atkStatIndex <= -1)
+                        {
+                            caster.atkStatIndex = 0;
+                            InterfaceManager.instance.Message(true, $"L'attaque de {caster.entityName} revient à la normale !");
+                        }
+                        else
+                        {
+                            caster.atkStatIndex = 2;
+                            InterfaceManager.instance.Message(true, $"L'attaque de {caster.entityName} augmente nettement !");
+                        }
+
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                        caster.SetNewAtk(caster.atkStatIndex);
+                        StatDisplayManager.instance.DisplayStat(caster);
+                        Debug.Log(caster.atkStatIndex + " + " + caster.entityAtk);
+                    }
+
+                }
+                else if (caster.elementType == ElementType.Obscur)
+                {
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} noie l'équipe dans un brouillard malsain !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+
+                    if (targetEntity.defStatIndex == -2)
+                    {
+                        InterfaceManager.instance.Message(true, $"La défense de {targetEntity.entityName} ne peut plus baisser !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    }
+                    else
+                    {
+                        targetEntity.defStatIndex = -2;
+                        InterfaceManager.instance.Message(true, $"La défense de {targetEntity.entityName} diminue au minimum !");
+                        targetEntity.SetNewDef(targetEntity.defStatIndex);
+                        StatDisplayManager.instance.DisplayStat(targetEntity);
+                        Debug.Log(targetEntity.defStatIndex + " + " + targetEntity.entityDef);
+                    }
                 }
 
-                bool statResetIsTrue = false;
+                break;
 
-                if (targetEntity.atkStatIndex > 0)
-                {
-                    targetEntity.atkStatIndex = 0;
-                    targetEntity.SetNewAtk(targetEntity.atkStatIndex);
-                    statResetIsTrue = true;
-                }
-                if (targetEntity.defStatIndex > 0)
-                {
-                    targetEntity.defStatIndex = 0;
-                    targetEntity.SetNewDef(targetEntity.defStatIndex);
-                    statResetIsTrue = true;
-                }
-                if (targetEntity.manaStatIndex > 0)
-                {
-                    targetEntity.manaStatIndex = 0;
-                    targetEntity.SetNewMana(targetEntity.manaStatIndex);
-                    statResetIsTrue = true;
-                }
+            case 33: //Changement d'élément
 
-                if (statResetIsTrue)
+                int newElement = Random.Range(1, 8);
+
+                if (newElement == 1)
                 {
-                    InterfaceManager.instance.Message(true, $"Les stats de {targetEntity.entityName} reviennent à la normale !");
-                    yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                    caster.elementType = ElementType.Feu;
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} s'imprègne du pouvoir du Feu !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(caster);
                 }
-                StatDisplayManager.instance.DisplayStat(caster);
+                else if (newElement == 2)
+                {
+                    caster.elementType = ElementType.Eau;
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} s'imprègne du pouvoir de l'Eau !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(caster);
+                }
+                else if (newElement == 3)
+                {
+                    caster.elementType = ElementType.Plante;
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} s'imprègne du pouvoir des Plantes !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(caster);
+                }
+                else if (newElement == 4)
+                {
+                    caster.elementType = ElementType.Vent;
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} s'imprègne du pouvoir du Vent !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(caster);
+                }
+                else if (newElement == 5)
+                {
+                    caster.elementType = ElementType.Terre;
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} s'imprègne du pouvoir de la Terre !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(caster);
+                }
+                else if (newElement == 6)
+                {
+                    caster.elementType = ElementType.Divin;
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} s'imprègne du pouvoir de la Lumière !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(caster);
+                }
+                else if (newElement == 7)
+                {
+                    caster.elementType = ElementType.Obscur;
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} s'imprègne du pouvoir de l'Obscurité !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(caster);
+                }
 
                 break;
 

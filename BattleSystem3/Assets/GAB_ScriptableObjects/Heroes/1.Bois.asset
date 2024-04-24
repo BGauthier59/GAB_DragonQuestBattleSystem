@@ -17,13 +17,13 @@ MonoBehaviour:
   spawnPosY: 0
   type: 0
   pronoun: 
-  hp: 173
-  mp: 100
-  atk: 83
-  defense: 69
-  agility: 69
-  level: 12
-  mana: 0.9
+  hp: 243
+  mp: 136
+  atk: 119
+  defense: 93
+  agility: 99
+  level: 18
+  mana: 1.05
   criticalHit: 10
   dodge: 10
   actionPerTurn: 1
@@ -52,10 +52,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
   - {fileID: 11400000, guid: 9a348bfe61ad8984ea29076e62b0d0b3, type: 2}
-  weapon: {fileID: 11400000, guid: e60d71f3272c3294a9f9c38bdd0e52bf, type: 2}
-  helmet: {fileID: 11400000, guid: c33cdbeeb8fc575469bc6be684641c6b, type: 2}
-  shield: {fileID: 11400000, guid: 009a2de45e17a134e80791e2122e3589, type: 2}
-  armor: {fileID: 11400000, guid: e4fb3cd3c54a915418d9e15989a1b875, type: 2}
+  - {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
+  - {fileID: 11400000, guid: 5abb6247cff777f4fbfd90db5f288afc, type: 2}
+  - {fileID: 11400000, guid: e8c33c364950fca488bb429c08dd10da, type: 2}
+  - {fileID: 11400000, guid: 7762f3e276536c745b0cc5b7828d0a46, type: 2}
+  weapon: {fileID: 11400000, guid: fc3f304783d89ba4eb264de03da2b303, type: 2}
+  helmet: {fileID: 11400000, guid: 20f49ad1e9f18b24f9b80471a28cab6f, type: 2}
+  shield: {fileID: 11400000, guid: d9bf73f30c7075b45aed3d2db04d33be, type: 2}
+  armor: {fileID: 11400000, guid: af22d0bb46c1ab944b126a737d1f8187, type: 2}
   hpLevelUp: 0a0000000e000000
   mpLevelUp: 0500000008000000
   atkLevelUp: 0500000008000000

@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Domptage
+  m_Name: "Encha\xEEnement royal"
   m_EditorClassIdentifier: 
-  spellName: Domptage
-  spellDescription: "Ass\xE8ne une s\xE9rie de trois coups port\xE9s de fa\xE7on
-    al\xE9atoire."
-  inBattleDescription: "ass\xE8ne une rafale de coups sur l'\xE9quipe !"
+  spellName: "Encha\xEEnement royal"
+  spellDescription: ATTAQUE MONSTRE
+  inBattleDescription: "effectue un encha\xEEnement de coups de ma\xEEtre !"
   excuseForInaction: 
   spellIndex: 6
   spellType: 1
-  cost: 10
-  SFXname: Whip
+  cost: 0
+  SFXname: Sword
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
@@ -30,6 +29,6 @@ MonoBehaviour:
   successRate: 0
   strenght: 0
   elementType: 0
-  factor: 90
+  factor: 100
   staticDamages: 0
-  hits: 3
+  hits: 5

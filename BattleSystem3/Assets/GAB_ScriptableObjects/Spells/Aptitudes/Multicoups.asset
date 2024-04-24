@@ -32,3 +32,4 @@ MonoBehaviour:
   elementType: 0
   factor: 70
   staticDamages: 0
+  hits: 3

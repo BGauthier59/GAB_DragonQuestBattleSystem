@@ -19,7 +19,7 @@ MonoBehaviour:
   spellIndex: 3
   spellType: 0
   cost: 3
-  SFXname: None
+  SFXname: ManaHeal
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0

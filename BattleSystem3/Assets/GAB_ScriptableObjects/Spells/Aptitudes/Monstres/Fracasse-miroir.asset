@@ -10,26 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Domptage
+  m_Name: Fracasse-miroir
   m_EditorClassIdentifier: 
-  spellName: Domptage
-  spellDescription: "Ass\xE8ne une s\xE9rie de trois coups port\xE9s de fa\xE7on
-    al\xE9atoire."
-  inBattleDescription: "ass\xE8ne une rafale de coups sur l'\xE9quipe !"
+  spellName: Fracasse-miroir
+  spellDescription: ATTAQUE MONSTRE
+  inBattleDescription: "\xE9met une lumi\xE8re malfaisante !"
   excuseForInaction: 
-  spellIndex: 6
+  spellIndex: 31
   spellType: 1
-  cost: 10
-  SFXname: Whip
+  cost: 0
+  SFXname: WallBreak
   hasSpecialEffect: 1
-  hasEffectAndDamages: 0
-  doTargetEveryone: 0
+  hasEffectAndDamages: 1
+  doTargetEveryone: 1
   helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0
   successRate: 0
   strenght: 0
   elementType: 0
-  factor: 90
+  factor: 100
   staticDamages: 0
-  hits: 3

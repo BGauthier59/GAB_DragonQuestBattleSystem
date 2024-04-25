@@ -17,7 +17,7 @@ MonoBehaviour:
   spawnPosY: 51
   type: 1
   pronoun: 
-  hp: 3230
+  hp: 3730
   mp: 9999
   atk: 248
   defense: 118

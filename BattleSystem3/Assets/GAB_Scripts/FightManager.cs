@@ -199,9 +199,9 @@ public class FightManager : MonoSingleton<FightManager>
                     if (!spell.doTargetEveryone) // Une seule cible
                     {
                         int defense = target.entityDef;
-                        if (target.isDefending) defense *= 2;
 
                         float damages = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (defense / 4)) * spell.factor * 0.01f;
+                        if (target.isDefending) damages *= 2;
                         int realDamages = (int) damages;
                         if (realDamages < 0) realDamages = Random.Range(0,2);
 
@@ -261,9 +261,9 @@ public class FightManager : MonoSingleton<FightManager>
                             if (!target.isDefeated)
                             {
                                 int defense = target.entityDef;
-                                if (target.isDefending) defense *= 2;
                             
                                 float damages = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (defense / 4)) * spell.factor * 0.01f;
+                                if (target.isDefending) damages *= 2;
                                 int realDamages = (int) damages;
                                 if (realDamages < 0) realDamages = Random.Range(0,2);
 
@@ -324,9 +324,8 @@ public class FightManager : MonoSingleton<FightManager>
                     {
                         float damages = (caster.entityMana * spell.strenght) * Random.Range(0.9f, 1.1f);
 
-                        Debug.Log(damages);
                         damages *= SpellElementFactor(spell, target);
-                        Debug.Log(damages);
+                        if (target.isDefending) damages *= 2;
                         int realDamages = (int) damages;
                         if (realDamages < 0) realDamages = Random.Range(0,2);
 
@@ -367,6 +366,7 @@ public class FightManager : MonoSingleton<FightManager>
                             {
                                 float damages = (caster.entityMana * spell.strenght) * Random.Range(0.9f, 1.1f);
                                 damages *= SpellElementFactor(spell, target);
+                                if (target.isDefending) damages *= 2;
                                 int realDamages = (int) damages;
 
                                 if (target.isReflected == true && spell.spellType == SpellType.Spell)

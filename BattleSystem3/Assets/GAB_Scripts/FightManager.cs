@@ -1854,6 +1854,7 @@ public class FightManager : MonoSingleton<FightManager>
                     {
                         targetEntity.defStatIndex = -2;
                         InterfaceManager.instance.Message(true, $"La défense de {targetEntity.entityName} diminue au minimum !");
+                        yield return new WaitForSeconds(InterfaceManager.instance.time);
                         targetEntity.SetNewDef(targetEntity.defStatIndex);
                         StatDisplayManager.instance.DisplayStat(targetEntity);
                         Debug.Log(targetEntity.defStatIndex + " + " + targetEntity.entityDef);

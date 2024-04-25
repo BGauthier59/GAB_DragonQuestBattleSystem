@@ -1919,7 +1919,6 @@ public class FightManager : MonoSingleton<FightManager>
 
                 break;
 
-
             default:
                 Debug.LogError("Index du sort invalide");
                 break;

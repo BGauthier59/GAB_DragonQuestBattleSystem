@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: "109-Dragon imp\xE9rial"
+  m_Name: 142-Chancelier II
   m_EditorClassIdentifier: 
-  entityName: "Dragon imp\xE9rial"
-  sprite: {fileID: 21300000, guid: 1cf838bccc4cab14eace39c25c3d3d9b, type: 3}
-  spawnPosY: 54
+  entityName: Chancelier
+  sprite: {fileID: 21300000, guid: 29094562e1fe776439b6f13826d8a4aa, type: 3}
+  spawnPosY: 51
   type: 1
   pronoun: Le
-  hp: 505
-  mp: 0
-  atk: 255
-  defense: 132
-  agility: 105
+  hp: 1170
+  mp: 9999
+  atk: 235
+  defense: 130
+  agility: 112
   level: 1
-  mana: 1
+  mana: 0.8
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
@@ -31,14 +31,15 @@ MonoBehaviour:
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
-  entityResilienceToSilence: 0
-  entityResilienceToSleep: 0
+  entityResilienceToSilence: 10
+  entityResilienceToSleep: 10
   entityResilienceToStatDecrease: 0
   spells:
-  - {fileID: 11400000, guid: 8783029f92f651a40838e1947d90b3ed, type: 2}
-  - {fileID: 11400000, guid: 848321aaefffffc4b9c44b3531b4a742, type: 2}
-  - {fileID: 11400000, guid: d347a2839b749974fba357b2f7c858f0, type: 2}
-  - {fileID: 11400000, guid: 47b34d54554974e4e99a51044e12b80f, type: 2}
+  - {fileID: 11400000, guid: 3219ff11a90df904182a256afbc711c5, type: 2}
+  - {fileID: 11400000, guid: 28ecd91b2a01f1f48ade6ef33a7bd029, type: 2}
+  - {fileID: 11400000, guid: 1f4b5d4126c158744baadc0d435463fc, type: 2}
+  - {fileID: 11400000, guid: 83ad7b5ee12db7f44a91ba00b9e73ea4, type: 2}
+  - {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -51,8 +52,8 @@ MonoBehaviour:
   manaLevelUp: []
   learnSpells: []
   strategy: 1
-  elementType: 6
+  elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
-  gold: 58
-  xp: 172
+  gold: 450
+  xp: 600

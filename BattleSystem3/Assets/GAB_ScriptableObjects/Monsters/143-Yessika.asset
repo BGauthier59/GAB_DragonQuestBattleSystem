@@ -10,36 +10,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
-  m_Name: 131-Chancelier
+  m_Name: 143-Yessika
   m_EditorClassIdentifier: 
-  entityName: Chancelier
-  sprite: {fileID: 21300000, guid: 29094562e1fe776439b6f13826d8a4aa, type: 3}
-  spawnPosY: 51
+  entityName: Yessika
+  sprite: {fileID: 21300000, guid: e45fd6504aa370b418f0c128ac43febb, type: 3}
+  spawnPosY: 60
   type: 1
-  pronoun: Le
-  hp: 575
+  pronoun: 
+  hp: 3090
   mp: 9999
-  atk: 138
-  defense: 95
-  agility: 80
+  atk: 245
+  defense: 126
+  agility: 120
   level: 1
-  mana: 0.8
-  criticalHit: 0
+  mana: 1.2
+  criticalHit: 100
   dodge: 0
   actionPerTurn: 1
-  entityChanceToUseSpell: 7
+  entityChanceToUseSpell: 40
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
-  entityResilienceToSilence: 10
-  entityResilienceToSleep: 10
+  entityResilienceToSilence: 999
+  entityResilienceToSleep: 999
   entityResilienceToStatDecrease: 0
   spells:
-  - {fileID: 11400000, guid: 3219ff11a90df904182a256afbc711c5, type: 2}
-  - {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
-  - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
-  - {fileID: 11400000, guid: de9ea8df1c5eb6d4cbc9991fbc884c2f, type: 2}
-  - {fileID: 11400000, guid: 1f4b5d4126c158744baadc0d435463fc, type: 2}
+  - {fileID: 11400000, guid: 8ad2d2e45d037024e8f59f797fbd1715, type: 2}
+  - {fileID: 11400000, guid: 924aec6e9095dd043a1755a1a035e8d2, type: 2}
+  - {fileID: 11400000, guid: 005010a22dfd8ea42bb2c9214f99367c, type: 2}
+  - {fileID: 11400000, guid: 786427b99a944984481c5bbe8749b6d8, type: 2}
+  - {fileID: 11400000, guid: 1e6c731f4d9499c409dfbe4a9e364428, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -55,5 +55,5 @@ MonoBehaviour:
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 0
-  gold: 150
-  xp: 300
+  gold: 800
+  xp: 1600

@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: "Souffle marmor\xE9en"
+  m_Name: "M\xE9gabras\xE9ro"
   m_EditorClassIdentifier: 
-  spellName: "Souffle marmor\xE9en"
-  spellDescription: ATTAQUE MONSTRE
-  inBattleDescription: "crache un souffle marmor\xE9en !"
+  spellName: "M\xE9gabras\xE9ro"
+  spellDescription: "Tente de br\xFBler tous les adversaires par la force de la pens\xE9e."
+  inBattleDescription: "lance le M\xE9gabras\xE9ro !"
   excuseForInaction: 
-  spellIndex: 28
-  spellType: 1
-  cost: 0
-  SFXname: SouffleGlace
+  spellIndex: 8
+  spellType: 0
+  cost: 5
+  SFXname: "Br\xFBlure"
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 1
   helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 0
+  successRate: 30
   strenght: 0
   elementType: 0
   factor: 0
-  staticDamages: 100
+  staticDamages: 0
   hits: 0

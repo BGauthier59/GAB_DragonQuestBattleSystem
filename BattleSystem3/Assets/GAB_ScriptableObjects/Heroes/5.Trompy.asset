@@ -38,16 +38,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
   - {fileID: 11400000, guid: 8ae93ae615124e244920d721fb0aea0e, type: 2}
   - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
-  - {fileID: 11400000, guid: de9ea8df1c5eb6d4cbc9991fbc884c2f, type: 2}
+  - {fileID: 11400000, guid: 8c88c99b741f8684faf711f2b828e282, type: 2}
   - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - {fileID: 11400000, guid: e0bdc00bcb4d8814595b418e46ed80c9, type: 2}
   - {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
-  - {fileID: 11400000, guid: 8c88c99b741f8684faf711f2b828e282, type: 2}
   - {fileID: 11400000, guid: bdb570d8985c3434981f49a81683b63a, type: 2}
+  - {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
+  - {fileID: 11400000, guid: 5678a91f97613cb4c962e518d0e1b498, type: 2}
   - {fileID: 11400000, guid: 03e8d9a0dafc498408295d8bf1ecf809, type: 2}
-  weapon: {fileID: 11400000, guid: 515ae546ddb7f37478bf49753b24d657, type: 2}
-  helmet: {fileID: 11400000, guid: f881842bc1b68d94dae8f6e4e70a963d, type: 2}
-  shield: {fileID: 11400000, guid: bf4666180a53c684bb3ad69a05b7d839, type: 2}
+  weapon: {fileID: 11400000, guid: 6aa95c745a9c7cf47a378dd449003eac, type: 2}
+  helmet: {fileID: 11400000, guid: 79b07c7f20812c24abec5cfd9e8a4cd7, type: 2}
+  shield: {fileID: 11400000, guid: 6b2cd29baca7aee4cb52238f99fffb4d, type: 2}
   armor: {fileID: 11400000, guid: 4f8a230ebde691742a3ba9dd8c7ddc20, type: 2}
   hpLevelUp: 0b0000000e000000
   mpLevelUp: 0600000009000000
@@ -65,7 +66,7 @@ MonoBehaviour:
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
   - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: de9ea8df1c5eb6d4cbc9991fbc884c2f, type: 2}
+    learningSpell: {fileID: 11400000, guid: 8c88c99b741f8684faf711f2b828e282, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - learningLevel: 0
@@ -73,7 +74,7 @@ MonoBehaviour:
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
   - learningLevel: 17
-    learningSpell: {fileID: 11400000, guid: 8c88c99b741f8684faf711f2b828e282, type: 2}
+    learningSpell: {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
   - learningLevel: 18
     learningSpell: {fileID: 11400000, guid: 5678a91f97613cb4c962e518d0e1b498, type: 2}
   - learningLevel: 19

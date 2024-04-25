@@ -16,7 +16,7 @@ MonoBehaviour:
   spellDescription: "R\xE9initialise les stats d'une cible."
   inBattleDescription: crache un souffle apathique !
   excuseForInaction: 
-  spellIndex: 32
+  spellIndex: 4
   spellType: 1
   cost: 0
   SFXname: WallBreak
@@ -31,3 +31,4 @@ MonoBehaviour:
   elementType: 0
   factor: 60
   staticDamages: 0
+  hits: 0

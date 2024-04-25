@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: "Souffle marmor\xE9en"
+  m_Name: "Poussi\xE8res de verre"
   m_EditorClassIdentifier: 
-  spellName: "Souffle marmor\xE9en"
+  spellName: "Poussi\xE8res de verre"
   spellDescription: ATTAQUE MONSTRE
-  inBattleDescription: "crache un souffle marmor\xE9en !"
+  inBattleDescription: "projette une pluie de poussi\xE8res de verre sur l'\xE9quipe
+    !"
   excuseForInaction: 
   spellIndex: 28
   spellType: 1
@@ -30,5 +31,5 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 0
-  staticDamages: 100
+  staticDamages: 110
   hits: 0

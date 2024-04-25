@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: "Souffle marmor\xE9en"
+  m_Name: Brisure
   m_EditorClassIdentifier: 
-  spellName: "Souffle marmor\xE9en"
+  spellName: Brisure
   spellDescription: ATTAQUE MONSTRE
-  inBattleDescription: "crache un souffle marmor\xE9en !"
+  inBattleDescription: "porte un coup an\xE9antissant les d\xE9fenses adverses !"
   excuseForInaction: 
-  spellIndex: 28
-  spellType: 1
-  cost: 0
-  SFXname: SouffleGlace
+  spellIndex: 4
+  spellType: 0
+  cost: 5
+  SFXname: WallBreak
   hasSpecialEffect: 1
-  hasEffectAndDamages: 0
-  doTargetEveryone: 1
+  hasEffectAndDamages: 1
+  doTargetEveryone: 0
   helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 0
+  successRate: 100
   strenght: 0
   elementType: 0
-  factor: 0
-  staticDamages: 100
+  factor: 115
+  staticDamages: 0
   hits: 0

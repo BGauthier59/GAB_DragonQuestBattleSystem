@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
+  m_Name: "144-Boit\xE9nique"
+  m_EditorClassIdentifier: 
+  entityName: "Boit\xE9nique"
+  sprite: {fileID: 21300000, guid: 5419d2425354f8a4ab6e49ef96ad78a2, type: 3}
+  spawnPosY: 58
+  type: 1
+  pronoun: 
+  hp: 4700
+  mp: 9999
+  atk: 292
+  defense: 140
+  agility: 130
+  level: 1
+  mana: 1.4
+  criticalHit: 0
+  dodge: 0
+  actionPerTurn: 2
+  entityChanceToUseSpell: 100
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 0
+  entityResilienceToSilence: 999
+  entityResilienceToSleep: 999
+  entityResilienceToStatDecrease: 0
+  spells:
+  - {fileID: 11400000, guid: e852b607a071e0642af6f92fe7b6cc50, type: 2}
+  - {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
+  - {fileID: 11400000, guid: 8ad2d2e45d037024e8f59f797fbd1715, type: 2}
+  - {fileID: 11400000, guid: 2c556ee3ae37cfa4297e28ec84023a23, type: 2}
+  - {fileID: 11400000, guid: facbac75ad8a7a1409514b639d4b93b0, type: 2}
+  - {fileID: 11400000, guid: d347a2839b749974fba357b2f7c858f0, type: 2}
+  - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
+  - {fileID: 11400000, guid: 6f9234e84aec74d4aaf089d781d98c59, type: 2}
+  - {fileID: 11400000, guid: 2deabe3d8ac2c3848a2baf9b2acf7827, type: 2}
+  weapon: {fileID: 0}
+  helmet: {fileID: 0}
+  shield: {fileID: 0}
+  armor: {fileID: 0}
+  hpLevelUp: 
+  mpLevelUp: 
+  atkLevelUp: 
+  defLevelUp: 
+  agiLevelUp: 
+  manaLevelUp: []
+  learnSpells: []
+  strategy: 1
+  elementType: 7
+  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  probability: 0
+  gold: 800
+  xp: 1600

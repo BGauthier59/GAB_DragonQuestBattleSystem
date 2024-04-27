@@ -10,6 +10,7 @@ public class EntitySO : ScriptableObject
     public float spawnPosY;
     public EntityType type;
     public string pronoun;
+    public bool isAIally;
 
     [Header("Statistics")]
     public int hp;

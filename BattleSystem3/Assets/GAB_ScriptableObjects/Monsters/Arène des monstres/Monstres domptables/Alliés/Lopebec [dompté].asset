@@ -17,6 +17,7 @@ MonoBehaviour:
   spawnPosY: 17
   type: 0
   pronoun: 
+  isAIally: 1
   hp: 186
   mp: 0
   atk: 86
@@ -45,10 +46,14 @@ MonoBehaviour:
   defLevelUp: 
   agiLevelUp: 
   manaLevelUp: []
-  learnSpells: []
+  learnSpells:
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: fb8efc175c9fc0e4099c543e310df7c1, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 25ff15e0bdbb02d4f8aa4a3286148f67, type: 2}
   strategy: 1
   elementType: 0
-  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  item: {fileID: 0}
   probability: 0
-  gold: 50
-  xp: 100
+  gold: 0
+  xp: 0

@@ -17,11 +17,12 @@ MonoBehaviour:
   spawnPosY: 15
   type: 1
   pronoun: La
+  isAIally: 0
   hp: 110
   mp: 0
-  atk: 100
+  atk: 93
   defense: 108
-  agility: 86
+  agility: 80
   level: 0
   mana: 1
   criticalHit: 0
@@ -48,7 +49,7 @@ MonoBehaviour:
   - 0
   - 0
   learnSpells: []
-  strategy: 0
+  strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 100

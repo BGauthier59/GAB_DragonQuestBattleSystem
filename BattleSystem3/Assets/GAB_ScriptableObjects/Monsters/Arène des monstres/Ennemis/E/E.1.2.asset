@@ -17,9 +17,10 @@ MonoBehaviour:
   spawnPosY: 33
   type: 1
   pronoun: La
+  isAIally: 0
   hp: 121
   mp: 0
-  atk: 110
+  atk: 102
   defense: 110
   agility: 74
   level: 0
@@ -27,14 +28,15 @@ MonoBehaviour:
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
-  entityChanceToUseSpell: 0
+  entityChanceToUseSpell: 5
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells: []
+  spells:
+  - {fileID: 11400000, guid: f8ac9cf0ac7f49f41b929d940f6ee4e2, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -48,7 +50,7 @@ MonoBehaviour:
   - 0
   - 0
   learnSpells: []
-  strategy: 0
+  strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 100

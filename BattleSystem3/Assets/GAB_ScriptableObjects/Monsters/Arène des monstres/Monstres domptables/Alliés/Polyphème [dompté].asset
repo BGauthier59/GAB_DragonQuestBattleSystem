@@ -17,10 +17,11 @@ MonoBehaviour:
   spawnPosY: 37
   type: 0
   pronoun: 
+  isAIally: 1
   hp: 710
   mp: 16
   atk: 176
-  defense: 50
+  defense: 70
   agility: 68
   level: 1
   mana: 1
@@ -34,8 +35,7 @@ MonoBehaviour:
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells:
-  - {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
+  spells: []
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -46,10 +46,12 @@ MonoBehaviour:
   defLevelUp: 
   agiLevelUp: 
   manaLevelUp: []
-  learnSpells: []
+  learnSpells:
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 3fbf044240ec43c47ad770cf7e414d68, type: 2}
   strategy: 1
   elementType: 0
-  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  item: {fileID: 0}
   probability: 0
-  gold: 100
-  xp: 200
+  gold: 0
+  xp: 0

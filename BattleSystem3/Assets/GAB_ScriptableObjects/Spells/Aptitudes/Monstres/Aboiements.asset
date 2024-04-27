@@ -19,7 +19,7 @@ MonoBehaviour:
   spellIndex: 10
   spellType: 1
   cost: 3
-  SFXname: None
+  SFXname: WarCry
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
   doTargetEveryone: 0
@@ -31,3 +31,4 @@ MonoBehaviour:
   elementType: 0
   factor: 0
   staticDamages: 0
+  hits: 0

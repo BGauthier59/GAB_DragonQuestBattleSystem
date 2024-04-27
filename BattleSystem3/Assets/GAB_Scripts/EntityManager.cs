@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Xml.Serialization;
 using JetBrains.Annotations;
 using TMPro;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +13,7 @@ public class EntityManager : MonoBehaviour
     #region Variables
 
     public EntitySO entitySO;
+    public bool isAIally;
 
     public int entityIndex;
     public EntityType entityType;
@@ -104,6 +107,8 @@ public class EntityManager : MonoBehaviour
         name = entityName;
 
         entityType = entitySO.type;
+
+        isAIally = entitySO.isAIally;
 
         entityPronoun = entitySO.pronoun;
 
@@ -440,6 +445,79 @@ public class EntityManager : MonoBehaviour
     }
 
     #endregion
+
+    public void EscouadeBonus(Escouade escouade)
+    {
+        switch (escouade)
+        {
+            case (Escouade.NA): break;
+
+
+            case (Escouade.La_Fratrie_Baï):
+
+                entityHpMax += 50;
+                entityHp = entityHpMax;
+                entityAtkInit += 30;
+
+                break;
+
+            case (Escouade.Les_Bûcherons):
+
+                entityHp += 30;
+                entityMp += 30;
+                
+                break;
+
+            case (Escouade.Les_Bois_Réincarnés):
+
+                entityAtkInit += 20;
+                entityDefInit += 20;
+                entityChanceToUseSpell += 1;
+
+                break;
+
+            case (Escouade.Les_Ensorceleurs):
+
+                entityMpMax += 20;
+                entityMp = entityMpMax;
+                entityManaInit += 0.2f;
+                entityChanceToUseSpell += 1;
+                entityResilienceToSilence = 999;
+                
+                break;
+
+            case (Escouade.Chien_et_Chats): 
+                
+                break;
+
+            case (Escouade.Les_Monumentaux):
+
+                entityDefInit += 30;
+                entityResilienceToStatDecrease = 999;
+                
+                break;
+
+
+            case (Escouade.Le_Ciel_Etoilé):
+
+                entityAgiInit += 30;
+
+                
+                break;
+
+            case (Escouade.Le_Grand_Bleu):
+
+                entityHpMax += 40;
+                entityHp = entityHpMax;
+                entityManaInit += 0.2f;
+                
+                break;
+
+            case (Escouade.Le_Gang_Des_Dragons):
+                
+                break;
+        }
+    }
 
     public void SetNewDef(int defStatIndex)
     {

@@ -200,9 +200,17 @@ public class BattleManager : MonoSingleton<BattleManager>
                     switch (entityManager.entityType)
                     {
                         case (EntityType.Ally):
-                            if (!escapeFail) StartCoroutine(AllyIsActing(entityManager));
-                            else hasEntityActed = true; // Fuite ratée : on passe directement à la suite pour les héros
-                            break;
+                            if (entityManager.isAIally)
+                            {
+                                StartCoroutine(MonsterIsActing(entityManager));
+                                break;
+                            }
+                            else
+                            {
+                                if (!escapeFail) StartCoroutine(AllyIsActing(entityManager));
+                                else hasEntityActed = true; // Fuite ratée : on passe directement à la suite pour les héros
+                                break;
+                            }
 
                         case (EntityType.Monster):
 
@@ -560,6 +568,70 @@ public class BattleManager : MonoSingleton<BattleManager>
         }
         else
         {
+            if (monster.isAIally) //L'attaquant est un monstre allié.
+            {
+                AudioManager.instance.Play("PrepareAttack");
+
+                switch (entityActing.entityStrategy)
+                {
+                    // Attaque ou lance une aptitude
+                    case EntityStrategy.Attaquant:
+                        foreach (SpellSO spell in entityActing.entitySpells)
+                        {
+                            if (entityActing.entityMp >= spell.cost && entityActing.entityStatut != Statut.Silence)
+                            {
+                                spells.Add(spell);
+                            }
+                        }
+
+                        foreach (GameObject m in SpawningManager.instance.monstersInBattle)
+                        {
+                            EntityManager entityManager = m.GetComponent<EntityManager>();
+                            if (!entityManager.isDefeated)
+                            {
+                                targets.Add(m.GetComponent<EntityManager>());
+                            }
+                        }
+
+                        int aleaAction = Random.Range(1, monster.entityChanceToUseSpell);
+                        if (spells.Count == 0 || aleaAction == 1 || aleaAction == 2 || aleaAction == 3) // Attaque normale
+                        {
+                            target = targets[Random.Range(0, targets.Count)];
+                            StartCoroutine(FightManager.instance.Attacking(entityActing, target));
+                        }
+                        else // Lance une aptitude
+                        {
+                            SpellSO chosenSpell = spells[Random.Range(0, spells.Count)];
+                            if (chosenSpell.helpingSpell)
+                            {
+                                targets.Clear();
+                                foreach (GameObject h in SpawningManager.instance.heroesInBattle)
+                                {
+                                    var e = h.GetComponent<EntityManager>();
+                                    if (e.isDefeated) continue;
+                                    targets.Add(e);
+                                }
+                            }
+                            target = targets[Random.Range(0, targets.Count)];
+                            StartCoroutine(FightManager.instance.CastingSpell(entityActing, target, chosenSpell));
+                        }
+                        break;
+
+                    // Ne lance que des sorts si possible
+                    case EntityStrategy.Mage:
+                        break;
+
+                    // Soigne un allié si nécessaire
+                    case EntityStrategy.Soigneur:
+                        break;
+
+                    // Ne fait que attaquer
+                    default:
+                        break;
+                }
+            }
+            else //L'attaquant est un monstre ennemi.
+            {
                 switch (entityActing.entityStrategy)
                 {
                     // Attaque ou lance une aptitude
@@ -734,6 +806,13 @@ public class BattleManager : MonoSingleton<BattleManager>
                         StartCoroutine(FightManager.instance.Attacking(entityActing, target));
                         break;
                 }
+            }
+
+
+
+
+
+            
         }
         targets.Clear();
         yield return new WaitForSeconds(InterfaceManager.instance.time);

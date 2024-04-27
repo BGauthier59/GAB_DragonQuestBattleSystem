@@ -18,8 +18,8 @@ MonoBehaviour:
   type: 1
   pronoun: Le
   hp: 580
-  mp: 0
-  atk: 177
+  mp: 18
+  atk: 171
   defense: 95
   agility: 106
   level: 0
@@ -27,14 +27,16 @@ MonoBehaviour:
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
-  entityChanceToUseSpell: 0
+  entityChanceToUseSpell: 5
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells: []
+  spells:
+  - {fileID: 11400000, guid: 2a97068c2e16e404dac24cde891cba80, type: 2}
+  - {fileID: 11400000, guid: b4f574918374a0a4fb70de4f7a1724ad, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -48,7 +50,7 @@ MonoBehaviour:
   - 0
   - 0
   learnSpells: []
-  strategy: 0
+  strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 100

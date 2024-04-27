@@ -17,17 +17,18 @@ MonoBehaviour:
   spawnPosY: 18
   type: 0
   pronoun: 
+  isAIally: 1
   hp: 204
   mp: 60
   atk: 76
-  defense: 65
+  defense: 91
   agility: 68
   level: 1
   mana: 1.1
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
-  entityChanceToUseSpell: 7
+  entityChanceToUseSpell: 8
   entityResilienceToMPTheft: 999
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -45,10 +46,14 @@ MonoBehaviour:
   defLevelUp: 
   agiLevelUp: 
   manaLevelUp: []
-  learnSpells: []
+  learnSpells:
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 5089c0dd326eb8e4faa2b663df231e6f, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: dcc98863970e2e44ebf3ce0cbc90f624, type: 2}
   strategy: 1
   elementType: 0
-  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  item: {fileID: 0}
   probability: 0
-  gold: 50
-  xp: 100
+  gold: 0
+  xp: 0

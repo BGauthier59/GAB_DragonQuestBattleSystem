@@ -17,10 +17,11 @@ MonoBehaviour:
   spawnPosY: 19
   type: 0
   pronoun: 
+  isAIally: 1
   hp: 582
   mp: 130
   atk: 180
-  defense: 108
+  defense: 152
   agility: 139
   level: 1
   mana: 1.1
@@ -48,10 +49,16 @@ MonoBehaviour:
   defLevelUp: 
   agiLevelUp: 
   manaLevelUp: []
-  learnSpells: []
+  learnSpells:
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: e44cf753cd3b69d44a00868fecd70512, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
   strategy: 1
   elementType: 6
-  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  item: {fileID: 0}
   probability: 0
-  gold: 200
-  xp: 300
+  gold: 0
+  xp: 0

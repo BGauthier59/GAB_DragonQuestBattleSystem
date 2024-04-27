@@ -1213,9 +1213,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroes:
-  - {fileID: 11400000, guid: c33ef0b7bd8e196499490b48dc36fcf4, type: 2}
-  - {fileID: 11400000, guid: 4a3285dc7dba48a46bfdedb69c23598b, type: 2}
+  - {fileID: 11400000, guid: a813cdfb366a8a646a37ad52bfd5a47c, type: 2}
   - {fileID: 11400000, guid: bc733ced66c2d2e479411bf6cded2b5f, type: 2}
+  - {fileID: 11400000, guid: 4593942137d227c4ab54d883305677ed, type: 2}
+  escouade: 0
   howManyMonster: 0
   configsInLocation: []
   allZones:

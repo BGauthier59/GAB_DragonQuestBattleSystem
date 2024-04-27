@@ -17,27 +17,25 @@ MonoBehaviour:
   spawnPosY: 32
   type: 0
   pronoun: 
+  isAIally: 1
   hp: 358
   mp: 80
   atk: 102
-  defense: 89
+  defense: 96
   agility: 84
   level: 1
   mana: 1.2
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
-  entityChanceToUseSpell: 6
+  entityChanceToUseSpell: 9
   entityResilienceToMPTheft: 999
   entityResilienceToPoison: 999
   entityResilienceToBurn: 0
   entityResilienceToSilence: 999
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells:
-  - {fileID: 11400000, guid: 76abd92ebdb02184286edee36a22fd2c, type: 2}
-  - {fileID: 11400000, guid: 70d02411ea2cf3246b27a60b421f251c, type: 2}
-  - {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
+  spells: []
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -48,10 +46,16 @@ MonoBehaviour:
   defLevelUp: 
   agiLevelUp: 
   manaLevelUp: []
-  learnSpells: []
+  learnSpells:
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 76abd92ebdb02184286edee36a22fd2c, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 70d02411ea2cf3246b27a60b421f251c, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
   strategy: 1
   elementType: 0
-  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  item: {fileID: 0}
   probability: 0
-  gold: 100
-  xp: 200
+  gold: 0
+  xp: 0

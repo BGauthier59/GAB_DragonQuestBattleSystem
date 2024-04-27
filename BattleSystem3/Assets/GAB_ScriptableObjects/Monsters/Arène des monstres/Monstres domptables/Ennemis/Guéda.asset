@@ -17,10 +17,11 @@ MonoBehaviour:
   spawnPosY: 17
   type: 1
   pronoun: 
+  isAIally: 0
   hp: 825
   mp: 0
   atk: 251
-  defense: 107
+  defense: 142
   agility: 115
   level: 1
   mana: 1
@@ -51,6 +52,6 @@ MonoBehaviour:
   strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
-  probability: 0
+  probability: 100
   gold: 200
   xp: 300

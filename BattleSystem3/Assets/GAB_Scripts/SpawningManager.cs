@@ -11,7 +11,9 @@ public class SpawningManager : MonoSingleton<SpawningManager>
     #region Variables
     
     public EntitySO[] heroes;
-    
+
+    public Escouade escouade;
+
     public int howManyMonster;
     
     public ConfigSO[] configsInLocation;
@@ -67,6 +69,12 @@ public class SpawningManager : MonoSingleton<SpawningManager>
             heroManager.LinkingEquipments();
             heroManager.LinkingToDisplay();
             heroManager.SetSpells();
+
+            if(heroManager.isAIally)
+            {
+                heroManager.EscouadeBonus(escouade);
+            }
+
             heroesInBattle.Add(hero);
         }
         
@@ -116,4 +124,9 @@ public enum CombatZone
     Région_Osédur, Caverne_rite, Région_Port_Lotecque, Région_Ordréal, Epave, Océan_nord, Océan_sud, Îles_mer_intérieure, Péninsule_polaire, Presqu_île_Dalgor, Cap_Dalgorique, Région_Sanctum, 
     Île_chanceliers, Domarium_Alad, Région_Berserkia, Souterrains_Berserkia, Région_Delphoe, Tour_Delphois, Cimes_Inaccessibles_Delphoe, Cimes_Inaccessibles_Gulrur, Cimes_Inaccessibles_Ordréal,
     Cimes_Inaccessibles_Delsor, Retraite_Gulrur, Source_Divine, Domarium_Imper, Boss, BossChancelor, MajorBoss, FinalBoss
+}
+
+public enum Escouade
+{
+    NA, La_Fratrie_Baï, Les_Bûcherons, Les_Bois_Réincarnés, Les_Ensorceleurs, Chien_et_Chats, Les_Monumentaux, Le_Ciel_Etoilé, Le_Grand_Bleu, Le_Gang_Des_Dragons 
 }

@@ -17,10 +17,11 @@ MonoBehaviour:
   spawnPosY: 33
   type: 1
   pronoun: 
+  isAIally: 0
   hp: 737
   mp: 88
   atk: 165
-  defense: 118
+  defense: 135
   agility: 111
   level: 1
   mana: 1.3
@@ -36,7 +37,7 @@ MonoBehaviour:
   entityResilienceToStatDecrease: 0
   spells:
   - {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
-  - {fileID: 11400000, guid: eefb1a0c883773645b0612bcedbfb6e9, type: 2}
+  - {fileID: 11400000, guid: e0bdc00bcb4d8814595b418e46ed80c9, type: 2}
   - {fileID: 11400000, guid: ad7ee25a2f883dc469f1fe251255b48d, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
@@ -52,6 +53,6 @@ MonoBehaviour:
   strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
-  probability: 0
+  probability: 100
   gold: 200
   xp: 300

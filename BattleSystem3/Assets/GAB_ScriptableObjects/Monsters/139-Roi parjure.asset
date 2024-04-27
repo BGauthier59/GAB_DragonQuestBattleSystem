@@ -17,7 +17,7 @@ MonoBehaviour:
   spawnPosY: 38
   type: 1
   pronoun: Le
-  hp: 3340
+  hp: 3850
   mp: 9999
   atk: 218
   defense: 113

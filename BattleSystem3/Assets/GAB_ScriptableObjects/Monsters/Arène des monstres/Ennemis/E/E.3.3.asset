@@ -19,9 +19,9 @@ MonoBehaviour:
   pronoun: Le
   hp: 91
   mp: 0
-  atk: 70
-  defense: 78
-  agility: 79
+  atk: 85
+  defense: 130
+  agility: 88
   level: 0
   mana: 1
   criticalHit: 0
@@ -51,6 +51,6 @@ MonoBehaviour:
   strategy: 0
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
-  probability: 0
+  probability: 100
   gold: 0
   xp: 0

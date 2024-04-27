@@ -20,7 +20,7 @@ MonoBehaviour:
   hp: 4700
   mp: 9999
   atk: 292
-  defense: 140
+  defense: 150
   agility: 130
   level: 1
   mana: 1.4

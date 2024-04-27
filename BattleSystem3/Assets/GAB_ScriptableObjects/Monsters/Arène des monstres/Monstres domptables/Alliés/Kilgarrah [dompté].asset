@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
+  m_Name: "Kilgarrah [dompt\xE9]"
+  m_EditorClassIdentifier: 
+  entityName: Kilgarrah
+  sprite: {fileID: 21300000, guid: 00957b113d3c6f74b98d6d81ad274516, type: 3}
+  spawnPosY: 54
+  type: 0
+  pronoun: 
+  hp: 843
+  mp: 0
+  atk: 233
+  defense: 106
+  agility: 96
+  level: 1
+  mana: 1
+  criticalHit: 5
+  dodge: 0
+  actionPerTurn: 1
+  entityChanceToUseSpell: 7
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 999
+  entityResilienceToSilence: 999
+  entityResilienceToSleep: 999
+  entityResilienceToStatDecrease: 0
+  spells:
+  - {fileID: 11400000, guid: 2fc29d3f5c5580041a3755d52819b22c, type: 2}
+  - {fileID: 11400000, guid: b4f574918374a0a4fb70de4f7a1724ad, type: 2}
+  - {fileID: 11400000, guid: 1221fea7d1ea93942989b3ea8e69e800, type: 2}
+  - {fileID: 11400000, guid: 8783029f92f651a40838e1947d90b3ed, type: 2}
+  weapon: {fileID: 0}
+  helmet: {fileID: 0}
+  shield: {fileID: 0}
+  armor: {fileID: 0}
+  hpLevelUp: 
+  mpLevelUp: 
+  atkLevelUp: 
+  defLevelUp: 
+  agiLevelUp: 
+  manaLevelUp: []
+  learnSpells: []
+  strategy: 1
+  elementType: 6
+  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  probability: 0
+  gold: 200
+  xp: 300

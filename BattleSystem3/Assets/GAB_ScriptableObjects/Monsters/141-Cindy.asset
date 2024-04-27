@@ -17,10 +17,10 @@ MonoBehaviour:
   spawnPosY: 51
   type: 1
   pronoun: 
-  hp: 3730
+  hp: 4300
   mp: 9999
   atk: 248
-  defense: 118
+  defense: 140
   agility: 103
   level: 1
   mana: 1.2

@@ -1215,8 +1215,8 @@ MonoBehaviour:
   heroes:
   - {fileID: 11400000, guid: 928e003365f724947a30d3d5d69a7f75, type: 2}
   - {fileID: 11400000, guid: 973a2bcee7854ba4cb80754e6ab194e8, type: 2}
+  - {fileID: 11400000, guid: 6cb18384e53f45f47853634a3b63124d, type: 2}
   - {fileID: 11400000, guid: a0e684e184818dc4e92dc49472565782, type: 2}
-  - {fileID: 11400000, guid: bb6856df1e8e69c439a55a2dc92b65cb, type: 2}
   howManyMonster: 0
   configsInLocation: []
   allZones:
@@ -1270,6 +1270,31 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 90b32dd528407884db8adf0ebd5dd1a9, type: 2}
   - {fileID: 11400000, guid: b4f0fe93c78fc034484b6b16ec3a1753, type: 2}
   - {fileID: 11400000, guid: 73debe510b1edba46a0f1d29bfc4f58f, type: 2}
+  - {fileID: 11400000, guid: fc2cb428d7aa3404983dfbc92db1eed6, type: 2}
+  - {fileID: 11400000, guid: c0f660eaf157c5d49b81ce8ea7138fdd, type: 2}
+  - {fileID: 11400000, guid: 89826587ed78ba84abc50547f9bc2976, type: 2}
+  - {fileID: 11400000, guid: 81e4e93118a1ead419d6eef1cdfb125e, type: 2}
+  - {fileID: 11400000, guid: 124186523d3bf41449be3aad77059dba, type: 2}
+  - {fileID: 11400000, guid: d8ef05abc5faea04da8446aae869642e, type: 2}
+  - {fileID: 11400000, guid: 20d19c27be0b75c49bac4f602a76dafe, type: 2}
+  - {fileID: 11400000, guid: 9f9a20bff5ba6ca40a79bf221f0d33c3, type: 2}
+  - {fileID: 11400000, guid: 91eea88d1f73cc74bafdfa489e599b44, type: 2}
+  - {fileID: 11400000, guid: 027d94234ef5e2b4d93fd1c6cf14b315, type: 2}
+  - {fileID: 11400000, guid: 814ed2b132e618a4a9f1549bf96d7f58, type: 2}
+  - {fileID: 11400000, guid: 5110ad4d9f747a346af6463abe1a407c, type: 2}
+  - {fileID: 11400000, guid: 0064a1b774e88fc4d84e7264c538e9cd, type: 2}
+  - {fileID: 11400000, guid: 960c886f5adaa9b4a951bb59960f729e, type: 2}
+  - {fileID: 11400000, guid: f309cc092256b0a41876bfe7afd419f5, type: 2}
+  - {fileID: 11400000, guid: 06f5a06b133cb4d44b87abec250a31d2, type: 2}
+  - {fileID: 11400000, guid: c9724bfb58d56a840b340d3c1ab5f1bd, type: 2}
+  - {fileID: 11400000, guid: a070781c8c176a24ebdcf66216fe26da, type: 2}
+  - {fileID: 11400000, guid: fbb097f1ecfd05e44ae4d0ccfa071825, type: 2}
+  - {fileID: 11400000, guid: 71f683b511034da478eae9e04a1376fc, type: 2}
+  - {fileID: 11400000, guid: df19d31ca9510b94e8d7c82212f0e80e, type: 2}
+  - {fileID: 11400000, guid: 8bac96c92bf28c44bb21f64b810303f2, type: 2}
+  - {fileID: 11400000, guid: 57c4cc84bdbfadc4594bde82d0362fc7, type: 2}
+  - {fileID: 11400000, guid: 545a446fe83cf874fb80244054c71828, type: 2}
+  - {fileID: 11400000, guid: 2c1608fdf58dde64c9b7158269a53ab2, type: 2}
   selectedZone: {fileID: 0}
   isNight: 0
   centerBattle: {fileID: 156872459}
@@ -4999,6 +5024,56 @@ MonoBehaviour:
     - m_Text: Boss15
       m_Image: {fileID: 0}
     - m_Text: Boss16
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le canardeur"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le golem des for\xEAts"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le grand molosse"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le boudeliste"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le lutin malicieux"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le p\xE8lerin bourru"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le cauchemar du d\xE9sert"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] L'\xE9toile montante"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le roi Ba\xEF"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le vestige ambulant"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] La f\xE9e incendiaire"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le berg\xE9ant"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le vieux proph\xE8te"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le rhino furieux"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le singe ail\xE9"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le seigneur Ba\xEF"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le corsaire lupin"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] L'albatroce"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le gourou grotesque"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le drag\xF6m"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] L'empereur Ba\xEF"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le destrier c\xE9leste"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] L'homme de paille"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le monstronimbus"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] L'eautiquit\xE9"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

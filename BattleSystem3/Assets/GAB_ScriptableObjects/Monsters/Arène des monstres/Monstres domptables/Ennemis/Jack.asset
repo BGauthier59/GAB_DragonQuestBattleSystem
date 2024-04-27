@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
+  m_Name: Jack
+  m_EditorClassIdentifier: 
+  entityName: Le corsaire lupin
+  sprite: {fileID: 21300000, guid: e1073f2fec1265d4aaf95ddccd9840d7, type: 3}
+  spawnPosY: 20
+  type: 1
+  pronoun: 
+  hp: 463
+  mp: 50
+  atk: 136
+  defense: 85
+  agility: 72
+  level: 1
+  mana: 1
+  criticalHit: 0
+  dodge: 5
+  actionPerTurn: 1
+  entityChanceToUseSpell: 7
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 0
+  entityResilienceToSilence: 0
+  entityResilienceToSleep: 0
+  entityResilienceToStatDecrease: 999
+  spells:
+  - {fileID: 11400000, guid: 1b5278c00ceb5f741b2c6b70bfd8d468, type: 2}
+  - {fileID: 11400000, guid: 5fc9270c2fe6fa949bfa8316178a942c, type: 2}
+  - {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
+  weapon: {fileID: 0}
+  helmet: {fileID: 0}
+  shield: {fileID: 0}
+  armor: {fileID: 0}
+  hpLevelUp: 
+  mpLevelUp: 
+  atkLevelUp: 
+  defLevelUp: 
+  agiLevelUp: 
+  manaLevelUp: []
+  learnSpells: []
+  strategy: 1
+  elementType: 0
+  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  probability: 0
+  gold: 100
+  xp: 200

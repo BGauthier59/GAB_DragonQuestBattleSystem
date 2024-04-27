@@ -20,7 +20,7 @@ MonoBehaviour:
   hp: 3090
   mp: 9999
   atk: 245
-  defense: 126
+  defense: 144
   agility: 120
   level: 1
   mana: 1.2
@@ -38,7 +38,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8ad2d2e45d037024e8f59f797fbd1715, type: 2}
   - {fileID: 11400000, guid: 924aec6e9095dd043a1755a1a035e8d2, type: 2}
   - {fileID: 11400000, guid: 005010a22dfd8ea42bb2c9214f99367c, type: 2}
-  - {fileID: 11400000, guid: 786427b99a944984481c5bbe8749b6d8, type: 2}
+  - {fileID: 11400000, guid: d109d12018ebaa34f8b9bc754de741b8, type: 2}
   - {fileID: 11400000, guid: 1e6c731f4d9499c409dfbe4a9e364428, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}

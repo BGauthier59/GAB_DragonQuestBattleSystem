@@ -468,14 +468,14 @@ public class EntityManager : MonoBehaviour
 
             case (1):
 
-                float entityDefUpper = entityDefInit * 1.5f;
+                float entityDefUpper = entityDefInit * 1.4f;
                 int realEntityDefUpper = (int)entityDefUpper;
                 entityDef = realEntityDefUpper;
                 break;
 
             case (2):
 
-                float entityDefMax = entityDefInit * 2;
+                float entityDefMax = entityDefInit * 1.75f;
                 entityDef = (int)entityDefMax;
                 break;
         }
@@ -508,14 +508,14 @@ public class EntityManager : MonoBehaviour
 
             case (1):
 
-                float entityAtkUpper = entityAtkInit * 1.5f;
+                float entityAtkUpper = entityAtkInit * 1.25f;
                 int realEntityAtkUpper = (int)entityAtkUpper;
                 entityAtk = realEntityAtkUpper;
                 break;
 
             case (2):
 
-                float entityAtkMax = entityAtkInit * 2;
+                float entityAtkMax = entityAtkInit * 1.5f;
                 entityAtk = (int)entityAtkMax;
                 break;
         }

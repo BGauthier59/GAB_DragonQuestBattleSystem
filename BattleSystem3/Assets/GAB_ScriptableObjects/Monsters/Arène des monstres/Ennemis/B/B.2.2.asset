@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
+  m_Name: B.2.2
+  m_EditorClassIdentifier: 
+  entityName: Cumulus Lex
+  sprite: {fileID: 21300000, guid: a7f980bb9decd654eab2f0d74e4fccb0, type: 3}
+  spawnPosY: 48
+  type: 1
+  pronoun: Le
+  hp: 580
+  mp: 0
+  atk: 177
+  defense: 95
+  agility: 106
+  level: 0
+  mana: 1
+  criticalHit: 0
+  dodge: 0
+  actionPerTurn: 1
+  entityChanceToUseSpell: 0
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 0
+  entityResilienceToSilence: 0
+  entityResilienceToSleep: 0
+  entityResilienceToStatDecrease: 0
+  spells: []
+  weapon: {fileID: 0}
+  helmet: {fileID: 0}
+  shield: {fileID: 0}
+  armor: {fileID: 0}
+  hpLevelUp: 0000000000000000
+  mpLevelUp: 0000000000000000
+  atkLevelUp: 0000000000000000
+  defLevelUp: 0000000000000000
+  agiLevelUp: 0000000000000000
+  manaLevelUp:
+  - 0
+  - 0
+  learnSpells: []
+  strategy: 0
+  elementType: 0
+  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  probability: 100
+  gold: 0
+  xp: 0

@@ -26,8 +26,9 @@ MonoBehaviour:
   helpingSpell: 1
   selfSpell: 0
   onlyWorkOnDefeated: 1
-  successRate: 50
+  successRate: 55
   strenght: 0
   elementType: 0
   factor: 0
   staticDamages: 0
+  hits: 0

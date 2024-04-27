@@ -38,7 +38,6 @@ MonoBehaviour:
   spells:
   - {fileID: 11400000, guid: 1c041651fc131f945b8c672c163c7baa, type: 2}
   - {fileID: 11400000, guid: 5089c0dd326eb8e4faa2b663df231e6f, type: 2}
-  - {fileID: 11400000, guid: 4f54229ba58584c4b8c39efb201b8b8f, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}

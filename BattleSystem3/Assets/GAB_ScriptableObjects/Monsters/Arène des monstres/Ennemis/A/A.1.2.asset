@@ -17,9 +17,10 @@ MonoBehaviour:
   spawnPosY: 26
   type: 1
   pronoun: Le
+  isAIally: 0
   hp: 518
   mp: 14
-  atk: 186
+  atk: 182
   defense: 110
   agility: 108
   level: 0

@@ -20,7 +20,7 @@ MonoBehaviour:
   isAIally: 1
   hp: 843
   mp: 0
-  atk: 233
+  atk: 263
   defense: 121
   agility: 96
   level: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
   manaLevelUp: []
   learnSpells:
   - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 2fc29d3f5c5580041a3755d52819b22c, type: 2}
+    learningSpell: {fileID: 11400000, guid: d347a2839b749974fba357b2f7c858f0, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: b4f574918374a0a4fb70de4f7a1724ad, type: 2}
   - learningLevel: 0

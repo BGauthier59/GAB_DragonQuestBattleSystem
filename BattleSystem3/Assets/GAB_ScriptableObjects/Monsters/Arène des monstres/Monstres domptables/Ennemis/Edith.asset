@@ -20,11 +20,11 @@ MonoBehaviour:
   isAIally: 0
   hp: 587
   mp: 50
-  atk: 147
+  atk: 167
   defense: 128
   agility: 116
   level: 1
-  mana: 1.2
+  mana: 1.3
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1

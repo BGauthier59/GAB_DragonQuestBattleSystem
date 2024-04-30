@@ -24,7 +24,7 @@ MonoBehaviour:
   defense: 205
   agility: 66
   level: 1
-  mana: 1.4
+  mana: 1.6
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
@@ -35,7 +35,10 @@ MonoBehaviour:
   entityResilienceToSilence: 999
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 999
-  spells: []
+  spells:
+  - {fileID: 11400000, guid: 7ea0b1b4207a45f4f859255ee512f91d, type: 2}
+  - {fileID: 11400000, guid: f80ee2e4a9ead3b4c9d4365973fafbaa, type: 2}
+  - {fileID: 11400000, guid: 1221fea7d1ea93942989b3ea8e69e800, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -50,11 +53,11 @@ MonoBehaviour:
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 7ea0b1b4207a45f4f859255ee512f91d, type: 2}
   - learningLevel: 0
-    learningSpell: {fileID: 0}
+    learningSpell: {fileID: 11400000, guid: f80ee2e4a9ead3b4c9d4365973fafbaa, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 1221fea7d1ea93942989b3ea8e69e800, type: 2}
   strategy: 1
-  elementType: 5
+  elementType: 2
   item: {fileID: 0}
   probability: 0
   gold: 0

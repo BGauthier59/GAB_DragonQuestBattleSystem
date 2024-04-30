@@ -19,8 +19,8 @@ MonoBehaviour:
   pronoun: 
   isAIally: 1
   hp: 582
-  mp: 130
-  atk: 180
+  mp: 255
+  atk: 206
   defense: 152
   agility: 139
   level: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
   spells:
   - {fileID: 11400000, guid: e44cf753cd3b69d44a00868fecd70512, type: 2}
   - {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
-  - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
+  - {fileID: 11400000, guid: 5abb6247cff777f4fbfd90db5f288afc, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -55,7 +55,7 @@ MonoBehaviour:
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
   - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
+    learningSpell: {fileID: 11400000, guid: 5abb6247cff777f4fbfd90db5f288afc, type: 2}
   strategy: 1
   elementType: 6
   item: {fileID: 0}

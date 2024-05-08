@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 4-Toge magique
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: toge magique
   equipmentName: Toge
   equipmentSprite: {fileID: 21300000, guid: 832f334b16cbbd242b27ac2b809b6bad, type: 3}
   equipmentType: 0

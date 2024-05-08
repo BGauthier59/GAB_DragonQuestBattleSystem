@@ -1043,7 +1043,7 @@ public class BattleManager : MonoSingleton<BattleManager>
         {
             InterfaceManager.instance.Message(true, $"{monsterItem} laisse tomber un objet...");
             yield return new WaitForSeconds(InterfaceManager.instance.time);
-            InterfaceManager.instance.Message(true, $"L'équipe obtient : {gotItem.itemName}");
+            InterfaceManager.instance.Message(true, $"L'équipe obtient : {gotItem.itemName}.");
             yield return new WaitForSeconds(InterfaceManager.instance.time * 2);
         }
         

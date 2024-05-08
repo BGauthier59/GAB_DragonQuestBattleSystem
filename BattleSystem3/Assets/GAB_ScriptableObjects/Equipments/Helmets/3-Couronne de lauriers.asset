@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 3-Couronne de lauriers
   m_EditorClassIdentifier: 
-  itemName: Couronne de lauriers
+  itemName: couronne de lauriers
   equipmentName: Couronne de lauriers
   equipmentSprite: {fileID: 21300000, guid: eb988514d0e8b484eb4dfbf2837e1947, type: 3}
   equipmentType: 2

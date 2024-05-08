@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc15f3d898c92a143981e506c0dfcc0d, type: 3}
-  m_Name: 1-Hache de pierre
+  m_Name: 1-Hache de silex
   m_EditorClassIdentifier: 
-  weaponName: Hache de pierre
+  weaponName: Hache de silex
   weaponSprite: {fileID: 21300000, guid: 3c28957e2ba150d48bae82f48307a182, type: 3}
   weaponType: 3
   hp: 0

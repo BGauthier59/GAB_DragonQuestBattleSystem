@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 3-Palladium
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: palladium
   equipmentName: Palladium
   equipmentSprite: {fileID: 21300000, guid: 9a64f587ff83b3344bed68fd84147551, type: 3}
   equipmentType: 1

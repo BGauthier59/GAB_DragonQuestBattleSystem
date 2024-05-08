@@ -50,7 +50,7 @@ MonoBehaviour:
   learnSpells: []
   strategy: 1
   elementType: 4
-  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  item: {fileID: 11400000, guid: ba918f0cdb710664ab1b0f7335e65322, type: 2}
   probability: 0
   gold: 7
   xp: 8

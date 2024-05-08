@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 4-Bouclier de la garde
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: bouclier de la garde
   equipmentName: Bouclier de la garde
   equipmentSprite: {fileID: 21300000, guid: 27e0ce8e66bf6c34dbd82181a8003e5a, type: 3}
   equipmentType: 1

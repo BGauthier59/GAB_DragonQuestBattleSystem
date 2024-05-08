@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 3-Dolman
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: dolman
   equipmentName: Dolman
   equipmentSprite: {fileID: 21300000, guid: 4568a351936211c47800374cc3d26d5b, type: 3}
   equipmentType: 0

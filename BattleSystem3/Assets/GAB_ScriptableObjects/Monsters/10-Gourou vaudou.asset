@@ -52,6 +52,6 @@ MonoBehaviour:
   strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: cf11d9cce110bc44ea575a59ddb9789e, type: 2}
-  probability: 0
+  probability: 16
   gold: 7
   xp: 5

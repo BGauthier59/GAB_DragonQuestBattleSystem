@@ -1041,10 +1041,12 @@ public class BattleManager : MonoSingleton<BattleManager>
 
         if (hasGotItem)
         {
-            InterfaceManager.instance.Message(true, $"{monsterItem} laisse tomber un objet...");
             yield return new WaitForSeconds(InterfaceManager.instance.time);
+            AudioManager.instance.Play("Item");
+            InterfaceManager.instance.Message(true, $"{monsterItem} laisse tomber un objet...");
+            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime);
             InterfaceManager.instance.Message(true, $"L'équipe obtient : {gotItem.itemName}.");
-            yield return new WaitForSeconds(InterfaceManager.instance.time * 2);
+            yield return new WaitForSeconds(InterfaceManager.instance.needToReadTime * 2);
         }
         
         StatDisplayManager.instance.goldTotal += goldEarned;

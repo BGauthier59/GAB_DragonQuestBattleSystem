@@ -17,9 +17,10 @@ MonoBehaviour:
   spawnPosY: 58
   type: 1
   pronoun: 
+  isAIally: 0
   hp: 9999
   mp: 9999
-  atk: 250
+  atk: 292
   defense: 150
   agility: 40
   level: 1
@@ -50,7 +51,7 @@ MonoBehaviour:
   learnSpells: []
   strategy: 1
   elementType: 7
-  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  item: {fileID: 0}
   probability: 0
   gold: 0
   xp: 0

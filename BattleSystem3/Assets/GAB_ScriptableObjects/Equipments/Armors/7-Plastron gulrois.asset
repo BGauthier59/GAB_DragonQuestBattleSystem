@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdbb4c3487bebb44bc9de682dc09b72, type: 3}
   m_Name: 7-Plastron gulrois
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: plastron gulrois
   equipmentName: Plastron gulrois
   equipmentSprite: {fileID: 21300000, guid: cabad6b5ad15ae54db9993f72cba5ea7, type: 3}
   equipmentType: 0

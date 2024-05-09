@@ -17,6 +17,7 @@ MonoBehaviour:
   spawnPosY: 20
   type: 1
   pronoun: Le
+  isAIally: 0
   hp: 63
   mp: 15
   atk: 68
@@ -49,7 +50,7 @@ MonoBehaviour:
   learnSpells: []
   strategy: 1
   elementType: 0
-  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
-  probability: 0
+  item: {fileID: 11400000, guid: 1efc4032e2239d04b80fd88c7d21f940, type: 2}
+  probability: 32
   gold: 19
   xp: 22

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellName: Explosion magique
   spellDescription: SORT MONSTRE
-  inBattleDescription: "ib\xE8re tous ses pouvoirs magiques d'un seul coup !"
+  inBattleDescription: "lib\xE8re tous ses pouvoirs magiques d'un seul coup !"
   excuseForInaction: 
-  spellIndex: 28
+  spellIndex: 34
   spellType: 0
   cost: 5000
   SFXname: MagicBurst
@@ -30,5 +30,5 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 0
-  staticDamages: 170
+  staticDamages: 200
   hits: 0

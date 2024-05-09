@@ -19,10 +19,10 @@ MonoBehaviour:
   pronoun: Le
   isAIally: 0
   hp: 36
-  mp: 0
+  mp: 3
   atk: 28
-  defense: 22
-  agility: 17
+  defense: 17
+  agility: 16
   level: 1
   mana: 1
   criticalHit: 0

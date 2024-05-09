@@ -17,7 +17,7 @@ MonoBehaviour:
   inBattleDescription: "porte un coup an\xE9antissant les d\xE9fenses adverses !"
   excuseForInaction: 
   spellIndex: 4
-  spellType: 0
+  spellType: 1
   cost: 5
   SFXname: WallBreak
   hasSpecialEffect: 1

@@ -15,7 +15,7 @@ MonoBehaviour:
   spellName: Aboiements
   spellDescription: ATTAQUE MONSTRE
   inBattleDescription: aboie sauvagement !
-  excuseForInaction: 
+  excuseForInaction: "est fig\xE9 par la peur !"
   spellIndex: 10
   spellType: 1
   cost: 3

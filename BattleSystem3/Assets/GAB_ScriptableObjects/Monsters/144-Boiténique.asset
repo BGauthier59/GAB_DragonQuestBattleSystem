@@ -18,7 +18,7 @@ MonoBehaviour:
   type: 1
   pronoun: 
   isAIally: 0
-  hp: 4700
+  hp: 5100
   mp: 9999
   atk: 292
   defense: 150
@@ -42,9 +42,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2c556ee3ae37cfa4297e28ec84023a23, type: 2}
   - {fileID: 11400000, guid: facbac75ad8a7a1409514b639d4b93b0, type: 2}
   - {fileID: 11400000, guid: d347a2839b749974fba357b2f7c858f0, type: 2}
-  - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
+  - {fileID: 11400000, guid: 0cb4c9309c70810448c124957dd0b5cc, type: 2}
   - {fileID: 11400000, guid: 6f9234e84aec74d4aaf089d781d98c59, type: 2}
   - {fileID: 11400000, guid: 2deabe3d8ac2c3848a2baf9b2acf7827, type: 2}
+  - {fileID: 11400000, guid: 7c91a77be9d783344b7f345a8d4d9a26, type: 2}
+  - {fileID: 11400000, guid: 5a51675c70ab5e941b0351728ac4df00, type: 2}
+  - {fileID: 11400000, guid: ec0b2f87af93a6f4ba816541d4d8a6cd, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -60,5 +63,5 @@ MonoBehaviour:
   elementType: 7
   item: {fileID: 11400000, guid: e475317bbda854f4b9bf9300d402f226, type: 2}
   probability: 999
-  gold: 800
-  xp: 1600
+  gold: 0
+  xp: 0

@@ -201,7 +201,7 @@ public class FightManager : MonoSingleton<FightManager>
                         int defense = target.entityDef;
 
                         float damages = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (defense / 4)) * spell.factor * 0.01f;
-                        if (target.isDefending) damages *= 2;
+                        if (target.isDefending) damages /= 2;
                         int realDamages = (int) damages;
                         if (realDamages < 0) realDamages = Random.Range(0,2);
 
@@ -263,7 +263,7 @@ public class FightManager : MonoSingleton<FightManager>
                                 int defense = target.entityDef;
                             
                                 float damages = (((Random.Range(caster.entityAtk * 0.9f, caster.entityAtk * 1.1f)) / 2) - (defense / 4)) * spell.factor * 0.01f;
-                                if (target.isDefending) damages *= 2;
+                                if (target.isDefending) damages /= 2;
                                 int realDamages = (int) damages;
                                 if (realDamages < 0) realDamages = Random.Range(0,2);
 
@@ -325,7 +325,7 @@ public class FightManager : MonoSingleton<FightManager>
                         float damages = (caster.entityMana * spell.strenght) * Random.Range(0.9f, 1.1f);
 
                         damages *= SpellElementFactor(spell, target);
-                        if (target.isDefending) damages *= 2;
+                        if (target.isDefending) damages /= 2;
                         int realDamages = (int) damages;
                         if (realDamages < 0) realDamages = Random.Range(0,2);
 
@@ -366,7 +366,7 @@ public class FightManager : MonoSingleton<FightManager>
                             {
                                 float damages = (caster.entityMana * spell.strenght) * Random.Range(0.9f, 1.1f);
                                 damages *= SpellElementFactor(spell, target);
-                                if (target.isDefending) damages *= 2;
+                                if (target.isDefending) damages /= 2;
                                 int realDamages = (int) damages;
 
                                 if (target.isReflected == true && spell.spellType == SpellType.Spell)
@@ -1918,6 +1918,53 @@ public class FightManager : MonoSingleton<FightManager>
                 }
 
                 break;
+
+            case 34: //Explosion magique
+
+                float damages34 = Random.Range(spell.staticDamages * 0.9f, spell.staticDamages * 1.1f);
+                if (targetEntity.isDefending) damages34 /= 2;
+                int realDamages34 = (int)(damages34);
+
+                if (realDamages34 == 0) AudioManager.instance.Play("Miss");
+                else AudioManager.instance.Play("Hit");
+
+                InterfaceManager.instance.Message(true, $"{targetEntity.entityName} subit {realDamages34} points de dégâts !");
+                yield return new WaitForSeconds(InterfaceManager.instance.shortTime);
+                targetEntity.entityHp -= realDamages34;
+
+                if (CheckDefeat(targetEntity))
+                {
+                    InterfaceManager.instance.Message(true, $"{targetEntity.entityName} est vaincu(e) !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    break;
+                }
+                StatDisplayManager.instance.DisplayStat(targetEntity);
+
+                caster.entityMp = 0;
+
+                break;
+
+            case 35: //Régénération magique / méditation
+
+
+                if (caster.entityMp == 0)
+                {
+                    caster.entityMp = 9999;
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} récupère l'intégralité de sa magie !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                    break;
+                }
+                else
+                {
+                    caster.entityHp += 500;
+                    if (caster.entityHp >= caster.entityHpMax) caster.entityHp = caster.entityHpMax;
+                    InterfaceManager.instance.Message(true, $"{caster.entityName} récupère 500 points de vie !");
+                    yield return new WaitForSeconds(InterfaceManager.instance.time);
+                    StatDisplayManager.instance.DisplayStat(targetEntity);
+                    break;
+                }
+                
 
             default:
                 Debug.LogError("Index du sort invalide");

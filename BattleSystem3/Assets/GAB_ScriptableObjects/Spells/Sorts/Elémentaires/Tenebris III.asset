@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
   m_Name: Tenebris III
   m_EditorClassIdentifier: 
-  spellName: I
+  spellName: Tenebris III
   spellDescription: "Noie tous les ennemis dans un oc\xE9an de t\xE9n\xE8bres."
   inBattleDescription: lance le Tenebris III !
   excuseForInaction: 
@@ -31,3 +31,4 @@ MonoBehaviour:
   elementType: 7
   factor: 0
   staticDamages: 0
+  hits: 0

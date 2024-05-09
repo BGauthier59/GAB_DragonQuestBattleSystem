@@ -19,7 +19,7 @@ MonoBehaviour:
   pronoun: 
   isAIally: 0
   hp: 1043
-  mp: 0
+  mp: 24
   atk: 263
   defense: 121
   agility: 96

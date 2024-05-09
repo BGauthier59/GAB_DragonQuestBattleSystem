@@ -18,7 +18,7 @@ MonoBehaviour:
   excuseForInaction: 
   spellIndex: 13
   spellType: 1
-  cost: 0
+  cost: 5
   SFXname: Torpeur
   hasSpecialEffect: 1
   hasEffectAndDamages: 0

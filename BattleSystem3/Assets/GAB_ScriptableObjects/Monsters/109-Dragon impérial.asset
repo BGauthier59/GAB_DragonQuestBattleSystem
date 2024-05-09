@@ -19,7 +19,7 @@ MonoBehaviour:
   pronoun: Le
   isAIally: 0
   hp: 505
-  mp: 0
+  mp: 24
   atk: 255
   defense: 132
   agility: 105

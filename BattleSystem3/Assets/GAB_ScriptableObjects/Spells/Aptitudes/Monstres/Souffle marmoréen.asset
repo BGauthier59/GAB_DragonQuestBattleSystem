@@ -18,7 +18,7 @@ MonoBehaviour:
   excuseForInaction: 
   spellIndex: 28
   spellType: 1
-  cost: 0
+  cost: 12
   SFXname: SouffleGlace
   hasSpecialEffect: 1
   hasEffectAndDamages: 0

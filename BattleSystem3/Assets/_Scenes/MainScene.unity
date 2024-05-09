@@ -1215,8 +1215,6 @@ MonoBehaviour:
   heroes:
   - {fileID: 11400000, guid: 928e003365f724947a30d3d5d69a7f75, type: 2}
   - {fileID: 11400000, guid: 973a2bcee7854ba4cb80754e6ab194e8, type: 2}
-  - {fileID: 11400000, guid: 6cb18384e53f45f47853634a3b63124d, type: 2}
-  - {fileID: 11400000, guid: a0e684e184818dc4e92dc49472565782, type: 2}
   escouade: 0
   howManyMonster: 0
   configsInLocation: []
@@ -2061,7 +2059,7 @@ PrefabInstance:
     - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
       propertyPath: soundArray.Array.data[44].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b8f4c795b843f9f4abdad80922e7e191, type: 3}
+      objectReference: {fileID: 8300000, guid: 51698e7a3d8c9a04fa87b45c7edc211f, type: 3}
     - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
       propertyPath: soundArray.Array.data[44].loop
       value: 1
@@ -2096,6 +2094,30 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 6a78f00bf57508a4eb4c64b606102040, type: 3}
     - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
       propertyPath: soundArray.Array.data[47].name
+      value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
+      propertyPath: soundArray.Array.data[48].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a78f00bf57508a4eb4c64b606102040, type: 3}
+    - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
+      propertyPath: soundArray.Array.data[48].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
+      propertyPath: soundArray.Array.data[48].name
+      value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
+      propertyPath: soundArray.Array.data[49].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a78f00bf57508a4eb4c64b606102040, type: 3}
+    - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
+      propertyPath: soundArray.Array.data[49].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
+      propertyPath: soundArray.Array.data[49].name
       value: Item
       objectReference: {fileID: 0}
     - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
@@ -2256,6 +2278,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
       propertyPath: soundArray.Array.data[47].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
+      propertyPath: soundArray.Array.data[48].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
+      propertyPath: soundArray.Array.data[49].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
@@ -2420,7 +2450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
       propertyPath: soundArray.Array.data[44].volume
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
       propertyPath: soundArray.Array.data[45].volume
@@ -2432,6 +2462,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
       propertyPath: soundArray.Array.data[47].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
+      propertyPath: soundArray.Array.data[48].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069590612839330107, guid: b492948f39090f7408b76a86da939b1d, type: 3}
+      propertyPath: soundArray.Array.data[49].volume
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellName: Rituel antimagique
   spellDescription: ATTAQUE MONSTRE
-  inBattleDescription: "Invoque des forces occultes qui se jettent sur l'\xE9quipe
+  inBattleDescription: "invoque des forces occultes qui se jettent sur l'\xE9quipe
     !"
   excuseForInaction: 
   spellIndex: 27
@@ -32,3 +32,4 @@ MonoBehaviour:
   elementType: 0
   factor: 100
   staticDamages: 0
+  hits: 0

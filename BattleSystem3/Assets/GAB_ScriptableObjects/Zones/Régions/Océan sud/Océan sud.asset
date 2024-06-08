@@ -31,6 +31,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a3a047525be9db74983f58535d7ef9f9, type: 2}
   - {fileID: 11400000, guid: 9540ac55a9b33eb42b23220705a78651, type: 2}
   - {fileID: 11400000, guid: 844b5744577535044bd1f8d4b607106b, type: 2}
+  - {fileID: 11400000, guid: 3a0e91ee6fed77247bf08f1427afd0ca, type: 2}
+  - {fileID: 11400000, guid: 2311ec6b5c3dae246a29d5c49f10a168, type: 2}
+  - {fileID: 11400000, guid: 7715a8762df803149961ce28a166260c, type: 2}
+  - {fileID: 11400000, guid: 88df57747b2384d4d8bfb7cca922a74a, type: 2}
   configsInZoneNight:
   - {fileID: 11400000, guid: 898b275e9d71b014594c561255c3223b, type: 2}
   - {fileID: 11400000, guid: ded8060d58d4d03409ca8fec5021c0be, type: 2}
@@ -50,6 +54,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a3a047525be9db74983f58535d7ef9f9, type: 2}
   - {fileID: 11400000, guid: 9540ac55a9b33eb42b23220705a78651, type: 2}
   - {fileID: 11400000, guid: 844b5744577535044bd1f8d4b607106b, type: 2}
+  - {fileID: 11400000, guid: 3a0e91ee6fed77247bf08f1427afd0ca, type: 2}
+  - {fileID: 11400000, guid: 2311ec6b5c3dae246a29d5c49f10a168, type: 2}
+  - {fileID: 11400000, guid: 7715a8762df803149961ce28a166260c, type: 2}
+  - {fileID: 11400000, guid: 88df57747b2384d4d8bfb7cca922a74a, type: 2}
   minMaxMonstersInBattle: 0000000000000000
   fontZoneDay: {fileID: 21300000, guid: 7f2d851bcc92c484a8b374cb9db87821, type: 3}
   fontZoneNight: {fileID: 21300000, guid: 212a3b9ae27a9b34995fb277aa5d09fb, type: 3}

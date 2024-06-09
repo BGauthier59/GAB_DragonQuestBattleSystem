@@ -20,7 +20,7 @@ MonoBehaviour:
   isAIally: 0
   hp: 140
   mp: 16
-  atk: 139
+  atk: 158
   defense: 104
   agility: 83
   level: 1

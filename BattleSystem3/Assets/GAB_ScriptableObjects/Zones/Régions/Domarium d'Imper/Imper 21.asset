@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3613da6db18ab8d44b981e903bb8a24b, type: 3}
-  m_Name: Imper 14
+  m_Name: Imper 21
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: aebf97c3fe86a92409d90a728381541b, type: 2}
-  - {fileID: 11400000, guid: aebf97c3fe86a92409d90a728381541b, type: 2}
   - {fileID: 11400000, guid: 0b138651db3c14547aa2ba4c4aacdba9, type: 2}
-  - {fileID: 11400000, guid: e87605dfec3ec7d4a9dfe00fd419e525, type: 2}
+  - {fileID: 11400000, guid: 4c31ec6049f17e24d9f1150f674443c7, type: 2}

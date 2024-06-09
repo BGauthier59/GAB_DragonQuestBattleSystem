@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Imper
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: 1c1e0c18526afe14288feda26b978969, type: 2}
-  - {fileID: 11400000, guid: 1c1e0c18526afe14288feda26b978969, type: 2}
-  - {fileID: 11400000, guid: 1c1e0c18526afe14288feda26b978969, type: 2}
+  - {fileID: 11400000, guid: 0b138651db3c14547aa2ba4c4aacdba9, type: 2}
+  - {fileID: 11400000, guid: 0b138651db3c14547aa2ba4c4aacdba9, type: 2}
+  - {fileID: 11400000, guid: 0b138651db3c14547aa2ba4c4aacdba9, type: 2}

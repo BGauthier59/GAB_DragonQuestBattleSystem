@@ -459,6 +459,8 @@ public class EntityManager : MonoBehaviour
                 entityHp = entityHpMax;
                 entityAtkInit += 30;
 
+                entitySpells.Add(entitySO.bonusSpell);
+
                 break;
 
             case (Escouade.Les_Bûcherons):
@@ -483,11 +485,15 @@ public class EntityManager : MonoBehaviour
                 entityManaInit += 0.2f;
                 entityChanceToUseSpell += 1;
                 entityResilienceToSilence = 999;
-                
+
+                entitySpells.Add(entitySO.bonusSpell);
+
                 break;
 
-            case (Escouade.Chien_et_Chats): 
-                
+            case (Escouade.Chien_et_Chats):
+
+                entitySpells.Add(entitySO.bonusSpell);
+
                 break;
 
             case (Escouade.Les_Monumentaux):
@@ -502,7 +508,8 @@ public class EntityManager : MonoBehaviour
 
                 entityAgiInit += 30;
 
-                
+                entitySpells.Add(entitySO.bonusSpell);
+
                 break;
 
             case (Escouade.Le_Grand_Bleu):
@@ -510,11 +517,37 @@ public class EntityManager : MonoBehaviour
                 entityHpMax += 40;
                 entityHp = entityHpMax;
                 entityManaInit += 0.2f;
-                
+
+                entitySpells.Add(entitySO.bonusSpell);
+
                 break;
 
             case (Escouade.Le_Gang_Des_Dragons):
-                
+
+                entityHpMax += 50;
+                entityHp = entityHpMax;
+                entityDefInit += 30;
+
+                entitySpells.Add(entitySO.bonusSpell);
+
+                break;
+
+            case (Escouade.Les_Oiseaux_Mythiques):
+
+                entityAgiInit += 20;
+                entityChanceToUseSpell += 1;
+
+                entitySpells.Add(entitySO.bonusSpell);
+
+                break;
+
+            case (Escouade.Les_Croisés):
+
+                entityResilienceToSleep = 999;
+                entityResilienceToPoison = 999;
+
+                entitySpells.Add(entitySO.bonusSpell);
+
                 break;
         }
     }

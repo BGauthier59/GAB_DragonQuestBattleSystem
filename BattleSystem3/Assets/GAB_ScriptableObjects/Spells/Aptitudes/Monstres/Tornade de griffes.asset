@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
+  m_Name: Tornade de griffes
+  m_EditorClassIdentifier: 
+  spellName: Tornade de griffes
+  spellDescription: ATTAQUE MONSTRE
+  inBattleDescription: "se transforme en tornade et ass\xE8ne des coups de griffe
+    !"
+  excuseForInaction: 
+  spellIndex: 6
+  spellType: 1
+  cost: 4
+  SFXname: VentCoupant
+  hasSpecialEffect: 1
+  hasEffectAndDamages: 0
+  doTargetEveryone: 0
+  helpingSpell: 0
+  selfSpell: 0
+  onlyWorkOnDefeated: 0
+  successRate: 0
+  strenght: 0
+  elementType: 0
+  factor: 80
+  staticDamages: 0
+  hits: 7

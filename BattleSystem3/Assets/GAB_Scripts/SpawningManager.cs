@@ -128,5 +128,5 @@ public enum CombatZone
 
 public enum Escouade
 {
-    NA, La_Fratrie_Baï, Les_Bûcherons, Les_Bois_Réincarnés, Les_Ensorceleurs, Chien_et_Chats, Les_Monumentaux, Le_Ciel_Etoilé, Le_Grand_Bleu, Le_Gang_Des_Dragons 
+    NA, La_Fratrie_Baï, Les_Bûcherons, Les_Bois_Réincarnés, Les_Ensorceleurs, Chien_et_Chats, Les_Monumentaux, Le_Ciel_Etoilé, Le_Grand_Bleu, Le_Gang_Des_Dragons, Les_Oiseaux_Mythiques, Les_Croisés 
 }

@@ -53,8 +53,7 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: b4f574918374a0a4fb70de4f7a1724ad, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: b2fe8fb0d8dc8624188304f85d7e76f3, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 2a97068c2e16e404dac24cde891cba80, type: 2}
+  bonusSpell: {fileID: 11400000, guid: 2a97068c2e16e404dac24cde891cba80, type: 2}
   strategy: 1
   elementType: 3
   item: {fileID: 0}

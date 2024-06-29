@@ -52,6 +52,7 @@ public class EntitySO : ScriptableObject
     public int[] agiLevelUp = new int[2];
     public float[] manaLevelUp = new float[2];
     public LearnSpell[] learnSpells;
+    public SpellSO bonusSpell;
     
     [Header("Monsters Only")]
     public EntityStrategy strategy;

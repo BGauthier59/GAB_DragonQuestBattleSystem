@@ -710,7 +710,7 @@ public class FightManager : MonoSingleton<FightManager>
                 }
                 else
                 {
-                    int hits = 2;
+                    int hits = spell.hits - 1;
 
                     for (int i = 0; i <= hits; i++)
                     {

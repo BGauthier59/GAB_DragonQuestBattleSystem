@@ -19,7 +19,7 @@ MonoBehaviour:
   pronoun: 
   isAIally: 1
   hp: 508
-  mp: 0
+  mp: 12
   atk: 194
   defense: 130
   agility: 102
@@ -35,7 +35,10 @@ MonoBehaviour:
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells: []
+  spells:
+  - {fileID: 11400000, guid: 74e1776eaa8ccf14d8e5493558a8bbac, type: 2}
+  - {fileID: 11400000, guid: 1221fea7d1ea93942989b3ea8e69e800, type: 2}
+  - {fileID: 11400000, guid: 974751fafaa220e45ac4bb18491cfb38, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -51,6 +54,7 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 74e1776eaa8ccf14d8e5493558a8bbac, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 1221fea7d1ea93942989b3ea8e69e800, type: 2}
+  bonusSpell: {fileID: 11400000, guid: 974751fafaa220e45ac4bb18491cfb38, type: 2}
   strategy: 1
   elementType: 0
   item: {fileID: 0}

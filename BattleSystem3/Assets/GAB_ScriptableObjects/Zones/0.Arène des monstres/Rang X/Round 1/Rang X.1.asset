@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Rang X.1
   m_EditorClassIdentifier: 
   configsInZoneDay:
-  - {fileID: 11400000, guid: 24d129e696e8a8549b99335edd6f69e6, type: 2}
+  - {fileID: 11400000, guid: 9c581c6925ab38244a2b9a9c66125476, type: 2}
   configsInZoneNight:
-  - {fileID: 11400000, guid: 24d129e696e8a8549b99335edd6f69e6, type: 2}
+  - {fileID: 11400000, guid: 9c581c6925ab38244a2b9a9c66125476, type: 2}
   minMaxMonstersInBattle: 0000000000000000
   fontZoneDay: {fileID: 21300000, guid: e0a2459283ee94d46bd69f06da30b8a1, type: 3}
   fontZoneNight: {fileID: 21300000, guid: e0a2459283ee94d46bd69f06da30b8a1, type: 3}

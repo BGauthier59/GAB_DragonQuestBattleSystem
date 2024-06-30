@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: X.1
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: d588a7ec69c2bda4f990b39ff48804f9, type: 2}
-  - {fileID: 11400000, guid: 76280ed3c3e018d468c91ec42901c782, type: 2}
-  - {fileID: 11400000, guid: 7ac5316408dc15e42aa49448d440c07b, type: 2}
+  - {fileID: 11400000, guid: f123aeb51f236a2479282b7b71e3895c, type: 2}

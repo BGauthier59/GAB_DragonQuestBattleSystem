@@ -569,7 +569,7 @@ public class EntityManager : MonoBehaviour
                 //entityHpMax += 30;
                 entityHpMax += 50;
 
-                entityHp = entityHpMax;
+                entityHp = entityHpMax; 
 
                 //entityMpMax += 15;
                 entityMpMax += 30;
@@ -580,10 +580,10 @@ public class EntityManager : MonoBehaviour
                 entityAtkInit += 50;
 
                 //entityDefInit += 30;
-                entityDefInit += 50;
+                //entityDefInit += 50;
 
                 //entityAgiInit += 15;
-                entityAgiInit += 30;
+                //entityAgiInit += 30;
 
                 //entityManaInit += 0.2f;
                 //entityManaInit += 0.3f;

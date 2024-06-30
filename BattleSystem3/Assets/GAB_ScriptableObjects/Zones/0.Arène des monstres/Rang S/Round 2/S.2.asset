@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: S.2
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: dbc648d2903a25a46bad894afab3c80d, type: 2}
-  - {fileID: 11400000, guid: 1249dfad9476b8440bcb8a8fbc8ceb51, type: 2}
   - {fileID: 11400000, guid: 3c0b0fe54f809a544a039f275ac1dc85, type: 2}
+  - {fileID: 11400000, guid: 1249dfad9476b8440bcb8a8fbc8ceb51, type: 2}
+  - {fileID: 11400000, guid: dbc648d2903a25a46bad894afab3c80d, type: 2}

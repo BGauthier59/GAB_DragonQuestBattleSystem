@@ -18,7 +18,7 @@ MonoBehaviour:
   type: 1
   pronoun: Le
   isAIally: 0
-  hp: 417
+  hp: 415
   mp: 0
   atk: 160
   defense: 121
@@ -50,6 +50,7 @@ MonoBehaviour:
   - 0
   - 0
   learnSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}

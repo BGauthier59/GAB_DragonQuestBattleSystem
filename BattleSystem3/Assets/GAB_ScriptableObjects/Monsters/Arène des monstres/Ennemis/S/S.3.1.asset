@@ -53,7 +53,7 @@ MonoBehaviour:
   learnSpells: []
   bonusSpell: {fileID: 0}
   strategy: 1
-  elementType: 0
+  elementType: 6
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
   probability: 999
   gold: 0

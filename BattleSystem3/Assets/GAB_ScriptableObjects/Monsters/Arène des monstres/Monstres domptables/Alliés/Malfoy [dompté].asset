@@ -20,7 +20,7 @@ MonoBehaviour:
   isAIally: 1
   hp: 711
   mp: 68
-  atk: 235
+  atk: 224
   defense: 139
   agility: 108
   level: 1
@@ -35,10 +35,7 @@ MonoBehaviour:
   entityResilienceToSilence: 0
   entityResilienceToSleep: 999
   entityResilienceToStatDecrease: 999
-  spells:
-  - {fileID: 11400000, guid: 08253c2b9d012d445981611d9ea9f6d9, type: 2}
-  - {fileID: 11400000, guid: 25ff15e0bdbb02d4f8aa4a3286148f67, type: 2}
-  - {fileID: 11400000, guid: 1f4b5d4126c158744baadc0d435463fc, type: 2}
+  spells: []
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}

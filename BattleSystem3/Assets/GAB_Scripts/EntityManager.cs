@@ -465,9 +465,11 @@ public class EntityManager : MonoBehaviour
 
             case (Escouade.Les_Bûcherons):
 
-                entityHp += 30;
-                entityMp += 30;
-                
+                entityHpMax += 30;
+                entityHp = entityHpMax;
+                entityMpMax += 30;
+                entityMp = entityMpMax;
+
                 break;
 
             case (Escouade.Les_Bois_Réincarnés):
@@ -547,6 +549,50 @@ public class EntityManager : MonoBehaviour
                 entityResilienceToPoison = 999;
 
                 entitySpells.Add(entitySO.bonusSpell);
+
+                break;
+
+            case (Escouade.Les_Légendaires):
+
+                entityManaInit += 0.2f;
+                entityMpMax += 10;
+                entityMp = entityMpMax;
+
+                entitySpells.Add(entitySO.bonusSpell);
+
+                break;
+
+            case (Escouade.Votre_Escouade):
+
+                //Bonus d'escouade
+
+                //entityHpMax += 30;
+                entityHpMax += 50;
+
+                entityHp = entityHpMax;
+
+                //entityMpMax += 15;
+                entityMpMax += 30;
+
+                entityMp = entityMpMax;
+
+                //entityAtkInit += 30;
+                entityAtkInit += 50;
+
+                //entityDefInit += 30;
+                entityDefInit += 50;
+
+                //entityAgiInit += 15;
+                entityAgiInit += 30;
+
+                //entityManaInit += 0.2f;
+                //entityManaInit += 0.3f;
+
+                entityChanceToUseSpell += 1;
+                //entityChanceToUseSpell += 2;
+
+                entitySpells.Add(entitySO.bonusSpell);
+
 
                 break;
         }

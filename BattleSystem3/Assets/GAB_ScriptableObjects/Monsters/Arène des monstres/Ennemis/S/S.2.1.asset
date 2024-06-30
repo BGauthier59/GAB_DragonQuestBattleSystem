@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
+  m_Name: S.2.1
+  m_EditorClassIdentifier: 
+  entityName: Chaolacanthe
+  sprite: {fileID: 21300000, guid: 9dce2771acbc45a42b5210c5f043e9b5, type: 3}
+  spawnPosY: 31
+  type: 1
+  pronoun: Le
+  isAIally: 0
+  hp: 833
+  mp: 0
+  atk: 191
+  defense: 122
+  agility: 76
+  level: 0
+  mana: 1
+  criticalHit: 0
+  dodge: 0
+  actionPerTurn: 1
+  entityChanceToUseSpell: 6
+  entityResilienceToMPTheft: 0
+  entityResilienceToPoison: 0
+  entityResilienceToBurn: 0
+  entityResilienceToSilence: 0
+  entityResilienceToSleep: 0
+  entityResilienceToStatDecrease: 0
+  spells:
+  - {fileID: 11400000, guid: 2fc29d3f5c5580041a3755d52819b22c, type: 2}
+  - {fileID: 11400000, guid: 43ac523b812566f499ed64b3cbe4f7c1, type: 2}
+  weapon: {fileID: 0}
+  helmet: {fileID: 0}
+  shield: {fileID: 0}
+  armor: {fileID: 0}
+  hpLevelUp: 0000000000000000
+  mpLevelUp: 0000000000000000
+  atkLevelUp: 0000000000000000
+  defLevelUp: 0000000000000000
+  agiLevelUp: 0000000000000000
+  manaLevelUp:
+  - 0
+  - 0
+  learnSpells: []
+  bonusSpell: {fileID: 0}
+  strategy: 1
+  elementType: 0
+  item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}
+  probability: 999
+  gold: 0
+  xp: 0

@@ -20,7 +20,7 @@ MonoBehaviour:
   isAIally: 0
   hp: 911
   mp: 68
-  atk: 235
+  atk: 224
   defense: 139
   agility: 108
   level: 1
@@ -50,6 +50,7 @@ MonoBehaviour:
   agiLevelUp: 
   manaLevelUp: []
   learnSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}

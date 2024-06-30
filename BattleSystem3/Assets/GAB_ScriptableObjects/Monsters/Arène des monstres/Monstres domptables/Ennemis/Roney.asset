@@ -18,7 +18,7 @@ MonoBehaviour:
   type: 1
   pronoun: 
   isAIally: 0
-  hp: 650
+  hp: 750
   mp: 50
   atk: 188
   defense: 110
@@ -49,6 +49,7 @@ MonoBehaviour:
   agiLevelUp: 
   manaLevelUp: []
   learnSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 5
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}

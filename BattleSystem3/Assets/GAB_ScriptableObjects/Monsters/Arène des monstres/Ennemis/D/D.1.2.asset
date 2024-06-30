@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
   m_Name: D.1.2
   m_EditorClassIdentifier: 
-  entityName: Garde octavien
-  sprite: {fileID: 21300000, guid: e95c88c0873993a469dc48a60016641d, type: 3}
-  spawnPosY: 43
+  entityName: Maestral
+  sprite: {fileID: 21300000, guid: a769007927250d843801c738623261e2, type: 3}
+  spawnPosY: 32
   type: 1
   pronoun: Le
   isAIally: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
   spells:
-  - {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
+  - {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -50,6 +50,7 @@ MonoBehaviour:
   - 0
   - 0
   learnSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: a27e5e02f61a67046afe041c80473d2d, type: 2}

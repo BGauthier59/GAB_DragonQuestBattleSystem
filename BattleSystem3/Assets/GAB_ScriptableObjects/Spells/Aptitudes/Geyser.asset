@@ -15,7 +15,7 @@ MonoBehaviour:
   spellName: Geyser
   spellDescription: "Transforme l'eau en une lame puissante dirig\xE9e contre un
     ennemi."
-  inBattleDescription: change l'eau en lame et attaque !
+  inBattleDescription: "soul\xE8ve une colonne d'eau br\xFBlante !"
   excuseForInaction: 
   spellIndex: 28
   spellType: 1

@@ -38,6 +38,7 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     public bool isVictoryChecked;
     public bool isBattleOver;
+    public bool isArenaBattle;
 
     public string monsterItem;
     public bool hasGotItem;
@@ -81,6 +82,7 @@ public class BattleManager : MonoSingleton<BattleManager>
             entityManager.boostList.Clear();
             
             StatDisplayManager.instance.DisplayStat(entityManager);
+
         }
         
         if (SpawningManager.instance.selectedZone.combatZone == CombatZone.Boss) AudioManager.instance.Play("BossBattleTheme");
@@ -1078,11 +1080,14 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     void ResetBattle()
     {
-
-        for (int i = 0; i < SpawningManager.instance.heroesInBattle.Count; i++)
+        if (!isArenaBattle)
         {
-            SpawningManager.instance.heroesInBattle[i].GetComponent<EntityManager>().StatAfterBattle();
+            for (int i = 0; i < SpawningManager.instance.heroesInBattle.Count; i++)
+            {
+                SpawningManager.instance.heroesInBattle[i].GetComponent<EntityManager>().StatAfterBattle();
+            }
         }
+
         for (int i = 0; i < InterfaceManager.instance.alliesButtonsList.Count; i++)
         {
             Destroy(InterfaceManager.instance.alliesButtonsList[i]);

@@ -1213,10 +1213,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroes:
-  - {fileID: 11400000, guid: a813cdfb366a8a646a37ad52bfd5a47c, type: 2}
-  - {fileID: 11400000, guid: c33ef0b7bd8e196499490b48dc36fcf4, type: 2}
-  - {fileID: 11400000, guid: 4a3285dc7dba48a46bfdedb69c23598b, type: 2}
-  escouade: 13
+  - {fileID: 11400000, guid: e8be85fb719d4d948a0f5e6d5159c017, type: 2}
+  - {fileID: 11400000, guid: ffc157b7aab040f4eb19450e1598cdad, type: 2}
+  - {fileID: 11400000, guid: bc733ced66c2d2e479411bf6cded2b5f, type: 2}
+  escouade: 1
   howManyMonster: 0
   configsInLocation: []
   allZones:
@@ -6868,6 +6868,7 @@ MonoBehaviour:
   targets: []
   isVictoryChecked: 0
   isBattleOver: 0
+  isArenaBattle: 0
   monsterItem: 
   hasGotItem: 0
   gotItem: {fileID: 0}

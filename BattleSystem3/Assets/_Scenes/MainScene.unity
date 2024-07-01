@@ -1277,6 +1277,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d8ef05abc5faea04da8446aae869642e, type: 2}
   - {fileID: 11400000, guid: 20d19c27be0b75c49bac4f602a76dafe, type: 2}
   - {fileID: 11400000, guid: 9f9a20bff5ba6ca40a79bf221f0d33c3, type: 2}
+  - {fileID: 11400000, guid: 0199063f933a6c8459c8f2c4330bf58c, type: 2}
+  - {fileID: 11400000, guid: 5b9b576b6941b1a489f2f2527ccdca6b, type: 2}
   - {fileID: 11400000, guid: 91eea88d1f73cc74bafdfa489e599b44, type: 2}
   - {fileID: 11400000, guid: 027d94234ef5e2b4d93fd1c6cf14b315, type: 2}
   - {fileID: 11400000, guid: 814ed2b132e618a4a9f1549bf96d7f58, type: 2}
@@ -1290,6 +1292,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fbb097f1ecfd05e44ae4d0ccfa071825, type: 2}
   - {fileID: 11400000, guid: 71f683b511034da478eae9e04a1376fc, type: 2}
   - {fileID: 11400000, guid: df19d31ca9510b94e8d7c82212f0e80e, type: 2}
+  - {fileID: 11400000, guid: 11b52c9ea1734a14ab93c6da2913ccc0, type: 2}
   - {fileID: 11400000, guid: 8bac96c92bf28c44bb21f64b810303f2, type: 2}
   - {fileID: 11400000, guid: 57c4cc84bdbfadc4594bde82d0362fc7, type: 2}
   - {fileID: 11400000, guid: 545a446fe83cf874fb80244054c71828, type: 2}
@@ -5098,6 +5101,10 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: "[M\xE9morial] L'\xE9toile montante"
       m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le nain de jardin"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] La f\xE9e des fleurs"
+      m_Image: {fileID: 0}
     - m_Text: "[M\xE9morial] Le roi Ba\xEF"
       m_Image: {fileID: 0}
     - m_Text: "[M\xE9morial] Le vestige ambulant"
@@ -5123,6 +5130,8 @@ MonoBehaviour:
     - m_Text: "[M\xE9morial] Le drag\xF6m"
       m_Image: {fileID: 0}
     - m_Text: "[M\xE9morial] L'empereur Ba\xEF"
+      m_Image: {fileID: 0}
+    - m_Text: "[M\xE9morial] Le micromonstre"
       m_Image: {fileID: 0}
     - m_Text: "[M\xE9morial] Le destrier c\xE9leste"
       m_Image: {fileID: 0}

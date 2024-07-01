@@ -457,7 +457,9 @@ public class EntityManager : MonoBehaviour
 
                 entityHpMax += 50;
                 entityHp = entityHpMax;
-                entityAtkInit += 30;
+                entityAtk += 30;
+                entityDef += 30;
+                entityChanceToUseSpell += 1;
 
                 entitySpells.Add(entitySO.bonusSpell);
 
@@ -474,8 +476,8 @@ public class EntityManager : MonoBehaviour
 
             case (Escouade.Les_Bois_Réincarnés):
 
-                entityAtkInit += 20;
-                entityDefInit += 20;
+                entityAtk += 20;
+                entityDef += 20;
                 entityChanceToUseSpell += 1;
 
                 break;
@@ -484,7 +486,7 @@ public class EntityManager : MonoBehaviour
 
                 entityMpMax += 20;
                 entityMp = entityMpMax;
-                entityManaInit += 0.2f;
+                entityMana += 0.2f;
                 entityChanceToUseSpell += 1;
                 entityResilienceToSilence = 999;
 
@@ -500,7 +502,7 @@ public class EntityManager : MonoBehaviour
 
             case (Escouade.Les_Monumentaux):
 
-                entityDefInit += 30;
+                entityDef += 30;
                 entityResilienceToStatDecrease = 999;
                 
                 break;
@@ -508,7 +510,7 @@ public class EntityManager : MonoBehaviour
 
             case (Escouade.Le_Ciel_Etoilé):
 
-                entityAgiInit += 30;
+                entityAgi += 30;
 
                 entitySpells.Add(entitySO.bonusSpell);
 
@@ -518,7 +520,7 @@ public class EntityManager : MonoBehaviour
 
                 entityHpMax += 40;
                 entityHp = entityHpMax;
-                entityManaInit += 0.2f;
+                entityMana += 0.2f;
 
                 entitySpells.Add(entitySO.bonusSpell);
 
@@ -528,7 +530,7 @@ public class EntityManager : MonoBehaviour
 
                 entityHpMax += 50;
                 entityHp = entityHpMax;
-                entityDefInit += 30;
+                entityDef += 30;
 
                 entitySpells.Add(entitySO.bonusSpell);
 
@@ -536,8 +538,18 @@ public class EntityManager : MonoBehaviour
 
             case (Escouade.Les_Oiseaux_Mythiques):
 
-                entityAgiInit += 20;
+                entityAgi += 20;
                 entityChanceToUseSpell += 1;
+
+                entitySpells.Add(entitySO.bonusSpell);
+
+                break;
+
+            case (Escouade.Les_Minimators):
+
+                entityHpMax += 30;
+                entityHp = entityHpMax;
+                entityDodge += 5;
 
                 entitySpells.Add(entitySO.bonusSpell);
 
@@ -554,7 +566,7 @@ public class EntityManager : MonoBehaviour
 
             case (Escouade.Les_Légendaires):
 
-                entityManaInit += 0.2f;
+                entityMana += 0.2f;
                 entityMpMax += 10;
                 entityMp = entityMpMax;
 
@@ -567,28 +579,28 @@ public class EntityManager : MonoBehaviour
                 //Bonus d'escouade
 
                 //entityHpMax += 30;
-                entityHpMax += 50;
+                //entityHpMax += 50;
 
                 entityHp = entityHpMax; 
 
                 //entityMpMax += 15;
-                entityMpMax += 30;
+                //entityMpMax += 30;
 
                 entityMp = entityMpMax;
 
-                //entityAtkInit += 30;
-                entityAtkInit += 50;
+                //entityAtk += 30;
+                entityAtk += 50;
 
-                //entityDefInit += 30;
-                //entityDefInit += 50;
+                //entityDef += 30;
+                entityDef += 50;
 
-                //entityAgiInit += 15;
-                //entityAgiInit += 30;
+                //entityAgi += 15;
+                //entityAgi += 30;
 
-                //entityManaInit += 0.2f;
-                //entityManaInit += 0.3f;
+                //entityMana += 0.2f;
+                //entityMana += 0.3f;
 
-                entityChanceToUseSpell += 1;
+                //entityChanceToUseSpell += 1;
                 //entityChanceToUseSpell += 2;
 
                 entitySpells.Add(entitySO.bonusSpell);

@@ -80,7 +80,9 @@ public class BattleManager : MonoSingleton<BattleManager>
             entityManager.effectList.Clear();
             entityManager.statList.Clear();
             entityManager.boostList.Clear();
-            
+            entityManager.ResetStuff();
+            entityManager.LinkingEquipments();
+
             StatDisplayManager.instance.DisplayStat(entityManager);
 
         }

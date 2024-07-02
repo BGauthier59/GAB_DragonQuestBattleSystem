@@ -1213,8 +1213,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroes:
-  - {fileID: 11400000, guid: 928e003365f724947a30d3d5d69a7f75, type: 2}
-  - {fileID: 11400000, guid: 973a2bcee7854ba4cb80754e6ab194e8, type: 2}
+  - {fileID: 11400000, guid: e8a06bbb6317b2f45b647f0524b1b9fa, type: 2}
+  - {fileID: 11400000, guid: 5745513167fa1c348bed3295f5bbad97, type: 2}
+  - {fileID: 11400000, guid: e39b1669929854f48905f124426470a6, type: 2}
+  - {fileID: 11400000, guid: 04e4036ee150b8e45872fa50439e7ea5, type: 2}
   escouade: 0
   howManyMonster: 0
   configsInLocation: []

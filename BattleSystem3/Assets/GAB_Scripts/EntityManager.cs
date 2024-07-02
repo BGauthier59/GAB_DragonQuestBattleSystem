@@ -24,27 +24,34 @@ public class EntityManager : MonoBehaviour
     public string entityName;
     public int entityHpMax;
     public int entityHp;
+    public int entityHpWS;
 
     public int entityMpMax;
     public int entityMp;
+    public int entityMpWS;
 
     public int entityAtkInit;
     public int entityAtk;
+    public int entityAtkWS;
 
     public int entityDefInit;
     public int entityDef;
+    public int entityDefWS;
     public bool isDefending;
 
     public int entityAgiInit;
     public int entityAgi;
+    public int entityAgiWS;
 
     public int entitytLv;
 
     public float entityManaInit;
     public float entityMana;
+    public float entityManaWS;
 
     public int entityCriticalInit;
     public int entityCritical;
+    public int entityCriticalWS;
 
     public int entityActionPerTurn;
     public int entityChanceToUseSpell;
@@ -112,23 +119,34 @@ public class EntityManager : MonoBehaviour
 
         entityPronoun = entitySO.pronoun;
 
+        entityWeapon = entitySO.weapon;
+        entityArmor = entitySO.armor;
+        entityShield = entitySO.shield;
+        entityHelmet = entitySO.helmet;
+
         entityHpMax = entitySO.hp;
         entityHp = entityHpMax;
+        entityHpWS = entityHp;
 
         entityMpMax = entitySO.mp;
         entityMp = entityMpMax;
+        entityMpWS = entityMp;
 
         entityAtkInit = entitySO.atk;
         entityAtk = entityAtkInit;
+        entityAtkWS = entityAtk;
 
         entityDefInit = entitySO.defense;
         entityDef = entityDefInit;
+        entityDefWS = entityDef;
 
         entityAgiInit = entitySO.agility;
         entityAgi = entityAgiInit;
+        entityAgiWS = entityAgi;
 
         entityManaInit = entitySO.mana;
         entityMana = entityManaInit;
+        entityManaWS = entityMana;
 
         entityCriticalInit = entitySO.criticalHit;
         entityCritical = entityCriticalInit;
@@ -176,122 +194,104 @@ public class EntityManager : MonoBehaviour
         isDefeated = false;
     }
 
+    public void ResetStuff()
+    {
+        entityHpMax = entityHpWS;
+        entityMpMax = entityMpWS;
+        entityAtkInit = entityAtkWS;
+        entityDefInit = entityDefWS;
+        entityAgiInit = entityAgiWS;
+        entityManaInit = entityManaWS;
+    }
+
     public void LinkingEquipments()
     {
-        if (entitySO.weapon != null)
+        if (entityWeapon != null)
         {
-            entityWeapon = entitySO.weapon;
+            entityHpMax = entityHpWS + entityWeapon.hp;
 
-            entityHpMax += entitySO.weapon.hp;
-            entityHp = entityHpMax;
+            entityMpMax = entityMpWS + entityWeapon.mp;
 
-            entityMpMax += entitySO.weapon.mp;
-            entityMp = entityMpMax;
-
-            entityAtkInit += entitySO.weapon.atk;
+            entityAtkInit = entityAtkWS + entityWeapon.atk;
             entityAtk = entityAtkInit;
 
-            entityDefInit += entitySO.weapon.def;
+            entityDefInit = entityDefWS + entityWeapon.def;
             entityDef = entityDefInit;
 
-            entityAgiInit += entitySO.weapon.agi;
+            entityAgiInit = entityAgiWS + entityWeapon.agi;
             entityAgi = entityAgiInit;
 
-            entityManaInit += entitySO.weapon.mana;
+            entityManaInit = entityManaWS + entityWeapon.mana;
             entityMana = entityManaInit;
 
-            entityCriticalInit += entitySO.weapon.critical;
+            entityCriticalInit = entityCriticalWS + entityWeapon.critical;
             entityCritical = entityCriticalInit;
-
-            entityDodgeInit += entitySO.weapon.dodge;
-            entityDodge = entityDodgeInit;
         }
 
-        if (entitySO.armor != null)
+        if (entityArmor != null)
         {
-            entityArmor = entitySO.armor;
+            entityHpMax += entityArmor.hp;
 
-            entityHpMax += entitySO.armor.hp;
-            entityHp = entityHpMax;
+            entityMpMax += entityArmor.mp;
 
-            entityMpMax += entitySO.armor.mp;
-            entityMp = entityMpMax;
-
-            entityAtkInit += entitySO.armor.atk;
+            entityAtkInit += entityArmor.atk;
             entityAtk = entityAtkInit;
 
-            entityDefInit += entitySO.armor.def;
+            entityDefInit += entityArmor.def;
             entityDef = entityDefInit;
 
-            entityAgiInit += entitySO.armor.agi;
+            entityAgiInit += entityArmor.agi;
             entityAgi = entityAgiInit;
 
-            entityManaInit += entitySO.armor.mana;
+            entityManaInit += entityArmor.mana;
             entityMana = entityManaInit;
 
-            entityCriticalInit += entitySO.armor.critical;
+            entityCriticalInit += entityArmor.critical;
             entityCritical = entityCriticalInit;
-
-            entityDodgeInit += entitySO.armor.dodge;
-            entityDodge = entityDodgeInit;
         }
 
-        if (entitySO.shield != null)
+        if (entityShield != null)
         {
-            entityShield = entitySO.shield;
+            entityHpMax += entityShield.hp;
 
-            entityHpMax += entitySO.shield.hp;
-            entityHp = entityHpMax;
+            entityMpMax += entityShield.mp;
 
-            entityMpMax += entitySO.shield.mp;
-            entityMp = entityMpMax;
-
-            entityAtkInit += entitySO.shield.atk;
+            entityAtkInit += entityShield.atk;
             entityAtk = entityAtkInit;
 
-            entityDefInit += entitySO.shield.def;
+            entityDefInit += entityShield.def;
             entityDef = entityDefInit;
 
-            entityAgiInit += entitySO.shield.agi;
+            entityAgiInit += entityShield.agi;
             entityAgi = entityAgiInit;
 
-            entityManaInit += entitySO.shield.mana;
+            entityManaInit += entityShield.mana;
             entityMana = entityManaInit;
 
-            entityCriticalInit += entitySO.shield.critical;
+            entityCriticalInit += entityShield.critical;
             entityCritical = entityCriticalInit;
-
-            entityDodgeInit += entitySO.shield.dodge;
-            entityDodge = entityDodgeInit;
         }
 
-        if (entitySO.helmet != null)
+        if (entityHelmet != null)
         {
-            entityHelmet = entitySO.helmet;
+            entityHpMax += entityHelmet.hp;
 
-            entityHpMax += entitySO.helmet.hp;
-            entityHp = entityHpMax;
+            entityMpMax += entityHelmet.mp;
 
-            entityMpMax += entitySO.helmet.mp;
-            entityMp = entityMpMax;
-
-            entityAtkInit += entitySO.helmet.atk;
+            entityAtkInit += entityHelmet.atk;
             entityAtk = entityAtkInit;
 
-            entityDefInit += entitySO.helmet.def;
+            entityDefInit += entityHelmet.def;
             entityDef = entityDefInit;
 
-            entityAgiInit += entitySO.helmet.agi;
+            entityAgiInit += entityHelmet.agi;
             entityAgi = entityAgiInit;
 
-            entityManaInit += entitySO.helmet.mana;
+            entityManaInit += entityHelmet.mana;
             entityMana = entityManaInit;
 
-            entityCriticalInit += entitySO.helmet.critical;
+            entityCriticalInit += entityHelmet.critical;
             entityCritical = entityCriticalInit;
-
-            entityDodgeInit += entitySO.helmet.dodge;
-            entityDodge = entityDodgeInit;
         }
 
     }
@@ -407,23 +407,23 @@ public class EntityManager : MonoBehaviour
     {
         entitytLv++;
 
-        entityHpMax += hp;
-        entityHp = entityHpMax;
+        entityHpWS += hp;
+        entityHpMax = entityHpWS;
 
-        entityMpMax += mp;
-        entityMp = entityMpMax;
+        entityMpWS += mp;
+        entityMpMax = entityMpWS;
 
-        entityAtkInit += atk;
-        entityAtk = entityAtkInit;
+        entityAtkWS += atk;
+        entityAtk = entityAtkWS;
 
-        entityDefInit += def;
-        entityDef = entityDefInit;
+        entityDefWS += def;
+        entityDef = entityDefWS;
 
-        entityAgiInit += agi;
-        entityAgi = entityAgiInit;
+        entityAgiWS += agi;
+        entityAgi = entityAgiWS;
 
-        entityManaInit += mana;
-        entityMana = entityManaInit;
+        entityManaWS += mana;
+        entityMana = entityManaWS;
     }
 
     public void SetSpells()

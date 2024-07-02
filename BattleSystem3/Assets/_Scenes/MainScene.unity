@@ -1237,6 +1237,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8bbe199228e07894fabe0523f9f3d9a7, type: 2}
   - {fileID: 11400000, guid: 2248a8ad061c3984099c935ba4e1e800, type: 2}
   - {fileID: 11400000, guid: d9dc11f306d8f2345a2cc61ab2c929dd, type: 2}
+  - {fileID: 11400000, guid: 96fcb6a17757dfa4c92fa101753b2992, type: 2}
   - {fileID: 11400000, guid: 8455749d61d9c5948871c03e924ee66d, type: 2}
   - {fileID: 11400000, guid: be408d03bde93db4b9865d969c1a79ee, type: 2}
   - {fileID: 11400000, guid: a40c605e790ed4b488cfddd83b5d403c, type: 2}
@@ -5021,6 +5022,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: "P\xE9ninsule polaire"
       m_Image: {fileID: 0}
+    - m_Text: "C\xF4tes au sud de Gulrur"
+      m_Image: {fileID: 0}
     - m_Text: "Presqu'\xEEle sacr\xE9e de Dalgor"
       m_Image: {fileID: 0}
     - m_Text: Cap dalgorique
@@ -7834,6 +7837,7 @@ MonoBehaviour:
   targets: []
   isVictoryChecked: 0
   isBattleOver: 0
+  isArenaBattle: 0
   monsterItem: 
   hasGotItem: 0
   gotItem: {fileID: 0}

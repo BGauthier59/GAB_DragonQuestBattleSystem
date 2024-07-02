@@ -49,9 +49,10 @@ MonoBehaviour:
   agiLevelUp: 
   manaLevelUp: []
   learnSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: e475317bbda854f4b9bf9300d402f226, type: 2}
-  probability: 16
+  probability: 8
   gold: 65
   xp: 145

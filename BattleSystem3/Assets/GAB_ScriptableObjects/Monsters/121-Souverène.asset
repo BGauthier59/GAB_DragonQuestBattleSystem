@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "121-Souver\xE8ne"
   m_EditorClassIdentifier: 
   entityName: "Souver\xE8ne"
-  sprite: {fileID: 21300000, guid: 0d7910c2ff2d8914787335d2dbc2f9f7, type: 3}
+  sprite: {fileID: 21300000, guid: 1904ef4f7231dce49b8a1ab699a7a20d, type: 3}
   spawnPosY: 13
   type: 1
   pronoun: La
@@ -48,6 +48,7 @@ MonoBehaviour:
   agiLevelUp: 
   manaLevelUp: []
   learnSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: 9dd8d0be74ae0f546b36ed425c98c468, type: 2}

@@ -46,10 +46,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 636bab58834a32d4ba27a8002f979793, type: 2}
   - {fileID: 11400000, guid: 9f07ce02acbfea44a8434593d7d01df1, type: 2}
   - {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
-  weapon: {fileID: 11400000, guid: b6be5fe8616d24a468c5d3c0f1a5b762, type: 2}
-  helmet: {fileID: 11400000, guid: 00d86373d125c194bb8270c160d6a27d, type: 2}
-  shield: {fileID: 11400000, guid: bf4666180a53c684bb3ad69a05b7d839, type: 2}
-  armor: {fileID: 11400000, guid: 53b33defcc7536d4fa76662418a0bb6c, type: 2}
+  weapon: {fileID: 11400000, guid: 4a69440664898504b9f37cb58345b73f, type: 2}
+  helmet: {fileID: 11400000, guid: 3b4a0c68a38fef2459e3230d20fcf5c1, type: 2}
+  shield: {fileID: 11400000, guid: 612f9aa2945d122489d19ba71ac7dac3, type: 2}
+  armor: {fileID: 11400000, guid: 93ff5e8f0ac6d1142825ee7cc1077d01, type: 2}
   hpLevelUp: 070000000b000000
   mpLevelUp: 0600000009000000
   atkLevelUp: 0300000006000000
@@ -109,6 +109,7 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 9f07ce02acbfea44a8434593d7d01df1, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
+  bonusSpell: {fileID: 0}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

@@ -17,6 +17,7 @@ MonoBehaviour:
   spawnPosY: 0
   type: 0
   pronoun: 
+  isAIally: 0
   hp: 232
   mp: 148
   atk: 83
@@ -43,13 +44,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e0bdc00bcb4d8814595b418e46ed80c9, type: 2}
   - {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
   - {fileID: 11400000, guid: bdb570d8985c3434981f49a81683b63a, type: 2}
-  - {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
-  - {fileID: 11400000, guid: 5678a91f97613cb4c962e518d0e1b498, type: 2}
-  - {fileID: 11400000, guid: 03e8d9a0dafc498408295d8bf1ecf809, type: 2}
-  weapon: {fileID: 11400000, guid: 6aa95c745a9c7cf47a378dd449003eac, type: 2}
-  helmet: {fileID: 11400000, guid: 79b07c7f20812c24abec5cfd9e8a4cd7, type: 2}
-  shield: {fileID: 11400000, guid: 6b2cd29baca7aee4cb52238f99fffb4d, type: 2}
-  armor: {fileID: 11400000, guid: 4f8a230ebde691742a3ba9dd8c7ddc20, type: 2}
+  weapon: {fileID: 11400000, guid: 0f051f2efbc7f1640989b86eb3ab4e07, type: 2}
+  helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
+  shield: {fileID: 11400000, guid: 009a2de45e17a134e80791e2122e3589, type: 2}
+  armor: {fileID: 11400000, guid: af22d0bb46c1ab944b126a737d1f8187, type: 2}
   hpLevelUp: 0b0000000e000000
   mpLevelUp: 0600000009000000
   atkLevelUp: 0300000006000000
@@ -81,6 +79,7 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 03e8d9a0dafc498408295d8bf1ecf809, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: bdb570d8985c3434981f49a81683b63a, type: 2}
+  bonusSpell: {fileID: 0}
   strategy: 0
   elementType: 0
   item: {fileID: 0}

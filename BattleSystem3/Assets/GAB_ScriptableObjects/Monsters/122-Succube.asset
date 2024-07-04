@@ -24,7 +24,7 @@ MonoBehaviour:
   defense: 95
   agility: 81
   level: 1
-  mana: 1
+  mana: 0.8
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
@@ -50,6 +50,7 @@ MonoBehaviour:
   agiLevelUp: 
   manaLevelUp: []
   learnSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: cf11d9cce110bc44ea575a59ddb9789e, type: 2}

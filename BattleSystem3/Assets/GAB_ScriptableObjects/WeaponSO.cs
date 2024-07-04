@@ -24,5 +24,5 @@ public class WeaponSO : ScriptableObject
 
 public enum WeaponType
 {
-    Sword, Scepter, Whip, Axe
+    Sword, Scepter, Whip, Axe, Self
 }

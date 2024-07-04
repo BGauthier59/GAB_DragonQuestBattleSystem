@@ -10,25 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Padjure
+  m_Name: Brisure
   m_EditorClassIdentifier: 
-  spellName: Padjure
-  spellDescription: "Ass\xE8ne un coup susceptible de r\xE9duire le mana de la cible."
-  inBattleDescription: utilise le Padjure !
+  spellName: Brisure
+  spellDescription: "Porte un coup sp\xE9cial qui r\xE9initialise les changements
+    de stats adverses."
+  inBattleDescription: "porte un coup an\xE9antissant les d\xE9fenses adverses !"
   excuseForInaction: 
-  spellIndex: 27
+  spellIndex: 4
   spellType: 1
-  cost: 6
-  SFXname: None
+  cost: 5
+  SFXname: WallBreak
   hasSpecialEffect: 1
   hasEffectAndDamages: 1
   doTargetEveryone: 0
   helpingSpell: 0
   selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 40
+  successRate: 100
   strenght: 0
   elementType: 0
-  factor: 120
+  factor: 115
   staticDamages: 0
   hits: 0

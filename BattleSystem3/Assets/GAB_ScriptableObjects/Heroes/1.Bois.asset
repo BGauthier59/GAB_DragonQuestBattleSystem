@@ -35,19 +35,7 @@ MonoBehaviour:
   entityResilienceToSilence: 0
   entityResilienceToSleep: 0
   entityResilienceToStatDecrease: 0
-  spells:
-  - {fileID: 11400000, guid: 28ecd91b2a01f1f48ade6ef33a7bd029, type: 2}
-  - {fileID: 11400000, guid: bdb3562b194a2ce4dab8e4aa6e10119e, type: 2}
-  - {fileID: 11400000, guid: 1f4b5d4126c158744baadc0d435463fc, type: 2}
-  - {fileID: 11400000, guid: 0bcf2b37184b66545ab85fd960d1ae40, type: 2}
-  - {fileID: 11400000, guid: 83ad7b5ee12db7f44a91ba00b9e73ea4, type: 2}
-  - {fileID: 11400000, guid: 650eb64a1b1dc5a41907803d7d9108f0, type: 2}
-  - {fileID: 11400000, guid: 55de6908804603e4aabd726b2651b78b, type: 2}
-  - {fileID: 11400000, guid: 5fc9270c2fe6fa949bfa8316178a942c, type: 2}
-  - {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
-  - {fileID: 11400000, guid: 08253c2b9d012d445981611d9ea9f6d9, type: 2}
-  - {fileID: 11400000, guid: a4f27f9407542c94992841e320990b79, type: 2}
-  - {fileID: 11400000, guid: bdc4f6fc8b70a0142bb060d5d95e8d18, type: 2}
+  spells: []
   weapon: {fileID: 11400000, guid: f06622d28f653d249a5733fe47d4f907, type: 2}
   helmet: {fileID: 11400000, guid: d9e2861543d113242bc26610d5cf3dc0, type: 2}
   shield: {fileID: 11400000, guid: 75e9c60d53aa7184db23e29b8a55899d, type: 2}
@@ -61,53 +49,81 @@ MonoBehaviour:
   - 0
   - 0.05
   learnSpells:
-  - learningLevel: 1
-    learningSpell: {fileID: 11400000, guid: a4f27f9407542c94992841e320990b79, type: 2}
   - learningLevel: 2
     learningSpell: {fileID: 11400000, guid: bdc4f6fc8b70a0142bb060d5d95e8d18, type: 2}
-  - learningLevel: 4
-    learningSpell: {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
   - learningLevel: 6
     learningSpell: {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
-  - learningLevel: 5
-    learningSpell: {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
-  - learningLevel: 9
-    learningSpell: {fileID: 11400000, guid: 9a348bfe61ad8984ea29076e62b0d0b3, type: 2}
   - learningLevel: 13
     learningSpell: {fileID: 11400000, guid: 5abb6247cff777f4fbfd90db5f288afc, type: 2}
-  - learningLevel: 14
-    learningSpell: {fileID: 11400000, guid: e8c33c364950fca488bb429c08dd10da, type: 2}
-  - learningLevel: 15
-    learningSpell: {fileID: 11400000, guid: 7762f3e276536c745b0cc5b7828d0a46, type: 2}
-  - learningLevel: 18
-    learningSpell: {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
   - learningLevel: 12
     learningSpell: {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
-  - learningLevel: 7
-    learningSpell: {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
-  - learningLevel: 0
+  - learningLevel: 5
+    learningSpell: {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
+  - learningLevel: 15
+    learningSpell: {fileID: 11400000, guid: 7762f3e276536c745b0cc5b7828d0a46, type: 2}
+  competenceSpells:
+  - weaponType: 0
+    learningPoints: 7
+    levelMin: 0
     learningSpell: {fileID: 11400000, guid: 28ecd91b2a01f1f48ade6ef33a7bd029, type: 2}
-  - learningLevel: 0
+  - weaponType: 0
+    learningPoints: 16
+    levelMin: 0
     learningSpell: {fileID: 11400000, guid: bdb3562b194a2ce4dab8e4aa6e10119e, type: 2}
-  - learningLevel: 0
+  - weaponType: 0
+    learningPoints: 28
+    levelMin: 0
     learningSpell: {fileID: 11400000, guid: 1f4b5d4126c158744baadc0d435463fc, type: 2}
-  - learningLevel: 0
+  - weaponType: 0
+    learningPoints: 40
+    levelMin: 0
     learningSpell: {fileID: 11400000, guid: 0bcf2b37184b66545ab85fd960d1ae40, type: 2}
-  - learningLevel: 0
+  - weaponType: 0
+    learningPoints: 54
+    levelMin: 0
     learningSpell: {fileID: 11400000, guid: 83ad7b5ee12db7f44a91ba00b9e73ea4, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 650eb64a1b1dc5a41907803d7d9108f0, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: 55de6908804603e4aabd726b2651b78b, type: 2}
-  - learningLevel: 0
+  - weaponType: 0
+    learningPoints: 68
+    levelMin: 0
     learningSpell: {fileID: 11400000, guid: 5fc9270c2fe6fa949bfa8316178a942c, type: 2}
-  - learningLevel: 0
+  - weaponType: 0
+    learningPoints: 80
+    levelMin: 0
     learningSpell: {fileID: 11400000, guid: dbb65e1036e688f4eb67c7165b5ca944, type: 2}
-  - learningLevel: 0
+  - weaponType: 4
+    learningPoints: 7
+    levelMin: 0
+    learningSpell: {fileID: 11400000, guid: a4f27f9407542c94992841e320990b79, type: 2}
+  - weaponType: 4
+    learningPoints: 16
+    levelMin: 0
+    learningSpell: {fileID: 11400000, guid: 83923e4604fb8b64883d2f27ca4ba726, type: 2}
+  - weaponType: 4
+    learningPoints: 28
+    levelMin: 0
+    learningSpell: {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
+  - weaponType: 4
+    learningPoints: 68
+    levelMin: 0
     learningSpell: {fileID: 11400000, guid: 08253c2b9d012d445981611d9ea9f6d9, type: 2}
+  - weaponType: 4
+    learningPoints: 40
+    levelMin: 0
+    learningSpell: {fileID: 11400000, guid: 9a348bfe61ad8984ea29076e62b0d0b3, type: 2}
+  - weaponType: 4
+    learningPoints: 54
+    levelMin: 0
+    learningSpell: {fileID: 11400000, guid: e8c33c364950fca488bb429c08dd10da, type: 2}
+  - weaponType: 4
+    learningPoints: 80
+    levelMin: 0
+    learningSpell: {fileID: 11400000, guid: 303bb042cecf2d8498fa100557173a89, type: 2}
+  bonusSpell: {fileID: 0}
   strategy: 0
   elementType: 0
   item: {fileID: 0}
   probability: 0
   gold: 0
   xp: 0
+  selfCompetence: 0
+  weaponCompetence: 0

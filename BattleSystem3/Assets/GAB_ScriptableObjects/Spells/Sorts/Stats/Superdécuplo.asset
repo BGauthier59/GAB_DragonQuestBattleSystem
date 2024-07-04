@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Brisure
+  m_Name: "Superd\xE9cuplo"
   m_EditorClassIdentifier: 
-  spellName: Brisure
-  spellDescription: ATTAQUE MONSTRE
-  inBattleDescription: "porte un coup an\xE9antissant les d\xE9fenses adverses !"
+  spellName: "Superd\xE9cuplo"
+  spellDescription: "Augmente fortement l'attaque de tous les alli\xE9s."
+  inBattleDescription: "lance le Superd\xE9cuplo !"
   excuseForInaction: 
-  spellIndex: 4
-  spellType: 1
-  cost: 5
-  SFXname: WallBreak
+  spellIndex: 23
+  spellType: 0
+  cost: 20
+  SFXname: StatIncrease
   hasSpecialEffect: 1
-  hasEffectAndDamages: 1
-  doTargetEveryone: 0
-  helpingSpell: 0
+  hasEffectAndDamages: 0
+  doTargetEveryone: 1
+  helpingSpell: 1
   selfSpell: 0
   onlyWorkOnDefeated: 0
   successRate: 100
   strenght: 0
   elementType: 0
-  factor: 115
+  factor: 0
   staticDamages: 0
   hits: 0

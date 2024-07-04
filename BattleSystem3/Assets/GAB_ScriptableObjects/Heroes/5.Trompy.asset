@@ -61,24 +61,33 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 8ae93ae615124e244920d721fb0aea0e, type: 2}
+  - learningLevel: 17
+    learningSpell: {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 8c88c99b741f8684faf711f2b828e282, type: 2}
+  - learningLevel: 0
+    learningSpell: {fileID: 11400000, guid: bdb570d8985c3434981f49a81683b63a, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: e0bdc00bcb4d8814595b418e46ed80c9, type: 2}
   - learningLevel: 0
     learningSpell: {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
-  - learningLevel: 17
-    learningSpell: {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
-  - learningLevel: 18
+  competenceSpells:
+  - weaponType: 4
+    learningPoints: 10
+    levelMin: 0
+    learningSpell: {fileID: 11400000, guid: 650eb64a1b1dc5a41907803d7d9108f0, type: 2}
+  - weaponType: 4
+    learningPoints: 20
+    levelMin: 0
     learningSpell: {fileID: 11400000, guid: 5678a91f97613cb4c962e518d0e1b498, type: 2}
-  - learningLevel: 19
+  - weaponType: 4
+    learningPoints: 30
+    levelMin: 0
     learningSpell: {fileID: 11400000, guid: 03e8d9a0dafc498408295d8bf1ecf809, type: 2}
-  - learningLevel: 0
-    learningSpell: {fileID: 11400000, guid: bdb570d8985c3434981f49a81683b63a, type: 2}
   bonusSpell: {fileID: 0}
   strategy: 0
   elementType: 0
@@ -86,3 +95,5 @@ MonoBehaviour:
   probability: 0
   gold: 0
   xp: 0
+  selfCompetence: 0
+  weaponCompetence: 0

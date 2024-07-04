@@ -103,6 +103,8 @@ public class EntityManager : MonoBehaviour
     public bool isDodgingAnim;
     public int gold;
     public int xp;
+    public int selfCompetence;
+    public int weaponCompetence;
 
     public bool isDefeated;
 
@@ -178,7 +180,8 @@ public class EntityManager : MonoBehaviour
 
         xp = entitySO.xp;
         gold = entitySO.gold;
-
+        selfCompetence = entitySO.selfCompetence;
+        weaponCompetence = entitySO.weaponCompetence;
     }
 
     public void Heal()
@@ -206,6 +209,8 @@ public class EntityManager : MonoBehaviour
 
     public void LinkingEquipments()
     {
+        if (elementType != ElementType.NA) elementType = ElementType.NA;
+
         if (entityWeapon != null)
         {
             entityHpMax = entityHpWS + entityWeapon.hp;
@@ -439,9 +444,16 @@ public class EntityManager : MonoBehaviour
                     entitySpells.Add(learning.learningSpell);
                 }
             }
+            foreach (CompetenceSpell competence in entitySO.competenceSpells)
+            {
+                if (i == competence.levelMin)
+                {
+                    if (weaponCompetence >= competence.learningPoints && competence.weaponType != WeaponType.Self) entitySpells.Add(competence.learningSpell);
+                    if (selfCompetence >= competence.learningPoints && entitytLv >= competence.levelMin && competence.weaponType == WeaponType.Self) entitySpells.Add(competence.learningSpell);
+                }
+                
+            }
         }
-
-        Debug.Log("Set spells for " + entityName);
     }
 
     #endregion

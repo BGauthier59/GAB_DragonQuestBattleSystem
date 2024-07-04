@@ -52,6 +52,7 @@ public class EntitySO : ScriptableObject
     public int[] agiLevelUp = new int[2];
     public float[] manaLevelUp = new float[2];
     public LearnSpell[] learnSpells;
+    public CompetenceSpell[] competenceSpells;
     public SpellSO bonusSpell;
     
     [Header("Monsters Only")]
@@ -61,6 +62,8 @@ public class EntitySO : ScriptableObject
     public int probability;
     public int gold;
     public int xp;
+    public int selfCompetence;
+    public int weaponCompetence;
 }
 
 public enum EntityType

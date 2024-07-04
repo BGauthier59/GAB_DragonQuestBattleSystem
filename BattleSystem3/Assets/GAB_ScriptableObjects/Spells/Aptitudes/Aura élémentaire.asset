@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd07d0829a735c4aa5f045bbbbc2b44, type: 3}
-  m_Name: Padjure
+  m_Name: "Aura \xE9l\xE9mentaire"
   m_EditorClassIdentifier: 
-  spellName: Padjure
-  spellDescription: "Ass\xE8ne un coup susceptible de r\xE9duire le mana de la cible."
-  inBattleDescription: utilise le Padjure !
+  spellName: "Aura \xE9l\xE9mentaire"
+  spellDescription: "Change al\xE9atoirement le statut \xE9l\xE9mentaire du lanceur."
+  inBattleDescription: "utilise l'aura \xE9l\xE9mentaire !"
   excuseForInaction: 
-  spellIndex: 27
+  spellIndex: 33
   spellType: 1
-  cost: 6
-  SFXname: None
+  cost: 3
+  SFXname: GreatPower
   hasSpecialEffect: 1
-  hasEffectAndDamages: 1
+  hasEffectAndDamages: 0
   doTargetEveryone: 0
-  helpingSpell: 0
+  helpingSpell: 1
   selfSpell: 0
   onlyWorkOnDefeated: 0
-  successRate: 40
+  successRate: 0
   strenght: 0
   elementType: 0
-  factor: 120
+  factor: 0
   staticDamages: 0
   hits: 0

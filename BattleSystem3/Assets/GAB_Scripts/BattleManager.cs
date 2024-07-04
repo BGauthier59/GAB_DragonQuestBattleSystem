@@ -81,6 +81,7 @@ public class BattleManager : MonoSingleton<BattleManager>
             entityManager.statList.Clear();
             entityManager.boostList.Clear();
             entityManager.ResetStuff();
+            entityManager.SetSpells();
             entityManager.LinkingEquipments();
 
             StatDisplayManager.instance.DisplayStat(entityManager);

@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 1
   pronoun: 
   isAIally: 0
+  role: 0
   hp: 4300
   mp: 9999
   atk: 248
@@ -38,12 +39,14 @@ MonoBehaviour:
   spells:
   - {fileID: 11400000, guid: f86fafba53e2d2144b8c04dda32427f8, type: 2}
   - {fileID: 11400000, guid: c1d00c4bc9fddf94abe8c8ac2d70ad44, type: 2}
+  - {fileID: 11400000, guid: c1d00c4bc9fddf94abe8c8ac2d70ad44, type: 2}
+  - {fileID: 11400000, guid: 2a97068c2e16e404dac24cde891cba80, type: 2}
   - {fileID: 11400000, guid: 2a97068c2e16e404dac24cde891cba80, type: 2}
   - {fileID: 11400000, guid: 8f9e804a992cb2d4abc914ef6b38059e, type: 2}
   - {fileID: 11400000, guid: 3219ff11a90df904182a256afbc711c5, type: 2}
   - {fileID: 11400000, guid: eefb1a0c883773645b0612bcedbfb6e9, type: 2}
   - {fileID: 11400000, guid: 1e96378f377433349b3ec7c53c89a117, type: 2}
-  - {fileID: 11400000, guid: c2c9f45c701916347b3feea7012b41d0, type: 2}
+  - {fileID: 11400000, guid: dbbdbf45f293add40aad0b2b4279a79d, type: 2}
   weapon: {fileID: 0}
   helmet: {fileID: 0}
   shield: {fileID: 0}
@@ -55,9 +58,15 @@ MonoBehaviour:
   agiLevelUp: 
   manaLevelUp: []
   learnSpells: []
+  competenceSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 1
   item: {fileID: 11400000, guid: e595db3074a4d3649b936e0f545adff2, type: 2}
   probability: 1
   gold: 2200
   xp: 3750
+  selfCompetence: 0
+  weaponCompetence: 0
+  selfLimit: 0
+  weaponLimit: 0

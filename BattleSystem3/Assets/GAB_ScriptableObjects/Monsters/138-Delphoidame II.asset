@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 1
   pronoun: La
   isAIally: 0
+  role: 0
   hp: 3080
   mp: 9999
   atk: 196
@@ -38,12 +39,16 @@ MonoBehaviour:
   spells:
   - {fileID: 11400000, guid: eefb1a0c883773645b0612bcedbfb6e9, type: 2}
   - {fileID: 11400000, guid: 66b7a961d58ccb8449946d9b55e6079e, type: 2}
+  - {fileID: 11400000, guid: 66b7a961d58ccb8449946d9b55e6079e, type: 2}
   - {fileID: 11400000, guid: 7ea0b1b4207a45f4f859255ee512f91d, type: 2}
+  - {fileID: 11400000, guid: 7ea0b1b4207a45f4f859255ee512f91d, type: 2}
+  - {fileID: 11400000, guid: 8f9e804a992cb2d4abc914ef6b38059e, type: 2}
   - {fileID: 11400000, guid: 8f9e804a992cb2d4abc914ef6b38059e, type: 2}
   - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
   - {fileID: 11400000, guid: 005010a22dfd8ea42bb2c9214f99367c, type: 2}
   - {fileID: 11400000, guid: 79118bed7858f0e4c9a445191c58e8e4, type: 2}
   - {fileID: 11400000, guid: 55de6908804603e4aabd726b2651b78b, type: 2}
+  - {fileID: 11400000, guid: 1e96378f377433349b3ec7c53c89a117, type: 2}
   - {fileID: 11400000, guid: 1e96378f377433349b3ec7c53c89a117, type: 2}
   - {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
   - {fileID: 11400000, guid: 738e2f26f406e0544857a0ec47f898dc, type: 2}
@@ -58,9 +63,15 @@ MonoBehaviour:
   agiLevelUp: 
   manaLevelUp: []
   learnSpells: []
+  competenceSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 3
   item: {fileID: 11400000, guid: 43a8054dfb1847a488da9222fd124a04, type: 2}
   probability: 1
   gold: 1870
   xp: 3100
+  selfCompetence: 0
+  weaponCompetence: 0
+  selfLimit: 0
+  weaponLimit: 0

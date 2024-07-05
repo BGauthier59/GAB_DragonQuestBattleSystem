@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: "R\xE9gion Delphoe 6"
   m_EditorClassIdentifier: 
   monsters:
-  - {fileID: 11400000, guid: f5d03773f815f5a4a8c3aa638310ed55, type: 2}
+  - {fileID: 11400000, guid: 177d1efb8e31c444fbfc321f00bd949e, type: 2}
   - {fileID: 11400000, guid: f5d03773f815f5a4a8c3aa638310ed55, type: 2}

@@ -65,6 +65,8 @@ public class EntitySO : ScriptableObject
     public int xp;
     public int selfCompetence;
     public int weaponCompetence;
+    public int selfLimit;
+    public int weaponLimit;
 }
 
 public enum EntityType

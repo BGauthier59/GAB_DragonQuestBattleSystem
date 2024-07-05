@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 0
   pronoun: 
   isAIally: 0
+  role: 5
   hp: 232
   mp: 148
   atk: 83
@@ -40,10 +41,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8ae93ae615124e244920d721fb0aea0e, type: 2}
   - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
   - {fileID: 11400000, guid: 8c88c99b741f8684faf711f2b828e282, type: 2}
+  - {fileID: 11400000, guid: bdb570d8985c3434981f49a81683b63a, type: 2}
   - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - {fileID: 11400000, guid: e0bdc00bcb4d8814595b418e46ed80c9, type: 2}
   - {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
-  - {fileID: 11400000, guid: bdb570d8985c3434981f49a81683b63a, type: 2}
   weapon: {fileID: 11400000, guid: 0f051f2efbc7f1640989b86eb3ab4e07, type: 2}
   helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
   shield: {fileID: 11400000, guid: 009a2de45e17a134e80791e2122e3589, type: 2}
@@ -78,15 +79,15 @@ MonoBehaviour:
   competenceSpells:
   - weaponType: 4
     learningPoints: 10
-    levelMin: 0
+    levelMin: 16
     learningSpell: {fileID: 11400000, guid: 650eb64a1b1dc5a41907803d7d9108f0, type: 2}
   - weaponType: 4
     learningPoints: 20
-    levelMin: 0
+    levelMin: 18
     learningSpell: {fileID: 11400000, guid: 5678a91f97613cb4c962e518d0e1b498, type: 2}
   - weaponType: 4
     learningPoints: 30
-    levelMin: 0
+    levelMin: 20
     learningSpell: {fileID: 11400000, guid: 03e8d9a0dafc498408295d8bf1ecf809, type: 2}
   bonusSpell: {fileID: 0}
   strategy: 0
@@ -97,3 +98,5 @@ MonoBehaviour:
   xp: 0
   selfCompetence: 0
   weaponCompetence: 0
+  selfLimit: 30
+  weaponLimit: 0

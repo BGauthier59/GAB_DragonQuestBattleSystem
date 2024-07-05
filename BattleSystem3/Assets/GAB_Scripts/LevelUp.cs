@@ -34,6 +34,8 @@ public class LevelUp : MonoBehaviour
     public int currentCompPoints;
     public int selfPointsGiven;
     public int weaponPointsGiven;
+    public bool hasFinisedhSelf;
+    public bool hasFinishedWeapon;
 
     public void LevellingUp(int index)
     {
@@ -42,8 +44,12 @@ public class LevelUp : MonoBehaviour
 
         weaponArea.GetComponent<Button>().interactable = true;
         weaponPointsGiven = 0;
+        hasFinishedWeapon = false;
+        weapon.GetComponent<TextMeshProUGUI>().color = Color.white;
         selfArea.GetComponent<Button>().interactable = true;
         selfPointsGiven = 0;
+        hasFinisedhSelf = false;
+        self.GetComponent<TextMeshProUGUI>().color = Color.white;
 
         AudioManager.instance.Play("LevelUp");
 
@@ -101,10 +107,19 @@ public class LevelUp : MonoBehaviour
 
     public void OnRisingWeaponCompetence()
     {
+        EntityManager entity = SpawningManager.instance.heroesInBattle[currentIndex].GetComponent<EntityManager>();
+
+        if (entity.weaponCompetence >= entity.entitySO.weaponLimit)
+        {
+            weapon.GetComponent<TextMeshProUGUI>().color = new Color(200, 175, 0, 255);
+            weaponArea.GetComponent<Button>().interactable = false;
+            hasFinishedWeapon = true;
+            return;
+        }
+
         weaponPointsGiven++;
         currentCompPoints--;
 
-        EntityManager entity = SpawningManager.instance.heroesInBattle[currentIndex].GetComponent<EntityManager>();
         entity.weaponCompetence++;
         weapon.text = $"Compétence {entity.entityWeapon.weaponType} ({entity.weaponCompetence}) ( + {weaponPointsGiven})";
 
@@ -118,10 +133,19 @@ public class LevelUp : MonoBehaviour
     }
     public void OnRisingSelfCompetence()
     {
+        EntityManager entity = SpawningManager.instance.heroesInBattle[currentIndex].GetComponent<EntityManager>();
+
+        if (entity.selfCompetence >= entity.entitySO.selfLimit)
+        {
+            self.GetComponent<TextMeshProUGUI>().color = new Color(200, 175, 0, 255);
+            selfArea.GetComponent<Button>().interactable = false;
+            hasFinisedhSelf = true;
+            return;
+        }
+
         selfPointsGiven++;
         currentCompPoints--;
 
-        EntityManager entity = SpawningManager.instance.heroesInBattle[currentIndex].GetComponent<EntityManager>();
         entity.selfCompetence++;
         self.text = $"Compétence {entity.role} ({entity.selfCompetence}) ( + {selfPointsGiven})";
 
@@ -129,7 +153,7 @@ public class LevelUp : MonoBehaviour
         {
             if (spell.learningPoints == entity.selfCompetence && spell.weaponType == WeaponType.Self)
             {
-                self.text = $"Compétence {entity.role} ({entity.selfCompetence}) ( + {selfPointsGiven}) Appris : {spell.learningSpell.name} !";
+                self.text = $"Compétence {entity.role} ({entity.selfCompetence}) ( + {selfPointsGiven}) Intégré : {spell.learningSpell.name} (niv.{spell.levelMin}) !";
             }
         }
     }
@@ -162,6 +186,6 @@ public class LevelUp : MonoBehaviour
 
     private void Update()
     {
-        //inputPressed = Input.GetKeyDown(KeyCode.Mouse0);
+        if (hasFinisedhSelf && hasFinishedWeapon) currentCompPoints = 0;
     }
 }

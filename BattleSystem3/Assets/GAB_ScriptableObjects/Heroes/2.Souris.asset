@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 0
   pronoun: 
   isAIally: 0
+  role: 2
   hp: 31
   mp: 26
   atk: 12
@@ -97,31 +98,31 @@ MonoBehaviour:
     learningSpell: {fileID: 11400000, guid: 8e37959bd7d3c0445baa5a90a563e959, type: 2}
   - weaponType: 4
     learningPoints: 7
-    levelMin: 0
+    levelMin: 1
     learningSpell: {fileID: 11400000, guid: 6fd4baafc5257e34c8277e168f5b8a95, type: 2}
   - weaponType: 4
     learningPoints: 16
-    levelMin: 0
+    levelMin: 2
     learningSpell: {fileID: 11400000, guid: 4f54229ba58584c4b8c39efb201b8b8f, type: 2}
   - weaponType: 4
     learningPoints: 40
-    levelMin: 0
+    levelMin: 6
     learningSpell: {fileID: 11400000, guid: 79118bed7858f0e4c9a445191c58e8e4, type: 2}
   - weaponType: 4
     learningPoints: 28
-    levelMin: 0
+    levelMin: 4
     learningSpell: {fileID: 11400000, guid: eefb1a0c883773645b0612bcedbfb6e9, type: 2}
   - weaponType: 4
     learningPoints: 80
-    levelMin: 0
+    levelMin: 16
     learningSpell: {fileID: 11400000, guid: f4b70b5dd11682c47b50b721039a1677, type: 2}
   - weaponType: 4
     learningPoints: 68
-    levelMin: 0
+    levelMin: 12
     learningSpell: {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
   - weaponType: 4
     learningPoints: 54
-    levelMin: 0
+    levelMin: 8
     learningSpell: {fileID: 11400000, guid: bdb570d8985c3434981f49a81683b63a, type: 2}
   bonusSpell: {fileID: 0}
   strategy: 0
@@ -132,3 +133,5 @@ MonoBehaviour:
   xp: 0
   selfCompetence: 0
   weaponCompetence: 0
+  selfLimit: 80
+  weaponLimit: 80

@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 1
   pronoun: 
   isAIally: 0
+  role: 0
   hp: 520
   mp: 9999
   atk: 182
@@ -28,7 +29,7 @@ MonoBehaviour:
   criticalHit: 0
   dodge: 0
   actionPerTurn: 1
-  entityChanceToUseSpell: 10
+  entityChanceToUseSpell: 6
   entityResilienceToMPTheft: 0
   entityResilienceToPoison: 0
   entityResilienceToBurn: 0
@@ -50,9 +51,15 @@ MonoBehaviour:
   agiLevelUp: 
   manaLevelUp: []
   learnSpells: []
+  competenceSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 5
   item: {fileID: 11400000, guid: a30f451819c7f9944b54e199202b53f4, type: 2}
-  probability: 1
+  probability: 999
   gold: 450
   xp: 530
+  selfCompetence: 0
+  weaponCompetence: 0
+  selfLimit: 0
+  weaponLimit: 0

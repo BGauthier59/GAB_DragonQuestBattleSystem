@@ -11,6 +11,7 @@ public class EntitySO : ScriptableObject
     public EntityType type;
     public string pronoun;
     public bool isAIally;
+    public EntityRole role;
 
     [Header("Statistics")]
     public int hp;
@@ -77,4 +78,9 @@ public enum EntityStrategy // Les catégories d'ennemis pour les IA
     Attaquant, // Va attaquer régulièrement
     Mage, // Va utiliser ses aptitudes régulièrement
     Soigneur // Va soigner dès que nécessaire
+}
+
+public enum EntityRole // Pour les pts de compétence seulement
+{
+    NA, Héros, Mage, Guérisseuse, Guerrier, Paladin
 }

@@ -20,6 +20,7 @@ public class EntityManager : MonoBehaviour
     public string entityPronoun;
     public EntityStrategy entityStrategy;
     public ElementType elementType;
+    public EntityRole role;
 
     public string entityName;
     public int entityHpMax;
@@ -118,6 +119,7 @@ public class EntityManager : MonoBehaviour
         entityType = entitySO.type;
 
         isAIally = entitySO.isAIally;
+        role = entitySO.role;
 
         entityPronoun = entitySO.pronoun;
 

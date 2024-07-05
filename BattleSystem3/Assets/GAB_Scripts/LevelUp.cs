@@ -4,10 +4,12 @@ using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.UI;
+using static UnityEngine.EventSystems.EventTrigger;
+using System.Reflection;
 
 public class LevelUp : MonoBehaviour
 {
-    private bool inputPressed;
+    private bool levelRisingFinished;
 
     [SerializeField] private GameObject statArea;
     
@@ -21,10 +23,28 @@ public class LevelUp : MonoBehaviour
     [SerializeField] private TextMeshProUGUI lv;
     [SerializeField] private TextMeshProUGUI spells;
 
+    [SerializeField] private GameObject competenceArea;
+    [SerializeField] private TextMeshProUGUI competence;
+    [SerializeField] private GameObject weaponArea;
+    [SerializeField] private GameObject selfArea;
+    [SerializeField] private TextMeshProUGUI weapon;
+    [SerializeField] private TextMeshProUGUI self;
+
+    public int currentIndex;
+    public int currentCompPoints;
+    public int selfPointsGiven;
+    public int weaponPointsGiven;
+
     public void LevellingUp(int index)
     {
+        currentIndex = index;
         InterfaceManager.instance.isHeroChosen = true;
-        
+
+        weaponArea.GetComponent<Button>().interactable = true;
+        weaponPointsGiven = 0;
+        selfArea.GetComponent<Button>().interactable = true;
+        selfPointsGiven = 0;
+
         AudioManager.instance.Play("LevelUp");
 
         EntityManager entity = SpawningManager.instance.heroesInBattle[index].GetComponent<EntityManager>();
@@ -36,6 +56,8 @@ public class LevelUp : MonoBehaviour
         int atkGot = Random.Range(so.atkLevelUp[0], so.atkLevelUp[1] + 1);
         int defGot = Random.Range(so.defLevelUp[0], so.defLevelUp[1] + 1);
         int agiGot = Random.Range(so.agiLevelUp[0], so.agiLevelUp[1] + 1);
+        int compGot = Random.Range(6, 9);
+        currentCompPoints = compGot;
         float manaGot = (float) Math.Round(Random.Range(so.manaLevelUp[0], so.manaLevelUp[1]), 2);
         string learnedSpell = null;
 
@@ -59,6 +81,10 @@ public class LevelUp : MonoBehaviour
         agi.text = $" AGI : {entity.entityAgiInit} ( + {agiGot})";
         mana.text = $" MANA : {entity.entityManaInit} ( + {manaGot})";
         lv.text = $"Lv : {entity.entitytLv}";
+        competence.text = $"Pts de compétence gagnés : {compGot}";
+
+        self.text = $"Compétence {entity.role} ({entity.selfCompetence})";
+        weapon.text = $"Compétence {entity.entityWeapon.weaponType} ({entity.weaponCompetence})";
         if (learnedSpell != null)
         {
             spells.text = $"{entity.entityName} a appris : {learnedSpell}";
@@ -73,6 +99,41 @@ public class LevelUp : MonoBehaviour
         StartCoroutine(ShowingLevelStat());
     }
 
+    public void OnRisingWeaponCompetence()
+    {
+        weaponPointsGiven++;
+        currentCompPoints--;
+
+        EntityManager entity = SpawningManager.instance.heroesInBattle[currentIndex].GetComponent<EntityManager>();
+        entity.weaponCompetence++;
+        weapon.text = $"Compétence {entity.entityWeapon.weaponType} ({entity.weaponCompetence}) ( + {weaponPointsGiven})";
+
+        foreach (CompetenceSpell spell in entity.entitySO.competenceSpells)
+        {
+            if (spell.learningPoints == entity.weaponCompetence && spell.weaponType != WeaponType.Self)
+            {
+                weapon.text = $"Compétence {entity.entityWeapon.weaponType} ({entity.weaponCompetence}) ( + {weaponPointsGiven}) Appris : {spell.learningSpell.name} !";
+            }
+        }
+    }
+    public void OnRisingSelfCompetence()
+    {
+        selfPointsGiven++;
+        currentCompPoints--;
+
+        EntityManager entity = SpawningManager.instance.heroesInBattle[currentIndex].GetComponent<EntityManager>();
+        entity.selfCompetence++;
+        self.text = $"Compétence {entity.role} ({entity.selfCompetence}) ( + {selfPointsGiven})";
+
+        foreach (CompetenceSpell spell in entity.entitySO.competenceSpells)
+        {
+            if (spell.learningPoints == entity.selfCompetence && spell.weaponType == WeaponType.Self)
+            {
+                self.text = $"Compétence {entity.role} ({entity.selfCompetence}) ( + {selfPointsGiven}) Appris : {spell.learningSpell.name} !";
+            }
+        }
+    }
+
     IEnumerator ShowingLevelStat()
     {
         foreach (var button in InterfaceManager.instance.heroesButton)
@@ -81,10 +142,19 @@ public class LevelUp : MonoBehaviour
         }
 
         statArea.SetActive(true);
+        competenceArea.SetActive(true);
+        weaponArea.SetActive(true);
+        selfArea.SetActive(true);
         
-        yield return new WaitUntil(() => inputPressed);
+        yield return new WaitUntil(() => currentCompPoints == 0);
+
+        weaponArea.GetComponent<Button>().interactable = false;
+        selfArea.GetComponent<Button>().interactable = false;
+
+        yield return new WaitForSeconds(2);
 
         statArea.SetActive(false);
+        competenceArea.SetActive(false);
 
         InterfaceManager.instance.isHeroChosen = false;
         InterfaceManager.instance.OnLevelUp();
@@ -92,6 +162,6 @@ public class LevelUp : MonoBehaviour
 
     private void Update()
     {
-        inputPressed = Input.GetKeyDown(KeyCode.Mouse0);
+        //inputPressed = Input.GetKeyDown(KeyCode.Mouse0);
     }
 }

@@ -19,7 +19,7 @@ MonoBehaviour:
   excuseForInaction: 
   spellIndex: 7
   spellType: 0
-  cost: 0
+  cost: 6
   SFXname: Poison
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
@@ -32,3 +32,4 @@ MonoBehaviour:
   elementType: 0
   factor: 0
   staticDamages: 0
+  hits: 0

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellName: Stimulation
   spellDescription: "Gu\xE9rie un alli\xE9 de la paralysie."
-  inBattleDescription: lance le Tohu-Bohu !
+  inBattleDescription: lance la Stimulation !
   excuseForInaction: 
   spellIndex: 18
   spellType: 0
-  cost: 0
+  cost: 2
   SFXname: HealStatut
   hasSpecialEffect: 1
   hasEffectAndDamages: 0
@@ -31,3 +31,4 @@ MonoBehaviour:
   elementType: 0
   factor: 0
   staticDamages: 0
+  hits: 0

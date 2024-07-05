@@ -31,4 +31,5 @@ MonoBehaviour:
   strenght: 0
   elementType: 0
   factor: 0
-  staticDamages: 45
+  staticDamages: 43
+  hits: 0

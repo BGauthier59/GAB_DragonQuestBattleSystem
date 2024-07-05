@@ -29,5 +29,6 @@ MonoBehaviour:
   successRate: 0
   strenght: 0
   elementType: 0
-  factor: 90
+  factor: 100
   staticDamages: 0
+  hits: 0

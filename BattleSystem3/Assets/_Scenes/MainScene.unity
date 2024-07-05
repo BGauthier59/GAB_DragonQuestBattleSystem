@@ -1283,6 +1283,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 90b32dd528407884db8adf0ebd5dd1a9, type: 2}
   - {fileID: 11400000, guid: b4f0fe93c78fc034484b6b16ec3a1753, type: 2}
   - {fileID: 11400000, guid: 73debe510b1edba46a0f1d29bfc4f58f, type: 2}
+  - {fileID: 11400000, guid: b93839b469601734d988c48846dfc510, type: 2}
   - {fileID: 11400000, guid: fc2cb428d7aa3404983dfbc92db1eed6, type: 2}
   - {fileID: 11400000, guid: c0f660eaf157c5d49b81ce8ea7138fdd, type: 2}
   - {fileID: 11400000, guid: 89826587ed78ba84abc50547f9bc2976, type: 2}
@@ -5313,6 +5314,8 @@ MonoBehaviour:
     - m_Text: Boss15
       m_Image: {fileID: 0}
     - m_Text: Boss16
+      m_Image: {fileID: 0}
+    - m_Text: Combat pirates
       m_Image: {fileID: 0}
     - m_Text: "[M\xE9morial] Le canardeur"
       m_Image: {fileID: 0}

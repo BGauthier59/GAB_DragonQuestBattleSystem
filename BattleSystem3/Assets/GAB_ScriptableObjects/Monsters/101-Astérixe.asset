@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: "101-Ast\xE9rixe"
   m_EditorClassIdentifier: 
   entityName: "Ast\xE9rixe"
-  sprite: {fileID: 21300000, guid: eb92b685ea32e384087b3b039f04c74b, type: 3}
+  sprite: {fileID: 21300000, guid: 4dcef9fb4b49b194b8f5aeb823a9864a, type: 3}
   spawnPosY: 12
   type: 1
   pronoun: L'
   isAIally: 0
+  role: 0
   hp: 138
   mp: 32
   atk: 151
@@ -48,9 +49,15 @@ MonoBehaviour:
   agiLevelUp: 
   manaLevelUp: []
   learnSpells: []
+  competenceSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 0
   item: {fileID: 11400000, guid: 85c41e1c2455b1c429a1944ef7c8fe29, type: 2}
   probability: 16
   gold: 42
   xp: 71
+  selfCompetence: 0
+  weaponCompetence: 0
+  selfLimit: 0
+  weaponLimit: 0

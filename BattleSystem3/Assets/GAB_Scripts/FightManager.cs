@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -17,11 +18,33 @@ public class FightManager : MonoSingleton<FightManager>
     public Color atkBonusColor;
     bool isCheckingSpecialAtk;
 
+    private async void PlayMonsterAnim(Transform attacker)
+    {
+        Vector3 initialPos = attacker.position;
+        Vector3 finalPos = initialPos + Vector3.up * 50f;
+        float jumpDuration = 0.5f;
+        float timer = 0;
+
+        Vector3 p1, p2, p3, p4;
+        p1 = p4 = initialPos;
+        p2 = p3 = finalPos;
+
+        while (timer < jumpDuration)
+        {
+            await Task.Yield();
+            timer += Time.deltaTime;
+
+            attacker.position = Utilities.CubicBeziersCurve(p1, p2, p3, p4, timer / jumpDuration);
+        }
+
+        attacker.position = initialPos;
+    }
+
     public IEnumerator Attacking(EntityManager attacker, EntityManager target)
     {
         if (attacker.entityType == EntityType.Monster)
         {
-            //attacker.entityAnim.Play("MonsterAttacks");
+            PlayMonsterAnim(attacker.transform);
             AudioManager.instance.Play("Attack");
         }
 
@@ -125,7 +148,7 @@ public class FightManager : MonoSingleton<FightManager>
     {
         if (caster.entityType == EntityType.Monster)
         {
-            caster.entityAnim.Play("MonsterAttacks");
+            PlayMonsterAnim(caster.transform);
         }
         
         if (spell.spellType == SpellType.Spell)

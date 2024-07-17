@@ -18,9 +18,10 @@ MonoBehaviour:
   type: 1
   pronoun: Le
   isAIally: 0
+  role: 0
   hp: 32
   mp: 9
-  atk: 36
+  atk: 43
   defense: 32
   agility: 35
   level: 1
@@ -48,9 +49,15 @@ MonoBehaviour:
   agiLevelUp: 
   manaLevelUp: []
   learnSpells: []
+  competenceSpells: []
+  bonusSpell: {fileID: 0}
   strategy: 1
   elementType: 1
   item: {fileID: 11400000, guid: 5a8a95b04c774084c95d8ff2dec79323, type: 2}
   probability: 32
   gold: 10
   xp: 12
+  selfCompetence: 0
+  weaponCompetence: 0
+  selfLimit: 0
+  weaponLimit: 0

@@ -498,8 +498,8 @@ MonoBehaviour:
   - {fileID: 325368865}
   gold: {fileID: 1996075644}
   xp: {fileID: 1952364678}
-  goldTotal: 0
-  xpTotal: 0
+  goldTotal: 98
+  xpTotal: 346
   infoZone: {fileID: 1892796165}
   infoName: {fileID: 495239904}
   infoHp: {fileID: 585954193}
@@ -8203,8 +8203,8 @@ MonoBehaviour:
   monsterItem: 
   hasGotItem: 0
   gotItem: {fileID: 0}
-  goldEarned: 14
-  xpEarned: 266
+  goldEarned: 0
+  xpEarned: 0
 --- !u!4 &946866546
 Transform:
   m_ObjectHideFlags: 0

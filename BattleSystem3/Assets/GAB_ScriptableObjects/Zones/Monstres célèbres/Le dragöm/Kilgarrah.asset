@@ -17,7 +17,7 @@ MonoBehaviour:
   configsInZoneNight:
   - {fileID: 11400000, guid: 6169c4f438341ce44bbe74dd8f687055, type: 2}
   minMaxMonstersInBattle: 0000000000000000
-  fontZoneDay: {fileID: 21300000, guid: 999633e6ae043df4481dc72847554922, type: 3}
-  fontZoneNight: {fileID: 21300000, guid: ec81c219b3dfe2e4a89ad0964ff5fd98, type: 3}
+  fontZoneDay: {fileID: 21300000, guid: 52808ef16b5e89249998f61a0175ceff, type: 3}
+  fontZoneNight: {fileID: 21300000, guid: 29e007f122f76a94e901da4587baba01, type: 3}
   musicInZone: {fileID: 8300000, guid: d86b760de2ae70a4ea77bdd2e2e2d04d, type: 3}
   combatZone: 0

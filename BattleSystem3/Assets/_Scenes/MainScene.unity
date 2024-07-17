@@ -8203,8 +8203,8 @@ MonoBehaviour:
   monsterItem: 
   hasGotItem: 0
   gotItem: {fileID: 0}
-  goldEarned: 0
-  xpEarned: 0
+  goldEarned: 14
+  xpEarned: 266
 --- !u!4 &946866546
 Transform:
   m_ObjectHideFlags: 0

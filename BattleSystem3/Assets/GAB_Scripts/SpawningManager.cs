@@ -42,6 +42,65 @@ public class SpawningManager : MonoSingleton<SpawningManager>
         CreatingHeroesInBattle();
     }
 
+    public void SaveData()
+    {
+        // Générer une Data
+        SaveManager.Data data = new SaveManager.Data()
+        {
+            gold = StatDisplayManager.instance.goldTotal,
+            xp = StatDisplayManager.instance.xpTotal
+        };
+
+        foreach (var hero in heroesInBattle)
+        {
+            EntityManager manager = hero.GetComponent<EntityManager>();
+            var so = manager.entitySO;
+            
+            // modifier le so
+            so.entityName = manager.entityName;
+            so.type = manager.entityType;
+
+            so.isAIally = manager.isAIally;
+            so.role = manager.role;
+
+            so.pronoun = manager.entityPronoun;
+
+            so.weapon = manager.entityWeapon;
+            so.armor = manager.entityArmor;
+            so.shield = manager.entityShield;
+            so.helmet = manager.entityHelmet;
+            
+            so.hp = manager.entityHpWS;
+            so.mp = manager.entityMpWS;
+            so.atk = manager.entityAtkWS;
+            so.defense = manager.entityDefWS;
+            so.agility = manager.entityAgiWS;
+            so.mana = manager.entityMpWS;
+
+            so.criticalHit = manager.entityCriticalInit;
+            so.dodge = manager.entityDodgeInit;
+
+            so.actionPerTurn = manager.entityActionPerTurn;
+            so.level = manager.entitytLv;
+
+            so.selfCompetence = manager.selfCompetence;
+            so.weaponCompetence = manager.weaponCompetence;
+            so.elementType = manager.elementType;
+        }
+        
+        SaveManager.instance.SaveDataOnMainDirectory(data);
+    }
+
+    public void LoadData()
+    {
+        SaveManager.Data data = SaveManager.instance.LoadDataFromDirectory<SaveManager.Data>();
+
+        StatDisplayManager.instance.goldTotal = data.gold;
+        StatDisplayManager.instance.xpTotal = data.xp;
+
+        StatDisplayManager.instance.DisplayGoldXp();
+    }
+
     public void Spawning()
     {
         InterfaceManager.instance.areas.gameObject.SetActive(false);

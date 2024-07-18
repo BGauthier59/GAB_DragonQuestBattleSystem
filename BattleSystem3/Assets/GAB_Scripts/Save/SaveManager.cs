@@ -19,6 +19,7 @@ public class SaveManager : MonoSingleton<SaveManager>
 
     public struct Data
     {
+        public int gold, xp;
         
     }
 

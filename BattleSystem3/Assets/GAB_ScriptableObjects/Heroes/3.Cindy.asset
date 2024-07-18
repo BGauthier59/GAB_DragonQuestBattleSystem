@@ -19,14 +19,14 @@ MonoBehaviour:
   pronoun: 
   isAIally: 0
   role: 3
-  hp: 92
-  mp: 68
-  atk: 42
-  defense: 30
-  agility: 42
-  level: 5
-  mana: 0.6
-  criticalHit: 10
+  hp: 102
+  mp: 74
+  atk: 46
+  defense: 35
+  agility: 47
+  level: 6
+  mana: 0.61
+  criticalHit: 0
   dodge: 10
   actionPerTurn: 1
   entityChanceToUseSpell: 0
@@ -40,10 +40,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cc229a28c865aac44a7659b6eaccb00d, type: 2}
   - {fileID: 11400000, guid: db51f43c70849da46aa7ee239e43f427, type: 2}
   - {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
+  - {fileID: 11400000, guid: bdc4f6fc8b70a0142bb060d5d95e8d18, type: 2}
+  - {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
   weapon: {fileID: 11400000, guid: 4a69440664898504b9f37cb58345b73f, type: 2}
   helmet: {fileID: 11400000, guid: 3b4a0c68a38fef2459e3230d20fcf5c1, type: 2}
   shield: {fileID: 11400000, guid: 612f9aa2945d122489d19ba71ac7dac3, type: 2}
-  armor: {fileID: 11400000, guid: 93ff5e8f0ac6d1142825ee7cc1077d01, type: 2}
+  armor: {fileID: 11400000, guid: 63a789993e358be4a85ce4853e0a5c80, type: 2}
   hpLevelUp: 070000000b000000
   mpLevelUp: 0600000009000000
   atkLevelUp: 0300000006000000
@@ -137,7 +139,7 @@ MonoBehaviour:
   probability: 0
   gold: 0
   xp: 0
-  selfCompetence: 0
+  selfCompetence: 8
   weaponCompetence: 0
   selfLimit: 60
   weaponLimit: 60

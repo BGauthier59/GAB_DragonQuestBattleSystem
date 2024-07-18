@@ -40,6 +40,8 @@ public class SpawningManager : MonoSingleton<SpawningManager>
     {
         centerBattleSave = centerBattle.position;
         CreatingHeroesInBattle();
+
+        LoadData(); 
     }
 
     public void SaveData()
@@ -75,7 +77,7 @@ public class SpawningManager : MonoSingleton<SpawningManager>
             so.atk = manager.entityAtkWS;
             so.defense = manager.entityDefWS;
             so.agility = manager.entityAgiWS;
-            so.mana = manager.entityMpWS;
+            so.mana = manager.entityManaWS;
 
             so.criticalHit = manager.entityCriticalInit;
             so.dodge = manager.entityDodgeInit;

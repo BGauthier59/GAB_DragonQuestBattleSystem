@@ -39,10 +39,10 @@ MonoBehaviour:
   spells:
   - {fileID: 11400000, guid: db51f43c70849da46aa7ee239e43f427, type: 2}
   - {fileID: 11400000, guid: 7d73ba6257ae4b64f95f84457044976c, type: 2}
-  weapon: {fileID: 11400000, guid: 4e070563b0810b44db4c1e406e71fb90, type: 2}
-  helmet: {fileID: 11400000, guid: 3b4a0c68a38fef2459e3230d20fcf5c1, type: 2}
+  weapon: {fileID: 11400000, guid: 6d18265c0b2603d48a77f5739c321490, type: 2}
+  helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
   shield: {fileID: 11400000, guid: 56ec2370bfdbf26448f1d4419e13b757, type: 2}
-  armor: {fileID: 11400000, guid: f84cc3117f0862f4a9020867ce9bd03b, type: 2}
+  armor: {fileID: 11400000, guid: e4fb3cd3c54a915418d9e15989a1b875, type: 2}
   hpLevelUp: 0b0000000f000000
   mpLevelUp: 0500000008000000
   atkLevelUp: 0500000008000000

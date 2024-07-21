@@ -46,7 +46,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
   - {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
   - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
-  weapon: {fileID: 11400000, guid: b7b7f91290ce96e48915b806d70da8ad, type: 2}
+  weapon: {fileID: 11400000, guid: d5f0da380cad10a48bb71f6390db4393, type: 2}
   helmet: {fileID: 11400000, guid: 3b4a0c68a38fef2459e3230d20fcf5c1, type: 2}
   shield: {fileID: 11400000, guid: 91543191394d739479eb1802cd559c0f, type: 2}
   armor: {fileID: 11400000, guid: e4fb3cd3c54a915418d9e15989a1b875, type: 2}

@@ -573,6 +573,18 @@ MonoBehaviour:
   mana: {fileID: 418072851}
   lv: {fileID: 1461298101}
   spells: {fileID: 1315801511}
+  competenceArea: {fileID: 0}
+  competence: {fileID: 0}
+  weaponArea: {fileID: 0}
+  selfArea: {fileID: 0}
+  weapon: {fileID: 0}
+  self: {fileID: 0}
+  currentIndex: 0
+  currentCompPoints: 0
+  selfPointsGiven: 0
+  weaponPointsGiven: 0
+  hasFinisedhSelf: 0
+  hasFinishedWeapon: 0
 --- !u!1 &79331422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,10 +1225,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroes:
-  - {fileID: 11400000, guid: e8be85fb719d4d948a0f5e6d5159c017, type: 2}
-  - {fileID: 11400000, guid: ffc157b7aab040f4eb19450e1598cdad, type: 2}
-  - {fileID: 11400000, guid: bc733ced66c2d2e479411bf6cded2b5f, type: 2}
-  escouade: 1
+  - {fileID: 11400000, guid: 8c1d26670b904b0418925f3eb0270dbb, type: 2}
+  - {fileID: 11400000, guid: 2615b4024b0f4244caea9c4ae7e82de2, type: 2}
+  - {fileID: 11400000, guid: e515b1e59e5bd1f458486271d6872fcb, type: 2}
+  escouade: 0
   howManyMonster: 0
   configsInLocation: []
   allZones:

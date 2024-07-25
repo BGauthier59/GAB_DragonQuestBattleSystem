@@ -19,13 +19,13 @@ MonoBehaviour:
   pronoun: 
   isAIally: 0
   role: 3
-  hp: 161
-  mp: 120
-  atk: 75
-  defense: 62
-  agility: 80
-  level: 12
-  mana: 0.71
+  hp: 179
+  mp: 134
+  atk: 84
+  defense: 71
+  agility: 91
+  level: 14
+  mana: 0.79
   criticalHit: 0
   dodge: 10
   actionPerTurn: 1
@@ -41,6 +41,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: db51f43c70849da46aa7ee239e43f427, type: 2}
   - {fileID: 11400000, guid: 31cd972bcfe3c1349b3bcb153fd8a6b5, type: 2}
   - {fileID: 11400000, guid: c5886072998571b4ab2f3a71b6511ac0, type: 2}
+  - {fileID: 11400000, guid: bd7281e306c3aaa40a93a6e867cb54e0, type: 2}
   - {fileID: 11400000, guid: bdc4f6fc8b70a0142bb060d5d95e8d18, type: 2}
   - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
   - {fileID: 11400000, guid: 2b92396938b9a10488a36d1a009295f5, type: 2}
@@ -49,6 +50,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
   - {fileID: 11400000, guid: ddb31d0bea0887344ab27c960c5f84e4, type: 2}
   - {fileID: 11400000, guid: 76abd92ebdb02184286edee36a22fd2c, type: 2}
+  - {fileID: 11400000, guid: ff923221bf8ed6a4bafc764818421296, type: 2}
+  - {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
+  - {fileID: 11400000, guid: ad7ee25a2f883dc469f1fe251255b48d, type: 2}
   weapon: {fileID: 11400000, guid: 20f2e83ff8c3cb447805fc8b557762dd, type: 2}
   helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
   shield: {fileID: 11400000, guid: 8d1f77f2821664848b5615fef674ba8d, type: 2}
@@ -146,7 +150,7 @@ MonoBehaviour:
   probability: 0
   gold: 0
   xp: 0
-  selfCompetence: 47
-  weaponCompetence: 5
+  selfCompetence: 48
+  weaponCompetence: 18
   selfLimit: 60
   weaponLimit: 60

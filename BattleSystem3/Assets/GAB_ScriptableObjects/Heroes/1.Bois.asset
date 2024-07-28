@@ -19,13 +19,13 @@ MonoBehaviour:
   pronoun: 
   isAIally: 0
   role: 1
-  hp: 186
-  mp: 109
-  atk: 94
-  defense: 65
-  agility: 74
-  level: 14
-  mana: 0.97999984
+  hp: 206
+  mp: 123
+  atk: 105
+  defense: 74
+  agility: 85
+  level: 16
+  mana: 1.0399998
   criticalHit: 0
   dodge: 10
   actionPerTurn: 1
@@ -48,10 +48,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9c996d5b0b9fdac44880a4654cb4d1ca, type: 2}
   - {fileID: 11400000, guid: f15f3105c40717b48bde2f3cd6c231b8, type: 2}
   - {fileID: 11400000, guid: a12b7f511876c34458289945468af875, type: 2}
+  - {fileID: 11400000, guid: 9a348bfe61ad8984ea29076e62b0d0b3, type: 2}
   - {fileID: 11400000, guid: 0fa5e9140e393df42af5abbad875fe88, type: 2}
   - {fileID: 11400000, guid: 5abb6247cff777f4fbfd90db5f288afc, type: 2}
+  - {fileID: 11400000, guid: 7762f3e276536c745b0cc5b7828d0a46, type: 2}
   weapon: {fileID: 11400000, guid: d5f0da380cad10a48bb71f6390db4393, type: 2}
-  helmet: {fileID: 11400000, guid: 3b4a0c68a38fef2459e3230d20fcf5c1, type: 2}
+  helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
   shield: {fileID: 11400000, guid: 91543191394d739479eb1802cd559c0f, type: 2}
   armor: {fileID: 11400000, guid: e4fb3cd3c54a915418d9e15989a1b875, type: 2}
   hpLevelUp: 0a0000000e000000
@@ -139,7 +141,7 @@ MonoBehaviour:
   probability: 0
   gold: 0
   xp: 0
-  selfCompetence: 37
-  weaponCompetence: 58
+  selfCompetence: 44
+  weaponCompetence: 65
   selfLimit: 80
   weaponLimit: 80

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d82a5067805ca5f408428eb766d29139, type: 3}
   m_Name: 3.Cindy
   m_EditorClassIdentifier: 
-  entityName: 'Cindy '
+  entityName: Cindy
   sprite: {fileID: 0}
   spawnPosY: 0
   type: 0

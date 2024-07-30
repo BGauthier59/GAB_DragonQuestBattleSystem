@@ -56,7 +56,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5abb6247cff777f4fbfd90db5f288afc, type: 2}
   weapon: {fileID: 11400000, guid: b1d01498109b32549b0cd240ace61a72, type: 2}
   helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
-  shield: {fileID: 11400000, guid: 8d1f77f2821664848b5615fef674ba8d, type: 2}
+  shield: {fileID: 11400000, guid: a9904f0b601ad2f478c2ca3c4b2d48be, type: 2}
   armor: {fileID: 11400000, guid: 5a7e2ae5aa52ac94199b4cf2e3bb939f, type: 2}
   hpLevelUp: 070000000b000000
   mpLevelUp: 0600000009000000

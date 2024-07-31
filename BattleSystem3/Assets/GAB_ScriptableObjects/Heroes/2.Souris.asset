@@ -19,13 +19,13 @@ MonoBehaviour:
   pronoun: 
   isAIally: 0
   role: 2
-  hp: 220
-  mp: 172
-  atk: 96
-  defense: 82
-  agility: 75
-  level: 20
-  mana: 1.1799998
+  hp: 231
+  mp: 181
+  atk: 100
+  defense: 85
+  agility: 79
+  level: 21
+  mana: 1.1999998
   criticalHit: 0
   dodge: 10
   actionPerTurn: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
   probability: 0
   gold: 0
   xp: 0
-  selfCompetence: 49
+  selfCompetence: 55
   weaponCompetence: 80
   selfLimit: 80
   weaponLimit: 80

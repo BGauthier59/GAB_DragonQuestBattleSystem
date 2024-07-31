@@ -4,7 +4,6 @@ using System.Threading;
 using System.Xml.Serialization;
 using JetBrains.Annotations;
 using TMPro;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -467,19 +466,20 @@ public class EntityManager : MonoBehaviour
             case (Escouade.NA): break;
 
 
-            case (Escouade.La_Fratrie_Baï):
+            case (Escouade.La_Fratrie_BaÃ¯):
 
-                entityHpMax += 50;
-                entityHp = entityHpMax;
-                entityAtk += 30;
-                entityDef += 30;
-                entityChanceToUseSpell += 1;
+                entityHpMax = entitySO.hp + 50;
+                //entityHp = entityHpMax;
+                entityAtk = entityAtkWS + 30;
+                entityDef = entityDefWS + 30;
+                entityChanceToUseSpell = entitySO.entityChanceToUseSpell + 1;
 
+                Debug.Log(("Add spell"));
                 entitySpells.Add(entitySO.bonusSpell);
 
                 break;
 
-            case (Escouade.Les_Bûcherons):
+            case (Escouade.Les_BÃ»cherons):
 
                 entityHpMax += 30;
                 entityHp = entityHpMax;
@@ -488,7 +488,7 @@ public class EntityManager : MonoBehaviour
 
                 break;
 
-            case (Escouade.Les_Bois_Réincarnés):
+            case (Escouade.Les_Bois_RÃ©incarnÃ©s):
 
                 entityAtk += 20;
                 entityDef += 20;
@@ -522,9 +522,9 @@ public class EntityManager : MonoBehaviour
                 break;
 
 
-            case (Escouade.Le_Ciel_Etoilé):
+            case (Escouade.Le_Ciel_EtoilÃ©):
 
-                entityAgi += 30;
+                entityAgi = entityAgiWS + 30;
 
                 entitySpells.Add(entitySO.bonusSpell);
 
@@ -569,7 +569,7 @@ public class EntityManager : MonoBehaviour
 
                 break;
 
-            case (Escouade.Les_Croisés):
+            case (Escouade.Les_CroisÃ©s):
 
                 entityResilienceToSleep = 999;
                 entityResilienceToPoison = 999;
@@ -578,7 +578,7 @@ public class EntityManager : MonoBehaviour
 
                 break;
 
-            case (Escouade.Les_Légendaires):
+            case (Escouade.Les_LÃ©gendaires):
 
                 entityMana += 0.2f;
                 entityMpMax += 10;

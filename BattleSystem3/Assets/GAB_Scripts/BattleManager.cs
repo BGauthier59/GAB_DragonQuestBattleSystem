@@ -46,7 +46,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     public int xpEarned;
 
     private string statNotif;
-
+    
     #region Battle begins
 
     public IEnumerator BattleInitialization()
@@ -71,6 +71,7 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     public void Initialization()
     {
+        
         for (int i = 0; i < SpawningManager.instance.heroesInBattle.Count; i++)
         {
             EntityManager entityManager = SpawningManager.instance.heroesInBattle[i].GetComponent<EntityManager>();
@@ -81,12 +82,19 @@ public class BattleManager : MonoSingleton<BattleManager>
             entityManager.boostList.Clear();
             entityManager.ResetStuff();
             entityManager.SetSpells();
+            
+            if(entityManager.isAIally)
+            {
+                entityManager.EscouadeBonus(SpawningManager.instance.escouade);
+            }
+            
             entityManager.LinkingEquipments();
 
             StatDisplayManager.instance.DisplayStat(entityManager);
 
         }
-        
+                
+
         if (SpawningManager.instance.selectedZone.combatZone == CombatZone.Boss) AudioManager.instance.Play("BossBattleTheme");
         else if (SpawningManager.instance.selectedZone.combatZone == CombatZone.BossChancelor) AudioManager.instance.Play("ChancelorBattleTheme");
         else if (SpawningManager.instance.selectedZone.combatZone == CombatZone.MajorBoss) AudioManager.instance.Play("MajorBossBattleTheme");

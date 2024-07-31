@@ -1225,10 +1225,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroes:
-  - {fileID: 11400000, guid: ffc157b7aab040f4eb19450e1598cdad, type: 2}
-  - {fileID: 11400000, guid: e8be85fb719d4d948a0f5e6d5159c017, type: 2}
-  - {fileID: 11400000, guid: e515b1e59e5bd1f458486271d6872fcb, type: 2}
-  escouade: 0
+  - {fileID: 11400000, guid: 4a3285dc7dba48a46bfdedb69c23598b, type: 2}
+  - {fileID: 11400000, guid: 436a98a0907db5d4fbb0fe5ea082e610, type: 2}
+  - {fileID: 11400000, guid: bc733ced66c2d2e479411bf6cded2b5f, type: 2}
+  escouade: 7
   howManyMonster: 0
   configsInLocation: []
   allZones:

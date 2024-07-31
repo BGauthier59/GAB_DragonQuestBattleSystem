@@ -134,7 +134,6 @@ public class SpawningManager : MonoSingleton<SpawningManager>
             if(heroManager.isAIally)
             {
                 BattleManager.instance.isArenaBattle = true;
-                heroManager.EscouadeBonus(escouade);
             }
 
             heroesInBattle.Add(hero);

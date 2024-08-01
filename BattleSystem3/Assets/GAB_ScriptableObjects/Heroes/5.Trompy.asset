@@ -19,13 +19,13 @@ MonoBehaviour:
   pronoun: 
   isAIally: 0
   role: 5
-  hp: 290
-  mp: 184
-  atk: 109
-  defense: 92
-  agility: 107
-  level: 21
-  mana: 1.1499999
+  hp: 327
+  mp: 205
+  atk: 125
+  defense: 105
+  agility: 125
+  level: 24
+  mana: 1.2399998
   criticalHit: 0
   dodge: 10
   actionPerTurn: 1
@@ -48,9 +48,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 650eb64a1b1dc5a41907803d7d9108f0, type: 2}
   - {fileID: 11400000, guid: 23a6a1937076a4b4aaf713d172c22e77, type: 2}
   - {fileID: 11400000, guid: 5678a91f97613cb4c962e518d0e1b498, type: 2}
+  - {fileID: 11400000, guid: 03e8d9a0dafc498408295d8bf1ecf809, type: 2}
   weapon: {fileID: 11400000, guid: ce77c032bfd39cb4e84b956a701485e4, type: 2}
-  helmet: {fileID: 11400000, guid: 6d87b1214d099964abaed3ce139da900, type: 2}
-  shield: {fileID: 11400000, guid: c879745f8e62a0741bf746d807ac7498, type: 2}
+  helmet: {fileID: 11400000, guid: c5a526b86355cdb42980496c2902fb75, type: 2}
+  shield: {fileID: 11400000, guid: 792099994da958d4e907feefd12bc66a, type: 2}
   armor: {fileID: 11400000, guid: 4f8a230ebde691742a3ba9dd8c7ddc20, type: 2}
   hpLevelUp: 0b0000000e000000
   mpLevelUp: 0600000009000000

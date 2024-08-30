@@ -19,12 +19,12 @@ MonoBehaviour:
   pronoun: 
   isAIally: 0
   role: 4
-  hp: 338
-  mp: 158
-  atk: 183
-  defense: 113
-  agility: 95
-  level: 24
+  hp: 351
+  mp: 164
+  atk: 190
+  defense: 117
+  agility: 97
+  level: 25
   mana: 1.1399997
   criticalHit: 0
   dodge: 10
@@ -47,7 +47,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2deabe3d8ac2c3848a2baf9b2acf7827, type: 2}
   - {fileID: 11400000, guid: cab4ffda81820274d83ed95408190823, type: 2}
   weapon: {fileID: 11400000, guid: c03bba99e36f7bb4887a8172b3fed34b, type: 2}
-  helmet: {fileID: 11400000, guid: f881842bc1b68d94dae8f6e4e70a963d, type: 2}
+  helmet: {fileID: 11400000, guid: 20f49ad1e9f18b24f9b80471a28cab6f, type: 2}
   shield: {fileID: 11400000, guid: c879745f8e62a0741bf746d807ac7498, type: 2}
   armor: {fileID: 11400000, guid: 19f2f787d0f4e1a448f34223c76fb6b3, type: 2}
   hpLevelUp: 0b0000000f000000

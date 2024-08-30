@@ -19,13 +19,13 @@ MonoBehaviour:
   pronoun: 
   isAIally: 0
   role: 1
-  hp: 303
-  mp: 170
-  atk: 152
-  defense: 109
-  agility: 124
-  level: 24
-  mana: 1.1999997
+  hp: 330
+  mp: 183
+  atk: 164
+  defense: 118
+  agility: 134
+  level: 26
+  mana: 1.2399997
   criticalHit: 0
   dodge: 10
   actionPerTurn: 1
